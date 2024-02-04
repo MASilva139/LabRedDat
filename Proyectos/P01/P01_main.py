@@ -42,11 +42,11 @@ class MultiApp:
             with c2: 
                 if opt == "Resumen":
                     st.markdown("## Resumen del trabajo")
-                    st.write("En la siguiente práctica se procedió a realizar una aplicación web encargada de graficar los datos obtenidos, tras 100 repeticiones, al lanzar un grupo de 10 fichas. Para ello, se empleó el uso de las librerías de *NumPy*, *Pandas*, *Plotly*, *MatPlotLib*, *StreamLit* y *SciPy*.")
+                    st.write("En la siguiente práctica se procedió a realizar una aplicación web encargada de graficar los datos obtenidos, tras 100 repeticiones, al lanzar un grupo de 10 fichas. Para ello, se emplearon las librerías de *NumPy*, *Pandas*, *Plotly.Express*, *MatPlotLib*, *StreamLit* y *SciPy*.")
                     st.write("")
-                    st.write("Se realizarón 100 repeticiones para el lanzamiento de 10 fichas, en las cuales se contaron el número de caras obtenidas por cada repetición, registrandolas como *n*. ")
+                    st.write("Se realizarón 100 repeticiones para el lanzamiento de 10 fichas, en las cuales se contaron el número de caras obtenidas por cada repetición, registrandolas como *n*. A partir de los datos obtenidos, convirtiendo las *n* caras por cada repetición, se realizarón las tablas con la librería de **Pandas.DataFrame()** y a partir de estas se hicieron las graficas de **Plotly.Expres** y **PyPlot**. Para el fit se usa el arreglo de **Numpy**, además de utilizar la función **curve_fit** de la librería de **scipy.optimize**.")
                     st.write("")
-                    st.write("Se determino que . . .")
+                    st.write("Se lograron realizar buenos ajustes de la curva, a partir de la función binomial, obteniendo una gráfica identica tanto a partir de la importación de la función binomial a partir del modulo **stats** de la librería de **scipy**, como de la definición de la función binomial a partir de los parámetros *n*, *x* y *p*, empleando el comando **def**.")
                         
                 if opt == "Referencias":
                     st.markdown("## Referencias bibliográficas (marco teórico)")
