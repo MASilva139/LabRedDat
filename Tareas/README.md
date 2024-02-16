@@ -19,7 +19,7 @@ Los contenidos de esta carpeta son los siguientes
     * Creación de repositorio local y repositorio en la nube. (Se utilizó Git y GitHub)
     * Vinculación de repositorio local con respositorio de la nube. (Repositorio remoto)
     * Empleo de las librerias 'pandas', 'plotly.express' y 'streamlit'.
-    * Publicación de página de streamlit.
+    * [Publicación de página de streamlit](https://tarea02.streamlit.app/).
 
 * [**Tarea 03:**](T03) Tarea entregada el /
 
