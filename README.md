@@ -10,10 +10,6 @@ Los contenidos de este repositorio son los siguientes:
 * [**Notas:**](Notas) Contiene las notas de clase.
 * [**Repositorio de Clases (Oculto)**](RepC) Contiene el repositorio de clase compartido por el licenciado.
 
-<script>
-    document.body.style.background = 'img/img01.jpg'
-</script>
-
 ## Comandos de git
 ```
 Comandos de terminal (bash)
