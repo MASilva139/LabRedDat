@@ -1,6 +1,6 @@
 # Laboratorio de Reducción de Datos (F503)
-Directorio remoto "origin" <git remote add origin git@github.com:MASilva139/LabRedDat.git>.
-    * git push -u origin main
+Directorio remoto "origin" (git remote add origin git@github.com:MASilva139/LabRedDat.git).
+    * [git push -u origin main]
 
 ## Navegación
 
