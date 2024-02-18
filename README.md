@@ -3,14 +3,14 @@ Directorio remoto "origin" (git remote add origin git@github.com:MASilva139/LabR
 * [git push -u origin main]
 
 ## Navegación
-
 Los contenidos de este repositorio son los siguientes:
-
 * [**Tareas:**](Tareas) Contiene las tareas realizadas durante el semestre.
 * [**Data:**](Data) Contiene archivos `.csv` de datos que serán utilizados para ejercicios, tareas y prácticas.
 * [**Proyectos:**](Proyectos) Contiene los proyectos realizados durante el semestre.
 * [**Notas:**](Notas) Contiene las notas de clase.
 * [**Repositorio de Clases (Oculto)**](RepC) Contiene el repositorio de clase compartido por el licenciado.
+
+![img1](img/img01.jpg)
 
 ## Comandos de git
 ```
