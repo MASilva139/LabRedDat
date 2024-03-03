@@ -14,3 +14,7 @@ De incluirse valores por defecto en su interfaz, colocar los mismos que los util
 * *Manejo de Git, GitHub y Deploy exitoso*
 
 ## Documentación
+```
+Librerías revisadas para el examen
+├── [mathplotlib.pyplot.subplot](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplot.html)
+```

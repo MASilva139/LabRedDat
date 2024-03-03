@@ -47,11 +47,19 @@ axis.plot(dt['x'], dt['Pb'], color='Red') #Generando la gráfica de línea
 plt.xlabel('n')
 plt.ylabel('Pb(x,n)')
 plt.grid(True)
-plt.title('Distribución en {n} tiros')
+plt.title(f'Distribución en {n} tiros')
 st.pyplot(bin_g)
 
 # Agregar tabla de datos del binomial
 st.write("### Tabla de datos", dt.sort_index())
 
 # Generando gráfica en escala logarítmica
-bin_gl, ax =plt.subplots()
+bin_gl, ax = plt.subplots()
+ax.bar(dt['x'], dt['Pb'], color='skyblue') #Estableciendo la gráfica de barras
+ax.plot(dt['x'], dt['Pb'], color='Red') #Generando la gráfica de línea
+plt.xlabel('n')
+plt.ylabel('Pb(x,n)')
+plt.grid(True)
+plt.yscale('log')
+plt.title(f'Distribución en {n} tiros (escala logarítmica)')
+st.pyplot(bin_gl)
