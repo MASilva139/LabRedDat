@@ -37,3 +37,6 @@ Librerías revisadas para el examen
 │       └── https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplot.html
 └── Streamlit.table()
 ```
+## Página
+El link de la página de streamlit es:
+* [Página de streamlit](https://f502-parcial01.streamlit.app/).
