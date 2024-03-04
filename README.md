@@ -7,7 +7,7 @@ Los contenidos de este repositorio son los siguientes:
 * [**Tareas:**](Tareas) Contiene las tareas realizadas durante el semestre.
 * [**Data:**](Data) Contiene archivos `.csv` de datos que serán utilizados para ejercicios, tareas y prácticas.
 * [**Proyectos:**](Proyectos) Contiene los proyectos realizados durante el semestre.
-* [**Notas:**](Notas) Contiene las notas de clase.
+* [**Notas:**](Notas) Contiene las notas de clase, y repositorios que podrían usarse en algún proyecto.
 * [**Repositorio de Clases (Oculto)**](RepC) Contiene el repositorio de clase compartido por el licenciado.
 
 ## Comandos de git

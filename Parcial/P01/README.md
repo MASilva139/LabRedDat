@@ -16,5 +16,18 @@ De incluirse valores por defecto en su interfaz, colocar los mismos que los util
 ## Documentación
 ```
 Librerías revisadas para el examen
-├── [mathplotlib.pyplot.subplot](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplot.html)
+├── Input widgets
+│   └── https://docs.streamlit.io/library/api-reference/widgets
+├── streamlit.number_input()
+│   └── https://docs.streamlit.io/library/api-reference/widgets/st.number_input
+├── streamlit.slider()
+│   └── https://docs.streamlit.io/library/api-reference/widgets/st.slider
+├── streamlit.columns()
+│   └── https://docs.streamlit.io/library/api-reference/layout/st.columns
+├── Pyplot (tutorial)
+│   └── matplotlib.pyplot.yscale()
+│   └── matplotlib.scale()
+│   └── mathplotlib.pyplot.subplot()
+│       └── https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplot.html
+└── 
 ```
