@@ -49,23 +49,23 @@ class MultiApp: # Declarando que es una aplicación con múltiples páginas
                     if opt == '***Descripción***':
                         st.markdown('### Inicio')
                         st.write('En esta sección se comentará acerca de lo que se realizó en el documento.')
-                        #img02 = Image.open('../img/img02.jpg')
-                        #st.image(img02)
+                        img02 = Image.open('Parcial/P01/e1img/img02.jpg')
+                        st.image(img02)
                         
                     if opt == '***Input***':
                         st.markdown('### Input Number')
                         st.write('En esta sección se observará la distribución binomial a partir de cuadros en donde se ingresan los valores pedidos.')
-                        #img03 = Image.open('../img/img03.jpg')
-                        #st.image(img03)
+                        img03 = Image.open('Parcial/P01/e1img/img03.jpg')
+                        st.image(img03)
                         
                     if opt == '***Slider***':
                         st.markdown('### Slider')
                         st.write('En esta sección se observará la distribución binomial a partir de sliders en los cuales se seleccionaran los valores pedidos.')
-                        #img04 = Image.open('../img/img04.jpg')
-                        #st.image(img04)
+                        img04 = Image.open('Parcial/P01/e1img/img04.jpg')
+                        st.image(img04)
                 
             with C2:
-                img = Image.open('../img/img00.png')
+                img = Image.open('Parcial/P01/e1img/img00.png')
                 st.image(img)
                 
         if app == "Descripción":
