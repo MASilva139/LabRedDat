@@ -19,8 +19,8 @@ def app():
         n = st.number_input("n: (valor entre 0 y 100)", min_value=0, max_value=100, value=1, step=1) 
         p = st.number_input("p: (valor entre 0.00 y 1.00)", min_value=0.0000, max_value=1.0000, value=0.5000)
         q = (1-p)
-        img = Image.open('Parcial/P01/img/img01.png')
-        st.image(img)
+        #img = Image.open('../img/img01.png')
+        #st.image(img)
         # Generando función del binomial
         def bin(x,n,p,q):
             comb = math.comb(n,x)
