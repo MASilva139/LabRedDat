@@ -24,8 +24,8 @@ def app():
         n = st.slider("n: (valor entre 0 y 100)", min_value=0, max_value=100, value=1, step=1) 
         p = st.slider("p: (valor entre 0 y 1)", 0.0000, 1.0000, value=0.5000)
         q = (1-p)
-        #img = Image.open('../img/img01.png')
-        #st.image(img)
+        img = Image.open('Parcial/P01/e1img/img01.png')
+        st.image(img)
         # Generando función del binomial
         def bin(x,n,p,q):
             comb = math.comb(n,x)
