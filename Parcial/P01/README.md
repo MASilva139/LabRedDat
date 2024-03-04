@@ -40,3 +40,4 @@ Librerías revisadas para el examen
 ## Página
 El link de la página de streamlit es:
 * [Página de streamlit](https://f502-parcial01.streamlit.app/).
+    Debido a unos problemas se tardó un buen rato para arreglar el problema de las imágenes (causado por un .gitignore previamente hecho y que no se había tomado en consideración) que daba un error a la página a la hora de generar tanto las gráficas de las funciones binomiales (problema debido a que no leía la ubicación de las imágenes incertadas en la página, debido a que no aparecía la carpeta). Se consiguió arreglar el problema. 
