@@ -1,5 +1,5 @@
 # import pickle # Se importa la librería de pickle
-from pathlib import Path #Se importa la librería Path
+# from pathlib import Path #Se importa la librería Path
 import streamlit as st
 from streamlit_option_menu import option_menu
 from PIL import Image
@@ -7,15 +7,15 @@ from PIL import Image
 
 import P01_home, P01_inp, P01_sl
 
-st.set_page_config(
-    page_title="F502 - Examen Parcial 01", #Coloca titulo a la página
+st.set_page_config( #Configuración de la página, titulo e ícono
+    page_title="F502 - Parcial 01", #Coloca titulo a la página
     page_icon=':virgo:', #Icóno de la página
     layout="wide"
 )
 
-class MultiApp:
+class MultiApp: # Declarando que es una aplicación con múltiples páginas
     def __init__(self):
-        self.apps = []
+        self.apps = [] 
     def add_app(self, title, func):
         self.apps.append({
             "title": title,
@@ -23,11 +23,11 @@ class MultiApp:
         })
     # Configurar el inicio de la web multipágina
     def run():
-        with st.sidebar:
+        with st.sidebar: # Se hara una barra en donde estarán las diferentes páginas
             app = option_menu(
                 menu_title='Páginas ',
-                options=['Home','Inicio', 'Input Number', 'Slider'],
-                icons=['house-fill', ':wheel_of_dharma:', ':yin_yang:'],
+                options=['Home','Descripción', 'Input Number', 'Slider'], # Nombre de cada pestaña
+                icons=['house-fill', 'bezier', 'bezier2', 'body-text'], #Iconos de las pestañas
                 menu_icon='chat-text-fill',
                 default_index=1,
                 styles={
@@ -42,13 +42,11 @@ class MultiApp:
             C1, C2 = st.columns([1,4])
             with C1:
                 st.title('Contenidos')
-                st.write('En el siguiente trabajo se tendrán los siguientes contenidos:')
-                
                 tog = st.toggle('Expandir')
                 if tog:
-                    opt = st.radio('', ["***Inicio***", "***Input***", "***Slider***"])
+                    opt = st.radio('', ["***Descripción***", "***Input***", "***Slider***"])
                     
-                    if opt == '***Inicio***':
+                    if opt == '***Descripción***':
                         st.markdown('### Inicio')
                         st.write('En esta sección se comentará acerca de lo que se realizó en el documento.')
                         img02 = Image.open('Parcial/P01/img/img02.jpg')
@@ -70,7 +68,7 @@ class MultiApp:
                 img = Image.open('Img/img01.png')
                 st.image(img)
                 
-        if app == "Inicio":
+        if app == "Descripción":
             P01_home.app()
             
         if app == "Input Number":

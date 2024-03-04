@@ -1,6 +1,6 @@
 # Importando las librerias de python a utilizar
 import streamlit as st
-import plotly.express as px
+# import plotly.express as px
 import pandas as pd
 from matplotlib import pyplot as plt
 import math
@@ -14,7 +14,7 @@ def app():
     # Declarando el tamaño relativo de las columnas a emplear 
     c1, c2 = st.columns([1,3])
 
-    with c1:
+    with c1: # Configuración de la primera columna
         # Declarando las variables n, p, q para el binomial (con sliders)
         n = st.number_input("n: (valor entre 0 y 100)", min_value=0, max_value=100, value=1, step=1) 
         p = st.number_input("p: (valor entre 0.00 y 1.00)", min_value=0.0000, max_value=1.0000, value=0.5000)
@@ -31,19 +31,22 @@ def app():
         # Lista y tabla de los valores de la función binomial
         l = np.arange(n+1)
 
-        lpx = []
+        lpx = [] #haciendo el listado de los valores de px
         for xj in l:
             lpx.append(math.pow(p,int(xj)))
-        lqnx = []
+            
+        lqnx = [] #haciendo el listado de los valores de qnx
+        
         for xi in l:
             lqnx.append(math.pow(q,int(n-xi)))
+            
         pq = zip(lpx,lqnx)
         pqr = [a*b for a, b in zip(lpx,lqnx)]
 
         dt = pd.DataFrame({'x':l, 'px':lpx, 'qnx':lqnx, 'px*qnx':pq})
         dt['Pb'] = dt.apply(lambda row: bin(int(row['x']),n,p,q), axis=1)
 
-    with c2:
+    with c2: # Configuración de la segunda columna
         # Generando gráfica en steramlit
         bin_g, axis = plt.subplots()
         axis.bar(dt['x'], dt['Pb'], color='skyblue') #Estableciendo la gráfica de barras

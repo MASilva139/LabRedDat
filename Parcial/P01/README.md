@@ -20,6 +20,12 @@ Librerías revisadas para el examen
 │   └── https://docs.streamlit.io/library/api-reference/widgets
 ├── streamlit.number_input()
 │   └── https://docs.streamlit.io/library/api-reference/widgets/st.number_input
+├── streamlit.radio()
+│   └── https://docs.streamlit.io/library/api-reference/widgets/st.radio
+├── streamlit.selectbox()
+│   └── https://docs.streamlit.io/library/api-reference/widgets/st.selectbox
+├── streamlit.toggle()
+│   └── https://docs.streamlit.io/library/api-reference/widgets/st.toggle
 ├── streamlit.slider()
 │   └── https://docs.streamlit.io/library/api-reference/widgets/st.slider
 ├── streamlit.columns()
@@ -29,5 +35,5 @@ Librerías revisadas para el examen
 │   └── matplotlib.scale()
 │   └── mathplotlib.pyplot.subplot()
 │       └── https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplot.html
-└── 
+└── Streamlit.table()
 ```
