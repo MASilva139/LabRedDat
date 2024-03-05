@@ -68,7 +68,7 @@ class MultiApp: # Declarando que es una aplicación con múltiples páginas
                 img = Image.open('Parcial/P01/e1img/img00.png')
                 st.image(img)
                 
-        if app == "Descripción":
+        elif app == "Descripción":
             P01_home.app()
             
         if app == "Input Number":
