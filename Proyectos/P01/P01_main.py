@@ -1,5 +1,5 @@
 import streamlit as st
-from streamlit_option_menu import option_menu as stom
+from streamlit_option_menu import option_menu
 from PIL import Image as im
 
 import home, proyecto, final
@@ -21,7 +21,7 @@ class MultiApp:
         })
     def run():
         with st.sidebar: # Se hara una barra en donde estarán las diferentes páginas
-            app = stom(
+            app = option_menu(
                 menu_title='Páginas ',
                 options=['Inicio','Descripción', 'Proyecto', 'Conclusiones'], # Nombre de cada pestaña
                 icons=['house-fill', 'bezier', 'bezier2', 'body-text'], #Iconos de las pestañas
