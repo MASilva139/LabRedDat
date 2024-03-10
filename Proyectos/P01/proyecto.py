@@ -132,3 +132,19 @@ def app():
                 # Aplicar la función a las celdas del DataFrame
                 fgroup = group.style.applymap(Ccol, subset=['GM']).applymap(color_celda, subset=['count'])
                 st.table(fgroup)
+            
+        if opt=="Resultados" and resultados == "Gráfica 03":
+            st.markdown("## Gráfica de todos los datos (Plotly)")
+            # Gráfica y fit de los datos de toda la clase
+            data_class = pd.Series(df.squeeze().values.ravel()).value_counts().sort_index()
+            data_class = data_class.reindex(value_range, fill_value=0)
+            group_class = data_class.to_numpy()
+            todos = data_class.reset_index()
+            # group_class = pd.Series.to_numpy(data_class['count'], dtype=int)
+            # Fit
+            p0=[10,1/2]
+            res_2, cov_2 = curve_fit(fit_function, value_range, data_class, p0=p0)
+            binomial_todos = px.line(x=value_range, y=fit_function(value_range, *res_2)*(450), line_shape='spline')
+            binomial_todos.update_traces(line_color='#721422', line_width=2.5)
+            binomial_todos.add_bar(x=todos['index'], y=todos['count'], marker_color='#6C6960', name='binomial')
+            st.plotly_chart(binomial_todos)
