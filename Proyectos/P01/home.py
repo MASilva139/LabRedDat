@@ -12,8 +12,9 @@ def app():
     with c2:   
         if opt == "Marco Teórico":
             st.title("Marco Teórico")
+            # A partir de aquí se escribe para el marco teórico
             
         if opt == "Problema":
             st.title("Definición del problema o caso de estudio")
-    # with c2:
-        # if opt == ""
+            # A partir de aquí se escribe para la definición del problema
+            

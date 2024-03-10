@@ -52,10 +52,12 @@ def app():
     with c2:
         if opt == "Procedimiento":
             st.markdown("## Procedimiento Experimental")
+            # A partir de aca se escribe lo del procedimiento experimental
             
             
         if opt == "Discusión":
             st.markdown("## Discusión de Resultados")
+            # A partir de acá se escribe la discusión de resultados
             
             
         if opt=="Resultados" and resultados == "Gráfica 01":
