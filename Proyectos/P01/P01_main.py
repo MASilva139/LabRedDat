@@ -7,8 +7,7 @@ import home, proyecto, final
 st.set_page_config(
     page_title="Proyecto 01",
     page_icon=':frog:',
-    layout="wide",
-    initial_sidebar_state="collapsed"
+    layout="wide"
 )
 
 class MultiApp:
