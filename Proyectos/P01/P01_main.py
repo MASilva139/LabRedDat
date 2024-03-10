@@ -47,7 +47,6 @@ class MultiApp:
                     st.write("Para gráficar los datos, ...")
                     st.write("")
                     st.write("Se determino que . . .")
-                    # bpl = st.page_link("pages/home.py", label="Descripción")
                         
                 if opt == "Referencias":
                     st.markdown("## Referencias bibliográficas (marco teórico)")
