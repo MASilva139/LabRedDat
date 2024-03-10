@@ -97,12 +97,38 @@ def app():
             
         if opt=="Resultados" and resultados == "Gráfica 02":
             st.markdown("## Gráfica Propia (PyPlot)")
-            # Fit
-            p0=[10,1/2]
-            res, cov = curve_fit(fit_function, value_range, group_2, p0=p0)
-            # Gráfica en pyplot
-            fig, ax = plt.subplots()
-            ax.bar(value_range, group_2)
-            ax.plot(value_range, fit_function(value_range, *res)*(number), color='C3')
+            c7, c8 = st.columns([6,1.5])
+            with c7:
+                # Fit
+                p0=[10,1/2]
+                res, cov = curve_fit(fit_function, value_range, group_2, p0=p0)
+                # Gráfica en pyplot
+                fig, ax = plt.subplots(figsize=(10,6))
+                ax.bar(value_range, group_2)
+                ax.plot(value_range, fit_function(value_range, *res)*(number), color='C3')
+                
+                # Otro tipo de fit y de gráfica
+                temp = df['GM'].iloc[:number]
+                # Mostrar gráfica de pyplot
+                st.pyplot(fig)
+            with c8:
+                # Función para cambiar el color de las celdas
+                def Ccol(val):
+                    color = '#000'
+                    return f'background-color: {color}'
+                def color_celda(val):
+                    if val >= 0 and val < 5:
+                        color = '#705335' 
+                    elif val >= 5 and val < 10:
+                        color='#587246'
+                    elif val >= 10 and val < 15:
+                        color='#606E8C'
+                    elif val >= 15 and val < 20:
+                        color='#2C5545'
+                    elif val >= 20 :
+                        color='#5E2129'
+                    return f'background-color: {color}'
 
-            
+                # Aplicar la función a las celdas del DataFrame
+                fgroup = group.style.applymap(Ccol, subset=['GM']).applymap(color_celda, subset=['count'])
+                st.table(fgroup)

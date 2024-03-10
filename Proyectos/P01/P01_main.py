@@ -42,9 +42,9 @@ class MultiApp:
             with c2: 
                 if opt == "Resumen":
                     st.markdown("## Resumen del trabajo")
-                    st.write("En la siguiente práctica se procedió a realizar una aplicación web encargada de graficar los datos obtenidos, tras 100 repeticiones, al lanzar un grupo de 10 fichas. Para ello, se empleó el uso de las librerías de *NumPy*, *Pandas*, *StreamLit* y *SciPy*.")
+                    st.write("En la siguiente práctica se procedió a realizar una aplicación web encargada de graficar los datos obtenidos, tras 100 repeticiones, al lanzar un grupo de 10 fichas. Para ello, se empleó el uso de las librerías de *NumPy*, *Pandas*, *Plotly*, *MatPlotLib*, *StreamLit* y *SciPy*.")
                     st.write("")
-                    st.write("Para gráficar los datos, ...")
+                    st.write("Se realizarón 100 repeticiones para el lanzamiento de 10 fichas, en las cuales se contaron el número de caras obtenidas por cada repetición, registrandolas como *n*. ")
                     st.write("")
                     st.write("Se determino que . . .")
                         
