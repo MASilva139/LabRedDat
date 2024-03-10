@@ -13,10 +13,10 @@ st.set_page_config(
 class MultiApp:
     def __init__(self):
         self.apps = []
-    def add_app(self, tittle, function):
+    def add_app(self, tittle, func):
         self.apps.append({
             "title": tittle,
-            "function": function
+            "function": func
         })
     def run():
         with st.sidebar: # Se hara una barra en donde estarán las diferentes páginas
