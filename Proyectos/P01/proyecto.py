@@ -23,14 +23,14 @@ def app():
     # Sección de los resultados
     rlist = ['a', 'b', 'c']
     rlist02 = ['d', 'e', 'f']
-    s = ''
-
-    for i in rlist:
-        s += "- " + i + "\n"
-        for j in rlist02:
-            s += + j
-
+    # Diccionario con los valores de rlist con el valor de cada valor de rlist02
+    dic = {key: i for key, i in zip(rlist,rlist02)}
+    # Imprime cada par en el markdown
+    s = "\n".join([f'"- " {key}: {i}' for key, i in dic.items()])
+    # for i in rlist:
+    #     s += "- " + i + "\n"
     st.markdown(s)
+        
     st.write(
         """
         En la presente sección se presentarán los resultados obtenidos en la presente práctica, de los cuales están divididos en
