@@ -13,9 +13,22 @@ def app():
     
     st.markdown("## **Procedimiento Experimental**")
     # Sección del procedimiento del proyecto
+    st.write(
+        """
+        En la presente práctica se llevó a cabo el lanzamiento de diez monedas para cada repetición, siendo un total de cien repeticiones, de las cuales en cada una de estas se contaban el número de fichas que caían cara. En caso de que alguna de las fichas fuese interrumpida por alguna cosa, se procedia a repetir el tiro de dicha moneda para completar el conteo de caras. 
+        """
+    )
     
     st.markdown("## **Resultados**")
     # Sección de los resultados
+    rlist = ['a', 'b', 'c']
+
+    s = ''
+
+    for i in rlist:
+        s += "- " + i + "\n"
+
+    st.markdown(s)
     st.write(
         """
         En la presente sección se presentarán los resultados obtenidos en la presente práctica, de los cuales están divididos en

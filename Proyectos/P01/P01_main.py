@@ -45,7 +45,7 @@ class MultiApp:
                     st.write("")
                     st.write("Se realizarón 100 repeticiones para el lanzamiento de 10 fichas, en las cuales se contaron el número de caras obtenidas por cada repetición, registrandolas como *n*. A partir de los datos obtenidos, convirtiendo las *n* caras por cada repetición, se realizarón las tablas con la librería de **Pandas.DataFrame()** y a partir de estas se hicieron las graficas de **Plotly.Expres** y **PyPlot**. Para el fit se usa el arreglo de **Numpy**, además de utilizar la función **curve_fit** de la librería de **scipy.optimize**.")
                     st.write("")
-                    st.write("Se lograron realizar buenos ajustes de la curva, a partir de la función binomial, obteniendo una gráfica identica tanto a partir de la importación de la función binomial a partir del modulo **stats** de la librería de **scipy**, como de la definición de la función binomial a partir de los parámetros *n*, *x* y *p*, empleando el comando **def**.")
+                    st.write("Se lograron realizar buenos ajustes de la curva, empleando para ello la libreria de ***Plotly.Express***, a partir de la función binomial, obteniendo una gráfica identica tanto a partir de la importación de la función binomial a partir del modulo **stats** de la librería de **scipy**, como de la definición de la función binomial a partir de los parámetros *n*, *x* y *p*, empleando el comando **def**.")
                 
                     st.markdown("## Marco Teórico")
                     # A partir de aquí se escribe para el marco teórico
