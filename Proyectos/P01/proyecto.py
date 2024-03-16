@@ -20,12 +20,9 @@ def app():
         """
         En la presente sección se presentarán los resultados obtenidos en la presente práctica, de los cuales están divididos en
         """
-    )
-    st.markdown(
         '''
-        <ol>
-            <li><b>Gráfica 01</b>: Gráfica de los valores propios, utilizando Plotly.</li>
-        </ol>
+        1. **Gráfica 01**: Gráfica de los valores propios, utilizando Plotly.
+        2. **Gráfica 02**: Gráfica de los datos de todos los grupos del laboratorio.
         '''
     )
     
