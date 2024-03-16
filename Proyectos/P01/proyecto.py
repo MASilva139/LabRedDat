@@ -19,6 +19,7 @@ def app():
     st.write(
         """
         En la presente sección se presentarán los resultados obtenidos en la presente práctica, de los cuales están divididos en
+        """
         r'''
         $$
         \begin{enumerate}
@@ -27,7 +28,6 @@ def app():
         \end{enumerate}
         $$
         '''
-        """
     )
     
     c1, c2 = st.columns([1,4])
