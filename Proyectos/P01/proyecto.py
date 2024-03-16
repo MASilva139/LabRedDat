@@ -21,25 +21,20 @@ def app():
     
     st.markdown("## **Resultados**")
     # Sección de los resultados
-    rlist = ['a', 'b', 'c']
-    rlist02 = ['d', 'e', 'f']
+    rlist = ['**Gráfica 01**', '**Gráfica 02**', '**Gráfica 03**']
+    rlist02 = ['Gráfica de los valores propios, utilizando Plotly.', 'Gráfica de los datos de todos los grupos del laboratorio.', 'f']
     # Diccionario con los valores de rlist con el valor de cada valor de rlist02
     dic = {key: i for key, i in zip(rlist,rlist02)}
     # Imprime cada par en el markdown
     s = "\n".join([f'- {key}: {i}' for key, i in dic.items()])
     # for i in rlist:
     #     s += "- " + i + "\n"
-    st.markdown(s)
-        
     st.write(
         """
-        En la presente sección se presentarán los resultados obtenidos en la presente práctica, de los cuales están divididos en
+        En la presente sección se presentarán los resultados obtenidos en la presente práctica, de los cuales están divididos en:
         """
-        '''
-        1. **Gráfica 01**: Gráfica de los valores propios, utilizando Plotly.
-        2. **Gráfica 02**: Gráfica de los datos de todos los grupos del laboratorio.
-        '''
     )
+    st.markdown(s)
     
     c1, c2 = st.columns([1,4])
     with c1:
