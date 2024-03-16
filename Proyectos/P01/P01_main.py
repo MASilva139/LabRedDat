@@ -90,6 +90,19 @@ class MultiApp:
                         \sigma=\sqrt{npq}=\sqrt{np(1-p)}
                         $$
                         '''
+                        """
+                        ### Fit distribución binomial
+                    
+                        La librería `scipy.optimize` permite crear un fit personalizado con la opción `curve_fit()`, la cual
+                        utiliza mínimos cuadrados no lineales para ajustar una función, $$f$$, a los datos proporcionados.
+                    
+                        La síntaxis del comando es la siguiente:
+                    
+                        ```python
+                        scipy.optimize.curve_fit(f, xdata, ydata, p0=None, sigma=None, absolute_sigma=False, check_finite=None, bounds=(-inf, inf), method=None, jac=None, *, full_output=False, nan_policy=None, **kwargs)
+                        ```
+                        Puede verse la documentación completa [aquí](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html).
+                        """
                     )
                     st.markdown("## Definición del problema o caso de estudio")
                     st.write('El presente trabajo tiene como proposito el determinar, de manera experimental, la distribución de probabilidad que presenta el lanzamiento de monedas, de las cuales se sabe que el resultado de cada moneda lanzada es de caracter arbitrario. ')
