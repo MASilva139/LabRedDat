@@ -2,7 +2,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 from PIL import Image as im
 
-import home, proyecto, final
+import proyecto, final
 
 st.set_page_config(
     page_title="Proyecto 01",
@@ -25,7 +25,7 @@ class MultiApp:
                 options=['Inicio', 'Proyecto', 'Conclusiones'], # Nombre de cada pestaña
                 icons=['house-fill', 'bezier', 'body-text'], #Iconos de las pestañas
                 menu_icon='alt',
-                default_index=0,
+                default_index=0, # En este se define la primera página en mostrarse
                 styles={
                     "container": {"padding": "5!important", "background-color":'black'},
                     "icon":{"color":"white", "font-size":"16px"},
