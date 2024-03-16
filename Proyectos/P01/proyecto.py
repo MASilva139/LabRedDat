@@ -23,8 +23,8 @@ def app():
         r'''
         $$
         \begin{enumerate}
-            \item[*] \textbold{Gráfica 01}: Gráfica de los valores propios, utilizando Plotly.
-            \item[*] \textbold{Gráfica 02}: Gráfica de los datos de todos los grupos del laboratorio.
+            \item[*] \textbf{Gráfica 01}: Gráfica de los valores propios, utilizando Plotly.
+            \item[*] \textbf{Gráfica 02}: Gráfica de los datos de todos los grupos del laboratorio.
         \end{enumerate}
         $$
         '''
