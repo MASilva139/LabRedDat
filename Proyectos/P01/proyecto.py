@@ -16,6 +16,19 @@ def app():
     
     st.markdown("## **Resultados**")
     # Sección de los resultados
+    st.write(
+        """
+        En la presente sección se presentarán los resultados obtenidos en la presente práctica, de los cuales están divididos en
+        r'''
+        $$
+        \begin{enumerate}
+            \item[*] \textbold{Gráfica 01}: Gráfica de los valores propios, utilizando Plotly.
+            \item[*] \textbold{Gráfica 02}: Gráfica de los datos de todos los grupos del laboratorio.
+        \end{enumerate}
+        $$
+        '''
+        """
+    )
     
     c1, c2 = st.columns([1,4])
     with c1:

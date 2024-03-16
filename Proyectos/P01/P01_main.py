@@ -51,14 +51,14 @@ class MultiApp:
                     # A partir de aquí se escribe para el marco teórico
                     st.write(
                         """
-                        ## Distribución binomial
+                        ### Distribución binomial
                     
                         Es una distribución de probabilidad discreta que cuenta la cantidad de éxitos en $$n$$ casos con una
                         probabilidad fija $$p$$. Se caracteriza porque únicamente existe dos casos: éxito y fracaso. Además la
                         probabilidad $$p$$ es fija, lo que quiere decir que la probabilidad de éxito o fracaso en cada uno de
                         los casos no depende de lo que haya sucedido en el anterior.
                     
-                        ### Fórmula
+                        #### Fórmula
                         """
                         r'''
                         $$
@@ -73,7 +73,7 @@ class MultiApp:
                         Donde $$P_b(x,n)$$ es la probabilidad de $$x$$ aciertos en $$n$$ ensayos, cada uno con probabilidad
                         $$p$$.
                     
-                        ### Media y desviación estándar
+                        #### Media y desviación estándar
                     
                         La media de una distribución binomial es de la forma:
                         """
@@ -92,6 +92,7 @@ class MultiApp:
                         '''
                     )
                     st.markdown("## Definición del problema o caso de estudio")
+                    st.write('El presente trabajo tiene como proposito el determinar, de manera experimental, la distribución de probabilidad que presenta el lanzamiento de monedas, de las cuales se sabe que el resultado de cada moneda lanzada es de caracter arbitrario. ')
                         
                 if opt == "Referencias":
                     st.markdown("## Referencias bibliográficas (marco teórico)")
