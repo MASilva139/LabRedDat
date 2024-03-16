@@ -86,6 +86,7 @@ def app():
                 st.plotly_chart(binomial)
                 st.write(f'El valor de n es: {res[0]}')
                 st.write(f'El valor de p es: {res[1]}')
+                st.table(df)
                 
             with c4:
                 # Función para cambiar el color de las celdas
