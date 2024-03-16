@@ -22,11 +22,12 @@ def app():
     st.markdown("## **Resultados**")
     # Sección de los resultados
     rlist = ['a', 'b', 'c']
-
+    rlist02 = ['d', 'e', 'f']
     s = ''
 
     for i in rlist:
-        s += "- " + i + "\n"
+        for j in rlist02:
+            s += "- " + i + j + "\n"
 
     st.markdown(s)
     st.write(
