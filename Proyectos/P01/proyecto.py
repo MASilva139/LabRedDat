@@ -86,7 +86,7 @@ def app():
                 st.plotly_chart(binomial)
                 st.write(f'El valor de n es: {res[0]}')
                 st.write(f'El valor de p es: {res[1]}')
-                st.table(df)
+                st.table(group_2)
                 
             with c4:
                 # Función para cambiar el color de las celdas
@@ -111,22 +111,27 @@ def app():
                 st.table(fgroup)
             
         if resultados == "Gráfica 03":
-            st.markdown("## Gráfica de todos los datos (Plotly)")
-            # Gráfica y fit de los datos de toda la clase
-            data_class = pd.Series(df.iloc[:number].squeeze().values.ravel()).value_counts().sort_index()
-            data_class = data_class.reindex(value_range, fill_value=0)
-            group_class = data_class.to_numpy()
-            todos = data_class.reset_index()
-            # group_class = pd.Series.to_numpy(data_class['count'], dtype=int)
-            # Fit
-            p0=[10,1/2]
-            res_2, cov_2 = curve_fit(fit_function, value_range, data_class, p0=p0, bounds=[(0,0), (np.inf,1)])
-            binomial_todos = px.line(x=value_range, y=fit_function(value_range, *res_2)*(number*6), line_shape='spline')
-            binomial_todos.update_traces(line_color='#721422', line_width=2.5)
-            binomial_todos.add_bar(x=todos['index'], y=todos['count'], marker_color='#6C6960', name='binomial')
-            st.plotly_chart(binomial_todos)
-            st.write(f'El valor de n es: {res_2[0]}')
-            st.write(f'El valor de p es: {res_2[1]}')
+            
+            c5, c6 = st.columns([6,1.5])
+            with c5:
+                st.markdown("## Gráfica de todos los datos (Plotly)")
+                # Gráfica y fit de los datos de toda la clase
+                data_class = pd.Series(df.iloc[:number].squeeze().values.ravel()).value_counts().sort_index()
+                data_class = data_class.reindex(value_range, fill_value=0)
+                group_class = data_class.to_numpy()
+                todos = data_class.reset_index()
+                # group_class = pd.Series.to_numpy(data_class['count'], dtype=int)
+                # Fit
+                p0=[10,1/2]
+                res_2, cov_2 = curve_fit(fit_function, value_range, data_class, p0=p0, bounds=[(0,0), (np.inf,1)])
+                binomial_todos = px.line(x=value_range, y=fit_function(value_range, *res_2)*(number*6), line_shape='spline')
+                binomial_todos.update_traces(line_color='#721422', line_width=2.5)
+                binomial_todos.add_bar(x=todos['index'], y=todos['count'], marker_color='#6C6960', name='binomial')
+                st.plotly_chart(binomial_todos)
+                st.write(f'El valor de n es: {res_2[0]}')
+                st.write(f'El valor de p es: {res_2[1]}')
+            with c6:
+                st.table(todos)
 
     st.markdown("## **Discusión de Resultados**")
     # Sección de los resultados
