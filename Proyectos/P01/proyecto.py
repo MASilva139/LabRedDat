@@ -26,8 +26,8 @@ def app():
     s = ''
 
     for i in rlist:
-        for j in i:
-            s += "- " + i.append(rlist02) + "\n"
+        for j in rlist02:
+            s += "- " + i.j + "\n"
 
     st.markdown(s)
     st.write(
