@@ -20,13 +20,12 @@ def app():
         """
         En la presente sección se presentarán los resultados obtenidos en la presente práctica, de los cuales están divididos en
         """
-        r'''
-        $$
-        \begin{enumerate}
-            \item[*] \textbf{Gráfica 01}: Gráfica de los valores propios, utilizando Plotly.
-            \item[*] \textbf{Gráfica 02}: Gráfica de los datos de todos los grupos del laboratorio.
-        \end{enumerate}
-        $$
+    )
+    st.markdown(
+        '''
+        <ol>
+            <li><b>Gráfica 01</b>: Gráfica de los valores propios, utilizando Plotly.</li>
+        </ol>
         '''
     )
     
