@@ -26,7 +26,7 @@ def app():
     # Diccionario con los valores de rlist con el valor de cada valor de rlist02
     dic = {key: i for key, i in zip(rlist,rlist02)}
     # Imprime cada par en el markdown
-    s = "\n".join([f'"- " {key}: {i}' for key, i in dic.items()])
+    s = "\n".join([f'- {key}: {i}' for key, i in dic.items()])
     # for i in rlist:
     #     s += "- " + i + "\n"
     st.markdown(s)
