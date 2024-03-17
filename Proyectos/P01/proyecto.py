@@ -39,7 +39,7 @@ def app():
     if expa3:
         st.write(
             '''
-            1. Se convirtió a una tabla ``numpy`` la tabla de pandas ``pandas`` que contiene los datos de los tiros.
+            1. Se convirtió a una tabla ``numpy`` la tabla de ``pandas`` que contiene los datos de los tiros.
             2. Se definieron los parámetros para el ajuste de la gráfica (fit) con el comando ``curve_fit`` de ``scipy.optimize``.
             3. Se generó la gráfica utilizando la librería de ``Plotly.Express`` dentro de la variable ``binomial``.
             4. Se gráfico el arreglo, junto con el histograma, en streamlit con el comando ``streamlit.plotly_chart()``.
