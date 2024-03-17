@@ -29,9 +29,11 @@ def app():
             '''
             1. Se definió la función del binomio a partir del comando ``def`` (de igual forma se utlizó la función incluida dentro de ``scipy``, ``stats.binom()``).
             2. Se configuró un ``st.slider()``.
-            3. Se 
+            3. Se creó una tabla con ``pandas`` para los datos de  los tiros.
             4. Se programó el conteo de caras dentro de la lista de datos obtenida en la parte experimental.
-            5. 
+            5. Se convirtió a una tabla ``numpy`` la tabla del paso (4).
+            6. Se definieron los parámetros para la gráfica con el comando ``curve_fit`` de ``scipy.optimize``.
+            7. Se generó la gráfica utilizando la librería de ``Plotly.Express`` dentro de la variable ``binomial``.
             '''
         )
     
