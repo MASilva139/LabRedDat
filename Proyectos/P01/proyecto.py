@@ -13,28 +13,27 @@ def app():
     
     st.markdown("## **Procedimiento Experimental**")
     # Sección del procedimiento del proyecto
-    st.write(
-        """
-        En la presente práctica se llevó a cabo el lanzamiento de diez monedas para cada repetición, siendo un total de cien repeticiones, de las cuales en cada una de estas se contaban el número de fichas que caían cara. En caso de que alguna de las fichas fuese interrumpida por alguna circunstancia, se procedia a repetir el tiro de dicha moneda para completar el conteo de caras. A partir de ello se procedió de la siguiente manera
-        
-        #### Datos de la distribución (parte experimental)
-        """
-        '''
-        1. Se lanzaron 10 monedas.
-        2. Se anotaron la cantidad de caras obtenidas entre las 10 monedas lanzadas.
-        3. Se repitieron los pasos (1) y (2) un total de 100 veces.
-        '''
-        """
-        #### Distribución binomial (gráficas de los datos)
-        """
-        '''
-        1. Se definió la función del binomio a partir del comando ``def`` (de igual forma se utlizó la función incluida dentro de ``scipy``, ``stats.binom()``).
-        2. Se configuró un ``st.slider()``.
-        3. Se 
-        4. Se programó el conteo de caras dentro de la lista de datos obtenida en la parte experimental.
-        5. 
-        '''
-    )
+    st.write("""En la presente práctica se llevó a cabo el lanzamiento de diez monedas para cada repetición, siendo un total de cien repeticiones, de las cuales en cada una de estas se contaban el número de fichas que caían cara. En caso de que alguna de las fichas fuese interrumpida por alguna circunstancia, se procedia a repetir el tiro de dicha moneda para completar el conteo de caras. A partir de ello se procedió de la siguiente manera""")
+    expa1 = st.toggle("##### Datos de la distribución (parte experimental)")
+    if expa1:
+        st.write(
+            '''
+            1. Se lanzaron 10 monedas.
+            2. Se anotaron la cantidad de caras obtenidas entre las 10 monedas lanzadas.
+            3. Se repitieron los pasos (1) y (2) un total de 100 veces.
+            '''
+        )
+    expa2 = st.toggle("##### Distribución binomial (gráficas de los datos)")
+    if expa2:
+        st.write(
+            '''
+            1. Se definió la función del binomio a partir del comando ``def`` (de igual forma se utlizó la función incluida dentro de ``scipy``, ``stats.binom()``).
+            2. Se configuró un ``st.slider()``.
+            3. Se 
+            4. Se programó el conteo de caras dentro de la lista de datos obtenida en la parte experimental.
+            5. 
+            '''
+        )
     
     st.markdown("## **Resultados**")
     # Sección de los resultados
