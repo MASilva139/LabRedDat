@@ -215,4 +215,14 @@ def app():
 
     st.markdown("## **Discusión de Resultados**")
     # Sección de los resultados
-    
+    st.write(
+        """
+        A partir de los datos obtenidos, presentados en la columna **GM**, en la tabla de datos originales (véase apartado ***Tabla 01***) se procede a determinar el histograma presentado en el apartado ***Gráfica 01***, la cual va presentando con respecto al valor presentado en el slider el conteo de caras obtenidos dicha repetición. Dichos datos pueden verse representados en la tabla que se encuentra a la par de la gráfica. De igual manera, se tiene una gràfica que presenta los datos de todos los grupos que realizaron la práctica (véase el apartado ***Gráfica 02***).
+        
+        Cabe a resaltar que tanto la gráfica generada a partir de la función ``stats.binom()``, como la función ``def``, dan el mismo resultado; es decir, generan la misma gráfica de barras y de ajuste, por lo que se optó solamente a utiizar una de estas funciones para realizar los fits. De igual manera, por comodidad y sobre todo por estética, se prefirio utilizar la gráfica generada por la librería de ``Plotly.Express``, dado que no solamente presenta la gráfica de la función de ajuste con una curva suave, sino que también permite observar, por medio de un zoom, de mejor manera la función de ajuste.
+        
+        A partir del valor de $$p$$ presentado en la tabla **Valores de $$n$$ y $$p$$**, de la **Gráfica 01**,  se tiene que $$p=0,5723 [\dots]$$ cuando $$m=19$$, mostrando una alta desviación con respecto al valor teórico $$p=0,50$$, siendo este valor el que mayor desviación presenta, dado que posteriormente se llega a normalizar; mientras que para los primeros tres valores $$m=1, 2, 3$$, se tiene que $p=0,5$. Por lo tanto, con lo previamente mencionado se puede concluir que la curva de ajuste realizada (``def``) presenta una buena aproximación, con respecto al modelo original.
+        
+        Sin embargo, en el apartado **Gráfica 02**, se tiene que el mayor valor que $$p$$ tiene es de $$0,521678$$ para un $$m=5$$, pero a cambio de ello se puede observar que para la mayoría de los valores de $$m$$ se tiene que el valor de $$p$$ oscila entre $$0,47<p<0,5002$$.
+        """
+    )
