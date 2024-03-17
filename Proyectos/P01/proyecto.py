@@ -83,6 +83,13 @@ def app():
                 tdp = pd.DataFrame({'n': [res[0]], 'p': [res[1]]})
                 tdpr =tdp.round(10).astype(str)
                 st.table(tdpr)
+                med = res[0]*res[1]
+                desv = math.sqrt(res[0]*res[1]*(1-res[1]))
+                tmd = pd.DataFrame({'μ': [med], 'σ': [desv]})
+                tmdr = tmd.round(9).astype(str)
+                
+                st.markdown("##### Valores de $$\mu$$ y $$\sigma$$")
+                st.table(tmdr)
             
             # Gráfica y fit de los datos de toda la clase
             data_class = pd.Series(df.iloc[:number].squeeze().values.ravel()).value_counts().sort_index()
@@ -102,6 +109,13 @@ def app():
                 tdp = pd.DataFrame({'n': [res_2[0]], 'p': [res_2[1]]})
                 tdpr =tdp.round(10).astype(str)
                 st.table(tdpr)
+                med = res_2[0]*res_2[1]
+                desv = math.sqrt(res_2[0]*res_2[1]*(1-res_2[1]))
+                tmd = pd.DataFrame({'μ': [med], 'σ': [desv]})
+                tmdr = tmd.round(9).astype(str)
+                
+                st.markdown("##### Valores de $$\mu$$ y $$\sigma$$")
+                st.table(tmdr)
             
         with c2:
             if resultados == "Gráfica 01":
@@ -174,3 +188,4 @@ def app():
 
     st.markdown("## **Discusión de Resultados**")
     # Sección de los resultados
+    

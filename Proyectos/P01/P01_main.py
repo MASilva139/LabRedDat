@@ -40,7 +40,7 @@ class MultiApp:
                 opt = st.radio("", ["Proyecto", "Referencias"], label_visibility="collapsed")
             with c2: 
                 if opt == "Proyecto":
-                    st.markdown("## Resumen del trabajo")
+                    st.markdown("## Resumen / Caso de estudio")
                     st.write("En la siguiente práctica se procedió a realizar una aplicación web encargada de graficar los datos obtenidos, tras 100 repeticiones, al lanzar un grupo de 10 fichas. Para ello, se emplearon las librerías de *NumPy*, *Pandas*, *Plotly.Express*, *MatPlotLib*, *StreamLit* y *SciPy*.")
                     st.write("")
                     st.write("Se realizarón 100 repeticiones para el lanzamiento de 10 fichas, en las cuales se contaron el número de caras obtenidas por cada repetición, registrandolas como *n*. A partir de los datos obtenidos, convirtiendo las *n* caras por cada repetición, se realizarón las tablas con la librería de **Pandas.DataFrame()** y a partir de estas se hicieron las graficas de **Plotly.Expres** y **PyPlot**. Para el fit se usa el arreglo de **Numpy**, además de utilizar la función **curve_fit** de la librería de **scipy.optimize**.")
@@ -104,8 +104,6 @@ class MultiApp:
                         Puede verse la documentación completa [aquí](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html).
                         """
                     )
-                    st.markdown("## Definición del problema o caso de estudio")
-                    st.write('El presente trabajo tiene como proposito el determinar, de manera experimental, la distribución de probabilidad que presenta el lanzamiento de monedas, de las cuales se sabe que el resultado de cada moneda lanzada es de caracter arbitrario. ')
                         
                 if opt == "Referencias":
                     st.markdown("## Referencias bibliográficas (marco teórico)")
