@@ -109,7 +109,7 @@ class MultiApp:
                         
                 if opt == "Referencias":
                     st.markdown("## Referencias bibliográficas (marco teórico)")
-                    wpages1 = ["a", '']
+                    wpages1 = ["Scipy Inc. (n.d.). Scipy.Optimize. Recuperado de https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html", '']
                     st.write(wpages1)
                     
                     
