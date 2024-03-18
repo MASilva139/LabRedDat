@@ -115,8 +115,14 @@ def app():
                 tmd = pd.DataFrame({'μ': [med], 'σ': [desv]})
                 tmdr = tmd.round(9).astype(str)
                 
+                mexp = np.sum(group_2*value_range)/number
+                dexp = math.sqrt(np.sum(group_2*(((value_range)-mexp)**2))/(number-1))
+                tmdexp = pd.DataFrame({'$$μ_{exp}$$': [mexp], '$$σ_{exp}$$': [dexp]})
+                tmdre = tmdexp.round(9).astype(str)
+                
                 st.markdown("##### Valores de $$\mu$$ y $$\sigma$$")
                 st.table(tmdr)
+                st.table(tmdre)
             
             # Gráfica y fit de los datos de toda la clase
             data_class = pd.Series(df.iloc[:number].squeeze().values.ravel()).value_counts().sort_index()
@@ -141,8 +147,14 @@ def app():
                 tmd = pd.DataFrame({'μ': [med], 'σ': [desv]})
                 tmdr = tmd.round(9).astype(str)
                 
+                media_2 = np.sum(group_class*value_range)/(number*6)
+                desv_2 = math.sqrt(np.sum(group_class*(((value_range)-media_2)**2))/((number*6)-1))
+                tmdexp2 = pd.DataFrame({'$$μ_{exp}$$': [media_2], '$$σ_{exp}$$': [desv_2]})
+                tmdre2 = tmdexp2.round(9).astype(str)
+                
                 st.markdown("##### Valores de $$\mu$$ y $$\sigma$$")
                 st.table(tmdr)
+                st.table(tmdre2)
             
         with c2:
             if resultados == "Gráfica 01":
