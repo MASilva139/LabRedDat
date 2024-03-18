@@ -235,6 +235,6 @@ def app():
         
         A partir del valor de $$p$$ presentado en la tabla **Valores de $$n$$ y $$p$$**, de la **Gráfica 01**,  se tiene que $$p=0,5723 [\dots]$$ cuando $$m=19$$, mostrando una alta desviación con respecto al valor teórico $$p=0,50$$, siendo este valor el que mayor desviación presenta, dado que posteriormente se llega a normalizar; mientras que para los primeros tres valores $$m=1, 2, 3$$, se tiene que $p=0,5$. Por lo tanto, con lo previamente mencionado se puede concluir que la curva de ajuste realizada (``def``) presenta una buena aproximación, con respecto al modelo original.
         
-        Sin embargo, en el apartado **Gráfica 02**, se tiene que el mayor valor que $$p$$ tiene es de $$0,521678$$ para un $$m=5$$, pero a cambio de ello se puede observar que para la mayoría de los valores de $$m$$ se tiene que el valor de $$p$$ oscila entre $$0,47<p<0,5002$$.
+        Sin embargo, en el apartado **Gráfica 02**, se tiene que el mayor valor que $$p$$ tiene es de $$0,521678$$ para un $$m=5$$, pero a cambio de ello se puede observar que para la mayoría de los valores de $$m$$ se tiene que el valor de $$p$$ oscila entre $$0,47<p<0,5002$$. Además, también se tiene que la media, $$\mu$$, y desviación media $$\sigma$$ del fit difieren en mayor o menor medida, depediendo del número de datos, con los valores de la media ($$\mu_{e}$$) y desviación media ($$\sigma_{e}$$) experimentales. 
         """
     )
