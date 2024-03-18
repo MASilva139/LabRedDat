@@ -117,7 +117,7 @@ def app():
                 
                 mexp = np.sum(group_2*value_range)/number
                 dexp = math.sqrt(np.sum(group_2*(((value_range)-mexp)**2))/(number-1))
-                tmdexp = pd.DataFrame({'$$μ_{exp}$$': [mexp], '$$σ_{exp}$$': [dexp]})
+                tmdexp = pd.DataFrame({'μe': [mexp], 'σe': [dexp]})
                 tmdre = tmdexp.round(9).astype(str)
                 
                 st.markdown("##### Valores de $$\mu$$ y $$\sigma$$")
@@ -149,7 +149,7 @@ def app():
                 
                 media_2 = np.sum(group_class*value_range)/(number*6)
                 desv_2 = math.sqrt(np.sum(group_class*(((value_range)-media_2)**2))/((number*6)-1))
-                tmdexp2 = pd.DataFrame({'$$μ_{exp}$$': [media_2], '$$σ_{exp}$$': [desv_2]})
+                tmdexp2 = pd.DataFrame({'μe': [media_2], 'σe': [desv_2]})
                 tmdre2 = tmdexp2.round(9).astype(str)
                 
                 st.markdown("##### Valores de $$\mu$$ y $$\sigma$$")
