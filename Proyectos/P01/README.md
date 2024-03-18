@@ -1,5 +1,5 @@
 # Proyecto 01
-En este proyecto se realizó ...
+En este proyecto se realizó un ajuste de la función binomial con respecto a un experimento práctico, en donde se observaba la tendencia de un modelo de distribución binomial en el lanzamiento simultáneo de 10 monedas en un total de 100 repeticiones, contando en cada una de estas la cantidad de caras obtenidas.
 
 ## Integrantes del proyecto
 
