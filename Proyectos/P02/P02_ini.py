@@ -36,11 +36,6 @@ try:
             with stycont(
                 key="opt_menu",
                 css_styles="""
-                div[data-textid="stVerticalBlockBorderWrapper"] {
-                    position= sticky;
-                    border-radius=1em;
-                    background-color=black;
-                }
                 """,
             ):
                 st.session_state.app = option_menu(
