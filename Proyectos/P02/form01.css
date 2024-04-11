@@ -17,13 +17,13 @@
 
 .st-emotion-cache-0.e1f1d6gn0 {
     position: sticky;
-    /* top:10%; */
-    z-index: 10000;
+    top:5%;
+    z-index: 1000;
     border-radius: 1em;
 }
 
 .st-emotion-cache-ocqkz7.e1f1d6gn5 {
-    z-index: -1;
+    /* z-index: -1; */
     background-color: linear-gradient(315deg, aqua 95%);
     background-attachment: fixed;
     border-radius: 1em;
