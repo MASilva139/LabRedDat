@@ -1,9 +1,11 @@
 .stApp > header {
     display: none;
+    /* background-color: transparent; */
 }
 
 .stApp {
     margin-top: -5%;
+    top: 0;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     overflow: auto;
     padding: 0;
@@ -15,7 +17,7 @@
 
 .st-emotion-cache-0.e1f1d6gn0 {
     position: sticky;
-    top:10%;
+    top:15%;
     z-index: 10000;
     border-radius: 1em;
 }

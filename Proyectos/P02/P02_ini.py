@@ -11,7 +11,7 @@ import proyecto, inicio
 #st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
 try:
     st.set_page_config(
-        page_title="Proyecto 01",
+        page_title="Proyecto 02",
         page_icon=':shinto_shrine:',
         layout="wide"
     )
