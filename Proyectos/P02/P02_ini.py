@@ -39,6 +39,7 @@ try:
                 div[data-textid="stVerticalBlockBorderWrapper"] {
                     position= sticky;
                     border-radius=1em;
+                    background-color=black;
                 }
                 """,
             ):
