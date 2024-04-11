@@ -9,4 +9,10 @@ import math
 from scipy.special import comb
 
 def app():
+    with open('Proyectos/P02/form01.css') as f:
+        css = f.read()
+
+    # Añade tu CSS
+    st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
+    
     st.title('Distribución Binomial en lanzamiento de monedas')
