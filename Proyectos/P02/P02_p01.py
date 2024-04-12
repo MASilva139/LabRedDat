@@ -5,10 +5,12 @@ from scipy import stats
 from scipy.optimize import curve_fit
 from streamlit_option_menu import option_menu
 from streamlit_extras.stylable_container import stylable_container as stycont
+from streamlit.components.v1 import html
 import streamlit as st
 import matplotlib.pyplot as plt
 import math
 from scipy.special import comb
+from PIL import Image as im
 
 def app():
     with open('Proyectos/P02/form01.css') as f:
@@ -19,10 +21,65 @@ def app():
     
     st.title('Proyecto 02: Predicción de COVID19')
     
-    # st.title('Proyecto 01: Distribución binomial en lanzamiento de monedas')
+    #########################################################
+    ##                       javascript                    ##
+    #########################################################
+    # Define tu JavaScript
+    # bjs = """
+    # function handleClick() {
+    #     // Obtén una referencia a los botones de radio y al elemento de texto
+    #     var radios = document.getElementsByClassName('miRadio');
+    #     var texto = document.getElementById('texto');
+
+    #     // Cambia el color de fondo y el color del texto del botón de radio cuando se selecciona
+    #     for (var i = 0; i < radios.length; i++) {
+    #         radios[i].style.backgroundColor = 'green';
+    #         radios[i].style.color = 'white';
+
+    #         // Muestra el texto correspondiente
+    #         if (radios[i].checked) {
+    #             if (radios[i].value == 'Proyecto') {
+    #                 texto.innerHTML = '<h2>Proyecto</h2>';
+    #             } else if (radios[i].value == 'Referencias') {
+    #                 texto.innerHTML = '<h2>Referencias</h2>';
+    #             }
+    #         }
+    #     }
+    # }
+
+    # // Agrega un manejador de eventos para el evento 'click' a cada botón de radio
+    # window.onload = function() {
+    #     var radios = document.getElementsByClassName('miRadio');
+    #     for (var i = 0; i < radios.length; i++) {
+    #         radios[i].addEventListener('click', handleClick);
+    #     }
+    # };
+    # """
+    # # Define tu HTML para los botones de radio
+    # html_radio = """
+    # <input type="radio" id="proyecto" name="miRadio" class="miRadio" value="Proyecto">
+    # <label for="proyecto">Proyecto</label><br>
+    # <input type="radio" id="referencias" name="miRadio" class="miRadio" value="Referencias">
+    # <label for="referencias">Referencias</label><br>
+    # <script>{}</script>
+    # """.format(bjs)
+    # # Define tu HTML para el texto
+    # html_texto = """
+    # <div id="texto"></div>
+    # """
+    
     c1, c2 = st.columns([1,5])
     with c1:
+        #########################################################
+        ##                       st.radio()                    ##
+        #########################################################
+        
         opt = st.radio("", ["Proyecto", "Referencias"], label_visibility="collapsed")
+        
+        #########################################################
+        ##                       contenedor                    ##
+        #########################################################
+        
         # with stycont(
         #         key="menu-01",
         #         css_styles="""
@@ -43,16 +100,23 @@ def app():
         #             "nav-link-selected":{"background-color":"darkolivegreen"}
         #         }
         #     )
+        
+        #########################################################
+        ##                       javascript                    ##
+        #########################################################
+        # html(html_radio)
+        
     with c2: 
+        #########################################################
+        ##                       st.radio                      ##
+        #########################################################
         if opt == "Proyecto":
-            
             st.markdown("## Resumen / Caso de estudio")
             st.write("En la siguiente práctica se procedió a realizar una aplicación web encargada de graficar los datos obtenidos, tras 100 repeticiones, al lanzar un grupo de $$10$$ fichas. Para ello, se emplearon las librerías de ``NumPy``, ``Pandas``, ``Plotly.Express``, ``MatPlotLib``, ``StreamLit`` y ``SciPy``.")
             st.write("")
             st.write("Se realizarón $$100$$ repeticiones para el lanzamiento de $$10$$ fichas, en las cuales se contaron el número de caras obtenidas por cada repetición, registrandolas como $$n$$. A partir de los datos obtenidos, convirtiendo las *n* caras por cada repetición, se realizarón las tablas con la librería de ``Pandas.DataFrame()`` y a partir de estas se hicieron las graficas de ``Plotly.Expres`` y ``PyPlot``. Para el fit se usa el arreglo de ``Numpy``, además de utilizar la función ``curve_fit`` de la librería de ``scipy.optimize``.")
             st.write("")
             st.write("Se lograron realizar buenos ajustes de la curva, empleando para ello la libreria de ``Plotly.Express``, a partir de la función binomial, obteniendo una gráfica identica tanto a partir de la importación de la función binomial a partir del modulo ``stats`` de la librería de ``scipy``, como de la definición de la función binomial a partir de los parámetros $$n$$, $$x$$ y $$p$$, empleando el comando ``def``.")
-        
             st.markdown("## Marco Teórico")
             # A partir de aquí se escribe para el marco teórico
             st.write(
@@ -119,7 +183,11 @@ def app():
             wpages1 = ["Scipy Inc. (n.d.). Scipy.Optimize. Recuperado de https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html", '']
             st.write(wpages1)
             
-            
             st.markdown("## Referencias bibliográficas (documentación)")
             wpages2 = ['KaTeX. (2024). Supported Functions. Recuperado de: https://katex.org/docs/supported.html','Streamlit Inc. (n.d.). st.columns. Recuperado de: https://docs.streamlit.io/library/api-reference/layout/st.columns','Streamlit Inc. (n.d.). st.markdown. Recuperado de: https://docs.streamlit.io/library/api-reference/text/st.markdown','Streamlit Inc. (n.d.). st.radio. Recuperado de: https://docs.streamlit.io/library/api-reference/widgets/st.radio','Streamlit Inc. (n.d.). st.set_page_config. Recuperado de: https://docs.streamlit.io/library/api-reference/utilities/st.set_page_config', 'Streamlit Inc. (n.d.). st.radio. Recuperado de: https://docs.streamlit.io/library/api-reference/widgets/st.slider','Streamlit Inc. (n.d.). st.write. Recuperado de: https://docs.streamlit.io/library/api-reference/write-magic/st.write']
             st.write(wpages2)
+            
+        #########################################################
+        ##                       javascript                    ##
+        #########################################################
+        # html(html_texto)

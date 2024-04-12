@@ -48,6 +48,7 @@
     /* border-style: solid;
     border-color: rgb(36, 36, 219); */
     position: relative;
+    /* border-radius: 1em; */
 }
 
 .st-ae.st-af.st-ag.st-ah.st-ai.st-aj.st-ak>.st-al.st-ae.st-am.st-ai.st-an.st-ao.st-ap.st-aq.st-ar.st-as.st-at.st-au.st-av.st-aw:hover {
@@ -77,6 +78,8 @@
 code {
     color: black;
     background-color: #FFFDD0;
+    font-style:italic;
+    font-weight:bold
 }
 
 pre.st-emotion-cache-12pd2es.e1ycw9pz3 {
@@ -96,4 +99,6 @@ pre.st-emotion-cache-12pd2es.e1ycw9pz3 {
 
 span.string-value {
     color: black;
+    font-style:italic;
+    font-weight:bold
 }

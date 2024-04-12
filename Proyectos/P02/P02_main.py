@@ -4,7 +4,7 @@ from streamlit_extras.stylable_container import stylable_container as stycont
 from PIL import Image as im
 import os
 
-import proyecto, inicio
+import P02_p01, P02_p02, P02_p03
 #print(os.path.abspath('form01.css'))
 #with open('form01.css') as f:
 #    css = f.read()
@@ -60,13 +60,13 @@ try:
                     }
                 )
             if st.session_state.app == "Inicio":
-                inicio.app()
+                P02_p01.app()
                 
             if st.session_state.app == "Proyecto":
-                proyecto.app()
+                P02_p02.app()
                 
             if st.session_state.app == "Conclusiones":
-                final.app()
+                P02_p03.app()
 
         run()
     pass

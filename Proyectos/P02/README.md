@@ -1,6 +1,6 @@
-# Proyecto 01
+# Proyecto 02
 
-La prueba y desarrollo de las gráficas utilizadas en el proyecto, tanto de ``Plotly.Express`` como de ``PyPlot``, fueron llevados a cabo dentro del repositorio [https://github.com/Reegh/LabRedDat/tree/main/Notas](https://github.com/Reegh/LabRedDat/tree/main/Notas), en el documento ***proyecto.py***.
+La prueba y desarrollo de las gráficas utilizadas en el proyecto, realizadas con la biblioteca de ``Plotly.Express``, fueron llevados a cabo dentro del repositorio [https://github.com/Reegh/LabRedDat/tree/main/Notas](https://github.com/Reegh/LabRedDat/tree/main/Notas), en el documento ***proyecto.py***.
 
 ## Integrantes del proyecto
 
