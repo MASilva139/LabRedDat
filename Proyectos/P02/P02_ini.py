@@ -47,10 +47,16 @@ try:
                     default_index=0, # En este se define la primera página en mostrarse,
                     orientation="horizontal",
                     styles={
-                        "container": {"padding": "1!important", "background-color":'black'},
+                        "container": {"padding": "1!important", "background-color":'#5f2ed3'},
                         "icon":{"color":"white", "font-size":"16px"},
-                        "nav-link":{"color":"white", "font-size": "13px", "text-align":"center", "margin":"0px","--hover-color":"sepia"},
-                        "nav-link-selected":{"background-color":"darkolivegreen"}
+                        "nav-link":{
+                            "color":"white", 
+                            "font-size": "15px", 
+                            "text-align":"center", 
+                            "margin":"0px",
+                            "--hover-color":"#000"
+                        },
+                        "nav-link-selected":{"background-color":"#353535"}
                     }
                 )
             if st.session_state.app == "Inicio":

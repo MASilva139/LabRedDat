@@ -4,12 +4,12 @@
 }
 
 .stApp {
-    margin-top: -5%;
+    margin-top: -6.2%;
     /* top: 0; */
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     overflow: auto;
     padding: 0;
-    background: linear-gradient(315deg, #4f2991 3%, #7dc4ff 38%, #36cfcc 68%, #5f2ed3 98%);
+    background: linear-gradient(315deg, #482585 3%, #7dc4ff 38%, #36cfcc 68%, #5f2ed3 98%);
     animation: gradient 15s ease infinite;
     background-size: 400% 400%;
     background-attachment: fixed;
@@ -26,8 +26,74 @@
 
 .st-emotion-cache-ocqkz7.e1f1d6gn5 {
     z-index: 1;
-    background-color: linear-gradient(315deg, aqua 95%);
+    background-color: transparent;
     background-attachment: fixed;
     border-radius: 1em;
     position: relative;
+}
+
+.st-emotion-cache-1l269bu.e1f1d6gn3 {
+    z-index: 1;
+}
+.row-widget.stRadio {
+    background-color: transparent;
+    padding: 5px;
+}
+
+.st-ae.st-af.st-ag.st-ah.st-ai.st-aj.st-ak>.st-al.st-ae.st-am.st-ai.st-an.st-ao.st-ap.st-aq.st-ar.st-as.st-at.st-au.st-av.st-aw {
+    background-color: #5f2ed3;
+    margin: left;
+    width: 100%;
+    padding: 2px;
+    /* border-style: solid;
+    border-color: rgb(36, 36, 219); */
+    position: relative;
+}
+
+.st-ae.st-af.st-ag.st-ah.st-ai.st-aj.st-ak>.st-al.st-ae.st-am.st-ai.st-an.st-ao.st-ap.st-aq.st-ar.st-as.st-at.st-au.st-av.st-aw:hover {
+    background-color: #482585;
+    margin:left;
+    width: 100%;
+    padding: 2px;
+}
+
+.st-emotion-cache-1ijpa8z.e1nzilvr5 > p {
+    padding: 0.5em;
+}
+
+/* div.st-emotion-cache-1wmy9hl.e1f1d6gn1 > div[data-testid="stVerticalBlock"].st-emotion-cache-1vmynj.e1f1d6gn2 {
+    background-color: blue;
+} */
+
+.st-emotion-cache-zt5igj.e1nzilvr4 > span.st-emotion-cache-10trblm.e1nzilvr1 {
+    background: linear-gradient(315deg, #482585 3%, #7dc4ff 38%, #36cfcc 68%, #5f2ed3 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    text-align: center;
+    padding: 0.2em;
+    border-radius: 1em;
+}
+
+code {
+    color: black;
+    background-color: #FFFDD0;
+}
+
+pre.st-emotion-cache-12pd2es.e1ycw9pz3 {
+    background-color: #FFFDD0;
+    color: black;
+}
+::-webkit-scrollbar {
+    background-color: gray;
+}
+::-webkit-scrollbar:hover {
+    background-color: black;
+}
+
+.pretty-json-container.object-container {
+    background-color: #4F8CC9;
+}
+
+span.string-value {
+    color: black;
 }

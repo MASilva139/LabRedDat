@@ -3,6 +3,8 @@ import pandas as pd
 import plotly.express as px
 from scipy import stats
 from scipy.optimize import curve_fit
+from streamlit_option_menu import option_menu
+from streamlit_extras.stylable_container import stylable_container as stycont
 import streamlit as st
 import matplotlib.pyplot as plt
 import math
@@ -15,17 +17,36 @@ def app():
     # Añade tu CSS
     st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
     
-    st.title('Proyecto 01: Distribución binomial en lanzamiento de monedas')
+    st.title('Proyecto 02: Predicción de COVID19')
     
     # st.title('Proyecto 01: Distribución binomial en lanzamiento de monedas')
     c1, c2 = st.columns([1,5])
     with c1:
         opt = st.radio("", ["Proyecto", "Referencias"], label_visibility="collapsed")
+        # with stycont(
+        #         key="menu-01",
+        #         css_styles="""
+        #         """,
+        #     ):
+        #     opt = option_menu(
+        #         #menu_title='Pages',
+        #         None,
+        #         options=['Proyecto', 'Referencias'], # Nombre de cada pestaña
+        #         icons=['house-fill', 'bezier', 'body-text'], #Iconos de las pestañas
+        #         menu_icon='alt',
+        #         default_index=0, # En este se define la primera página en mostrarse,
+        #         orientation="vertical",
+        #         styles={
+        #             "container": {"padding": "1!important", "background-color":'transparent'},
+        #             "icon":{"color":"white", "font-size":"16px"},
+        #             "nav-link":{"color":"white", "font-size": "13px", "text-align":"center", "margin":"0px","--hover-color":"sepia"},
+        #             "nav-link-selected":{"background-color":"darkolivegreen"}
+        #         }
+        #     )
     with c2: 
         if opt == "Proyecto":
             
             st.markdown("## Resumen / Caso de estudio")
-            
             st.write("En la siguiente práctica se procedió a realizar una aplicación web encargada de graficar los datos obtenidos, tras 100 repeticiones, al lanzar un grupo de $$10$$ fichas. Para ello, se emplearon las librerías de ``NumPy``, ``Pandas``, ``Plotly.Express``, ``MatPlotLib``, ``StreamLit`` y ``SciPy``.")
             st.write("")
             st.write("Se realizarón $$100$$ repeticiones para el lanzamiento de $$10$$ fichas, en las cuales se contaron el número de caras obtenidas por cada repetición, registrandolas como $$n$$. A partir de los datos obtenidos, convirtiendo las *n* caras por cada repetición, se realizarón las tablas con la librería de ``Pandas.DataFrame()`` y a partir de estas se hicieron las graficas de ``Plotly.Expres`` y ``PyPlot``. Para el fit se usa el arreglo de ``Numpy``, además de utilizar la función ``curve_fit`` de la librería de ``scipy.optimize``.")
@@ -90,8 +111,8 @@ def app():
                 """
             )
             
-            if st.button('Ir al inicio'):
-                st.write('<meta http-equiv="refresh" content="0">', unsafe_allow_html=True)
+            # if st.button('Ir al inicio'):
+            #     st.write('<meta http-equiv="refresh" content="0">', unsafe_allow_html=True)
                 
         if opt == "Referencias":
             st.markdown("## Referencias bibliográficas (marco teórico)")
