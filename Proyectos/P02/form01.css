@@ -1,6 +1,8 @@
 .stApp > header {
-    display: none;
-    /* background-color: transparent; */
+    /* display: none; */
+    background-color: transparent;
+    pointer-events: painted;
+    z-index: 1;
 }
 
 .stApp {
@@ -60,6 +62,8 @@
 
 .st-emotion-cache-1ijpa8z.e1nzilvr5 > p {
     padding: 0.5em;
+    box-shadow:inset 2px 2px 4px #78787866, inset -3px -3px 3px #ffffff66;
+    text-align: justify;
 }
 
 /* div.st-emotion-cache-1wmy9hl.e1f1d6gn1 > div[data-testid="stVerticalBlock"].st-emotion-cache-1vmynj.e1f1d6gn2 {
@@ -101,4 +105,13 @@ span.string-value {
     color: black;
     font-style:italic;
     font-weight:bold
+}
+
+button.st-emotion-cache-1g06wcx.e1ycw9pz0 {
+    background-color: #383838;
+}
+
+svg.main-svg {
+    background: transparent;
+    box-shadow:inset 2px 2px 4px #78787866, inset -3px -3px 3px #ffffff66;
 }

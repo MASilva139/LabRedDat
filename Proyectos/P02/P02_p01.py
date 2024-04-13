@@ -1,16 +1,7 @@
-import numpy as np
-import pandas as pd
-import plotly.express as px
-from scipy import stats
-from scipy.optimize import curve_fit
 from streamlit_option_menu import option_menu
 from streamlit_extras.stylable_container import stylable_container as stycont
 from streamlit.components.v1 import html
 import streamlit as st
-import matplotlib.pyplot as plt
-import math
-from scipy.special import comb
-from PIL import Image as im
 
 def app():
     with open('Proyectos/P02/form01.css') as f:
@@ -112,11 +103,13 @@ def app():
         #########################################################
         if opt == "Proyecto":
             st.markdown("## Resumen / Caso de estudio")
-            st.write("En la siguiente práctica se procedió a realizar una aplicación web encargada de graficar los datos obtenidos, tras 100 repeticiones, al lanzar un grupo de $$10$$ fichas. Para ello, se emplearon las librerías de ``NumPy``, ``Pandas``, ``Plotly.Express``, ``MatPlotLib``, ``StreamLit`` y ``SciPy``.")
-            st.write("")
-            st.write("Se realizarón $$100$$ repeticiones para el lanzamiento de $$10$$ fichas, en las cuales se contaron el número de caras obtenidas por cada repetición, registrandolas como $$n$$. A partir de los datos obtenidos, convirtiendo las *n* caras por cada repetición, se realizarón las tablas con la librería de ``Pandas.DataFrame()`` y a partir de estas se hicieron las graficas de ``Plotly.Expres`` y ``PyPlot``. Para el fit se usa el arreglo de ``Numpy``, además de utilizar la función ``curve_fit`` de la librería de ``scipy.optimize``.")
-            st.write("")
-            st.write("Se lograron realizar buenos ajustes de la curva, empleando para ello la libreria de ``Plotly.Express``, a partir de la función binomial, obteniendo una gráfica identica tanto a partir de la importación de la función binomial a partir del modulo ``stats`` de la librería de ``scipy``, como de la definición de la función binomial a partir de los parámetros $$n$$, $$x$$ y $$p$$, empleando el comando ``def``.")
+            st.write(
+            """
+                En la siguiente práctica se procedió a realizar una aplicación web para graficar los datos de los registros de casos de COVID-19 del año 2020 dados por el Ministerio de Salud y a partir de ello predecir el pico de contagios asumiendo que no se cuentan con los datos futuros; empleando para ello la biblioteca de ``Plotly-Express``, para gráficar el histograma y la curva de ajuste, y el programa de ``GNUPlot``, para los valores de la curva de ajuste. \n
+                Empleando el programa de ``GNUPlot`` se determinaron los valores de las constantes de la ecuación de Distribución Gaussiana $$A$$, $$\mu$$ y $$\sigma$$, realizando un fit sobre los datos de casos positivos, columna 5 del csv; utilizando 69 datos, comenzando desde el día 13 de marzo del 2020, se determinaron que los valores de las constantes son $$A=$$930.848, $$\mu=$$109.684 y $$\sigma=$$23.3855. Se vectorizó la función de Distribución Gaussiana para poder introducir diferentes valores de $$x$$ como una lista y con ello poder graficar la curva de ajuste respecto a los datos de casos positivos registrados. \n
+                Se evaluaron los datos disponibles y se eliminaron aquellos que ocasionaban un sobreajuste al fit, de manera que solamente se utilizaron los valores de los primeros 69 días, debido a que con otros datos el ajuste toma que el pico de casos positivos ya se dio, de manera que los datos solamente decrecerian. De igual manera, se utilizó la distribución Gaussiana, en lugar de la distribución binomial, debido a que al tratarse de datos y no probabilidades, el ajuste que daba la primera de estas era mejor, mientras que con la binomial se hubiese tenido que arreglar la función o los datos para poder realizar el ajuste de la curva.
+            """
+            )
             st.markdown("## Marco Teórico")
             # A partir de aquí se escribe para el marco teórico
             st.write(
@@ -132,17 +125,18 @@ def app():
                 """
                 r'''
                 $$
-                P_b(x,n)=\begin{pmatrix}
-                    n\\
-                    x
-                \end{pmatrix}
-                p^x(1-p)^{n-x}=\frac{n!}{x!(n-x)!}\cdot p^x(1-p)^{n-x}
+                P_{G}(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{2}} \longleftrightarrow P_{G}(x)=\frac{1}{\sigma\sqrt{2\pi}} \cdot \exp{\left[-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{2}\right]}
                 $$
                 '''
                 """
-                Donde $$P_b(x,n)$$ es la probabilidad de $$x$$ aciertos en $$n$$ ensayos, cada uno con probabilidad
-                $$p$$.
-            
+                Donde $$P_G(x)$$ es la distribución gaussiana. La ecuación empleada en la práctica está dada por:
+                """
+                r'''
+                $$
+                P_{G}(x)=A\cdot e^{-\frac{1}{2}\left(\frac{x-u}{r}\right)^{2}} \longleftrightarrow P_{G}(x)=A\cdot \exp{\left[-\frac{1}{2}\left(\frac{x-u}{r}\right)^{2}\right]}
+                $$
+                '''
+                """
                 #### Media y desviación estándar
             
                 La media de una distribución binomial es de la forma:

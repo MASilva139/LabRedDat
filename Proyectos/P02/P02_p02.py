@@ -11,4 +11,124 @@ def app():
     # Añade tu CSS
     st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
     
-    st.title('Distribución Binomial en lanzamiento de monedas')
+    st.title('Distribuciones para la Predicción de COVID19')
+    
+    st.markdown("## **Procedimiento Experimental**")
+    # Sección del procedimiento del proyecto
+    st.write("""
+        En la presente práctica se llevó a cabo el análisis para realizar una predicción con los datos registrados por el Ministerio de Salud, de los casos de COVID-19 en el año 2020. A partir de ello se procedió de la siguiente manera
+    """)
+    
+    expa0 = st.toggle("##### Datos de las constantes GNUPlot (Parte experimental)")
+    if expa0:
+        #fit.log → lin: 2750 → Wed Apr 10 14:54:58 2024
+        st.write(
+            '''
+            1. Se definió la función de la Distribución Gaussiana, $$f(x)$$.
+            2. Se indicaron los valores de las constantes como $$A$$=400, $$u$$=200 y $$r$$=100.
+            3. Empleando el comando ``fit f(x) (...)`` se realizó la gráfica de la función con los datos de casos positivos.
+            4. Se indicó el uso de 69 datos.
+            5. A partir de las iteraciones se determinaron los valores de $$A$$, $$u$$ y $$r$$ que ajustan de mejor manera el fit.
+            '''
+        )
+        
+    expa1 = st.toggle("##### Gráfica de la distribución (parte experimental)")
+    if expa1:
+        st.write(
+            '''
+            1. Se definió, con el comando ``def``, la función de la Distribución Gaussiana, $$P_{G}(x)$$, con los valores de las constantes $$A$$, $$u$$ y $$r$$ previamente obtenidos.
+            2. Se vectorizó la función de la Distribución Gaussiana con ``numpy.vetorize()``, para diferentes valores de $$x$$.
+            3. Se definió un rango de 185 datos con ``numpy.arange``.
+            4. Se definieron los parámetros de la gráfica y la curva del ajuste.
+            5. Se gráfico el ajuste y el histograma con el comando ``streamlit.plotly_chart()``.
+            '''
+        )
+####################################################################
+##                        Gráfica de Plotly                       ##
+####################################################################
+    # Crear pandas con los datos
+    data = pd.read_csv('Proyectos/P02/csv/covid.csv')
+    df = pd.DataFrame(data)
+    
+    # Definir fórmula del fit
+    # Fit desde el 13 de marzo → 80 días (01-junio)
+    def fit(x):
+        A=298.165
+        u=73.5442
+        r=9.04991
+        x = np.array(x, dtype=int)
+        return A*math.exp(-((x-u)/r)**2/2)
+    fit = np.vectorize(fit)
+    
+    value_range = np.arange(100)
+    
+    plot_fit = px.line(x=value_range, y=fit(value_range))
+    plot_fit.update_traces(line_color='#B21914', line_width=2.5)
+    plot_fit.update_layout({'plot_bgcolor':'rgba(0,0,0,0)','paper_bgcolor':'rgba(0,0,0,0)'})
+
+    #Fit 13 de marzo → 69 días
+    def fit_2(x):
+        A=930.848
+        u=109.684
+        r=23.3855
+        x = np.array(x, dtype=int)
+        return A*math.exp(-((x-u)/r)**2/2)
+    fit_2 = np.vectorize(fit_2)
+
+    value_range_2 = np.arange(185)
+
+    plot_fit_2 = px.line(x=value_range_2, y=fit_2(value_range_2))
+    plot_fit_2.update_traces(line_color='#B21914', line_width=2.5)
+    plot_fit_2.update_layout({'plot_bgcolor':'rgba(0,0,0,0)','paper_bgcolor':'rgba(0,0,0,0)'})
+    
+    st.markdown("## **Resultados**")
+    # Sección de los resultados
+    rlist = ['**Gráfica 01**', '**Gráfica 02**', '**Tabla 01**']
+    rlist02 = ['Gráfica utilizando 69 datos, iniciando desde el 13 de marzo del 2020 hasta el 20 de mayo.', 'Gráfica utilizando 80 datos, iniciando desde el 01 de marzo hasta el 01 de junio.', 'Datos de las gráficas.']
+    # Diccionario con los valores de rlist con el valor de cada valor de rlist02
+    dic = {key: i for key, i in zip(rlist,rlist02)}
+    # Imprime cada par en el markdown
+    s = "\n".join([f'- {key}: {i}' for key, i in dic.items()])
+    # for i in rlist:
+    #     s += "- " + i + "\n"
+    st.write(
+        """
+        En la presente sección se presentarán los resultados obtenidos en la presente práctica, de los cuales están divididos en:
+        """
+    )
+    st.markdown(s)
+    
+    c1, c2 = st.columns([1,4])
+    with c1:
+        resultados = st.radio(
+            "**Resultados**", 
+            ["Gráfica 01", "Gráfica 02", "Tabla 01"]
+        )
+        
+    with c2:
+        if resultados == "Gráfica 01":
+            st.markdown("## Gráfica 13 de marzo hasta el 20 de mayo")
+            
+            c3, c4 = st.columns([6,1.5])
+            with c3:
+                # Mostrar gráfica de plotly
+                don = st.toggle('Ver fit')
+
+                if don:
+                    plot_fit_2.add_bar(x=df.index, y=df['resultados'], marker_color='#291a4d')
+                else:
+                    plot_fit_2.add_bar(x=df.index, y=df['resultados'].iloc[:69], marker_color='#291a4d')
+                st.plotly_chart(plot_fit_2)
+                
+        if resultados == "Gráfica 02":
+            st.markdown("## Gráfica 13 de marzo hasta el 01 de junio")
+            
+            c3, c4 = st.columns([6,1.5])
+            with c3:
+                on = st.toggle('Ver datos completos')
+
+                if on:
+                    plot_fit.add_bar(x=df.index, y=df['resultados'], marker_color='#291a4d')
+                else:
+                    plot_fit.add_bar(x=df.index, y=df['resultados'].iloc[:81], marker_color='#291a4d')
+                st.plotly_chart(plot_fit)
