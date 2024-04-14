@@ -25,6 +25,198 @@ def app():
     anex = st.toggle("Mostrar anexos")
     if anex:
         st.markdown("### Fit 01 GNUPlot")
+        c44, c45 = st.columns([2, 2])
+        with c44:
+            st.markdown("##### Descripción")
+            st.write(
+                """
+                Fit realizado a partir del día 59, después del primer caso positivo registrado.
+                \n
+                ##### Función empleada
+                """
+                r'''
+                $$
+                P_{G}(x)=A\cdot \exp{\left[-\frac{1}{2}\left(\frac{x-u}{r}\right)^{2}\right]}
+                $$
+                '''
+                """
+                ##### Valores de las constantes
+                """
+                r'''
+                $$
+                \begin{aligned}
+                    A & = 1195,28 \pm 2,094+04 \\
+                    u & = 188,642 \pm 673,3 \\
+                    r & = 53,1543 \pm 119,9
+                \end{aligned}
+                $$
+                '''
+            )
+        with c45:
+            img23 = im.open('Proyectos/P02/img/fit23.png')
+            st.image(img23)
+            
+        st.markdown("### Fit 02 GNUPlot")
+        c42, c43 = st.columns([2, 2])
+        with c42:
+            st.markdown("##### Descripción")
+            st.write(
+                """
+                Fit realizado a partir del día 60, después del primer caso positivo registrado.
+                \n
+                ##### Función empleada
+                """
+                r'''
+                $$
+                P_{G}(x)=A\cdot \exp{\left[-\frac{1}{2}\left(\frac{x-u}{r}\right)^{2}\right]}
+                $$
+                '''
+                """
+                ##### Valores de las constantes
+                """
+                r'''
+                $$
+                \begin{aligned}
+                    A & = 1497,57 \pm 2,715+04 \\
+                    u & = 196,503 \pm 694,1 \\
+                    r & = 54,302 \pm 120,5
+                \end{aligned}
+                $$
+                '''
+            )
+        with c43:
+            img22 = im.open('Proyectos/P02/img/fit22.png')
+            st.image(img22)
+            
+        st.markdown("### Fit 03 GNUPlot")
+        c40, c41 = st.columns([2, 2])
+        with c40:
+            st.markdown("##### Descripción")
+            st.write(
+                """
+                Fit realizado a partir del día 61, después del primer caso positivo registrado.
+                \n
+                ##### Función empleada
+                """
+                r'''
+                $$
+                P_{G}(x)=A\cdot \exp{\left[-\frac{1}{2}\left(\frac{x-u}{r}\right)^{2}\right]}
+                $$
+                '''
+                """
+                ##### Valores de las constantes
+                """
+                r'''
+                $$
+                \begin{aligned}
+                    A & = 5129,59 \pm 1,321e+05 \\
+                    u & = 233,932 \pm 944,3 \\
+                    r & = 59,1266 \pm 143,8
+                \end{aligned}
+                $$
+                '''
+            )
+        with c41:
+            img21 = im.open('Proyectos/P02/img/fit21.png')
+            st.image(img21)
+            
+        st.markdown("### Fit 04 GNUPlot")
+        c38, c39 = st.columns([2, 2])
+        with c38:
+            st.markdown("##### Descripción")
+            st.write(
+                """
+                Fit realizado a partir del día 62, después del primer caso positivo registrado.
+                \n
+                ##### Función empleada
+                """
+                r'''
+                $$
+                P_{G}(x)=A\cdot \exp{\left[-\frac{1}{2}\left(\frac{x-u}{r}\right)^{2}\right]}
+                $$
+                '''
+                """
+                ##### Valores de las constantes
+                """
+                r'''
+                $$
+                \begin{aligned}
+                    A & = 3322,76 \pm 5,779e+04 \\
+                    u & = 185,103 \pm 527,7 \\
+                    r & = 45,7464 \pm 86
+                \end{aligned}
+                $$
+                '''
+            )
+        with c39:
+            img20 = im.open('Proyectos/P02/img/fit20.png')
+            st.image(img20)
+            
+        st.markdown("### Fit 05 GNUPlot")
+        c36, c37 = st.columns([2, 2])
+        with c36:
+            st.markdown("##### Descripción")
+            st.write(
+                """
+                Fit realizado a partir del día 63, después del primer caso positivo registrado.
+                \n
+                ##### Función empleada
+                """
+                r'''
+                $$
+                P_{G}(x)=A\cdot \exp{\left[-\frac{1}{2}\left(\frac{x-u}{r}\right)^{2}\right]}
+                $$
+                '''
+                """
+                ##### Valores de las constantes
+                """
+                r'''
+                $$
+                \begin{aligned}
+                    A & = 29181,8 \pm 8,178e+05 \\
+                    u & = 190,337 \pm 604,4 \\
+                    r & = 38,7087 \pm 82,29
+                \end{aligned}
+                $$
+                '''
+            )
+        with c37:
+            img19 = im.open('Proyectos/P02/img/fit19.png')
+            st.image(img19)
+            
+        st.markdown("### Fit 06 GNUPlot")
+        c34, c35 = st.columns([2, 2])
+        with c34:
+            st.markdown("##### Descripción")
+            st.write(
+                """
+                Fit realizado a partir del día 64, después del primer caso positivo registrado.
+                \n
+                ##### Función empleada
+                """
+                r'''
+                $$
+                P_{G}(x)=A\cdot \exp{\left[-\frac{1}{2}\left(\frac{x-u}{r}\right)^{2}\right]}
+                $$
+                '''
+                """
+                ##### Valores de las constantes
+                """
+                r'''
+                $$
+                \begin{aligned}
+                    A & = 33999,9 \pm 8,331e+05 \\
+                    u & = 176,595 \pm 469,9 \\
+                    r & = 34,3377 \pm 64,07
+                \end{aligned}
+                $$
+                '''
+            )
+        with c35:
+            img18 = im.open('Proyectos/P02/img/fit18.png')
+            st.image(img18)
+            
+        st.markdown("### Fit 07 GNUPlot")
         c32, c33 = st.columns([2, 2])
         with c32:
             st.markdown("##### Descripción")
@@ -56,7 +248,7 @@ def app():
             img17 = im.open('Proyectos/P02/img/fit17.png')
             st.image(img17)
             
-        st.markdown("### Fit 02 GNUPlot")
+        st.markdown("### Fit 08 GNUPlot")
         c0, c1 = st.columns([2, 2])
         with c0:
             st.markdown("##### Descripción")
@@ -88,7 +280,7 @@ def app():
             img01 = im.open('Proyectos/P02/img/fit09.png')
             st.image(img01)
             
-        st.markdown("### Fit 03 GNUPlot")
+        st.markdown("### Fit 09 GNUPlot")
         c30, c31 = st.columns([2, 2])
         with c30:
             st.markdown("##### Descripción")
@@ -120,7 +312,7 @@ def app():
             img16 = im.open('Proyectos/P02/img/fit16.png')
             st.image(img16)
             
-        st.markdown("### Fit 04 GNUPlot")
+        st.markdown("### Fit 10 GNUPlot")
         c28, c29 = st.columns([2, 2])
         with c28:
             st.markdown("##### Descripción")
@@ -152,7 +344,7 @@ def app():
             img15 = im.open('Proyectos/P02/img/fit15.png')
             st.image(img15)
             
-        st.markdown("### Fit 05 GNUPlot")
+        st.markdown("### Fit 11 GNUPlot")
         c2, c3 = st.columns([2, 2])
         with c2:
             st.markdown("##### Descripción")
@@ -184,7 +376,7 @@ def app():
             img02 = im.open('Proyectos/P02/img/fit07.png')
             st.image(img02)
             
-        st.markdown("### Fit 06 GNUPlot")
+        st.markdown("### Fit 12 GNUPlot")
         c26, c27 = st.columns([2, 2])
         with c26:
             st.markdown("##### Descripción")
@@ -216,7 +408,7 @@ def app():
             img14 = im.open('Proyectos/P02/img/fit14.png')
             st.image(img14)
             
-        st.markdown("### Fit 07 GNUPlot")
+        st.markdown("### Fit 13 GNUPlot")
         c4, c5 = st.columns([2, 2])
         with c4:
             st.markdown("##### Descripción")
@@ -248,7 +440,7 @@ def app():
             img03 = im.open('Proyectos/P02/img/fit08.png')
             st.image(img03)
             
-        st.markdown("### Fit 08 GNUPlot")
+        st.markdown("### Fit 14 GNUPlot")
         c24, c25 = st.columns([2, 2])
         with c24:
             st.markdown("##### Descripción")
@@ -280,7 +472,7 @@ def app():
             img13 = im.open('Proyectos/P02/img/fit13.png')
             st.image(img13)
             
-        st.markdown("### Fit 09 GNUPlot")
+        st.markdown("### Fit 15 GNUPlot")
         c22, c23 = st.columns([2, 2])
         with c22:
             st.markdown("##### Descripción")
@@ -312,7 +504,7 @@ def app():
             img12 = im.open('Proyectos/P02/img/fit12.png')
             st.image(img12)
             
-        st.markdown("### Fit 10 GNUPlot")
+        st.markdown("### Fit 16 GNUPlot")
         c6, c7 = st.columns([2, 2])
         with c6:
             st.markdown("##### Descripción")
@@ -344,7 +536,7 @@ def app():
             img04 = im.open('Proyectos/P02/img/fit10.png')
             st.image(img04)
             
-        st.markdown("### Fit 11 GNUPlot")
+        st.markdown("### Fit 17 GNUPlot")
         c8, c9 = st.columns([2, 2])
         with c8:
             st.markdown("##### Descripción")
@@ -376,7 +568,7 @@ def app():
             img05 = im.open('Proyectos/P02/img/fit11.png')
             st.image(img05)
             
-        st.markdown("### Fit 12 GNUPlot")
+        st.markdown("### Fit 18 GNUPlot")
         c10, c11 = st.columns([2, 2])
         with c10:
             st.markdown("##### Descripción")
@@ -408,7 +600,7 @@ def app():
             img06 = im.open('Proyectos/P02/img/fit04.png')
             st.image(img06)
             
-        st.markdown("### Fit 13 GNUPlot")
+        st.markdown("### Fit 19 GNUPlot")
         c12, c13 = st.columns([2, 2])
         with c12:
             st.markdown("##### Descripción")
@@ -440,7 +632,7 @@ def app():
             img07 = im.open('Proyectos/P02/img/fit03.png')
             st.image(img07)
             
-        st.markdown("### Fit 14 GNUPlot")
+        st.markdown("### Fit 20 GNUPlot")
         c14, c15 = st.columns([2, 2])
         with c14:
             st.markdown("##### Descripción")
@@ -472,7 +664,7 @@ def app():
             img08 = im.open('Proyectos/P02/img/fit01.png')
             st.image(img08)
             
-        st.markdown("### Fit 15 GNUPlot")
+        st.markdown("### Fit 21 GNUPlot")
         c16, c17 = st.columns([2, 2])
         with c16:
             st.markdown("##### Descripción")
@@ -504,7 +696,7 @@ def app():
             img09 = im.open('Proyectos/P02/img/fit06.png')
             st.image(img09)
             
-        st.markdown("### Fit 16 GNUPlot")
+        st.markdown("### Fit 22 GNUPlot")
         c18, c19 = st.columns([2, 2])
         with c18:
             st.markdown("##### Descripción")
@@ -536,7 +728,7 @@ def app():
             img10 = im.open('Proyectos/P02/img/fit05.png')
             st.image(img10)
             
-        st.markdown("### Fit 17 GNUPlot")
+        st.markdown("### Fit 23 GNUPlot")
         c20, c21 = st.columns([2, 2])
         with c20:
             st.markdown("##### Descripción")
