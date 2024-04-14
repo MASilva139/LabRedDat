@@ -114,13 +114,47 @@ def app():
             # A partir de aquí se escribe para el marco teórico
             st.write(
                 """
-                ### Distribución binomial
+                ### Distribución Normal
             
-                Es una distribución de probabilidad discreta que cuenta la cantidad de éxitos en $$n$$ casos con una
-                probabilidad fija $$p$$. Se caracteriza porque únicamente existe dos casos: éxito y fracaso. Además la
-                probabilidad $$p$$ es fija, lo que quiere decir que la probabilidad de éxito o fracaso en cada uno de
-                los casos no depende de lo que haya sucedido en el anterior.
-            
+                También conocida como distribución de Gauss, es una distribución de variable continua, con campo de variación $$(-\infty, \infty)$$. Esta queda especificada por dos parámetros de los que depende su función de densidad y que resultan ser la media $$\mu$$ y la dsviación típica de la distribución $$\sigma$$. Su estudio teórico suele introducirse directamente a partir de su función de densidad.
+                \n
+                Dado que depende de dos parámetros, $$\mu$$ y $$\sigma$$, el hecho de que una variable $$X$$ se distribuya con una distribución normal de media $$\mu$$ y desviación típica $$\sigma$$ se representa por la siguiente expresión:
+                """
+                r'''
+                $$
+                X \rightarrow N \left[\mu : \sigma\right] \hspace{20pt} \| \hspace{20pt} L(X) \rightarrow N \left[\mu : \sigma\right]
+                $$
+                '''
+                """
+                Por tanto, se tiene que la función de densidad está dada por 
+                """
+                r'''
+                $$
+                f(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{2}} \hspace{20pt} \forall x \in \Re
+                $$
+                '''
+                """
+                Las características de dicha función de densidad son:
+                """
+                '''
+                1. Si se realiza la primera derivada de la función se tiene que
+                '''
+                r'''
+                $$
+                f'(x) = -\frac{\left(x-\mu\right)}{{\sigma}^{3}\sqrt{2\pi}}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{2}} \longrightarrow f'(x) = -\frac{\left(x-\mu\right)}{\sigma^{2}}\cdot f(x)
+                $$
+                '''
+                '''
+                2. Si se realiza la segunda derivada de la función se tiene que
+                '''
+                r'''
+                $$
+                f''(x) = \frac{\left(x-\mu\right)^{2}-\sigma^{2}}{\sigma^{4}}\cdot f(x)
+                $$
+                '''
+                """
+                Al igualar a cero la primera derivada se obtiene que $$f'(x)=0$$ para $$X=\mu$$ y para $$X=\infty$$. Como la segunda derivada en $$X=\mu$$ es negativa, se puede concluir que la función de densidad presenta un máximo en $$X=\mu$$, lo que afir,a que la media es también la moda de la distribución normal.
+                
                 #### Fórmula
                 """
                 r'''
@@ -174,7 +208,7 @@ def app():
                 
         if opt == "Referencias":
             st.markdown("## Referencias bibliográficas (marco teórico)")
-            wpages1 = ["Scipy Inc. (n.d.). Scipy.Optimize. Recuperado de https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html", '']
+            wpages1 = ["Scipy Inc. (n.d.). Scipy.Optimize. Recuperado de https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html", 'CEACES, (n.d.). Distribución normal, [PDF]. Recuperado de https://www.uv.es/ceaces/pdf/normal.pdf']
             st.write(wpages1)
             
             st.markdown("## Referencias bibliográficas (documentación)")
