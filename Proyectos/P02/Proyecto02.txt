@@ -1,0 +1,539 @@
+#------------------------------------- p02_main.py
+import streamlit as st
+from streamlit_option_menu import option_menu
+from streamlit_extras.stylable_container import stylable_container as stycont
+from PIL import Image as im
+import os
+
+import P02_p01, P02_p02, P02_p03
+#print(os.path.abspath('form01.css'))
+#with open('form01.css') as f:
+#    css = f.read()
+#st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
+try:
+    st.set_page_config(
+        page_title="Proyecto 02",
+        page_icon=':shinto_shrine:',
+        layout="wide"
+    )
+    #https://github.com/MathCatsAnd/Streamlit-Mechanics-Examples/blob/main/pages/column_selector_v2.py
+    with open('Proyectos/P02/form01.css') as f:
+        css = f.read()
+
+    # Añade tu CSS
+    st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
+    
+    class MultiApp:
+        def __init__(self):
+            self.apps = []
+        def add_app(self, tittle, func):
+            self.apps.append({
+                "title": tittle,
+                "function": func
+            })
+        def run():
+            if 'app' not in st.session_state:
+                st.session_state.app = 'Inicio'
+            with stycont(
+                key="opt_menu",
+                css_styles="""
+                """,
+            ):
+                st.session_state.app = option_menu(
+                    #menu_title='Pages',
+                    None,
+                    options=['Inicio', 'Proyecto', 'Conclusiones'], # Nombre de cada pestaña
+                    icons=['house-fill', 'bezier', 'body-text'], #Iconos de las pestañas
+                    menu_icon='alt',
+                    default_index=0, # En este se define la primera página en mostrarse,
+                    orientation="horizontal",
+                    styles={
+                        "container": {"padding": "1!important", "background-color":'#5f2ed3'},
+                        "icon":{"color":"white", "font-size":"16px"},
+                        "nav-link":{
+                            "color":"white", 
+                            "font-size": "15px", 
+                            "text-align":"center", 
+                            "margin":"0px",
+                            "--hover-color":"#000"
+                        },
+                        "nav-link-selected":{"background-color":"#353535"}
+                    }
+                )
+            if st.session_state.app == "Inicio":
+                P02_p01.app()
+                
+            if st.session_state.app == "Proyecto":
+                P02_p02.app()
+                
+            if st.session_state.app == "Conclusiones":
+                P02_p03.app()
+
+        run()
+    pass
+except FileNotFoundError:
+    st.error("No se encontró el archivo de configuración")
+
+#----------------------------- P02_p01.py
+from streamlit_option_menu import option_menu
+from streamlit_extras.stylable_container import stylable_container as stycont
+from streamlit.components.v1 import html
+import streamlit as st
+
+def app():
+    with open('Proyectos/P02/form01.css') as f:
+        css = f.read()
+
+    # Añade tu CSS
+    st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
+    
+    st.title('Proyecto 02: Predicción de COVID19')
+    
+    #########################################################
+    ##                       javascript                    ##
+    #########################################################
+    # Define tu JavaScript
+    # bjs = """
+    # function handleClick() {
+    #     // Obtén una referencia a los botones de radio y al elemento de texto
+    #     var radios = document.getElementsByClassName('miRadio');
+    #     var texto = document.getElementById('texto');
+
+    #     // Cambia el color de fondo y el color del texto del botón de radio cuando se selecciona
+    #     for (var i = 0; i < radios.length; i++) {
+    #         radios[i].style.backgroundColor = 'green';
+    #         radios[i].style.color = 'white';
+
+    #         // Muestra el texto correspondiente
+    #         if (radios[i].checked) {
+    #             if (radios[i].value == 'Proyecto') {
+    #                 texto.innerHTML = '<h2>Proyecto</h2>';
+    #             } else if (radios[i].value == 'Referencias') {
+    #                 texto.innerHTML = '<h2>Referencias</h2>';
+    #             }
+    #         }
+    #     }
+    # }
+
+    # // Agrega un manejador de eventos para el evento 'click' a cada botón de radio
+    # window.onload = function() {
+    #     var radios = document.getElementsByClassName('miRadio');
+    #     for (var i = 0; i < radios.length; i++) {
+    #         radios[i].addEventListener('click', handleClick);
+    #     }
+    # };
+    # """
+    # # Define tu HTML para los botones de radio
+    # html_radio = """
+    # <input type="radio" id="proyecto" name="miRadio" class="miRadio" value="Proyecto">
+    # <label for="proyecto">Proyecto</label><br>
+    # <input type="radio" id="referencias" name="miRadio" class="miRadio" value="Referencias">
+    # <label for="referencias">Referencias</label><br>
+    # <script>{}</script>
+    # """.format(bjs)
+    # # Define tu HTML para el texto
+    # html_texto = """
+    # <div id="texto"></div>
+    # """
+    
+    c1, c2 = st.columns([1,5])
+    with c1:
+        #########################################################
+        ##                       st.radio()                    ##
+        #########################################################
+        
+        opt = st.radio("", ["Proyecto", "Referencias"], label_visibility="collapsed")
+        
+        #########################################################
+        ##                       contenedor                    ##
+        #########################################################
+        
+        # with stycont(
+        #         key="menu-01",
+        #         css_styles="""
+        #         """,
+        #     ):
+        #     opt = option_menu(
+        #         #menu_title='Pages',
+        #         None,
+        #         options=['Proyecto', 'Referencias'], # Nombre de cada pestaña
+        #         icons=['house-fill', 'bezier', 'body-text'], #Iconos de las pestañas
+        #         menu_icon='alt',
+        #         default_index=0, # En este se define la primera página en mostrarse,
+        #         orientation="vertical",
+        #         styles={
+        #             "container": {"padding": "1!important", "background-color":'transparent'},
+        #             "icon":{"color":"white", "font-size":"16px"},
+        #             "nav-link":{"color":"white", "font-size": "13px", "text-align":"center", "margin":"0px","--hover-color":"sepia"},
+        #             "nav-link-selected":{"background-color":"darkolivegreen"}
+        #         }
+        #     )
+        
+        #########################################################
+        ##                       javascript                    ##
+        #########################################################
+        # html(html_radio)
+        
+    with c2: 
+        #########################################################
+        ##                       st.radio                      ##
+        #########################################################
+        if opt == "Proyecto":
+            st.markdown("## Resumen / Caso de estudio")
+            st.write(
+            """
+                En la siguiente práctica se procedió a realizar una aplicación web para graficar los datos de los registros de casos de COVID-19 del año 2020 dados por el Ministerio de Salud y a partir de ello predecir el pico de contagios asumiendo que no se cuentan con los datos futuros; empleando para ello la biblioteca de ``Plotly-Express``, para gráficar el histograma y la curva de ajuste, y el programa de ``GNUPlot``, para los valores de la curva de ajuste. \n
+                Empleando el programa de ``GNUPlot`` se determinaron los valores de las constantes de la ecuación de Distribución Gaussiana $$A$$, $$\mu$$ y $$\sigma$$, realizando un fit sobre los datos de casos positivos, columna 5 del csv; utilizando 69 datos, comenzando desde el día 13 de marzo del 2020, se determinaron que los valores de las constantes son $$A=$$930.848, $$\mu=$$109.684 y $$\sigma=$$23.3855. Se vectorizó la función de Distribución Gaussiana para poder introducir diferentes valores de $$x$$ como una lista y con ello poder graficar la curva de ajuste respecto a los datos de casos positivos registrados. \n
+                Se evaluaron los datos disponibles y se eliminaron aquellos que ocasionaban un sobreajuste al fit, de manera que solamente se utilizaron los valores de los primeros 69 días, debido a que con otros datos el ajuste toma que el pico de casos positivos ya se dio, de manera que los datos solamente decrecerian. De igual manera, se utilizó la distribución Gaussiana, en lugar de la distribución binomial, debido a que al tratarse de datos y no probabilidades, el ajuste que daba la primera de estas era mejor, mientras que con la binomial se hubiese tenido que arreglar la función o los datos para poder realizar el ajuste de la curva.
+            """
+            )
+            st.markdown("## Marco Teórico")
+            # A partir de aquí se escribe para el marco teórico
+            st.write(
+                """
+                ### Distribución binomial
+            
+                Es una distribución de probabilidad discreta que cuenta la cantidad de éxitos en $$n$$ casos con una
+                probabilidad fija $$p$$. Se caracteriza porque únicamente existe dos casos: éxito y fracaso. Además la
+                probabilidad $$p$$ es fija, lo que quiere decir que la probabilidad de éxito o fracaso en cada uno de
+                los casos no depende de lo que haya sucedido en el anterior.
+            
+                #### Fórmula
+                """
+                r'''
+                $$
+                P_{G}(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{2}} \longleftrightarrow P_{G}(x)=\frac{1}{\sigma\sqrt{2\pi}} \cdot \exp{\left[-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{2}\right]}
+                $$
+                '''
+                """
+                Donde $$P_G(x)$$ es la distribución gaussiana. La ecuación empleada en la práctica está dada por:
+                """
+                r'''
+                $$
+                P_{G}(x)=A\cdot e^{-\frac{1}{2}\left(\frac{x-u}{r}\right)^{2}} \longleftrightarrow P_{G}(x)=A\cdot \exp{\left[-\frac{1}{2}\left(\frac{x-u}{r}\right)^{2}\right]}
+                $$
+                '''
+                """
+                #### Media y desviación estándar
+            
+                La media de una distribución binomial es de la forma:
+                """
+                r'''
+                $$
+                \mu=np
+                $$
+                '''
+                """
+                La desviación estándar viene dada por:
+                """
+                r'''
+                $$
+                \sigma=\sqrt{npq}=\sqrt{np(1-p)}
+                $$
+                '''
+                """
+                ### Fit distribución binomial
+            
+                La librería `scipy.optimize` permite crear un fit personalizado con la opción `curve_fit()`, la cual
+                utiliza mínimos cuadrados no lineales para ajustar una función, $$f$$, a los datos proporcionados.
+            
+                La síntaxis del comando es la siguiente:
+            
+                ```python
+                scipy.optimize.curve_fit(f, xdata, ydata, p0=None, sigma=None, absolute_sigma=False, check_finite=None, bounds=(-inf, inf), method=None, jac=None, *, full_output=False, nan_policy=None, **kwargs)
+                ```
+                Puede verse la documentación completa [aquí](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html).
+                """
+            )
+            
+            # if st.button('Ir al inicio'):
+            #     st.write('<meta http-equiv="refresh" content="0">', unsafe_allow_html=True)
+                
+        if opt == "Referencias":
+            st.markdown("## Referencias bibliográficas (marco teórico)")
+            wpages1 = ["Scipy Inc. (n.d.). Scipy.Optimize. Recuperado de https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html", '']
+            st.write(wpages1)
+            
+            st.markdown("## Referencias bibliográficas (documentación)")
+            wpages2 = ['KaTeX. (2024). Supported Functions. Recuperado de: https://katex.org/docs/supported.html','Streamlit Inc. (n.d.). st.columns. Recuperado de: https://docs.streamlit.io/library/api-reference/layout/st.columns','Streamlit Inc. (n.d.). st.markdown. Recuperado de: https://docs.streamlit.io/library/api-reference/text/st.markdown','Streamlit Inc. (n.d.). st.radio. Recuperado de: https://docs.streamlit.io/library/api-reference/widgets/st.radio','Streamlit Inc. (n.d.). st.set_page_config. Recuperado de: https://docs.streamlit.io/library/api-reference/utilities/st.set_page_config', 'Streamlit Inc. (n.d.). st.radio. Recuperado de: https://docs.streamlit.io/library/api-reference/widgets/st.slider','Streamlit Inc. (n.d.). st.write. Recuperado de: https://docs.streamlit.io/library/api-reference/write-magic/st.write']
+            st.write(wpages2)
+            
+        #########################################################
+        ##                       javascript                    ##
+        #########################################################
+        # html(html_texto)
+
+#------------------------- P02_p02.py
+import pandas as pd
+import plotly.express as px
+import streamlit as st
+import numpy as np
+import math
+
+def app():
+    with open('Proyectos/P02/form01.css') as f:
+        css = f.read()
+
+    # Añade tu CSS
+    st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
+    
+    st.title('Distribuciones para la Predicción de COVID19')
+    
+    st.markdown("## **Procedimiento Experimental**")
+    # Sección del procedimiento del proyecto
+    st.write("""
+        En la presente práctica se llevó a cabo el análisis para realizar una predicción con los datos registrados por el Ministerio de Salud, de los casos de COVID-19 en el año 2020. A partir de ello se procedió de la siguiente manera
+    """)
+    
+    expa0 = st.toggle("##### Datos de las constantes GNUPlot (Parte experimental)")
+    if expa0:
+        #fit.log → lin: 2750 → Wed Apr 10 14:54:58 2024
+        st.write(
+            '''
+            1. Se definió la función de la Distribución Gaussiana, $$f(x)$$.
+            2. Se indicaron los valores de las constantes como $$A$$=400, $$u$$=200 y $$r$$=100.
+            3. Empleando el comando ``fit f(x) (...)`` se realizó la gráfica de la función con los datos de casos positivos.
+            4. Se indicó el uso de 69 datos.
+            5. A partir de las iteraciones se determinaron los valores de $$A$$, $$u$$ y $$r$$ que ajustan de mejor manera el fit.
+            '''
+        )
+        
+    expa1 = st.toggle("##### Gráfica de la distribución (parte experimental)")
+    if expa1:
+        st.write(
+            '''
+            1. Se definió, con el comando ``def``, la función de la Distribución Gaussiana, $$P_{G}(x)$$, con los valores de las constantes $$A$$, $$u$$ y $$r$$ previamente obtenidos.
+            2. Se vectorizó la función de la Distribución Gaussiana con ``numpy.vetorize()``, para diferentes valores de $$x$$.
+            3. Se definió un rango de 185 datos con ``numpy.arange``.
+            4. Se definieron los parámetros de la gráfica y la curva del ajuste.
+            5. Se gráfico el ajuste y el histograma con el comando ``streamlit.plotly_chart()``.
+            '''
+        )
+####################################################################
+##                        Gráfica de Plotly                       ##
+####################################################################
+    # Crear pandas con los datos
+    data = pd.read_csv('Proyectos/P02/csv/covid.csv')
+    df = pd.DataFrame(data)
+    
+    # Definir fórmula del fit
+    # Fit desde el 13 de marzo → 80 días (01-junio)
+    def fit(x):
+        A=298.165
+        u=73.5442
+        r=9.04991
+        x = np.array(x, dtype=int)
+        return A*math.exp(-((x-u)/r)**2/2)
+    fit = np.vectorize(fit)
+    
+    value_range = np.arange(100)
+    
+    plot_fit = px.line(x=value_range, y=fit(value_range))
+    plot_fit.update_traces(line_color='#B21914', line_width=2.5)
+    plot_fit.update_layout({'plot_bgcolor':'rgba(0,0,0,0)','paper_bgcolor':'rgba(0,0,0,0)'})
+
+    #Fit 13 de marzo → 69 días
+    def fit_2(x):
+        A=930.848
+        u=109.684
+        r=23.3855
+        x = np.array(x, dtype=int)
+        return A*math.exp(-((x-u)/r)**2/2)
+    fit_2 = np.vectorize(fit_2)
+
+    value_range_2 = np.arange(185)
+
+    plot_fit_2 = px.line(x=value_range_2, y=fit_2(value_range_2))
+    plot_fit_2.update_traces(line_color='#B21914', line_width=2.5)
+    plot_fit_2.update_layout({'plot_bgcolor':'rgba(0,0,0,0)','paper_bgcolor':'rgba(0,0,0,0)'})
+    
+    st.markdown("## **Resultados**")
+    # Sección de los resultados
+    rlist = ['**Gráfica 01**', '**Gráfica 02**', '**Tabla 01**']
+    rlist02 = ['Gráfica utilizando 69 datos, iniciando desde el 13 de marzo del 2020 hasta el 20 de mayo.', 'Gráfica utilizando 80 datos, iniciando desde el 01 de marzo hasta el 01 de junio.', 'Datos de las gráficas.']
+    # Diccionario con los valores de rlist con el valor de cada valor de rlist02
+    dic = {key: i for key, i in zip(rlist,rlist02)}
+    # Imprime cada par en el markdown
+    s = "\n".join([f'- {key}: {i}' for key, i in dic.items()])
+    # for i in rlist:
+    #     s += "- " + i + "\n"
+    st.write(
+        """
+        En la presente sección se presentarán los resultados obtenidos en la presente práctica, de los cuales están divididos en:
+        """
+    )
+    st.markdown(s)
+    
+    c1, c2 = st.columns([1,4])
+    with c1:
+        resultados = st.radio(
+            "**Resultados**", 
+            ["Gráfica 01", "Gráfica 02", "Tabla 01"]
+        )
+        
+    with c2:
+        if resultados == "Gráfica 01":
+            st.markdown("## Gráfica 13 de marzo hasta el 20 de mayo")
+            
+            c3, c4 = st.columns([6,1.5])
+            with c3:
+                # Mostrar gráfica de plotly
+                don = st.toggle('Ver fit')
+
+                if don:
+                    plot_fit_2.add_bar(x=df.index, y=df['resultados'], marker_color='#291a4d')
+                else:
+                    plot_fit_2.add_bar(x=df.index, y=df['resultados'].iloc[:69], marker_color='#291a4d')
+                st.plotly_chart(plot_fit_2)
+                
+        if resultados == "Gráfica 02":
+            st.markdown("## Gráfica 13 de marzo hasta el 01 de junio")
+            
+            c3, c4 = st.columns([6,1.5])
+            with c3:
+                on = st.toggle('Ver datos completos')
+
+                if on:
+                    plot_fit.add_bar(x=df.index, y=df['resultados'], marker_color='#291a4d')
+                else:
+                    plot_fit.add_bar(x=df.index, y=df['resultados'].iloc[:81], marker_color='#291a4d')
+                st.plotly_chart(plot_fit)
+
+#------------------------------------------ P02_p03.py
+
+
+#------------------------------------ form01.css
+.stApp > header {
+    /* display: none; */
+    background-color: transparent;
+    pointer-events: painted;
+    z-index: 1;
+}
+
+.stApp {
+    margin-top: -6.2%;
+    /* top: 0; */
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    padding: 0;
+    background: linear-gradient(315deg, #482585 3%, #7dc4ff 38%, #36cfcc 68%, #5f2ed3 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
+.st-emotion-cache-0.e1f1d6gn0 {
+    position: sticky;
+    top:7.1%;
+    z-index: 1000;
+    border-radius: 1em;
+    pointer-events:painted;
+}
+
+
+.st-emotion-cache-ocqkz7.e1f1d6gn5 {
+    z-index: 1;
+    background-color: transparent;
+    background-attachment: fixed;
+    border-radius: 1em;
+    position: relative;
+}
+
+.st-emotion-cache-1l269bu.e1f1d6gn3 {
+    z-index: 1;
+}
+.row-widget.stRadio {
+    background-color: transparent;
+    padding: 5px;
+}
+
+.st-ae.st-af.st-ag.st-ah.st-ai.st-aj.st-ak>.st-al.st-ae.st-am.st-ai.st-an.st-ao.st-ap.st-aq.st-ar.st-as.st-at.st-au.st-av.st-aw {
+    background-color: #5f2ed3;
+    margin: left;
+    width: 100%;
+    padding: 2px;
+    /* border-style: solid;
+    border-color: rgb(36, 36, 219); */
+    position: relative;
+    /* border-radius: 1em; */
+}
+
+.st-ae.st-af.st-ag.st-ah.st-ai.st-aj.st-ak>.st-al.st-ae.st-am.st-ai.st-an.st-ao.st-ap.st-aq.st-ar.st-as.st-at.st-au.st-av.st-aw:hover {
+    background-color: #482585;
+    margin:left;
+    width: 100%;
+    padding: 2px;
+}
+
+.st-emotion-cache-1ijpa8z.e1nzilvr5 > p {
+    padding: 0.5em;
+    box-shadow:inset 2px 2px 4px #78787866, inset -3px -3px 3px #ffffff66;
+    text-align: justify;
+}
+
+/* div.st-emotion-cache-1wmy9hl.e1f1d6gn1 > div[data-testid="stVerticalBlock"].st-emotion-cache-1vmynj.e1f1d6gn2 {
+    background-color: blue;
+} */
+
+.st-emotion-cache-zt5igj.e1nzilvr4 > span.st-emotion-cache-10trblm.e1nzilvr1 {
+    background: linear-gradient(315deg, #482585 3%, #7dc4ff 38%, #36cfcc 68%, #5f2ed3 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    text-align: center;
+    padding: 0.2em;
+    border-radius: 1em;
+}
+
+code {
+    color: black;
+    background-color: #FFFDD0;
+    font-style:italic;
+    font-weight:bold
+}
+
+pre.st-emotion-cache-12pd2es.e1ycw9pz3 {
+    background-color: #FFFDD0;
+    color: black;
+}
+::-webkit-scrollbar {
+    background-color: gray;
+}
+::-webkit-scrollbar:hover {
+    background-color: black;
+}
+
+.pretty-json-container.object-container {
+    background-color: #4F8CC9;
+}
+
+span.string-value {
+    color: black;
+    font-style:italic;
+    font-weight:bold
+}
+
+button.st-emotion-cache-1g06wcx.e1ycw9pz0 {
+    background-color: #383838;
+}
+
+svg.main-svg {
+    background: transparent;
+    box-shadow:inset 2px 2px 4px #78787866, inset -3px -3px 3px #ffffff66;
+}
+
+
+#--------------------------------- README.md
+# Proyecto 02
+
+La prueba y desarrollo de las gráficas utilizadas en el proyecto, realizadas con la biblioteca de ``Plotly.Express``, fueron llevados a cabo dentro del repositorio [https://github.com/Reegh/LabRedDat/tree/main/Notas](https://github.com/Reegh/LabRedDat/tree/main/Notas), en el documento ***proyecto.py***.
+
+## Integrantes del proyecto
+
+```
+202104854 - Giovanna Reneé Hernández Alonzo
+201906054 - Mario Armando Urbina Silva
+```
+
+## Página de Streamlit
+El link de la página de streamlit es:
+* [Página de streamlit](https://lrd-proy02.streamlit.app/).

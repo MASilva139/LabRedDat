@@ -6,7 +6,7 @@
 }
 
 .stApp {
-    margin-top: -6.2%;
+    margin-top: -7.3%;
     /* top: 0; */
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     overflow: auto;
@@ -19,7 +19,7 @@
 
 .st-emotion-cache-0.e1f1d6gn0 {
     position: sticky;
-    top:7.1%;
+    top:7.0%;
     z-index: 1000;
     border-radius: 1em;
     pointer-events:painted;
@@ -61,8 +61,9 @@
 }
 
 .st-emotion-cache-1ijpa8z.e1nzilvr5 > p {
-    padding: 0.5em;
-    box-shadow:inset 2px 2px 4px #78787866, inset -3px -3px 3px #ffffff66;
+    padding: 1em;
+    /* box-shadow:inset 2px 2px 4px #78787866, inset -3px -3px 3px #ffffff66; */
+    box-shadow:inset 4px 4px 8px #78787866, inset -6px -6px 6px #ffffff66;
     text-align: justify;
 }
 
@@ -115,3 +116,15 @@ svg.main-svg {
     background: transparent;
     box-shadow:inset 2px 2px 4px #78787866, inset -3px -3px 3px #ffffff66;
 }
+div.stPlotlyChart.js-plotly-plot {
+    width: 100%;
+}
+
+div.plot-container.plotly > div.user-select-none.svg-container {
+    width: 100%;
+}
+
+/* label.st-emotion-cache-1qg05tj.e1y5xkzn3 > div.st-emotion-cache-10uslyt.e1nzilvr5 {
+    text-align: center;
+    margin: 5px;
+} */
