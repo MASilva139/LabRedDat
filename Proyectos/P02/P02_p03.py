@@ -57,8 +57,8 @@ def app():
             st.image(img01)
             
         st.markdown("### Fit 02 GNUPlot")
-        c0, c1 = st.columns([2, 2])
-        with c0:
+        c2, c3 = st.columns([2, 2])
+        with c2:
             st.markdown("##### Descripción")
             st.write(
                 """
@@ -84,13 +84,13 @@ def app():
                 $$
                 '''
             )
-        with c1:
-            img01 = im.open('Proyectos/P02/img/fit07.png')
-            st.image(img01)
+        with c3:
+            img02 = im.open('Proyectos/P02/img/fit07.png')
+            st.image(img02)
             
         st.markdown("### Fit 03 GNUPlot")
-        c0, c1 = st.columns([2, 2])
-        with c0:
+        c4, c5 = st.columns([2, 2])
+        with c4:
             st.markdown("##### Descripción")
             st.write(
                 """
@@ -116,13 +116,13 @@ def app():
                 $$
                 '''
             )
-        with c1:
-            img01 = im.open('Proyectos/P02/img/fit08.png')
-            st.image(img01)
+        with c5:
+            img03 = im.open('Proyectos/P02/img/fit08.png')
+            st.image(img03)
             
         st.markdown("### Fit 04 GNUPlot")
-        c0, c1 = st.columns([2, 2])
-        with c0:
+        c6, c7 = st.columns([2, 2])
+        with c6:
             st.markdown("##### Descripción")
             st.write(
                 """
@@ -148,13 +148,13 @@ def app():
                 $$
                 '''
             )
-        with c1:
-            img01 = im.open('Proyectos/P02/img/fit10.png')
-            st.image(img01)
+        with c7:
+            img04 = im.open('Proyectos/P02/img/fit10.png')
+            st.image(img04)
             
         st.markdown("### Fit 05 GNUPlot")
-        c0, c1 = st.columns([2, 2])
-        with c0:
+        c8, c9 = st.columns([2, 2])
+        with c8:
             st.markdown("##### Descripción")
             st.write(
                 """
@@ -180,13 +180,13 @@ def app():
                 $$
                 '''
             )
-        with c1:
-            img01 = im.open('Proyectos/P02/img/fit11.png')
-            st.image(img01)
+        with c9:
+            img05 = im.open('Proyectos/P02/img/fit11.png')
+            st.image(img05)
             
         st.markdown("### Fit 06 GNUPlot")
-        c0, c1 = st.columns([2, 2])
-        with c0:
+        c10, c11 = st.columns([2, 2])
+        with c10:
             st.markdown("##### Descripción")
             st.write(
                 """
@@ -212,13 +212,13 @@ def app():
                 $$
                 '''
             )
-        with c1:
-            img01 = im.open('Proyectos/P02/img/fit04.png')
-            st.image(img01)
+        with c11:
+            img06 = im.open('Proyectos/P02/img/fit04.png')
+            st.image(img06)
             
         st.markdown("### Fit 07 GNUPlot")
-        c0, c1 = st.columns([2, 2])
-        with c0:
+        c12, c13 = st.columns([2, 2])
+        with c12:
             st.markdown("##### Descripción")
             st.write(
                 """
@@ -244,13 +244,13 @@ def app():
                 $$
                 '''
             )
-        with c1:
-            img01 = im.open('Proyectos/P02/img/fit03.png')
-            st.image(img01)
+        with c13:
+            img07 = im.open('Proyectos/P02/img/fit03.png')
+            st.image(img07)
             
         st.markdown("### Fit 08 GNUPlot")
-        c0, c1 = st.columns([2, 2])
-        with c0:
+        c14, c15 = st.columns([2, 2])
+        with c14:
             st.markdown("##### Descripción")
             st.write(
                 """
@@ -276,13 +276,13 @@ def app():
                 $$
                 '''
             )
-        with c1:
-            img01 = im.open('Proyectos/P02/img/fit01.png')
-            st.image(img01)
+        with c15:
+            img08 = im.open('Proyectos/P02/img/fit01.png')
+            st.image(img08)
             
         st.markdown("### Fit 09 GNUPlot")
-        c0, c1 = st.columns([2, 2])
-        with c0:
+        c16, c17 = st.columns([2, 2])
+        with c16:
             st.markdown("##### Descripción")
             st.write(
                 """
@@ -308,13 +308,13 @@ def app():
                 $$
                 '''
             )
-        with c1:
-            img01 = im.open('Proyectos/P02/img/fit06.png')
-            st.image(img01)
+        with c17:
+            img09 = im.open('Proyectos/P02/img/fit06.png')
+            st.image(img09)
             
         st.markdown("### Fit 10 GNUPlot")
-        c0, c1 = st.columns([2, 2])
-        with c0:
+        c18, c19 = st.columns([2, 2])
+        with c18:
             st.markdown("##### Descripción")
             st.write(
                 """
@@ -340,13 +340,13 @@ def app():
                 $$
                 '''
             )
-        with c1:
-            img01 = im.open('Proyectos/P02/img/fit05.png')
-            st.image(img01)
+        with c19:
+            img10 = im.open('Proyectos/P02/img/fit05.png')
+            st.image(img10)
             
         st.markdown("### Fit 11 GNUPlot")
-        c0, c1 = st.columns([2, 2])
-        with c0:
+        c20, c21 = st.columns([2, 2])
+        with c20:
             st.markdown("##### Descripción")
             st.write(
                 """
@@ -372,6 +372,6 @@ def app():
                 $$
                 '''
             )
-        with c1:
-            img01 = im.open('Proyectos/P02/img/fit02.png')
-            st.image(img01)
+        with c21:
+            img11 = im.open('Proyectos/P02/img/fit02.png')
+            st.image(img11)
