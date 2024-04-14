@@ -117,7 +117,7 @@ def app():
                 ### Distribución Normal
             
                 También conocida como distribución de Gauss, es una distribución de variable continua, con campo de variación $$(-\infty, \infty)$$. Esta queda especificada por dos parámetros de los que depende su función de densidad y que resultan ser la media $$\mu$$ y la dsviación típica de la distribución $$\sigma$$. Su estudio teórico suele introducirse directamente a partir de su función de densidad.
-                \n
+                
                 Dado que depende de dos parámetros, $$\mu$$ y $$\sigma$$, el hecho de que una variable $$X$$ se distribuya con una distribución normal de media $$\mu$$ y desviación típica $$\sigma$$ se representa por la siguiente expresión:
                 """
                 r'''
