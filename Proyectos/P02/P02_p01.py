@@ -2,6 +2,7 @@ from streamlit_option_menu import option_menu
 from streamlit_extras.stylable_container import stylable_container as stycont
 from streamlit.components.v1 import html
 import streamlit as st
+import pandas as pd
 
 def app():
     with open('Proyectos/P02/form01.css') as f:
@@ -111,6 +112,10 @@ def app():
             """
             )
             st.markdown("## Marco Teórico")
+            
+            d = {'Comando': ['pwd','cd','load [fichero]','clear','exit/quit','plot','splot','replot'], 'Descripción': ['Indica cual es el directorio por defecto.','Cambia el directorio por defecto. El path del directorio se puede indicar en forma absoluta o relativa.','Si [fichero] es un script contiene comandos gnuplot, esta orden ejecuta dichos comandos. Cuando se termina, se vuelve al modo interactivo.','Borra el terminal gráfico.','En la línea de comandos de gnuplot, terminan la ejecución del programa.','Para dibujar curvas planas y gráficos 2D.','Para dibujar superficies.','Para hacer modificaciones de un plot o un splot anterior.']}
+            df = pd.DataFrame(d)
+            
             # A partir de aquí se escribe para el marco teórico
             st.write(
                 """
@@ -171,48 +176,24 @@ def app():
                 $$
                 '''
                 """
-                #### Media y desviación estándar
+                #### GNUPlot
             
-                La media de una distribución binomial es de la forma:
-                """
-                r'''
-                $$
-                \mu=np
-                $$
-                '''
-                """
-                La desviación estándar viene dada por:
-                """
-                r'''
-                $$
-                \sigma=\sqrt{npq}=\sqrt{np(1-p)}
-                $$
-                '''
-                """
-                ### Fit distribución binomial
-            
-                La librería `scipy.optimize` permite crear un fit personalizado con la opción `curve_fit()`, la cual
-                utiliza mínimos cuadrados no lineales para ajustar una función, $$f$$, a los datos proporcionados.
-            
-                La síntaxis del comando es la siguiente:
-            
-                ```python
-                scipy.optimize.curve_fit(f, xdata, ydata, p0=None, sigma=None, absolute_sigma=False, check_finite=None, bounds=(-inf, inf), method=None, jac=None, *, full_output=False, nan_policy=None, **kwargs)
-                ```
-                Puede verse la documentación completa [aquí](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html).
+                Es un programa de visualización gráfica de datos científicos. Permite realizar gráficos 2D y 3D de curvas, líneas de nivel y superficies, tanto a partir de funciones como de datos discretos. Este software funciona mediante comandos, que pueden usarse en modo interactivo como escribiendo scripts; es decir, la secuencia de comandos escritos en un fichero.\n
+                Algunos comandos son:
                 """
             )
+            st.table(df)
             
             # if st.button('Ir al inicio'):
             #     st.write('<meta http-equiv="refresh" content="0">', unsafe_allow_html=True)
                 
         if opt == "Referencias":
             st.markdown("## Referencias bibliográficas (marco teórico)")
-            wpages1 = ["Scipy Inc. (n.d.). Scipy.Optimize. Recuperado de https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html", 'CEACES, (n.d.). Distribución normal, [PDF]. Recuperado de https://www.uv.es/ceaces/pdf/normal.pdf']
+            wpages1 = [ 'CEACES, (n.d.). Distribución normal, [PDF]. Recuperado de https://www.uv.es/ceaces/pdf/normal.pdf', "Echevarría, R. (n.d.). Breve Introducción a GNUPlot. Recuperado de https://personal.us.es/echevarria/documentos/APUNTESgnuplot.pdf"]
             st.write(wpages1)
             
             st.markdown("## Referencias bibliográficas (documentación)")
-            wpages2 = ['KaTeX. (2024). Supported Functions. Recuperado de: https://katex.org/docs/supported.html','Streamlit Inc. (n.d.). st.columns. Recuperado de: https://docs.streamlit.io/library/api-reference/layout/st.columns','Streamlit Inc. (n.d.). st.markdown. Recuperado de: https://docs.streamlit.io/library/api-reference/text/st.markdown','Streamlit Inc. (n.d.). st.radio. Recuperado de: https://docs.streamlit.io/library/api-reference/widgets/st.radio','Streamlit Inc. (n.d.). st.set_page_config. Recuperado de: https://docs.streamlit.io/library/api-reference/utilities/st.set_page_config', 'Streamlit Inc. (n.d.). st.radio. Recuperado de: https://docs.streamlit.io/library/api-reference/widgets/st.slider','Streamlit Inc. (n.d.). st.write. Recuperado de: https://docs.streamlit.io/library/api-reference/write-magic/st.write']
+            wpages2 = ['Anónimo, (n.d.). Streamlit-extras. Recuperado de: https://extras.streamlit.app','KaTeX. (2024). Supported Functions. Recuperado de: https://katex.org/docs/supported.html','Pandas documentation, (2024). pandas.DataFrame. Recuperado de: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html','Streamlit Inc. (n.d.). st.columns. Recuperado de: https://docs.streamlit.io/library/api-reference/layout/st.columns','Streamlit Inc. (n.d.). st.markdown. Recuperado de: https://docs.streamlit.io/library/api-reference/text/st.markdown','Streamlit Inc. (n.d.). st.radio. Recuperado de: https://docs.streamlit.io/library/api-reference/widgets/st.radio','Streamlit Inc. (n.d.). st.set_page_config. Recuperado de: https://docs.streamlit.io/library/api-reference/utilities/st.set_page_config', 'Streamlit Inc. (n.d.). st.slider. Recuperado de: https://docs.streamlit.io/library/api-reference/widgets/st.slider','Streamlit Inc. (n.d.). st.table. Recuperado de: https://docs.streamlit.io/develop/api-reference/data/st.table','Streamlit Inc. (n.d.). st.write. Recuperado de: https://docs.streamlit.io/library/api-reference/write-magic/st.write']
             st.write(wpages2)
             
         #########################################################
