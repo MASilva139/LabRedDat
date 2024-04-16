@@ -15,9 +15,9 @@ def app():
     st.title("Conclusiones")
     st.write(
         '''
-        - Las gráficas presentadas por ``Plotly.Express`` permiten una mejor representación de los datos que las realizadas por el entorno de ``PyPlot``.
-        - Los valores experimentales presentan una muy buena aproximación, respecto a los valores teóricos, con la función binomial.
-        - Mientras mayor sea el número de datos, la gráfica toma una forma más parecida a una distribución binomial teórica y los datos $$n$$ y $$p$$ obtenidos por el ajuste son más cercanos a los teóricos.
+        - Las gráficas presentadas por ``Plotly.Express`` permiten realizar gráficas interactivas en donde puede observarse la comparación de la proyección dada por el ajuste con los datos reales que ya conocemos.
+        - En esta ocasión no era óptimo utilizar una distribución binomial, aunque los datos tomaran esta forma, ya que para ello necesitabamos información que no poseíamos, como lo es la probabilidad.
+        - Aunque la elección de la distribución y fórmula a utilizar es un paso clave, la exactitud y fiabilidad del ajuste fue decidida gracias al análisis previo de los datos para definir cuales nos darían resultados más satisfactorios y coherentes con lo estudiado.
         '''
     )
     
