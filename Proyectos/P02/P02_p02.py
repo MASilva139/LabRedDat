@@ -112,12 +112,12 @@ def app():
             # c3, c4 = st.columns([6,1.5])
             # with c3:
                 # Mostrar gráfica de plotly
-            don = st.toggle('Ver fit')
+            don = st.toggle('Comparar la predicción con los datos reales:')
 
             if don:
                 plot_fit_2.add_bar(x=df.index, y=df['resultados'], marker_color='#291a4d')
             else:
-                plot_fit_2.add_bar(x=df.index, y=df['resultados'].iloc[:69], marker_color='#291a4d')
+                plot_fit_2.add_bar(x=df.index, y=df['resultados'].iloc[:81], marker_color='#291a4d')
             st.plotly_chart(plot_fit_2)
                 
         if resultados == "Gráfica 02":
@@ -125,7 +125,7 @@ def app():
             
             # c3, c4 = st.columns([6,1.5])
             # with c3:
-            on = st.toggle('Ver datos completos')
+            on = st.toggle('Ver la exactitud de la predicción:')
 
             if on:
                 plot_fit.add_bar(x=df.index, y=df['resultados'], marker_color='#291a4d')
@@ -144,8 +144,13 @@ def app():
     # Sección de los resultados
     st.write(
         """
-        A partir de los datos dados por el ministerio de Salud, de los casos positivos desde el 13 de marzo del 2020 hasta el 15 de marzo del 2021 (véase apartado ***Tabla 01***), se procede a realizar en las gráficas el histograma presentado en la ***Gráfica 01*** y ***Gráfica 02***. Del mismo modo se realizó una curva de ajuste empleando para ello la distribución gaussiana, con respecto a cierta cantidad de datos del histograma, para predecir un posible pico de contagios de COVID-19; esto es, considerando que se está en el día 69 y 80, después del primer caso, presentados en la ***Gráfica 01*** y ***Gráfica 02***, respectivamente.
+        A partir de los datos dados por el Ministerio de Salud, de los casos positivos desde el 13 de marzo del 2020 hasta el 15 de marzo del 2021 (véase apartado ***Tabla 01***), se procede a realizar en las gráficas el histograma presentado en la ***Gráfica 01*** y ***Gráfica 02***. Del mismo modo se realizó una curva de ajuste empleando para ello la distribución gaussiana, con respecto a cierta cantidad de datos del histograma, para predecir un posible pico de contagios de COVID-19; esto es, considerando que se está en el día 69 y 80, después del primer caso, presentados en la ***Gráfica 01*** y ***Gráfica 02***, respectivamente.
         \n
-        De los fits realizados en ``GNUPlot`` se consideró utilizar el del día 69, después del primer caso de contagio registrado, presentados en los apartados ***Gráfica 01*** y ***Fit 11 GNUPlot***, del apédice. Esto se debe a que en otros días los valores aumentaban o disminuian de manera drástica, como en el caso que se presenta en el ***Fit 13 GNUPlot*** (véase apéndice), donde el valor de $$A$$ cambiaba de 930,848 $$\pm$$ 3038 a 73351,4 $$\pm$$ 1,105e+06. Además, a partir del día 71 los datos comenzaban a decrecer, y con ello el tomar el fit desde ese día hacía que el fit tomase esa tendencia en lugar de predecir un fit.
+        De los fits realizados en ``GNUPlot`` se consideró utilizar el del día 69, después del primer caso de contagio registrado, presentados en los apartados ***Gráfica 01*** y ***Fit 11 GNUPlot***, del apédice. Esto se debe a que en otros días los valores aumentaban o disminuian de manera drástica, como en el caso que se presenta en el ***Fit 13 GNUPlot*** (véase apéndice), donde el valor de $$A$$ cambiaba de 930,848 $$\pm$$ 3038 a 73351,4 $$\pm$$ 1,105e+06. Además, a partir del día 71 los datos tendían a decrecer, y con ello al realizar el ajuste tomando de ese día en adelante hacía que el fit proyectara que el valor máximo ya había sucedido y decreciera en vez de predecir un pico.
+        
+        De igual manera existían datos anteriores que también lograban realizar una proyección de un pico coherente a futuro, pero el utilizar estos ocasionaba que se desecharan
+        un gran número de datos y por lo mismo su predicción podría ser menos fiable. Pero, como se mencionó anteriormente, también existían datos que ocasionaban que el ajuste
+        se disparara a cantidades exageradas, debido a que eran días en donde los datos aumentaban o disminuían de manera drástica, obteniendo de esta manera una proyección que
+        parecía improbable y por ende fue desechada.
         """
     )
