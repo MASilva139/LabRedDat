@@ -97,7 +97,7 @@ def app():
     st.markdown("## **Resultados**")
     # Sección de los resultados
     rlist = ['**Gráfica 01**', '**Gráfica 02**', '**Tabla 01**']
-    rlist02 = ['Gráfica del Aire.', 'Gráfica Cesio.', 'Datos de las gráficas.']
+    rlist02 = ['Gráfica del Cesio-137.', 'Gráfica del Aire.', 'Datos de las gráficas.']
     # Diccionario con los valores de rlist con el valor de cada valor de rlist02
     dic = {key: i for key, i in zip(rlist,rlist02)}
     # Imprime cada par en el markdown
@@ -120,7 +120,7 @@ def app():
         
     with c2:
         if resultados == "Gráfica 01":
-            st.markdown("## Gráfica del decaimiento radiactivo del Aire")
+            st.markdown("## Gráfica del decaimiento radiactivo del Cesio-137")
             
             # c3, c4 = st.columns([6,1.5])
             # with c3:
@@ -128,7 +128,7 @@ def app():
             st.plotly_chart(plot_fit)
                 
         if resultados == "Gráfica 02":
-            st.markdown("## Gráfica del decaimiento radiactivo del Cesio-137")
+            st.markdown("## Gráfica del decaimiento radiactivo del Aire")
             
             # c3, c4 = st.columns([6,1.5])
             # with c3:
