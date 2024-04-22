@@ -136,9 +136,9 @@ def app():
             
         if resultados == "Tabla 01":
             st.markdown("## Datos de las gráficas")
-            l = np.arange(368)
-            table = pd.DataFrame({'Fechas': df['fecha'], 'Resultados Positivos': df['resultados']})
-            st.table(table)
+            # l = np.arange(368)
+            # table = pd.DataFrame({'Fechas': df['fecha'], 'Resultados Positivos': df['resultados']})
+            st.table(data)
             
     
     st.markdown("## **Discusión de Resultados**")
