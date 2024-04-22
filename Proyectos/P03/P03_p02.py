@@ -44,47 +44,60 @@ def app():
             '''
         )
 ####################################################################
-##                        Gráfica de Plotly                       ##
+##                    Gráfica de Plotly (Aire)                    ##
 ####################################################################
-    # Crear pandas con los datos
-    data = pd.read_csv('Proyectos/P02/csv/covid.csv')
-    df = pd.DataFrame(data)
-    
-    # Definir fórmula del fit
-    # Fit desde el 13 de marzo → 80 días (01-junio)
+    # Definir fórmula del fit para el aire
     def fit(x):
-        A=298.165
-        u=73.5442
-        r=9.04991
+        A=63.5733
+        u=2.18871
+        r=1.59884
         x = np.array(x, dtype=int)
         return A*math.exp(-((x-u)/r)**2/2)
     fit = np.vectorize(fit)
-    
-    value_range = np.arange(100)
-    
-    plot_fit = px.line(x=value_range, y=fit(value_range))
-    plot_fit.update_traces(line_color='#B21914', line_width=2.5)
-    plot_fit.update_layout({'plot_bgcolor':'rgba(0,0,0,0)','paper_bgcolor':'rgba(0,0,0,0)'})
 
-    #Fit 13 de marzo → 69 días
-    def fit_2(x):
-        A=930.848
-        u=109.684
-        r=23.3855
+    # Datos aire
+    data = pd.read_csv('muestra_radiacion.csv')
+    df = pd.DataFrame(data)
+    value_range = np.arange(-3,df['Aire'].max()+1)
+    count = df['Aire'].value_counts().reindex(value_range, fill_value=0).reset_index()
+    print(count)
+
+    plot_fit = px.line(x=value_range, y=fit(value_range))
+    plot_fit.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline')
+    plot_fit.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
+    plot_fit.add_bar(x=count['Aire'], y=count['count'])
+    
+####################################################################
+##                    Gráfica de Plotly (Cesio)                   ##
+####################################################################
+    # Definir fórmula del fit para el cesio
+    def fit2(x):
+        A=5.09283
+        u=442.826
+        r=19.5837
         x = np.array(x, dtype=int)
         return A*math.exp(-((x-u)/r)**2/2)
-    fit_2 = np.vectorize(fit_2)
+    fit2 = np.vectorize(fit2)
 
-    value_range_2 = np.arange(185)
+    # Datos cesio
+    print(df['Cesio'].min())
+    value_range2 = np.arange(df['Cesio'].min(),df['Cesio'].max()+1)
+    count2 = df['Cesio'].value_counts().reindex(value_range2, fill_value=0).reset_index()
+    print(count2)
+    print(value_range2)
 
-    plot_fit_2 = px.line(x=value_range_2, y=fit_2(value_range_2))
-    plot_fit_2.update_traces(line_color='#B21914', line_width=2.5)
-    plot_fit_2.update_layout({'plot_bgcolor':'rgba(0,0,0,0)','paper_bgcolor':'rgba(0,0,0,0)'})
+    plot_fit2 = px.line(x=value_range2, y=fit(value_range2))
+    plot_fit2.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline')
+    plot_fit2.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
+    plot_fit2.add_bar(x=count2['Cesio'], y=count2['count'])
     
+####################################################################
+##                      Apartado de Resultados                    ##
+####################################################################
     st.markdown("## **Resultados**")
     # Sección de los resultados
     rlist = ['**Gráfica 01**', '**Gráfica 02**', '**Tabla 01**']
-    rlist02 = ['Gráfica utilizando 69 datos, iniciando desde el 13 de marzo del 2020 hasta el 20 de mayo.', 'Gráfica utilizando 80 datos, iniciando desde el 01 de marzo hasta el 01 de junio.', 'Datos de las gráficas.']
+    rlist02 = ['Gráfica del Aire.', 'Gráfica Cesio.', 'Datos de las gráficas.']
     # Diccionario con los valores de rlist con el valor de cada valor de rlist02
     dic = {key: i for key, i in zip(rlist,rlist02)}
     # Imprime cada par en el markdown
@@ -107,31 +120,19 @@ def app():
         
     with c2:
         if resultados == "Gráfica 01":
-            st.markdown("## Gráfica 13 de marzo hasta el 20 de mayo")
+            st.markdown("## Gráfica del decaimiento radiactivo del Aire")
             
             # c3, c4 = st.columns([6,1.5])
             # with c3:
-                # Mostrar gráfica de plotly
-            don = st.toggle('Comparar la predicción con los datos reales:')
-
-            if don:
-                plot_fit_2.add_bar(x=df.index, y=df['resultados'], marker_color='#291a4d')
-            else:
-                plot_fit_2.add_bar(x=df.index, y=df['resultados'].iloc[:81], marker_color='#291a4d')
-            st.plotly_chart(plot_fit_2)
+            # Mostrar gráfica de plotly
+            st.plotly_chart(plot_fit)
                 
         if resultados == "Gráfica 02":
-            st.markdown("## Gráfica 13 de marzo hasta el 01 de junio")
+            st.markdown("## Gráfica del decaimiento radiactivo del Cesio-137")
             
             # c3, c4 = st.columns([6,1.5])
             # with c3:
-            on = st.toggle('Ver la exactitud de la predicción:')
-
-            if on:
-                plot_fit.add_bar(x=df.index, y=df['resultados'], marker_color='#291a4d')
-            else:
-                plot_fit.add_bar(x=df.index, y=df['resultados'].iloc[:81], marker_color='#291a4d')
-            st.plotly_chart(plot_fit)
+            st.plotly_chart(plot_fit2)
             
         if resultados == "Tabla 01":
             st.markdown("## Datos de las gráficas")
