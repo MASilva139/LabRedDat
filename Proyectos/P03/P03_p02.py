@@ -56,7 +56,7 @@ def app():
     fit = np.vectorize(fit)
 
     # Datos aire
-    data = pd.read_csv('muestra_radiacion.csv')
+    data = pd.read_csv('Proyectos/P02/csv/muestra_radiacion.csv')
     df = pd.DataFrame(data)
     value_range = np.arange(-3,df['Aire'].max()+1)
     count = df['Aire'].value_counts().reindex(value_range, fill_value=0).reset_index()
@@ -72,9 +72,9 @@ def app():
 ####################################################################
     # Definir fórmula del fit para el cesio
     def fit2(x):
-        A=5.09283
+        A=5.09287
         u=442.826
-        r=19.5837
+        r=19.5836
         x = np.array(x, dtype=int)
         return A*math.exp(-((x-u)/r)**2/2)
     fit2 = np.vectorize(fit2)
