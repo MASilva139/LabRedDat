@@ -76,12 +76,15 @@ def app():
         return float(P_x)
     v_poisson_ai = np.vectorize(poisson_ai)
         
-    datpossai = pd.DataFrame({'Aire':df['Aire']})
-    datpossai['Pp(x)'] = datpossai['Aire'].apply(v_poisson_ai)
-    dpoissonai = datpossai.round(15).astype(str)
+    nd = df['Aire'].count()
+    datpossai = pd.DataFrame({'Aire':count['Aire'], 'hi(x)':count['count']})
+    datpossai['Pp(x)'] = (datpossai['Aire'].apply(v_poisson_ai))*(nd)
+    datpossai['[hi(x)-yi(x)]^2'] = (datpossai['hi(x)']-datpossai['Pp(x)'])**2
+    datpossai['χ^2 (1)'] = (datpossai['[hi(x)-yi(x)]^2'])/((datpossai['Pp(x)'])**2)
+    datpossai['χ^2 (2)'] = (datpossai['[hi(x)-yi(x)]^2'])/((datpossai['hi(x)'])**2)
+    dpoissonai = (datpossai).round(15).astype(str)
     #print(dpoisson01)
     
-    nd = df['Aire'].count()
     poisson_fitai = px.line(x=value_range, y=(v_poisson_ai(value_range))*(nd))
     poisson_fitai.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline')
     poisson_fitai.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
@@ -119,12 +122,12 @@ def app():
         return float(P_x)
     v_poisson_ce01 = np.vectorize(poisson_ce01)
         
-    datposs01 = pd.DataFrame({'Cesio':df['Cesio']})
-    datposs01['Pp(x)'] = datposs01['Cesio'].apply(v_poisson_ce01)
+    nd01 = df['Cesio'].count()
+    datposs01 = pd.DataFrame({'Cesio':count2['Cesio']})
+    datposs01['Pp(x)'] = (datposs01['Cesio'].apply(v_poisson_ce01))*(nd01)
     dpoisson01 = datposs01.round(15).astype(str)
     #print(dpoisson01)
     
-    nd01 = df['Cesio'].count()
     poisson_fit1 = px.line(x=value_range2, y=(v_poisson_ce01(value_range2))*(nd01))
     poisson_fit1.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline')
     poisson_fit1.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
@@ -158,11 +161,11 @@ def app():
         return float(P_x)
     v_poisson_ce02 = np.vectorize(poisson_ce02)
         
-    datposs02 = pd.DataFrame({'Cesio':dfd['Cesio']})
-    datposs02['Pp(x)'] = datposs02['Cesio'].apply(v_poisson_ce02)
-    dpoisson01 = datposs02.round(15).astype(str)
-    
     nd02 = dfd['Cesio'].count()
+    datposs02 = pd.DataFrame({'Cesio':dfd['Cesio']})
+    datposs02['Pp(x)'] = (datposs02['Cesio'].apply(v_poisson_ce02))*(nd02)
+    dpoisson02 = datposs02.round(15).astype(str)
+    
     poisson_fit2 = px.line(x=group, y=(v_poisson_ce02(group))*(nd02))
     poisson_fit2.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline')
     poisson_fit2.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
@@ -173,8 +176,8 @@ def app():
 ####################################################################
     st.markdown("## **Resultados**")
     # Sección de los resultados
-    rlist = ['**Gráfica 01**', '**Gráfica 02**', '**Gráfica 03**', '**Tabla 01**']
-    rlist02 = ['Distribución Gaussiana del Aire.', 'Distribución del Cesio-137.', 'Distribución del Cesio-137, datos agrupados de 5 en 5.', 'Datos de las gráficas.']
+    rlist = ['**Gráfica 01**', '**Gráfica 02**', '**Gráfica 03**', '**Tabla 01**', '**Tabla 02**']
+    rlist02 = ['Distribución Gaussiana del Aire.', 'Distribución del Cesio-137.', 'Distribución del Cesio-137, datos agrupados de 5 en 5.', 'Datos originales de las gráficas.', 'Datos empleados en las gráficas (histograma).']
     # Diccionario con los valores de rlist con el valor de cada valor de rlist02
     dic = {key: i for key, i in zip(rlist,rlist02)}
     # Imprime cada par en el markdown
@@ -192,7 +195,7 @@ def app():
     with c1:
         resultados = st.radio(
             "**Resultados**", 
-            ["Gráfica 01", "Gráfica 02", "Gráfica 03", "Tabla 01"]
+            ["Gráfica 01", "Gráfica 02", "Gráfica 03", "Tabla 01", "Tabla 02", "Tabla 03", "Tabla 04", "Tabla 05"]
         )
         
     with c2:
@@ -230,11 +233,33 @@ def app():
             st.plotly_chart(poisson_fit2)
             
         if resultados == "Tabla 01":
-            st.markdown("## Datos de las gráficas")
+            st.markdown("## Datos Originales")
             # l = np.arange(368)
             # table = pd.DataFrame({'Fechas': df['fecha'], 'Resultados Positivos': df['resultados']})
             st.table(data)
+                
+        if resultados == "Tabla 02":
+            st.markdown("### Datos de las gráficas")
+            datc = pd.DataFrame({'Aire':count['Aire'], "N_{Aire}":count['count'], 'Cesio-137':count2['Cesio'], 'N_{Cs-137}':count2['count'],'Cesio-137 (arr)':data_c['Cesio'], 'N_{Cs-137} (arr)':data_c['count']})
+            st.table(datc)
+                
+        if resultados == "Tabla 03":
+            st.markdown("## Datos de las gráficas del decaimiento radiactivo del aire")
             
+            st.markdown("### Distribución de Poisson, $$P_{P}(x)$$")
+            st.table(dpoissonai)
+           
+        if resultados == "Tabla 04":
+            st.markdown("## Datos de las gráficas del decaimiento radiactivo del Cesio-137")
+            
+            st.markdown("### Distribución de Poisson, $$P_{P}(x)$$")
+            st.table(dpoisson01)
+            
+        if resultados == "Tabla 05":
+            st.markdown("## Datos de las gráficas del decaimiento radiactivo del Cesio-137 (datos agrupados)")
+            
+            st.markdown("### Distribución de Poisson, $$P_{P}(x)$$")
+            st.table(dpoisson02)
     
     st.markdown("## **Discusión de Resultados**")
     # Sección de los resultados
