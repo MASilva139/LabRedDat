@@ -77,6 +77,14 @@ def app():
     v_poisson_ai = np.vectorize(poisson_ai)
         
     nd = df['Aire'].count()
+    #------------Distribución Gaussiana
+    datgaussai = pd.DataFrame({'Aire':count['Aire'], 'hi(x)':count['count']})
+    datgaussai['Pg(x)'] = fit(datgaussai['Aire'])
+    datgaussai['[hi(x)-yi(x)]^2'] = (datgaussai['hi(x)']-datgaussai['Pg(x)'])**2
+    datgaussai['χ^2 (1)'] = (datgaussai['[hi(x)-yi(x)]^2'])/((datgaussai['Pg(x)'])**2)
+    datgaussai['χ^2 (2)'] = (datgaussai['[hi(x)-yi(x)]^2'])/((datgaussai['hi(x)'])**2)
+    dgaussai =(datgaussai).round(15).astype(str)
+    #------------Poisson
     datpossai = pd.DataFrame({'Aire':count['Aire'], 'hi(x)':count['count']})
     datpossai['Pp(x)'] = (datpossai['Aire'].apply(v_poisson_ai))*(nd)
     datpossai['[hi(x)-yi(x)]^2'] = (datpossai['hi(x)']-datpossai['Pp(x)'])**2
@@ -123,8 +131,19 @@ def app():
     v_poisson_ce01 = np.vectorize(poisson_ce01)
         
     nd01 = df['Cesio'].count()
-    datposs01 = pd.DataFrame({'Cesio':count2['Cesio']})
+    #------------Distribución Gaussiana
+    datgauss01 = pd.DataFrame({'Cesio-137':count2['Cesio'], 'hi(x)':count2['count']})
+    datgauss01['Pg(x)'] = fit2(datgauss01['Cesio-137'])
+    datgauss01['[hi(x)-yi(x)]^2'] = (datgauss01['hi(x)']-datgauss01['Pg(x)'])**2
+    datgauss01['χ^2 (1)'] = (datgauss01['[hi(x)-yi(x)]^2'])/((datgauss01['Pg(x)'])**2)
+    datgauss01['χ^2 (2)'] = (datgauss01['[hi(x)-yi(x)]^2'])/((datgauss01['hi(x)'])**2)
+    dgauss01 =(datgauss01).round(15).astype(str)
+    #------------Poisson
+    datposs01 = pd.DataFrame({'Cesio':count2['Cesio'], 'hi(x)':count2['count']})
     datposs01['Pp(x)'] = (datposs01['Cesio'].apply(v_poisson_ce01))*(nd01)
+    datposs01['[hi(x)-yi(x)]^2'] = (datposs01['hi(x)']-datposs01['Pp(x)'])**2
+    datposs01['χ^2 (1)'] = (datposs01['[hi(x)-yi(x)]^2'])/((datposs01['Pp(x)'])**2)
+    datposs01['χ^2 (2)'] = (datposs01['[hi(x)-yi(x)]^2'])/((datposs01['hi(x)'])**2)
     dpoisson01 = datposs01.round(15).astype(str)
     #print(dpoisson01)
     
@@ -162,8 +181,19 @@ def app():
     v_poisson_ce02 = np.vectorize(poisson_ce02)
         
     nd02 = dfd['Cesio'].count()
-    datposs02 = pd.DataFrame({'Cesio':dfd['Cesio']})
+    #------------Distribución Gaussiana
+    datgauss02 = pd.DataFrame({'Cesio-137':dfd['Cesio'], 'hi(x)':dfd['count']})
+    datgauss02['Pg(x)'] = fit2(datgauss02['Cesio-137'])
+    datgauss02['[hi(x)-yi(x)]^2'] = (datgauss02['hi(x)']-datgauss02['Pg(x)'])**2
+    datgauss02['χ^2 (1)'] = (datgauss02['[hi(x)-yi(x)]^2'])/((datgauss02['Pg(x)'])**2)
+    datgauss02['χ^2 (2)'] = (datgauss02['[hi(x)-yi(x)]^2'])/((datgauss02['hi(x)'])**2)
+    dgauss02 =(datgauss02).round(15).astype(str)
+    #------------Poisson
+    datposs02 = pd.DataFrame({'Cesio':dfd['Cesio'], 'hi(x)':dfd['count']})
     datposs02['Pp(x)'] = (datposs02['Cesio'].apply(v_poisson_ce02))*(nd02)
+    datposs02['[hi(x)-yi(x)]^2'] = (datposs02['hi(x)']-datposs02['Pp(x)'])**2
+    datposs02['χ^2 (1)'] = (datposs02['[hi(x)-yi(x)]^2'])/((datposs02['Pp(x)'])**2)
+    datposs02['χ^2 (2)'] = (datposs02['[hi(x)-yi(x)]^2'])/((datposs02['hi(x)'])**2)
     dpoisson02 = datposs02.round(15).astype(str)
     
     poisson_fit2 = px.line(x=group, y=(v_poisson_ce02(group))*(nd02))
@@ -245,18 +275,24 @@ def app():
                 
         if resultados == "Tabla 03":
             st.markdown("## Datos de las gráficas del decaimiento radiactivo del aire")
+            st.markdown("### Distribución Gaussiana, $$P_{G}(x)$$")
+            st.table(dgaussai)
             
             st.markdown("### Distribución de Poisson, $$P_{P}(x)$$")
             st.table(dpoissonai)
            
         if resultados == "Tabla 04":
             st.markdown("## Datos de las gráficas del decaimiento radiactivo del Cesio-137")
+            st.markdown("### Distribución Gaussiana, $$P_{G}(x)$$")
+            st.table(dgauss01)
             
             st.markdown("### Distribución de Poisson, $$P_{P}(x)$$")
             st.table(dpoisson01)
             
         if resultados == "Tabla 05":
             st.markdown("## Datos de las gráficas del decaimiento radiactivo del Cesio-137 (datos agrupados)")
+            st.markdown("### Distribución Gaussiana, $$P_{G}(x)$$")
+            st.table(dgauss02)
             
             st.markdown("### Distribución de Poisson, $$P_{P}(x)$$")
             st.table(dpoisson02)
