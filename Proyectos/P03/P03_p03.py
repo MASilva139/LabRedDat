@@ -5,6 +5,8 @@ import numpy as np
 import math
 from PIL import Image as im
 
+#import P03_p02
+
 def app():
     with open('Proyectos/P03/form01.css') as f:
         css = f.read()
@@ -24,11 +26,11 @@ def app():
     st.title("Anexos")
     anex = st.toggle("Mostrar anexos")
     if anex:
-        ca01, ca02 = st.columns([1.5,5])
+        ca01, ca02 = st.columns([1,5])
         with ca01:
             opt = st.radio(
             "**Anexos**", 
-            ["Ajuste (Fit)", "Tabla 01", "Tablas Aire", "Tablas Cesio-137", "Tablas Cesio-137 (arr)"]
+            ["Ajuste (Fit)", "Tabla 01", "Tablas Aire", "Tablas Cesio-137", "Tablas Cesio-137 (2)"]
         )
         
         with ca02:
@@ -98,3 +100,9 @@ def app():
                 with c43:
                     img22 = im.open('Proyectos/P02/img/fit22.png')
                     st.image(img22)
+                    
+            if opt == "Tabla 01":
+                st.markdown("## Datos originales")
+                from P03_p02 import df
+                st.table(df)
+                

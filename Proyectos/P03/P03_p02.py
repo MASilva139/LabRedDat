@@ -4,7 +4,170 @@ import streamlit as st
 import numpy as np
 import math
 import mpmath as mpm
+################################################################################################################################
+###########################                            Parte práctica                                ###########################
+################################################################################################################################
 
+####################################################################
+##                    Gráfica de Plotly (Aire)                    ##
+####################################################################
+# Definir fórmula del fit (D. Gaussiana) para el aire
+def fit(x):
+    A = 63.5733
+    u = 2.18871
+    r = 1.59884
+    x = np.array(x, dtype=int)
+    return A*math.exp(-((x-u)/r)**2/2)
+fit = np.vectorize(fit)
+
+# Datos aire
+data = pd.read_csv('Proyectos/P03/csv/muestra_radiacion.csv')
+df = pd.DataFrame(data)
+value_range = np.arange(0,df['Aire'].max()+1)
+count = df['Aire'].value_counts().reindex(value_range, fill_value=0).reset_index()
+#print(count)
+
+plot_fit = px.line(x=value_range, y=fit(value_range))
+plot_fit.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline')
+plot_fit.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
+plot_fit.add_bar(x=count['Aire'], y=count['count'])
+
+# Definir fórmula del fit (D. Poisson) para el aire
+def poisson_ai(x):
+    m = (df['Aire'].sum())/(df['Aire'].count())
+    # x = np.array(x, dtype=int)
+    P_x = ((m**x)*(mpm.exp(-m)))/(mpm.factorial(x))
+    return float(P_x)
+v_poisson_ai = np.vectorize(poisson_ai)
+    
+nd = df['Aire'].count()
+#------------Distribución Gaussiana
+datgaussai = pd.DataFrame({'Aire':count['Aire'], 'hi(x)':count['count']})
+datgaussai['Pg(x)'] = fit(datgaussai['Aire'])
+datgaussai['[hi(x)-yi(x)]^2'] = (datgaussai['hi(x)']-datgaussai['Pg(x)'])**2
+datgaussai['χ^2 (1)'] = (datgaussai['[hi(x)-yi(x)]^2'])/((datgaussai['Pg(x)'])**2)
+datgaussai['χ^2 (2)'] = (datgaussai['[hi(x)-yi(x)]^2'])/((datgaussai['hi(x)'])**2)
+dgaussai =(datgaussai).round(15).astype(str)
+#------------Poisson
+datpossai = pd.DataFrame({'Aire':count['Aire'], 'hi(x)':count['count']})
+datpossai['Pp(x)'] = (datpossai['Aire'].apply(v_poisson_ai))*(nd)
+datpossai['[hi(x)-yi(x)]^2'] = (datpossai['hi(x)']-datpossai['Pp(x)'])**2
+datpossai['χ^2 (1)'] = (datpossai['[hi(x)-yi(x)]^2'])/((datpossai['Pp(x)'])**2)
+datpossai['χ^2 (2)'] = (datpossai['[hi(x)-yi(x)]^2'])/((datpossai['hi(x)'])**2)
+dpoissonai = (datpossai).round(15).astype(str)
+#print(dpoisson01)
+
+poisson_fitai = px.line(x=value_range, y=(v_poisson_ai(value_range))*(nd))
+poisson_fitai.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline')
+poisson_fitai.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
+poisson_fitai.add_bar(x=count['Aire'], y=count['count'])
+    
+####################################################################
+##                    Gráfica de Plotly (Cesio)                   ##
+####################################################################
+# Definir fórmula del fit (D. Gaussiana) para el cesio
+def fit2(x):
+    A = 5.09274
+    u = 442.826
+    r = 19.5845
+    x = np.array(x, dtype=int)
+    return A*math.exp(-((x-u)/r)**2/2)
+fit2 = np.vectorize(fit2)
+
+# Datos cesio
+#print(df['Cesio'].min())
+value_range2 = np.arange(df['Cesio'].min(),df['Cesio'].max()+1)
+count2 = df['Cesio'].value_counts().reindex(value_range2, fill_value=0).reset_index()
+#print(count2)
+#print(value_range2)
+
+plot_fit2 = px.line(x=value_range2, y=fit2(value_range2))
+plot_fit2.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline')
+plot_fit2.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
+plot_fit2.add_bar(x=count2['Cesio'], y=count2['count'])
+
+# Definir fórmula del fit (D. Poisson) para el Cesio-137 (1/1)
+def poisson_ce01(x):
+    m = (df['Cesio'].sum())/(df['Cesio'].count())
+    # x = np.array(x, dtype=int)
+    P_x = ((m**x)*(mpm.exp(-m)))/(mpm.factorial(x))
+    return float(P_x)
+v_poisson_ce01 = np.vectorize(poisson_ce01)
+    
+nd01 = df['Cesio'].count()
+#------------Distribución Gaussiana
+datgauss01 = pd.DataFrame({'Cesio-137':count2['Cesio'], 'hi(x)':count2['count']})
+datgauss01['Pg(x)'] = fit2(datgauss01['Cesio-137'])
+datgauss01['[hi(x)-yi(x)]^2'] = (datgauss01['hi(x)']-datgauss01['Pg(x)'])**2
+datgauss01['χ^2 (1)'] = (datgauss01['[hi(x)-yi(x)]^2'])/((datgauss01['Pg(x)'])**2)
+datgauss01['χ^2 (2)'] = (datgauss01['[hi(x)-yi(x)]^2'])/((datgauss01['hi(x)'])**2)
+dgauss01 =(datgauss01).round(15).astype(str)
+#------------Poisson
+datposs01 = pd.DataFrame({'Cesio':count2['Cesio'], 'hi(x)':count2['count']})
+datposs01['Pp(x)'] = (datposs01['Cesio'].apply(v_poisson_ce01))*(nd01)
+datposs01['[hi(x)-yi(x)]^2'] = (datposs01['hi(x)']-datposs01['Pp(x)'])**2
+datposs01['χ^2 (1)'] = (datposs01['[hi(x)-yi(x)]^2'])/((datposs01['Pp(x)'])**2)
+datposs01['χ^2 (2)'] = (datposs01['[hi(x)-yi(x)]^2'])/((datposs01['hi(x)'])**2)
+dpoisson01 = datposs01.round(15).astype(str)
+#print(dpoisson01)
+
+poisson_fit1 = px.line(x=value_range2, y=(v_poisson_ce01(value_range2))*(nd01))
+poisson_fit1.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline')
+poisson_fit1.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
+poisson_fit1.add_bar(x=count2['Cesio'], y=count2['count'])
+
+#-----------------------------
+def fit2_1(x):
+    A = 25.382
+    u = 439.84
+    r = 19.6525
+    x = np.array(x, dtype=int)
+    return A*math.exp(-((x-u)/r)**2/2)
+fit2_1 = np.vectorize(fit2_1)
+
+group = np.arange(350, 505, 5)
+cesio_cut = df.groupby(pd.cut(df['Cesio'], group))['Cesio'].count()
+#print(cesio_cut)
+data_c = pd.read_csv('Proyectos/P03/csv/Cesio01.csv')
+dfd = pd.DataFrame(data_c)
+
+plot_fit2_1 = px.line(x=group, y=fit2_1(group))
+plot_fit2_1.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline')
+plot_fit2_1.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
+plot_fit2_1.add_bar(x=group, y=dfd['count'])
+
+# Definir fórmula del fit (D. Poisson) para el Cesio-137 (5/5)
+def poisson_ce02(x):
+    m = (dfd['Cesio'].sum())/(dfd['Cesio'].count())
+    # x = np.array(x, dtype=int)
+    P_x = ((m**x)*(mpm.exp(-m)))/(mpm.factorial(x))
+    return float(P_x)
+v_poisson_ce02 = np.vectorize(poisson_ce02)
+    
+nd02 = dfd['Cesio'].count()
+#------------Distribución Gaussiana
+datgauss02 = pd.DataFrame({'Cesio-137':dfd['Cesio'], 'hi(x)':dfd['count']})
+datgauss02['Pg(x)'] = fit2(datgauss02['Cesio-137'])
+datgauss02['[hi(x)-yi(x)]^2'] = (datgauss02['hi(x)']-datgauss02['Pg(x)'])**2
+datgauss02['χ^2 (1)'] = (datgauss02['[hi(x)-yi(x)]^2'])/((datgauss02['Pg(x)'])**2)
+datgauss02['χ^2 (2)'] = (datgauss02['[hi(x)-yi(x)]^2'])/((datgauss02['hi(x)'])**2)
+dgauss02 =(datgauss02).round(15).astype(str)
+#------------Poisson
+datposs02 = pd.DataFrame({'Cesio':dfd['Cesio'], 'hi(x)':dfd['count']})
+datposs02['Pp(x)'] = (datposs02['Cesio'].apply(v_poisson_ce02))*(nd02)
+datposs02['[hi(x)-yi(x)]^2'] = (datposs02['hi(x)']-datposs02['Pp(x)'])**2
+datposs02['χ^2 (1)'] = (datposs02['[hi(x)-yi(x)]^2'])/((datposs02['Pp(x)'])**2)
+datposs02['χ^2 (2)'] = (datposs02['[hi(x)-yi(x)]^2'])/((datposs02['hi(x)'])**2)
+dpoisson02 = datposs02.round(15).astype(str)
+
+poisson_fit2 = px.line(x=group, y=(v_poisson_ce02(group))*(nd02))
+poisson_fit2.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline')
+poisson_fit2.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
+poisson_fit2.add_bar(x=group, y=dfd['count'])
+
+################################################################################################################################
+###########################                            Parte Escrita                                 ###########################
+################################################################################################################################
 def app():
     with open('Proyectos/P03/form01.css') as f:
         css = f.read()
@@ -44,163 +207,7 @@ def app():
             5. Se gráfico el ajuste y el histograma con el comando ``streamlit.plotly_chart()``.
             '''
         )
-####################################################################
-##                    Gráfica de Plotly (Aire)                    ##
-####################################################################
-    # Definir fórmula del fit (D. Gaussiana) para el aire
-    def fit(x):
-        A = 63.5733
-        u = 2.18871
-        r = 1.59884
-        x = np.array(x, dtype=int)
-        return A*math.exp(-((x-u)/r)**2/2)
-    fit = np.vectorize(fit)
 
-    # Datos aire
-    data = pd.read_csv('Proyectos/P03/csv/muestra_radiacion.csv')
-    df = pd.DataFrame(data)
-    value_range = np.arange(0,df['Aire'].max()+1)
-    count = df['Aire'].value_counts().reindex(value_range, fill_value=0).reset_index()
-    #print(count)
-    
-    plot_fit = px.line(x=value_range, y=fit(value_range))
-    plot_fit.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline')
-    plot_fit.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
-    plot_fit.add_bar(x=count['Aire'], y=count['count'])
-    
-    # Definir fórmula del fit (D. Poisson) para el aire
-    def poisson_ai(x):
-        m = (df['Aire'].sum())/(df['Aire'].count())
-        # x = np.array(x, dtype=int)
-        P_x = ((m**x)*(mpm.exp(-m)))/(mpm.factorial(x))
-        return float(P_x)
-    v_poisson_ai = np.vectorize(poisson_ai)
-        
-    nd = df['Aire'].count()
-    #------------Distribución Gaussiana
-    datgaussai = pd.DataFrame({'Aire':count['Aire'], 'hi(x)':count['count']})
-    datgaussai['Pg(x)'] = fit(datgaussai['Aire'])
-    datgaussai['[hi(x)-yi(x)]^2'] = (datgaussai['hi(x)']-datgaussai['Pg(x)'])**2
-    datgaussai['χ^2 (1)'] = (datgaussai['[hi(x)-yi(x)]^2'])/((datgaussai['Pg(x)'])**2)
-    datgaussai['χ^2 (2)'] = (datgaussai['[hi(x)-yi(x)]^2'])/((datgaussai['hi(x)'])**2)
-    dgaussai =(datgaussai).round(15).astype(str)
-    #------------Poisson
-    datpossai = pd.DataFrame({'Aire':count['Aire'], 'hi(x)':count['count']})
-    datpossai['Pp(x)'] = (datpossai['Aire'].apply(v_poisson_ai))*(nd)
-    datpossai['[hi(x)-yi(x)]^2'] = (datpossai['hi(x)']-datpossai['Pp(x)'])**2
-    datpossai['χ^2 (1)'] = (datpossai['[hi(x)-yi(x)]^2'])/((datpossai['Pp(x)'])**2)
-    datpossai['χ^2 (2)'] = (datpossai['[hi(x)-yi(x)]^2'])/((datpossai['hi(x)'])**2)
-    dpoissonai = (datpossai).round(15).astype(str)
-    #print(dpoisson01)
-    
-    poisson_fitai = px.line(x=value_range, y=(v_poisson_ai(value_range))*(nd))
-    poisson_fitai.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline')
-    poisson_fitai.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
-    poisson_fitai.add_bar(x=count['Aire'], y=count['count'])
-    
-####################################################################
-##                    Gráfica de Plotly (Cesio)                   ##
-####################################################################
-    # Definir fórmula del fit (D. Gaussiana) para el cesio
-    def fit2(x):
-        A = 5.09274
-        u = 442.826
-        r = 19.5845
-        x = np.array(x, dtype=int)
-        return A*math.exp(-((x-u)/r)**2/2)
-    fit2 = np.vectorize(fit2)
-
-    # Datos cesio
-    #print(df['Cesio'].min())
-    value_range2 = np.arange(df['Cesio'].min(),df['Cesio'].max()+1)
-    count2 = df['Cesio'].value_counts().reindex(value_range2, fill_value=0).reset_index()
-    #print(count2)
-    #print(value_range2)
-
-    plot_fit2 = px.line(x=value_range2, y=fit2(value_range2))
-    plot_fit2.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline')
-    plot_fit2.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
-    plot_fit2.add_bar(x=count2['Cesio'], y=count2['count'])
-    
-    # Definir fórmula del fit (D. Poisson) para el Cesio-137 (1/1)
-    def poisson_ce01(x):
-        m = (df['Cesio'].sum())/(df['Cesio'].count())
-        # x = np.array(x, dtype=int)
-        P_x = ((m**x)*(mpm.exp(-m)))/(mpm.factorial(x))
-        return float(P_x)
-    v_poisson_ce01 = np.vectorize(poisson_ce01)
-        
-    nd01 = df['Cesio'].count()
-    #------------Distribución Gaussiana
-    datgauss01 = pd.DataFrame({'Cesio-137':count2['Cesio'], 'hi(x)':count2['count']})
-    datgauss01['Pg(x)'] = fit2(datgauss01['Cesio-137'])
-    datgauss01['[hi(x)-yi(x)]^2'] = (datgauss01['hi(x)']-datgauss01['Pg(x)'])**2
-    datgauss01['χ^2 (1)'] = (datgauss01['[hi(x)-yi(x)]^2'])/((datgauss01['Pg(x)'])**2)
-    datgauss01['χ^2 (2)'] = (datgauss01['[hi(x)-yi(x)]^2'])/((datgauss01['hi(x)'])**2)
-    dgauss01 =(datgauss01).round(15).astype(str)
-    #------------Poisson
-    datposs01 = pd.DataFrame({'Cesio':count2['Cesio'], 'hi(x)':count2['count']})
-    datposs01['Pp(x)'] = (datposs01['Cesio'].apply(v_poisson_ce01))*(nd01)
-    datposs01['[hi(x)-yi(x)]^2'] = (datposs01['hi(x)']-datposs01['Pp(x)'])**2
-    datposs01['χ^2 (1)'] = (datposs01['[hi(x)-yi(x)]^2'])/((datposs01['Pp(x)'])**2)
-    datposs01['χ^2 (2)'] = (datposs01['[hi(x)-yi(x)]^2'])/((datposs01['hi(x)'])**2)
-    dpoisson01 = datposs01.round(15).astype(str)
-    #print(dpoisson01)
-    
-    poisson_fit1 = px.line(x=value_range2, y=(v_poisson_ce01(value_range2))*(nd01))
-    poisson_fit1.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline')
-    poisson_fit1.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
-    poisson_fit1.add_bar(x=count2['Cesio'], y=count2['count'])
-    
-    #-----------------------------
-    def fit2_1(x):
-        A = 25.382
-        u = 439.84
-        r = 19.6525
-        x = np.array(x, dtype=int)
-        return A*math.exp(-((x-u)/r)**2/2)
-    fit2_1 = np.vectorize(fit2_1)
-    
-    group = np.arange(350, 505, 5)
-    cesio_cut = df.groupby(pd.cut(df['Cesio'], group))['Cesio'].count()
-    #print(cesio_cut)
-    data_c = pd.read_csv('Proyectos/P03/csv/Cesio01.csv')
-    dfd = pd.DataFrame(data_c)
-
-    plot_fit2_1 = px.line(x=group, y=fit2_1(group))
-    plot_fit2_1.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline')
-    plot_fit2_1.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
-    plot_fit2_1.add_bar(x=group, y=dfd['count'])
-    
-    # Definir fórmula del fit (D. Poisson) para el Cesio-137 (5/5)
-    def poisson_ce02(x):
-        m = (dfd['Cesio'].sum())/(dfd['Cesio'].count())
-        # x = np.array(x, dtype=int)
-        P_x = ((m**x)*(mpm.exp(-m)))/(mpm.factorial(x))
-        return float(P_x)
-    v_poisson_ce02 = np.vectorize(poisson_ce02)
-        
-    nd02 = dfd['Cesio'].count()
-    #------------Distribución Gaussiana
-    datgauss02 = pd.DataFrame({'Cesio-137':dfd['Cesio'], 'hi(x)':dfd['count']})
-    datgauss02['Pg(x)'] = fit2(datgauss02['Cesio-137'])
-    datgauss02['[hi(x)-yi(x)]^2'] = (datgauss02['hi(x)']-datgauss02['Pg(x)'])**2
-    datgauss02['χ^2 (1)'] = (datgauss02['[hi(x)-yi(x)]^2'])/((datgauss02['Pg(x)'])**2)
-    datgauss02['χ^2 (2)'] = (datgauss02['[hi(x)-yi(x)]^2'])/((datgauss02['hi(x)'])**2)
-    dgauss02 =(datgauss02).round(15).astype(str)
-    #------------Poisson
-    datposs02 = pd.DataFrame({'Cesio':dfd['Cesio'], 'hi(x)':dfd['count']})
-    datposs02['Pp(x)'] = (datposs02['Cesio'].apply(v_poisson_ce02))*(nd02)
-    datposs02['[hi(x)-yi(x)]^2'] = (datposs02['hi(x)']-datposs02['Pp(x)'])**2
-    datposs02['χ^2 (1)'] = (datposs02['[hi(x)-yi(x)]^2'])/((datposs02['Pp(x)'])**2)
-    datposs02['χ^2 (2)'] = (datposs02['[hi(x)-yi(x)]^2'])/((datposs02['hi(x)'])**2)
-    dpoisson02 = datposs02.round(15).astype(str)
-    
-    poisson_fit2 = px.line(x=group, y=(v_poisson_ce02(group))*(nd02))
-    poisson_fit2.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline')
-    poisson_fit2.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
-    poisson_fit2.add_bar(x=group, y=dfd['count'])
-    
 ####################################################################
 ##                      Apartado de Resultados                    ##
 ####################################################################
