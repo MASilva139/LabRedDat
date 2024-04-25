@@ -128,3 +128,23 @@ div.plot-container.plotly > div.user-select-none.svg-container {
     text-align: center;
     margin: 5px;
 } */
+table {
+    width: 100%;
+}
+div.element-container.st-emotion-cache-uzna7h.e1f1d6gn4 > .stMarkdown > .st-emotion-cache-1ijpa8z.e1nzilvr5 > table > thead > tr > th {
+    /* display: inline-flexbox; */
+    text-align: center;
+    text-align-last: center;
+    font-weight: bold;
+}
+
+div.st-emotion-cache-n7d69t.e1q9reml4 > table.st-emotion-cache-zuelfj.e1q9reml3 > thead > tr > th {
+    text-align: center;
+    text-align-last: center;
+    font-weight: bold;
+}
+
+div.st-emotion-cache-n7d69t.e1q9reml4 > table.st-emotion-cache-zuelfj.e1q9reml3 > tbody > tr > td.st-emotion-cache-4sszyo.e1q9reml2 {
+    text-align: right;
+    text-align-last: right;
+}
