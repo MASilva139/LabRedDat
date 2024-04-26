@@ -59,7 +59,25 @@
     width: 100%;
     padding: 2px;
 }
+/* ---------------------------------------------------------------------- */
+.st-b4.st-bb.st-bc.st-bd.st-be.st-bf.st-bg>.st-bh.st-b4.st-bi.st-be.st-as.st-bj.st-at.st-bk.st-bl.st-bm.st-bn.st-bo.st-bp.st-bq {
+    background-color: #5f2ed3;
+    margin: left;
+    width: 100%;
+    padding: 2px;
+    /* border-style: solid;
+    border-color: rgb(36, 36, 219); */
+    position: relative;
+    /* border-radius: 1em; */
+}
 
+.st-b4.st-bb.st-bc.st-bd.st-be.st-bf.st-bg>.st-bh.st-b4.st-bi.st-be.st-as.st-bj.st-at.st-bk.st-bl.st-bm.st-bn.st-bo.st-bp.st-bq:hover {
+    background-color: #482585;
+    margin:left;
+    width: 100%;
+    padding: 2px;
+}
+/* ---------------------------------------------------------------------- */
 .st-emotion-cache-1ijpa8z.e1nzilvr5 > p {
     padding: 1em;
     /* box-shadow:inset 2px 2px 4px #78787866, inset -3px -3px 3px #ffffff66; */
@@ -136,18 +154,24 @@ div.element-container.st-emotion-cache-uzna7h.e1f1d6gn4 > .stMarkdown > .st-emot
     /* display: inline-flexbox; */
     text-align: center;
     text-align-last: center;
+    -ms-text-align-last: center;
+    -moz-text-align-last: center;
     font-weight: bold;
 }
 
 div.st-emotion-cache-n7d69t.e1q9reml4 > table.st-emotion-cache-zuelfj.e1q9reml3 > thead > tr > th {
     text-align: center;
     text-align-last: center;
+    -ms-text-align-last: center;
+    -moz-text-align-last: center;
     font-weight: bold;
 }
 
 div.st-emotion-cache-n7d69t.e1q9reml4 > table.st-emotion-cache-zuelfj.e1q9reml3 > tbody > tr > td.st-emotion-cache-4sszyo.e1q9reml2 {
     text-align: right;
     text-align-last: right;
+    -ms-text-align-last: right;
+    -moz-text-align-last: right;
 }
 
 div.element-container.st-emotion-cache-6w6dvf.e1f1d6gn4 > .stMarkdown > .st-emotion-cache-1ijpa8z.e1nzilvr5 > table > thead > tr > th {

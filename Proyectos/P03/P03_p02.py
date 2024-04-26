@@ -256,7 +256,7 @@ def app():
     with c1:
         resultados = st.radio(
             "**Resultados**", 
-            ["Gráfica 01", "Gráfica 02", "Gráfica 03", "Tabla 01", "Tabla 02", "Tabla 03", "Tabla 04", "Tabla 05"]
+            ["Gráfica 01", "Gráfica 02", "Gráfica 03", "Tabla 01", "Tabla 02"]
         )
         
     with c2:

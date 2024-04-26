@@ -28,7 +28,7 @@ def app():
     with ca01:
         opt = st.radio(
         "**Anexos**", 
-        ["Ajuste (Fit)", "Tabla 01", "Tablas Aire", "Tablas Cesio-137", "Tablas Cesio-137 (2)"]
+        ["Ajuste (Fit)", "Tabla 01", "Tablas Aire", "Tablas Cs-137", "Tablas Cs-137 (2)"]
     )
     
     with ca02:
@@ -155,7 +155,7 @@ def app():
             else:
                 st.markdown(air_poisson.to_markdown())
                 
-        if opt == "Tablas Cesio-137":
+        if opt == "Tablas Cs-137":
             st.markdown("## Datos de las gráficas del decaimiento radiactivo del Cesio-137")
             from P03_p02 import dgauss01, dpoisson01, cs_gaussian01, cs_poisson01
             st.markdown("### Tabla 01: Distribución Gaussiana, $$P_{G}(x)$$")
@@ -173,7 +173,7 @@ def app():
             else:
                 st.markdown(cs_poisson01.to_markdown())
             
-        if opt == "Tablas Cesio-137 (2)":
+        if opt == "Tablas Cs-137 (2)":
             st.markdown("## Datos de las gráficas del decaimiento radiactivo del Cesio-137 (Datos agrupados)")
             from P03_p02 import dgauss02, dpoisson02, cs_gaussian02, cs_poisson02
             st.markdown("### Tabla 01: Distribución Gaussiana, $$P_{G}(x)$$")
