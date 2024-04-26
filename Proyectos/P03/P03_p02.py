@@ -50,6 +50,10 @@ datgaussai['[hi(x)]^2'] = (datgaussai['hi(x)'])**2
 datgaussai['χ^2 (1)'] = (datgaussai['[hi(x)-yi(x)]^2'])/((datgaussai['Pg(x)'])**2)
 datgaussai['χ^2 (2)'] = (datgaussai['[hi(x)-yi(x)]^2'])/((datgaussai['hi(x)'])**2)
 dgaussai =(datgaussai).round(10).astype(str)
+achigauss01 = datgaussai['χ^2 (1)'].sum()
+achigauss02 = datgaussai['χ^2 (2)'].sum()
+# print('chi-square')
+# print(achi01)
 
 air_gaussian = pd.DataFrame({'Aire': dgaussai['Aire'],'$$h_{i}(x)$$':dgaussai['hi(x)'],'$$P_{G}(x)$$':dgaussai['Pg(x)'],'$$[h_{i}(x)-y_{i}(x)]^2$$':dgaussai['[hi(x)-yi(x)]^2'],'$$[y_{i}(x)]^2$$':dgaussai['[yi(x)]^2'],'$$[h_{i}(x)]^2$$':dgaussai['[hi(x)]^2'],'$$χ_{1}^{2}$$':dgaussai['χ^2 (1)'],'$$χ_{2}^{2}$$':dgaussai['χ^2 (2)']})
 #------------Poisson
@@ -61,6 +65,8 @@ datpossai['[hi(x)]^2'] = (datpossai['hi(x)'])**2
 datpossai['χ^2 (1)'] = (datpossai['[hi(x)-yi(x)]^2'])/((datpossai['Pp(x)'])**2)
 datpossai['χ^2 (2)'] = (datpossai['[hi(x)-yi(x)]^2'])/((datpossai['hi(x)'])**2)
 dpoissonai = (datpossai).round(10).astype(str)
+achipoiss01 = datpossai['χ^2 (1)'].sum()
+achipoiss02 = datpossai['χ^2 (2)'].sum()
 
 air_poisson = pd.DataFrame({'Aire': dpoissonai['Aire'],'$$h_{i}(x)$$':dpoissonai['hi(x)'],'$$P_{P}(x)$$':dpoissonai['Pp(x)'],'$$[h_{i}(x)-y_{i}(x)]^2$$':dpoissonai['[hi(x)-yi(x)]^2'],'$$[y_{i}(x)]^2$$':dpoissonai['[yi(x)]^2'],'$$[h_{i}(x)]^2$$':dpoissonai['[hi(x)]^2'],'$$χ_{1}^{2}$$':dpoissonai['χ^2 (1)'],'$$χ_{2}^{2}$$':dpoissonai['χ^2 (2)']})
 #print(dpoisson01)
@@ -112,6 +118,8 @@ datgauss01['[hi(x)]^2'] = (datgauss01['hi(x)'])**2
 datgauss01['χ^2 (1)'] = (datgauss01['[hi(x)-yi(x)]^2'])/((datgauss01['Pg(x)'])**2)
 datgauss01['χ^2 (2)'] = (datgauss01['[hi(x)-yi(x)]^2'])/((datgauss01['hi(x)'])**2)
 dgauss01 =(datgauss01).round(10).astype(str)
+cschigauss01 = datgauss01['χ^2 (1)'].sum()
+cschigauss02 = datgauss01['χ^2 (2)'].sum()
 
 cs_gaussian01 = pd.DataFrame({'Cesio': dgauss01['Cesio-137'],'$$h_{i}(x)$$':dgauss01['hi(x)'],'$$P_{G}(x)$$':dgauss01['Pg(x)'],'$$[h_{i}(x)-y_{i}(x)]^2$$':dgauss01['[hi(x)-yi(x)]^2'],'$$[y_{i}(x)]^2$$':dgauss01['[yi(x)]^2'],'$$[h_{i}(x)]^2$$':dgauss01['[hi(x)]^2'],'$$χ_{1}^{2}$$':dgauss01['χ^2 (1)'],'$$χ_{2}^{2}$$':dgauss01['χ^2 (2)']})
 #------------Poisson
@@ -123,6 +131,8 @@ datposs01['[hi(x)]^2'] = (datposs01['hi(x)'])**2
 datposs01['χ^2 (1)'] = (datposs01['[hi(x)-yi(x)]^2'])/((datposs01['Pp(x)'])**2)
 datposs01['χ^2 (2)'] = (datposs01['[hi(x)-yi(x)]^2'])/((datposs01['hi(x)'])**2)
 dpoisson01 = datposs01.round(10).astype(str)
+cschipoiss01 = datposs01['χ^2 (1)'].sum()
+cschipoiss02 = datposs01['χ^2 (2)'].sum()
 
 cs_poisson01 = pd.DataFrame({'Cesio': dpoisson01['Cesio'],'$$h_{i}(x)$$':dpoisson01['hi(x)'],'$$P_{P}(x)$$':dpoisson01['Pp(x)'],'$$[h_{i}(x)-y_{i}(x)]^2$$':dpoisson01['[hi(x)-yi(x)]^2'],'$$[y_{i}(x)]^2$$':dpoisson01['[yi(x)]^2'],'$$[h_{i}(x)]^2$$':dpoisson01['[hi(x)]^2'],'$$χ_{1}^{2}$$':dpoisson01['χ^2 (1)'],'$$χ_{2}^{2}$$':dpoisson01['χ^2 (2)']})
 #print(dpoisson01)
@@ -170,6 +180,8 @@ datgauss02['[hi(x)]^2'] = (datgauss02['hi(x)'])**2
 datgauss02['χ^2 (1)'] = (datgauss02['[hi(x)-yi(x)]^2'])/((datgauss02['Pg(x)'])**2)
 datgauss02['χ^2 (2)'] = (datgauss02['[hi(x)-yi(x)]^2'])/((datgauss02['hi(x)'])**2)
 dgauss02 =(datgauss02).round(10).astype(str)
+cs2chigauss01 = datgauss02['χ^2 (1)'].sum()
+cs2chigauss02 = datgauss02['χ^2 (2)'].sum()
 
 cs_gaussian02 = pd.DataFrame({'Cesio': dgauss02['Cesio-137'],'$$h_{i}(x)$$':dgauss02['hi(x)'],'$$P_{G}(x)$$':dgauss02['Pg(x)'],'$$[h_{i}(x)-y_{i}(x)]^2$$':dgauss02['[hi(x)-yi(x)]^2'],'$$[y_{i}(x)]^2$$':dgauss02['[yi(x)]^2'],'$$[h_{i}(x)]^2$$':dgauss02['[hi(x)]^2'],'$$χ_{1}^{2}$$':dgauss02['χ^2 (1)'],'$$χ_{2}^{2}$$':dgauss02['χ^2 (2)']})
 #------------Poisson
@@ -181,6 +193,8 @@ datposs02['[hi(x)]^2'] = (datposs02['hi(x)'])**2
 datposs02['χ^2 (1)'] = (datposs02['[hi(x)-yi(x)]^2'])/((datposs02['Pp(x)'])**2)
 datposs02['χ^2 (2)'] = (datposs02['[hi(x)-yi(x)]^2'])/((datposs02['hi(x)'])**2)
 dpoisson02 = datposs02.round(10).astype(str)
+cs2chipoiss01 = datposs02['χ^2 (1)'].sum()
+cs2chipoiss02 = datposs02['χ^2 (2)'].sum()
 
 cs_poisson02 = pd.DataFrame({'Cesio': dpoisson02['Cesio'],'$$h_{i}(x)$$':dpoisson02['hi(x)'],'$$P_{P}(x)$$':dpoisson02['Pp(x)'],'$$[h_{i}(x)-y_{i}(x)]^2$$':dpoisson02['[hi(x)-yi(x)]^2'],'$$[y_{i}(x)]^2$$':dpoisson02['[yi(x)]^2'],'$$[h_{i}(x)]^2$$':dpoisson02['[hi(x)]^2'],'$$χ_{1}^{2}$$':dpoisson02['χ^2 (1)'],'$$χ_{2}^{2}$$':dpoisson02['χ^2 (2)']})
 
@@ -188,6 +202,16 @@ poisson_fit2 = px.line(x=group, y=(v_poisson_ce02(group))*(nd02))
 poisson_fit2.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline')
 poisson_fit2.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
 poisson_fit2.add_bar(x=group, y=dfd['count'])
+
+#######################################
+##        Tabla de chi-square        ##
+#######################################
+tchi = pd.DataFrame({
+    '$$χ^2$$':['Gauss $$(1/[y_{i}(x)]^{2})$$', 'Gauss $$(1/[h_{i}(x)]^{2})$$', 'Poisson $$(1/[y_{i}(x)]^{2})$$', 'Poisson $$(1/[h_{i}(x)]^{2})$$'], 
+    '$$χ_{Aire}^2$$': [achigauss01, achigauss02, achipoiss01, achipoiss02],
+    '$$χ_{Cs-137}^2$$': [cschigauss01, cschigauss02, cschipoiss01, cschipoiss02],
+    '$$χ_{Cs-137}^2$$ (arr)': [cs2chigauss01, cs2chigauss02, cs2chipoiss01, cs2chipoiss02]
+})
 
 ################################################################################################################################
 ###########################                            Parte Escrita                                 ###########################
@@ -238,7 +262,7 @@ def app():
     st.markdown("## **Resultados**")
     # Sección de los resultados
     rlist = ['**Gráfica 01**', '**Gráfica 02**', '**Gráfica 03**', '**Tabla 01**', '**Tabla 02**']
-    rlist02 = ['Distribución Gaussiana del Aire.', 'Distribución del Cesio-137.', 'Distribución del Cesio-137, datos agrupados de 5 en 5.', 'Datos de las gráficas, histograma y ajuste de las ditribuciones gaussianas y de Poisson.']
+    rlist02 = ['Distribución Gaussiana del Aire.', 'Distribución del Cesio-137.', 'Distribución del Cesio-137, datos agrupados de 5 en 5.', 'Datos de las gráficas, histograma y ajuste de las ditribuciones gaussianas y de Poisson.', 'Datos de la prueba de $$\chi^{2}$$ de las distribuciones gaussianas y de Poisson.']
     # Diccionario con los valores de rlist con el valor de cada valor de rlist02
     dic = {key: i for key, i in zip(rlist,rlist02)}
     # Imprime cada par en el markdown
@@ -298,6 +322,9 @@ def app():
             datc = pd.DataFrame({'Aire':count['Aire'], "$$N_{Aire}$$":count['count'], "$$P_{G_{Aire}}$$":dgaussai['Pg(x)'],"$$P_{P_{Aire}}$$":dpoissonai['Pp(x)'], 'Cs':count2['Cesio'], '$$N_{Cs}$$':count2['count'], "$$P_{G_{Cs}}$$":dgauss01['Pg(x)'],'Cs (arr)':data_c['Cesio'], '$$N_{Cs} (arr)$$':data_c['count'],"$$P_{G_{Cs}} (arr)$$":dgauss02['Pg(x)']})
             st.markdown(datc.to_markdown())
                 
+        if resultados == "Tabla 02":
+            st.markdown("### Datos de la prueba de $$χ^2$$")
+            st.markdown(tchi.to_markdown())
     
     st.markdown("## **Discusión de Resultados**")
     # Sección de los resultados

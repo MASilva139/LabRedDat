@@ -152,6 +152,7 @@ table {
 
 div.element-container.st-emotion-cache-uzna7h.e1f1d6gn4 > .stMarkdown > .st-emotion-cache-1ijpa8z.e1nzilvr5 > table > thead > tr > th {
     /* display: inline-flexbox; */
+    background: linear-gradient(315deg, #5f2ed3 98%, #482585 3%);
     text-align: center;
     text-align-last: center;
     -ms-text-align-last: center;
@@ -160,6 +161,7 @@ div.element-container.st-emotion-cache-uzna7h.e1f1d6gn4 > .stMarkdown > .st-emot
 }
 
 div.st-emotion-cache-n7d69t.e1q9reml4 > table.st-emotion-cache-zuelfj.e1q9reml3 > thead > tr > th {
+    background: linear-gradient(315deg, #5f2ed3 98%, #482585 3%);
     text-align: center;
     text-align-last: center;
     -ms-text-align-last: center;
@@ -176,6 +178,11 @@ div.st-emotion-cache-n7d69t.e1q9reml4 > table.st-emotion-cache-zuelfj.e1q9reml3 
 
 div.element-container.st-emotion-cache-6w6dvf.e1f1d6gn4 > .stMarkdown > .st-emotion-cache-1ijpa8z.e1nzilvr5 > table > thead > tr > th {
     /* display: inline-flexbox; */
+    /* background-color: #55c9c7; */
+    /* background-color: #585858; */
+    /* background-color: #5f2ed3; */
+    background: linear-gradient(315deg, #5f2ed3 98%, #482585 3%);
+    /* background: linear-gradient(315deg, #50b0ff 38%, #36cfcc 68%); */
     text-align: center;
     text-align-last: center;
     -ms-text-align-last: center;
