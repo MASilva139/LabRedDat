@@ -208,9 +208,9 @@ poisson_fit2.add_bar(x=group, y=dfd['count'])
 #######################################
 tchi = pd.DataFrame({
     '$$χ^2$$':['Gauss $$(1/[y_{i}(x)]^{2})$$', 'Gauss $$(1/[h_{i}(x)]^{2})$$', 'Poisson $$(1/[y_{i}(x)]^{2})$$', 'Poisson $$(1/[h_{i}(x)]^{2})$$'], 
-    '$$χ_{Aire}^2$$': [achigauss01, achigauss02, achipoiss01, achipoiss02],
-    '$$χ_{Cs-137}^2$$': [cschigauss01, cschigauss02, cschipoiss01, cschipoiss02],
-    '$$χ_{Cs-137}^2$$ (arr)': [cs2chigauss01, cs2chigauss02, cs2chipoiss01, cs2chipoiss02]
+    '$${χ^2}_{Aire}$$': [achigauss01, achigauss02, achipoiss01, achipoiss02],
+    '$${χ^2}_{Cs-137}$$': [cschigauss01, cschigauss02, cschipoiss01, cschipoiss02],
+    '$${χ^2}_{Cs-137}$$ (arr)': [cs2chigauss01, cs2chigauss02, cs2chipoiss01, cs2chipoiss02]
 })
 
 ################################################################################################################################
