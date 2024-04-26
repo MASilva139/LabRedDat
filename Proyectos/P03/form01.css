@@ -131,6 +131,7 @@ div.plot-container.plotly > div.user-select-none.svg-container {
 table {
     width: 100%;
 }
+
 div.element-container.st-emotion-cache-uzna7h.e1f1d6gn4 > .stMarkdown > .st-emotion-cache-1ijpa8z.e1nzilvr5 > table > thead > tr > th {
     /* display: inline-flexbox; */
     text-align: center;
@@ -147,4 +148,13 @@ div.st-emotion-cache-n7d69t.e1q9reml4 > table.st-emotion-cache-zuelfj.e1q9reml3 
 div.st-emotion-cache-n7d69t.e1q9reml4 > table.st-emotion-cache-zuelfj.e1q9reml3 > tbody > tr > td.st-emotion-cache-4sszyo.e1q9reml2 {
     text-align: right;
     text-align-last: right;
+}
+
+div.element-container.st-emotion-cache-6w6dvf.e1f1d6gn4 > .stMarkdown > .st-emotion-cache-1ijpa8z.e1nzilvr5 > table > thead > tr > th {
+    /* display: inline-flexbox; */
+    text-align: center;
+    text-align-last: center;
+    -ms-text-align-last: center;
+    -moz-text-align-last: center;
+    font-weight: bold;
 }
