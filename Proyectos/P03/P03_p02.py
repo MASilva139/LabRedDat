@@ -32,15 +32,6 @@ plot_fit.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline'
 plot_fit.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
 plot_fit.add_bar(x=count['Aire'], y=count['count'])
 
-# Definir fórmula del fit (D. Poisson) para el aire
-def poisson_ai(x):
-    m = (df['Aire'].sum())/(df['Aire'].count())
-    # x = np.array(x, dtype=int)
-    P_x = ((m**x)*(mpm.exp(-m)))/(mpm.factorial(x))
-    return float(P_x)
-v_poisson_ai = np.vectorize(poisson_ai)
-    
-nd = df['Aire'].count()
 #------------Distribución Gaussiana
 datgaussai = pd.DataFrame({'Aire':count['Aire'], 'hi(x)':count['count']})
 datgaussai['Pg(x)'] = fit(datgaussai['Aire'])
@@ -54,6 +45,16 @@ achigauss01 = datgaussai['χ^2 (1)'].sum()
 achigauss02 = datgaussai['χ^2 (2)'].sum()
 # print('chi-square')
 # print(achi01)
+
+# Definir fórmula del fit (D. Poisson) para el aire
+def poisson_ai(x):
+    m = (df['Aire'].sum())/(df['Aire'].count())
+    # x = np.array(x, dtype=int)
+    P_x = ((m**x)*(mpm.exp(-m)))/(mpm.factorial(x))
+    return float(P_x)
+v_poisson_ai = np.vectorize(poisson_ai)
+    
+nd = df['Aire'].count()
 
 air_gaussian = pd.DataFrame({'Aire': dgaussai['Aire'],'$$h_{i}(x)$$':dgaussai['hi(x)'],'$$P_{G}(x)$$':dgaussai['Pg(x)'],'$$[h_{i}(x)-y_{i}(x)]^2$$':dgaussai['[hi(x)-yi(x)]^2'],'$$[y_{i}(x)]^2$$':dgaussai['[yi(x)]^2'],'$$[h_{i}(x)]^2$$':dgaussai['[hi(x)]^2'],'$$χ_{1}^{2}$$':dgaussai['χ^2 (1)'],'$$χ_{2}^{2}$$':dgaussai['χ^2 (2)']})
 #------------Poisson
@@ -75,11 +76,36 @@ poisson_fitai = px.line(x=value_range, y=(v_poisson_ai(value_range))*(nd))
 poisson_fitai.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline')
 poisson_fitai.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
 poisson_fitai.add_bar(x=count['Aire'], y=count['count'])
+#__________________________________________________________________#
+#-                   Gráfica de Plotly (Aire 2)                   -#
+#__________________________________________________________________#
+dat_air = pd.read_csv('Proyectos/P03/csv/Aire(t2).csv')
+dair = pd.DataFrame(dat_air)
+
+#----------------------- Distribución Gaussiana --------------------
+gair_plotf = px.line(x=dair['Aire'], y=fit(dair['Aire']))
+gair_plotf.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline')
+gair_plotf.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
+gair_plotf.add_bar(x=dair['Aire'], y=dair['count'])
+
+#----------------------- Distribución de Poisson --------------------
+def poisson_air(x):
+    m = (((dair['Aire'])*(dair['count'])).sum())/(dair['count'].sum())
+    # x = np.array(x, dtype=int)
+    P_x = ((m**x)*(mpm.exp(-m)))/(mpm.factorial(x))
+    return float(P_x)
+v_poisson_air = np.vectorize(poisson_ai)
+
+airn = dair['count'].sum()
+pair_plotf = px.line(x=dair['Aire'], y=(v_poisson_air(dair['Aire']))*(airn))
+pair_plotf.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline')
+pair_plotf.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
+pair_plotf.add_bar(x=dair['Aire'], y=dair['count'])
     
 ####################################################################
 ##                    Gráfica de Plotly (Cesio)                   ##
 ####################################################################
-# Definir fórmula del fit (D. Gaussiana) para el cesio
+# Definir fórmula del fit (D. Gaussiana) para el cesio (1/1)
 def fit2(x):
     A = 5.09274
     u = 442.826
@@ -142,7 +168,36 @@ poisson_fit1.update_traces(line_color='#B21914', line_width=2.5, line_shape='spl
 poisson_fit1.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
 poisson_fit1.add_bar(x=count2['Cesio'], y=count2['count'])
 
-#-----------------------------
+#__________________________________________________________________#
+#-                  Gráfica de Plotly (Cesio 2)                   -#
+#__________________________________________________________________#
+dat_cs01 = pd.read_csv('Proyectos/P03/csv/Cesio(t2).csv')
+dcs01 = pd.DataFrame(dat_cs01)
+
+#----------------------- Distribución Gaussiana (1/1) --------------------
+gcs01_plotf = px.line(x=dcs01['Cesio'], y=fit2(dcs01['Cesio']))
+gcs01_plotf.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline')
+gcs01_plotf.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
+gcs01_plotf.add_bar(x=dcs01['Cesio'], y=dcs01['count'])
+
+#----------------------- Distribución de Poisson (1/1) --------------------
+cs01n = dcs01['count'].sum()
+def poisson2_ce01(x):
+    m = ((dcs01['Cesio']*dcs01['count']).sum())/(dcs01['count'].sum())
+    # x = np.array(x, dtype=int)
+    P_x = ((m**x)*(mpm.exp(-m)))/(mpm.factorial(x))
+    return float(P_x)
+v_poisson2_ce01 = np.vectorize(poisson2_ce01)
+
+pcs01_plotf = px.line(x=dcs01['Cesio'], y=(v_poisson2_ce01(dcs01['Cesio']))*(cs01n))
+pcs01_plotf.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline')
+pcs01_plotf.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
+pcs01_plotf.add_bar(x=dcs01['Cesio'], y=dcs01['count'])
+
+##############################################################
+##############################################################
+
+# Definir fórmula del fit (D. Gaussiana) para el cesio (5/5)
 def fit2_1(x):
     A = 25.382
     u = 439.84
@@ -203,6 +258,33 @@ poisson_fit2.update_traces(line_color='#B21914', line_width=2.5, line_shape='spl
 poisson_fit2.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
 poisson_fit2.add_bar(x=group, y=dfd['count'])
 
+#__________________________________________________________________#
+#-                  Gráfica de Plotly (Cesio 2)                   -#
+#__________________________________________________________________#
+dat_cs02 = pd.read_csv('Proyectos/P03/csv/Cesio01(t2).csv')
+dcs02 = pd.DataFrame(dat_cs02)
+
+#----------------------- Distribución Gaussiana --------------------
+gcs02_plotf = px.line(x=dcs02['Cesio'], y=fit2_1(dcs02['Cesio']))
+gcs02_plotf.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline')
+gcs02_plotf.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
+gcs02_plotf.add_bar(x=dcs02['Cesio'], y=dcs02['count'])
+
+#----------------------- Distribución de Poisson --------------------
+gp02 = np.arange(390, 505, 5)
+def poisson2_ce02(x):
+    m = ((dcs02['Cesio']*dcs02['count']).sum())/(dcs02['count'].sum())
+    # x = np.array(x, dtype=int)
+    P_x = ((m**x)*(mpm.exp(-m)))/(mpm.factorial(x))
+    return float(P_x)
+v_poisson2_ce02 = np.vectorize(poisson2_ce02)
+
+cs02n = dcs02['count'].sum()
+pcs02_plotf = px.line(x=gp02, y=(v_poisson2_ce02(gp02))*(cs02n))
+pcs02_plotf.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline')
+pcs02_plotf.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
+pcs02_plotf.add_bar(x=gp02, y=dcs02['count'])
+
 #######################################
 ##        Tabla de chi-square        ##
 #######################################
@@ -261,8 +343,8 @@ def app():
 ####################################################################
     st.markdown("## **Resultados**")
     # Sección de los resultados
-    rlist = ['**Gráfica 01**', '**Gráfica 02**', '**Gráfica 03**', '**Tabla 01**', '**Tabla 02**']
-    rlist02 = ['Distribución Gaussiana del Aire.', 'Distribución del Cesio-137.', 'Distribución del Cesio-137, datos agrupados de 5 en 5.', 'Datos de las gráficas, histograma y ajuste de las ditribuciones gaussianas y de Poisson.', 'Datos de la prueba de $$\chi^{2}$$ de las distribuciones gaussianas y de Poisson.']
+    rlist = ['**Gráfica 01**', '**Gráfica 02**', '**Gráfica 03**', '**Tabla 01**', '**Tabla 02**', '**Gráfica 04**', '**Gráfica 05**', '**Gráfica 06**', '**Tabla 03**', '**Tabla 04**']
+    rlist02 = ['Distribución Gaussiana del Aire.', 'Distribución del Cesio-137.', 'Distribución del Cesio-137, datos agrupados de 5 en 5.', 'Datos de las gráficas, histograma y ajuste de las ditribuciones gaussianas y de Poisson.', 'Datos de la prueba de $$\chi^{2}$$ de las distribuciones gaussianas y de Poisson.','Distribución Gaussiana del Aire (extra).', 'Distribución del Cesio-137 (extra).', 'Distribución del Cesio-137, datos agrupados de 5 en 5 (extra).', 'Datos de las gráficas, histograma y ajuste de las ditribuciones gaussianas y de Poisson (extra).', 'Datos de la prueba de $$\chi^{2}$$ de las distribuciones gaussianas y de Poisson (extra).']
     # Diccionario con los valores de rlist con el valor de cada valor de rlist02
     dic = {key: i for key, i in zip(rlist,rlist02)}
     # Imprime cada par en el markdown
@@ -280,7 +362,7 @@ def app():
     with c1:
         resultados = st.radio(
             "**Resultados**", 
-            ["Gráfica 01", "Gráfica 02", "Gráfica 03", "Tabla 01", "Tabla 02"]
+            ["Gráfica 01", "Gráfica 02", "Gráfica 03", "Tabla 01", "Tabla 02","Gráfica 04", "Gráfica 05", "Gráfica 06", "Tabla 03", "Tabla 04"]
         )
         
     with c2:
@@ -325,6 +407,30 @@ def app():
         if resultados == "Tabla 02":
             st.markdown("### Datos de la prueba de $$χ^2$$")
             st.markdown(tchi.to_markdown())
+            
+        if resultados == "Gráfica 04":
+            st.markdown("## Distribución del decaimiento radiactivo del Aire")
+            st.markdown("### Distribución Gaussiana")
+            st.plotly_chart(gair_plotf)
+            
+            st.markdown("### Distribución de Poisson")
+            st.plotly_chart(pair_plotf)
+                
+        if resultados == "Gráfica 05":
+            st.markdown("## Distribución del decaimiento radiactivo del Cesio-137")
+            st.markdown("### Distribución Gaussiana")
+            st.plotly_chart(gcs01_plotf)
+            
+            st.markdown("### Distribución de Poisson")
+            st.plotly_chart(pcs01_plotf)
+            
+        if resultados == "Gráfica 06":
+            st.markdown("## Distribución del decaimiento radiactivo del Cesio-137, datos agrupados de 5 en 5")
+            st.markdown("### Distribución Gaussiana")
+            st.plotly_chart(gcs02_plotf)
+            
+            st.markdown("### Distribución de Poisson")
+            st.plotly_chart(pcs02_plotf)
     
     st.markdown("## **Discusión de Resultados**")
     # Sección de los resultados
