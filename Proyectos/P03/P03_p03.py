@@ -189,3 +189,58 @@ def app():
                 st.table(dpoisson02)
             else:
                 st.markdown(cs_poisson02.to_markdown())
+                
+        if opt == "T02.Aire":
+            st.markdown("## Datos de las gráficas del decaimiento radiactivo del aire (modificado)")
+            from P03_p02 import dgaussai02, dpoissonai02, air_tgaussian, air_tpoisson
+            
+            st.markdown("### Tabla 01: Distribución Gaussiana, $$P_{G}(x)$$")
+            orig01 = st.toggle("Tabla original distribución gaussiana")
+            # form_airgaussian = air_gaussian.applymap(lambda x: '{:.10f}'.format(x) if isinstance(x, (int, float)) else x)
+            if orig01:
+                st.table(dgaussai02)
+            else:
+                st.markdown(air_tgaussian.to_markdown())
+            
+            st.markdown("### Tabla 02: Distribución de Poisson, $$P_{P}(x)$$")
+            orig02 = st.toggle("Tabla original distribución de Poisson")
+            if orig02:
+                st.table(dpoissonai02)
+            else:
+                st.markdown(air_tpoisson.to_markdown())
+                
+        if opt == "T02.Cs-137":
+            st.markdown("## Datos de las gráficas del decaimiento radiactivo del Cesio-137 (modificado)")
+            from P03_p02 import mdgauss01, mdpoisson01, mcs_gaussian01, mcs_poisson01
+            st.markdown("### Tabla 01: Distribución Gaussiana, $$P_{G}(x)$$")
+            orig01 = st.toggle("Tabla original distribución gaussiana")
+            if orig01:
+                st.table(mdgauss01)
+            else:
+                st.markdown(mcs_gaussian01.to_markdown())
+                #st.write(cs_gaussian01)
+            
+            st.markdown("### Tabla 02: Distribución de Poisson, $$P_{P}(x)$$")
+            orig02 = st.toggle("Tabla original distribución de Poisson")
+            if orig02:
+                st.table(mdpoisson01)
+            else:
+                st.markdown(mcs_poisson01.to_markdown())
+            
+        if opt == "T02.Cs-137 (2)":
+            st.markdown("## Datos de las gráficas del decaimiento radiactivo del Cesio-137, datos agrupados (modificado)")
+            from P03_p02 import mdgauss02, mdpoisson02, mcs_gaussian02, mcs_poisson02
+            st.markdown("### Tabla 01: Distribución Gaussiana, $$P_{G}(x)$$")
+            orig01 = st.toggle("Tabla original distribución gaussiana")
+            if orig01:
+                st.table(mdgauss02)
+            else:
+                st.markdown(mcs_gaussian02.to_markdown())
+            
+            st.markdown("### Tabla 02: Distribución de Poisson, $$P_{P}(x)$$")
+            orig02 = st.toggle("Tabla original distribución de Poisson")
+            if orig02:
+                st.table(mdpoisson02)
+            else:
+                st.markdown(mcs_poisson02.to_markdown())
+                

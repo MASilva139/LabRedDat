@@ -83,14 +83,22 @@ dat_air = pd.read_csv('Proyectos/P03/csv/Aire(t2).csv')
 dair = pd.DataFrame(dat_air)
 
 #----------------------- Gráfica Distribución Gaussiana --------------------
-gair_plotf = px.line(x=dair['Aire'], y=fit(dair['Aire']))
+def gfit(x):
+    A = 63.5727
+    u = 2.1887
+    r = 1.59887
+    x = np.array(x, dtype=int)
+    return A*math.exp(-((x-u)/r)**2/2)
+gfit = np.vectorize(gfit)
+
+gair_plotf = px.line(x=dair['Aire'], y=gfit(dair['Aire']))
 gair_plotf.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline')
 gair_plotf.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
 gair_plotf.add_bar(x=dair['Aire'], y=dair['count'])
 
 #------------ Tabla Distribución Gaussiana
 datgaussai02 = pd.DataFrame({'Aire':dair['Aire'], 'hi(x)':dair['count']})
-datgaussai02['Pg(x)'] = fit(datgaussai02['Aire'])
+datgaussai02['Pg(x)'] = gfit(datgaussai02['Aire'])
 datgaussai02['[hi(x)-yi(x)]^2'] = (datgaussai02['hi(x)']-datgaussai02['Pg(x)'])**2
 datgaussai02['[yi(x)]^2'] = (datgaussai02['Pg(x)'])**2
 datgaussai02['[hi(x)]^2'] = (datgaussai02['hi(x)'])**2
@@ -118,7 +126,7 @@ pair_plotf.add_bar(x=dair['Aire'], y=dair['count'])
 
 #------------ Tabla Poisson
 datpossai02 = pd.DataFrame({'Aire':dair['Aire'], 'hi(x)':dair['count']})
-datpossai02['Pp(x)'] = (datpossai02['Aire'].apply(v_poisson_air))*(nd)
+datpossai02['Pp(x)'] = (datpossai02['Aire'].apply(v_poisson_air))*(airn)
 datpossai02['[hi(x)-yi(x)]^2'] = (datpossai02['hi(x)']-datpossai02['Pp(x)'])**2
 datpossai02['[yi(x)]^2'] = (datpossai02['Pp(x)'])**2
 datpossai02['[hi(x)]^2'] = (datpossai02['hi(x)'])**2
@@ -202,7 +210,7 @@ poisson_fit1.add_bar(x=count2['Cesio'], y=count2['count'])
 dat_cs01 = pd.read_csv('Proyectos/P03/csv/Cesio(t2).csv')
 dcs01 = pd.DataFrame(dat_cs01)
 
-#----------------------- Distribución Gaussiana (1/1) --------------------
+#----------------------- Gráfica Distribución Gaussiana (1/1) --------------------
 def gfit2(x):
     A = 5.08918
     u = 442.814
@@ -215,6 +223,19 @@ gcs01_plotf = px.line(x=dcs01['Cesio'], y=gfit2(dcs01['Cesio']))
 gcs01_plotf.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline')
 gcs01_plotf.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
 gcs01_plotf.add_bar(x=dcs01['Cesio'], y=dcs01['count'])
+#------------ Tabla Distribución Gaussiana (1/1)
+mdatgauss01 = pd.DataFrame({'Cesio-137':dcs01['Cesio'], 'hi(x)':dcs01['count']})
+mdatgauss01['Pg(x)'] = gfit2(mdatgauss01['Cesio-137'])
+mdatgauss01['[hi(x)-yi(x)]^2'] = (mdatgauss01['hi(x)']-mdatgauss01['Pg(x)'])**2
+mdatgauss01['[yi(x)]^2'] = (mdatgauss01['Pg(x)'])**2
+mdatgauss01['[hi(x)]^2'] = (mdatgauss01['hi(x)'])**2
+mdatgauss01['χ^2 (1)'] = (mdatgauss01['[hi(x)-yi(x)]^2'])/((mdatgauss01['Pg(x)'])**2)
+mdatgauss01['χ^2 (2)'] = (mdatgauss01['[hi(x)-yi(x)]^2'])/((mdatgauss01['hi(x)'])**2)
+mdgauss01 =(mdatgauss01).round(10).astype(str)
+mcschigauss01 = mdatgauss01['χ^2 (1)'].sum()
+mcschigauss02 = mdatgauss01['χ^2 (2)'].sum()
+
+mcs_gaussian01 = pd.DataFrame({'Cesio': mdgauss01['Cesio-137'],'$$h_{i}(x)$$':mdgauss01['hi(x)'],'$$P_{G}(x)$$':mdgauss01['Pg(x)'],'$$[h_{i}(x)-y_{i}(x)]^2$$':mdgauss01['[hi(x)-yi(x)]^2'],'$$[y_{i}(x)]^2$$':mdgauss01['[yi(x)]^2'],'$$[h_{i}(x)]^2$$':mdgauss01['[hi(x)]^2'],'$$χ_{1}^{2}$$':mdgauss01['χ^2 (1)'],'$$χ_{2}^{2}$$':mdgauss01['χ^2 (2)']})
 
 #----------------------- Distribución de Poisson (1/1) --------------------
 cs01n = dcs01['count'].sum()
@@ -229,6 +250,19 @@ pcs01_plotf = px.line(x=dcs01['Cesio'], y=(v_poisson2_ce01(dcs01['Cesio']))*(cs0
 pcs01_plotf.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline')
 pcs01_plotf.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
 pcs01_plotf.add_bar(x=dcs01['Cesio'], y=dcs01['count'])
+#------------ Tabla Poisson
+mdatposs01 = pd.DataFrame({'Cesio':dcs01['Cesio'], 'hi(x)':dcs01['count']})
+mdatposs01['Pp(x)'] = (mdatposs01['Cesio'].apply(v_poisson2_ce01))*(cs01n)
+mdatposs01['[hi(x)-yi(x)]^2'] = (mdatposs01['hi(x)']-mdatposs01['Pp(x)'])**2
+mdatposs01['[yi(x)]^2'] = (mdatposs01['Pp(x)'])**2
+mdatposs01['[hi(x)]^2'] = (mdatposs01['hi(x)'])**2
+mdatposs01['χ^2 (1)'] = (mdatposs01['[hi(x)-yi(x)]^2'])/((mdatposs01['Pp(x)'])**2)
+mdatposs01['χ^2 (2)'] = (mdatposs01['[hi(x)-yi(x)]^2'])/((mdatposs01['hi(x)'])**2)
+mdpoisson01 = mdatposs01.round(10).astype(str)
+mcschipoiss01 = mdatposs01['χ^2 (1)'].sum()
+mcschipoiss02 = mdatposs01['χ^2 (2)'].sum()
+
+mcs_poisson01 = pd.DataFrame({'Cesio': mdpoisson01['Cesio'],'$$h_{i}(x)$$':mdpoisson01['hi(x)'],'$$P_{P}(x)$$':mdpoisson01['Pp(x)'],'$$[h_{i}(x)-y_{i}(x)]^2$$':mdpoisson01['[hi(x)-yi(x)]^2'],'$$[y_{i}(x)]^2$$':mdpoisson01['[yi(x)]^2'],'$$[h_{i}(x)]^2$$':mdpoisson01['[hi(x)]^2'],'$$χ_{1}^{2}$$':mdpoisson01['χ^2 (1)'],'$$χ_{2}^{2}$$':mdpoisson01['χ^2 (2)']})
 
 ##############################################################
 ##############################################################
@@ -313,6 +347,19 @@ gcs02_plotf = px.line(x=dcs02['Cesio'], y=gfit2_1(dcs02['Cesio']))
 gcs02_plotf.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline')
 gcs02_plotf.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
 gcs02_plotf.add_bar(x=dcs02['Cesio'], y=dcs02['count'])
+#------------ Tabla Distribución Gaussiana
+mdatgauss02 = pd.DataFrame({'Cesio-137':dcs02['Cesio'], 'hi(x)':dcs02['count']})
+mdatgauss02['Pg(x)'] = (gfit2_1(mdatgauss02['Cesio-137']))
+mdatgauss02['[hi(x)-yi(x)]^2'] = (mdatgauss02['hi(x)']-mdatgauss02['Pg(x)'])**2
+mdatgauss02['[yi(x)]^2'] = (mdatgauss02['Pg(x)'])**2
+mdatgauss02['[hi(x)]^2'] = (mdatgauss02['hi(x)'])**2
+mdatgauss02['χ^2 (1)'] = (mdatgauss02['[hi(x)-yi(x)]^2'])/((mdatgauss02['Pg(x)'])**2)
+mdatgauss02['χ^2 (2)'] = (mdatgauss02['[hi(x)-yi(x)]^2'])/((mdatgauss02['hi(x)'])**2)
+mdgauss02 =(mdatgauss02).round(10).astype(str)
+mcs2chigauss01 = mdatgauss02['χ^2 (1)'].sum()
+mcs2chigauss02 = mdatgauss02['χ^2 (2)'].sum()
+
+mcs_gaussian02 = pd.DataFrame({'Cesio': mdgauss02['Cesio-137'],'$$h_{i}(x)$$':mdgauss02['hi(x)'],'$$P_{G}(x)$$':mdgauss02['Pg(x)'],'$$[h_{i}(x)-y_{i}(x)]^2$$':mdgauss02['[hi(x)-yi(x)]^2'],'$$[y_{i}(x)]^2$$':mdgauss02['[yi(x)]^2'],'$$[h_{i}(x)]^2$$':mdgauss02['[hi(x)]^2'],'$$χ_{1}^{2}$$':mdgauss02['χ^2 (1)'],'$$χ_{2}^{2}$$':mdgauss02['χ^2 (2)']})
 
 #----------------------- Distribución de Poisson --------------------
 gp02 = np.arange(390, 505, 5)
@@ -328,6 +375,19 @@ pcs02_plotf = px.line(x=gp02, y=(v_poisson2_ce02(gp02))*(cs02n))
 pcs02_plotf.update_traces(line_color='#B21914', line_width=2.5, line_shape='spline')
 pcs02_plotf.update_layout({'plot_bgcolor': 'rgba(0, 0, 0, 0)','paper_bgcolor': 'rgba(0, 0, 0, 0)',})
 pcs02_plotf.add_bar(x=gp02, y=dcs02['count'])
+#------------Poisson
+mdatposs02 = pd.DataFrame({'Cesio':dcs02['Cesio'], 'hi(x)':dcs02['count']})
+mdatposs02['Pp(x)'] = (mdatposs02['Cesio'].apply(v_poisson2_ce02))*(cs02n)
+mdatposs02['[hi(x)-yi(x)]^2'] = (mdatposs02['hi(x)']-mdatposs02['Pp(x)'])**2
+mdatposs02['[yi(x)]^2'] = (mdatposs02['Pp(x)'])**2
+mdatposs02['[hi(x)]^2'] = (mdatposs02['hi(x)'])**2
+mdatposs02['χ^2 (1)'] = (mdatposs02['[hi(x)-yi(x)]^2'])/((mdatposs02['Pp(x)'])**2)
+mdatposs02['χ^2 (2)'] = (mdatposs02['[hi(x)-yi(x)]^2'])/((mdatposs02['hi(x)'])**2)
+mdpoisson02 = mdatposs02.round(10).astype(str)
+mcs2chipoiss01 = mdatposs02['χ^2 (1)'].sum()
+mcs2chipoiss02 = mdatposs02['χ^2 (2)'].sum()
+
+mcs_poisson02 = pd.DataFrame({'Cesio': mdpoisson02['Cesio'],'$$h_{i}(x)$$':mdpoisson02['hi(x)'],'$$P_{P}(x)$$':mdpoisson02['Pp(x)'],'$$[h_{i}(x)-y_{i}(x)]^2$$':mdpoisson02['[hi(x)-yi(x)]^2'],'$$[y_{i}(x)]^2$$':mdpoisson02['[yi(x)]^2'],'$$[h_{i}(x)]^2$$':mdpoisson02['[hi(x)]^2'],'$$χ_{1}^{2}$$':mdpoisson02['χ^2 (1)'],'$$χ_{2}^{2}$$':mdpoisson02['χ^2 (2)']})
 
 #######################################
 ##        Tabla de chi-square        ##
@@ -387,8 +447,8 @@ def app():
 ####################################################################
     st.markdown("## **Resultados**")
     # Sección de los resultados
-    rlist = ['**Gráfica 01**', '**Gráfica 02**', '**Gráfica 03**', '**Tabla 01**', '**Tabla 02**', '**Gráfica 04**', '**Gráfica 05**', '**Gráfica 06**', '**Tabla 03**', '**Tabla 04**']
-    rlist02 = ['Distribución Gaussiana del Aire.', 'Distribución del Cesio-137.', 'Distribución del Cesio-137, datos agrupados de 5 en 5.', 'Datos de las gráficas, histograma y ajuste de las ditribuciones gaussianas y de Poisson.', 'Datos de la prueba de $$\chi^{2}$$ de las distribuciones gaussianas y de Poisson.','Distribución Gaussiana del Aire (extra).', 'Distribución del Cesio-137 (extra).', 'Distribución del Cesio-137, datos agrupados de 5 en 5 (extra).', 'Datos de las gráficas, histograma y ajuste de las ditribuciones gaussianas y de Poisson (extra).', 'Datos de la prueba de $$\chi^{2}$$ de las distribuciones gaussianas y de Poisson (extra).']
+    rlist = ['**Gráfica 01**', '**Gráfica 02**', '**Gráfica 03**', '**Tabla 01**', '**Tabla 02**']
+    rlist02 = ['Distribución Gaussiana del Aire.', 'Distribución del Cesio-137.', 'Distribución del Cesio-137, datos agrupados de 5 en 5.', 'Datos de las gráficas, histograma y ajuste de las ditribuciones gaussianas y de Poisson.', 'Datos de la prueba de $$\chi^{2}$$ de las distribuciones gaussianas y de Poisson.']
     # Diccionario con los valores de rlist con el valor de cada valor de rlist02
     dic = {key: i for key, i in zip(rlist,rlist02)}
     # Imprime cada par en el markdown
