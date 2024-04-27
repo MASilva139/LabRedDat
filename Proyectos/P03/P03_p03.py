@@ -28,7 +28,7 @@ def app():
     with ca01:
         opt = st.radio(
         "**Anexos**", 
-        ["Ajuste (Fit)", "Tabla 01", "Tablas Aire", "Tablas Cs-137", "Tablas Cs-137 (2)"]
+        ["Ajuste (Fit)", "Tabla 01", "Tablas Aire", "Tablas Cs-137", "Tablas Cs-137 (2)", "T02.Aire", "T02.Cs-137", "T02.Cs-137 (2)"]
     )
     
     with ca02:
