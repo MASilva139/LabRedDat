@@ -189,3 +189,13 @@ div.element-container.st-emotion-cache-6w6dvf.e1f1d6gn4 > .stMarkdown > .st-emot
     -moz-text-align-last: center;
     font-weight: bold;
 }
+
+div.element-container.st-emotion-cache-ka5odo.e1f1d6gn4 > .stMarkdown > .st-emotion-cache-1ijpa8z.e1nzilvr5 > table > thead > tr > th {
+    background: linear-gradient(315deg, #5f2ed3 98%, #482585 3%);
+    /* background: linear-gradient(315deg, #50b0ff 38%, #36cfcc 68%); */
+    text-align: center;
+    text-align-last: center;
+    -ms-text-align-last: center;
+    -moz-text-align-last: center;
+    font-weight: bold;
+}
