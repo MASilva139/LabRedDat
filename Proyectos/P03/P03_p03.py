@@ -243,4 +243,5 @@ def app():
                 st.table(mdpoisson02)
             else:
                 st.markdown(mcs_poisson02.to_markdown())
-                
+       
+             

@@ -384,19 +384,66 @@ mdatposs02['[hi(x)]^2'] = (mdatposs02['hi(x)'])**2
 mdatposs02['χ^2 (1)'] = (mdatposs02['[hi(x)-yi(x)]^2'])/((mdatposs02['Pp(x)'])**2)
 mdatposs02['χ^2 (2)'] = (mdatposs02['[hi(x)-yi(x)]^2'])/((mdatposs02['hi(x)'])**2)
 mdpoisson02 = mdatposs02.round(10).astype(str)
-mcs2chipoiss01 = mdatposs02['χ^2 (1)'].sum()
-mcs2chipoiss02 = mdatposs02['χ^2 (2)'].sum()
+mcs2chipoiss01 = (mdatposs02['χ^2 (1)']).sum()
+mcs2chipoiss02 = (mdatposs02['χ^2 (2)']).sum()
 
 mcs_poisson02 = pd.DataFrame({'Cesio': mdpoisson02['Cesio'],'$$h_{i}(x)$$':mdpoisson02['hi(x)'],'$$P_{P}(x)$$':mdpoisson02['Pp(x)'],'$$[h_{i}(x)-y_{i}(x)]^2$$':mdpoisson02['[hi(x)-yi(x)]^2'],'$$[y_{i}(x)]^2$$':mdpoisson02['[yi(x)]^2'],'$$[h_{i}(x)]^2$$':mdpoisson02['[hi(x)]^2'],'$$χ_{1}^{2}$$':mdpoisson02['χ^2 (1)'],'$$χ_{2}^{2}$$':mdpoisson02['χ^2 (2)']})
 
 #######################################
 ##        Tabla de chi-square        ##
 #######################################
+# ----------------- Aire -----------------
+adgaussdict01 = (datgaussai.to_dict()).get("χ^2 (1)")
+sumairgauss01 = sum(adgaussdict01[i] for i in range(26))
+sum2airgauss01 = sum(adgaussdict01[i] for i in range(12))
+adgaussdict02 = (datgaussai.to_dict()).get("χ^2 (2)")
+sumairgauss02 = sum(adgaussdict02[i] for i in range(26))
+sum2airgauss02 = sum(adgaussdict02[i] for i in range(12))
+adpoissdict01 = (datpossai.to_dict()).get("χ^2 (1)")
+sumairpoiss01 = sum(adpoissdict01[i] for i in range(26))
+sum2airpoiss01 = sum(adpoissdict01[i] for i in range(12))
+adpoissdict02 = (datpossai.to_dict()).get("χ^2 (2)")
+sumairpoiss02 = sum(adpoissdict02[i] for i in range(26))
+sum2airpoiss02 = sum(adpoissdict02[i] for i in range(12))
+# ----------------- Cesio (1/1) -----------------
+cs1dgaussdict01 = (datgauss01.to_dict()).get("χ^2 (1)")
+sumcs1gauss01 = sum(cs1dgaussdict01[i] for i in range(len(cs1dgaussdict01)))
+sum2cs1gauss01 = sum(cs1dgaussdict01[i] for i in range(41,len(cs1dgaussdict01)))
+cs1dgaussdict02 = (datgauss01.to_dict()).get("χ^2 (2)")
+sumcs1gauss02 = sum(cs1dgaussdict02[i] for i in range(len(cs1dgaussdict02)))
+sum2cs1gauss02 = sum(cs1dgaussdict02[i] for i in range(41,len(cs1dgaussdict02)))
+cs1dpoissdict01 = (datposs01.to_dict()).get("χ^2 (1)")
+sumcs1poiss01 = sum(cs1dpoissdict01[i] for i in range(len(cs1dpoissdict01)))
+sum2cs1poiss01 = sum(cs1dpoissdict01[i] for i in range(41,len(cs1dpoissdict01)))
+cs1dpoissdict02 = (datposs01.to_dict()).get("χ^2 (2)")
+sumcs1poiss02 = sum(cs1dpoissdict02[i] for i in range(len(cs1dpoissdict02)))
+sum2cs1poiss02 = sum(cs1dpoissdict02[i] for i in range(41,len(cs1dpoissdict02)))
+# ----------------- Cesio (5/5) -----------------
+cs2dgaussdict01 = (datgauss02.to_dict()).get("χ^2 (1)")
+sumcs2gauss01 = sum(cs2dgaussdict01[i] for i in range(len(cs2dgaussdict01)))
+sum2cs2gauss01 = sum(cs2dgaussdict01[i] for i in range(8,len(cs2dgaussdict01)))
+cs2dgaussdict02 = (datgauss02.to_dict()).get("χ^2 (2)")
+sumcs2gauss02 = sum(cs2dgaussdict02[i] for i in range(len(cs2dgaussdict02)))
+sum2cs2gauss02 = sum(cs2dgaussdict02[i] for i in range(8,len(cs2dgaussdict02)))
+cs2dpoissdict01 = (datposs02.to_dict()).get("χ^2 (1)")
+sumcs2poiss01 = sum(cs2dpoissdict01[i] for i in range(len(cs2dpoissdict01)))
+sum2cs2poiss01 = sum(cs2dpoissdict01[i] for i in range(8,len(cs2dpoissdict01)))
+cs2dpoissdict02 = (datposs02.to_dict()).get("χ^2 (2)")
+sumcs2poiss02 = sum(cs2dpoissdict02[i] for i in range(len(cs2dpoissdict02)))
+sum2cs2poiss02 = sum(cs2dpoissdict02[i] for i in range(8,len(cs2dpoissdict02)))
+
 tchi = pd.DataFrame({
     '$$χ^2$$':['Gauss $$(1/[y_{i}(x)]^{2})$$', 'Gauss $$(1/[h_{i}(x)]^{2})$$', 'Poisson $$(1/[y_{i}(x)]^{2})$$', 'Poisson $$(1/[h_{i}(x)]^{2})$$'], 
-    '$${χ^2}_{Aire}$$': [achigauss01, achigauss02, achipoiss01, achipoiss02],
-    '$${χ^2}_{Cs-137}$$': [cschigauss01, cschigauss02, cschipoiss01, cschipoiss02],
-    '$${χ^2}_{Cs-137}$$ (arr)': [cs2chigauss01, cs2chigauss02, cs2chipoiss01, cs2chipoiss02]
+    '$${χ^2}_{Aire}$$': [sumairgauss01, sumairgauss02, sumairpoiss01, sumairpoiss02],
+    '$${χ^2}_{Cs-137}$$': [sumcs1gauss01, sumcs1gauss02, sumcs1poiss01, sumcs1poiss02],
+    '$${χ^2}_{Cs-137}$$ (arr)': [sumcs2gauss01, sumcs2gauss02, sumcs2poiss01, sumcs2poiss02]
+})
+
+tchi02 = pd.DataFrame({
+    '$$χ^2$$':['Gauss $$(1/[y_{i}(x)]^{2})$$', 'Gauss $$(1/[h_{i}(x)]^{2})$$', 'Poisson $$(1/[y_{i}(x)]^{2})$$', 'Poisson $$(1/[h_{i}(x)]^{2})$$'], 
+    '$${χ^2}_{Aire}$$': [sum2airgauss01, sum2airgauss02, sum2airpoiss01, sum2airpoiss02],
+    '$${χ^2}_{Cs-137}$$': [sum2cs1gauss01, sum2cs1gauss02, sum2cs1poiss01, sum2cs1poiss02],
+    '$${χ^2}_{Cs-137}$$ (arr)': [sum2cs2gauss01, sum2cs2gauss02, sum2cs2poiss01, sum2cs2poiss02]
 })
 
 ################################################################################################################################
@@ -524,12 +571,20 @@ def app():
                 
         if resultados == "Tabla 01":
             st.markdown("### Datos de las gráficas")
-            datc = pd.DataFrame({'Aire':count['Aire'], "$$N_{Aire}$$":count['count'], "$$P_{G_{Aire}}$$":dgaussai['Pg(x)'],"$$P_{P_{Aire}}$$":dpoissonai['Pp(x)'], 'Cs':count2['Cesio'], '$$N_{Cs}$$':count2['count'], "$$P_{G_{Cs}}$$":dgauss01['Pg(x)'],'Cs (arr)':data_c['Cesio'], '$$N_{Cs} (arr)$$':data_c['count'],"$$P_{G_{Cs}} (arr)$$":dgauss02['Pg(x)']})
-            st.markdown(datc.to_markdown())
+            tabla01 = st.toggle("Datos de las gráficas (modificada)")
+            if tabla01:
+                datc2 = pd.DataFrame({'Aire':dair['Aire'], "$$N_{Aire}$$":dair['count'], "$$P_{G_{Aire}}$$":dgaussai02['Pg(x)'],"$$P_{P_{Aire}}$$":dpoissonai02['Pp(x)'], 'Cs':dcs01['Cesio'], '$$N_{Cs}$$':dcs01['count'], "$$P_{G_{Cs}}$$":mdgauss01['Pg(x)'],'Cs (arr)':dcs02['Cesio'], '$$N_{Cs} (arr)$$':dcs02['count'],"$$P_{G_{Cs}} (arr)$$":mdgauss02['Pg(x)']})
+                st.markdown(datc2.to_markdown())
+            else:
+                datc = pd.DataFrame({'Aire':count['Aire'], "$$N_{Aire}$$":count['count'], "$$P_{G_{Aire}}$$":dgaussai['Pg(x)'],"$$P_{P_{Aire}}$$":dpoissonai['Pp(x)'], 'Cs':count2['Cesio'], '$$N_{Cs}$$':count2['count'], "$$P_{G_{Cs}}$$":dgauss01['Pg(x)'],'Cs (arr)':data_c['Cesio'], '$$N_{Cs} (arr)$$':data_c['count'],"$$P_{G_{Cs}} (arr)$$":dgauss02['Pg(x)']})
+                st.markdown(datc.to_markdown())
                 
         if resultados == "Tabla 02":
-            st.markdown("### Datos de la prueba de $$χ^2$$")
+            st.markdown("## Datos de la prueba de $$χ^2$$")
+            st.markdown("### Tabla 01: Prueba $$χ^2$$ (todos los datos)")
             st.markdown(tchi.to_markdown())
+            st.markdown("### Tabla 02: Prueba $$χ^2$$ (datos acotados)")
+            st.markdown(tchi02.to_markdown())
     
     st.markdown("## **Discusión de Resultados**")
     # Sección de los resultados
