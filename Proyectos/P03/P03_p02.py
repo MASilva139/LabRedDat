@@ -493,12 +493,12 @@ def app():
     # Añade tu CSS
     st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
     
-    st.title('Distribuciones para la Predicción de COVID19')
+    st.title('Decaimiento de Cesio-137')
     
     st.markdown("## **Procedimiento Experimental**")
     # Sección del procedimiento del proyecto
     st.write("""
-        En la presente práctica se llevó a cabo el análisis para realizar una predicción con los datos registrados por el Ministerio de Salud, de los casos de COVID-19 en el año 2020. A partir de ello se procedió de la siguiente manera
+        En la presente práctica se llevó a cabo el análisis del decaimiento radiactivo del Cesio-137 y el aire. Con ello en mente se procedio la práctica de la siguiente manera
     """)
     
     expa0 = st.toggle("##### Datos de las constantes GNUPlot (Parte experimental)")
@@ -514,14 +514,25 @@ def app():
             '''
         )
         
-    expa1 = st.toggle("##### Gráfica de la distribución (parte experimental)")
+    expa1 = st.toggle("##### Gráfica de la distribución gaussiana (parte experimental)")
     if expa1:
         st.write(
             '''
             1. Se definió, con el comando ``def``, la función de la Distribución Gaussiana, $$P_{G}(x)$$, con los valores de las constantes $$A$$, $$u$$ y $$r$$ previamente obtenidos.
             2. Se vectorizó la función de la Distribución Gaussiana con ``numpy.vetorize()``, para diferentes valores de $$x$$.
-            3. Se definió un rango de 185 datos con ``numpy.arange``.
-            4. Se definieron los parámetros de la gráfica y la curva del ajuste.
+            3. Se definieron los parámetros de la gráfica y la curva del ajuste.
+            4. Se gráfico el ajuste y el histograma con el comando ``streamlit.plotly_chart()``.
+            '''
+        )
+        
+    expa2 = st.toggle("##### Gráfica de la distribución de Poisson (parte experimental)")
+    if expa2:
+        st.write(
+            '''
+            1. Se definió, con el comando ``def``, la función de la Distribución de Poisson, $$P_{P}(x)$$.
+            2. Se definió, dentro del comando ``def`` el valor de $$\mu$$.
+            3. Se retornó el valor de la función de Poisson como flotante.
+            4. Se vectorizó la función de la Distribución de Poisson con ``numpy.vetorize()``, para diferentes valores de $$x$$.
             5. Se gráfico el ajuste y el histograma con el comando ``streamlit.plotly_chart()``.
             '''
         )
