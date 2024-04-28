@@ -392,6 +392,8 @@ mcs_poisson02 = pd.DataFrame({'Cesio': mdpoisson02['Cesio'],'$$h_{i}(x)$$':mdpoi
 #######################################
 ##        Tabla de chi-square        ##
 #######################################
+#________________________________________#
+#             Datos originales           #
 # ----------------- Aire -----------------
 adgaussdict01 = (datgaussai.to_dict()).get("χ^2 (1)")
 sumairgauss01 = sum(adgaussdict01[i] for i in range(26))
@@ -438,12 +440,47 @@ tchi = pd.DataFrame({
     '$${χ^2}_{Cs-137}$$': [sumcs1gauss01, sumcs1gauss02, sumcs1poiss01, sumcs1poiss02],
     '$${χ^2}_{Cs-137}$$ (arr)': [sumcs2gauss01, sumcs2gauss02, sumcs2poiss01, sumcs2poiss02]
 })
-
 tchi02 = pd.DataFrame({
     '$$χ^2$$':['Gauss $$(1/[y_{i}(x)]^{2})$$', 'Gauss $$(1/[h_{i}(x)]^{2})$$', 'Poisson $$(1/[y_{i}(x)]^{2})$$', 'Poisson $$(1/[h_{i}(x)]^{2})$$'], 
     '$${χ^2}_{Aire}$$': [sum2airgauss01, sum2airgauss02, sum2airpoiss01, sum2airpoiss02],
     '$${χ^2}_{Cs-137}$$': [sum2cs1gauss01, sum2cs1gauss02, sum2cs1poiss01, sum2cs1poiss02],
     '$${χ^2}_{Cs-137}$$ (arr)': [sum2cs2gauss01, sum2cs2gauss02, sum2cs2poiss01, sum2cs2poiss02]
+})
+#________________________________________#
+#              Datos acotados            #
+# ----------------- Aire -----------------
+madgaussdict01 = (datgaussai02.to_dict()).get("χ^2 (1)")
+msumairgauss01 = sum(madgaussdict01[i] for i in range(len(madgaussdict01)))
+madgaussdict02 = (datgaussai02.to_dict()).get("χ^2 (2)")
+msumairgauss02 = sum(madgaussdict02[i] for i in range(len(madgaussdict02)))
+madpoissdict01 = (datpossai02.to_dict()).get("χ^2 (1)")
+msumairpoiss01 = sum(madpoissdict01[i] for i in range(len(madpoissdict01)))
+madpoissdict02 = (datpossai02.to_dict()).get("χ^2 (2)")
+msumairpoiss02 = sum(madpoissdict02[i] for i in range(len(madpoissdict02)))
+# ----------------- Cesio (1/1) -----------------
+mcs1dgaussdict01 = (mdatgauss01.to_dict()).get("χ^2 (1)")
+msumcs1gauss01 = sum(mcs1dgaussdict01[i] for i in range(len(mcs1dgaussdict01)))
+mcs1dgaussdict02 = (mdatgauss01.to_dict()).get("χ^2 (2)")
+msumcs1gauss02 = sum(mcs1dgaussdict02[i] for i in range(len(mcs1dgaussdict02)))
+mcs1dpoissdict01 = (mdatposs01.to_dict()).get("χ^2 (1)")
+msumcs1poiss01 = sum(mcs1dpoissdict01[i] for i in range(len(mcs1dpoissdict01)))
+mcs1dpoissdict02 = (mdatposs01.to_dict()).get("χ^2 (2)")
+msumcs1poiss02 = sum(mcs1dpoissdict02[i] for i in range(len(mcs1dpoissdict02)))
+# ----------------- Cesio (5/5) -----------------
+mcs2dgaussdict01 = (mdatgauss02.to_dict()).get("χ^2 (1)")
+msumcs2gauss01 = sum(cs2dgaussdict01[i] for i in range(len(cs2dgaussdict01)))
+mcs2dgaussdict02 = (mdatgauss02.to_dict()).get("χ^2 (2)")
+msumcs2gauss02 = sum(cs2dgaussdict02[i] for i in range(len(cs2dgaussdict02)))
+mcs2dpoissdict01 = (mdatposs02.to_dict()).get("χ^2 (1)")
+msumcs2poiss01 = sum(cs2dpoissdict01[i] for i in range(len(cs2dpoissdict01)))
+mcs2dpoissdict02 = (mdatposs02.to_dict()).get("χ^2 (2)")
+msumcs2poiss02 = sum(cs2dpoissdict02[i] for i in range(len(cs2dpoissdict02)))
+
+tchi03 = pd.DataFrame({
+    '$$χ^2$$':['Gauss $$(1/[y_{i}(x)]^{2})$$', 'Gauss $$(1/[h_{i}(x)]^{2})$$', 'Poisson $$(1/[y_{i}(x)]^{2})$$', 'Poisson $$(1/[h_{i}(x)]^{2})$$'], 
+    '$${χ^2}_{Aire}$$': [msumairgauss01, msumairgauss02, msumairpoiss01, msumairpoiss02],
+    '$${χ^2}_{Cs-137}$$': [msumcs1gauss01, msumcs1gauss02, msumcs1poiss01, msumcs1poiss02],
+    '$${χ^2}_{Cs-137}$$ (arr)': [msumcs2gauss01, msumcs2gauss02, msumcs2poiss01, msumcs2poiss02]
 })
 
 ################################################################################################################################
@@ -509,7 +546,7 @@ def app():
     )
     st.markdown(s)
     
-    c1, c2 = st.columns([1,4])
+    c1, c2 = st.columns([1,6])
     with c1:
         resultados = st.radio(
             "**Resultados**", 
@@ -581,10 +618,15 @@ def app():
                 
         if resultados == "Tabla 02":
             st.markdown("## Datos de la prueba de $$χ^2$$")
-            st.markdown("### Tabla 01: Prueba $$χ^2$$ (todos los datos)")
-            st.markdown(tchi.to_markdown())
-            st.markdown("### Tabla 02: Prueba $$χ^2$$ (datos acotados)")
-            st.markdown(tchi02.to_markdown())
+            tabla02 = st.toggle("Datos de las gráficas (modificada)")
+            if tabla02:
+                st.markdown("### Tabla 01: Prueba $$χ^2$$ (datos modificados)")
+                st.markdown(tchi03.to_markdown())
+            else:
+                st.markdown("### Tabla 01: Prueba $$χ^2$$ (todos los datos)")
+                st.markdown(tchi.to_markdown())
+                st.markdown("### Tabla 02: Prueba $$χ^2$$ (datos acotados)")
+                st.markdown(tchi02.to_markdown())
     
     st.markdown("## **Discusión de Resultados**")
     # Sección de los resultados
