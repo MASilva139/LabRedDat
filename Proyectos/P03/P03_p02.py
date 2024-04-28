@@ -396,43 +396,43 @@ mcs_poisson02 = pd.DataFrame({'Cesio': mdpoisson02['Cesio'],'$$h_{i}(x)$$':mdpoi
 #             Datos originales           #
 # ----------------- Aire -----------------
 adgaussdict01 = (datgaussai.to_dict()).get("χ^2 (1)")
-sumairgauss01 = sum(adgaussdict01[i] for i in range(26))
-sum2airgauss01 = sum(adgaussdict01[i] for i in range(12))
+sumairgauss01 = sum(adgaussdict01[i] for i in range(26))/26
+sum2airgauss01 = sum(adgaussdict01[i] for i in range(12))/12
 adgaussdict02 = (datgaussai.to_dict()).get("χ^2 (2)")
-sumairgauss02 = sum(adgaussdict02[i] for i in range(26))
-sum2airgauss02 = sum(adgaussdict02[i] for i in range(12))
+sumairgauss02 = sum(adgaussdict02[i] for i in range(26))/26
+sum2airgauss02 = sum(adgaussdict02[i] for i in range(12))/12
 adpoissdict01 = (datpossai.to_dict()).get("χ^2 (1)")
-sumairpoiss01 = sum(adpoissdict01[i] for i in range(26))
-sum2airpoiss01 = sum(adpoissdict01[i] for i in range(12))
+sumairpoiss01 = sum(adpoissdict01[i] for i in range(26))/26
+sum2airpoiss01 = sum(adpoissdict01[i] for i in range(12))/12
 adpoissdict02 = (datpossai.to_dict()).get("χ^2 (2)")
-sumairpoiss02 = sum(adpoissdict02[i] for i in range(26))
-sum2airpoiss02 = sum(adpoissdict02[i] for i in range(12))
+sumairpoiss02 = sum(adpoissdict02[i] for i in range(26))/26
+sum2airpoiss02 = sum(adpoissdict02[i] for i in range(12))/12
 # ----------------- Cesio (1/1) -----------------
 cs1dgaussdict01 = (datgauss01.to_dict()).get("χ^2 (1)")
-sumcs1gauss01 = sum(cs1dgaussdict01[i] for i in range(len(cs1dgaussdict01)))
-sum2cs1gauss01 = sum(cs1dgaussdict01[i] for i in range(41,len(cs1dgaussdict01)))
+sumcs1gauss01 = sum(cs1dgaussdict01[i] for i in range(len(cs1dgaussdict01)))/146
+sum2cs1gauss01 = sum(cs1dgaussdict01[i] for i in range(41,len(cs1dgaussdict01)))/105
 cs1dgaussdict02 = (datgauss01.to_dict()).get("χ^2 (2)")
-sumcs1gauss02 = sum(cs1dgaussdict02[i] for i in range(len(cs1dgaussdict02)))
-sum2cs1gauss02 = sum(cs1dgaussdict02[i] for i in range(41,len(cs1dgaussdict02)))
+sumcs1gauss02 = sum(cs1dgaussdict02[i] for i in range(len(cs1dgaussdict02)))/146
+sum2cs1gauss02 = sum(cs1dgaussdict02[i] for i in range(41,len(cs1dgaussdict02)))/105
 cs1dpoissdict01 = (datposs01.to_dict()).get("χ^2 (1)")
-sumcs1poiss01 = sum(cs1dpoissdict01[i] for i in range(len(cs1dpoissdict01)))
-sum2cs1poiss01 = sum(cs1dpoissdict01[i] for i in range(41,len(cs1dpoissdict01)))
+sumcs1poiss01 = sum(cs1dpoissdict01[i] for i in range(len(cs1dpoissdict01)))/146
+sum2cs1poiss01 = sum(cs1dpoissdict01[i] for i in range(41,len(cs1dpoissdict01)))/105
 cs1dpoissdict02 = (datposs01.to_dict()).get("χ^2 (2)")
-sumcs1poiss02 = sum(cs1dpoissdict02[i] for i in range(len(cs1dpoissdict02)))
-sum2cs1poiss02 = sum(cs1dpoissdict02[i] for i in range(41,len(cs1dpoissdict02)))
+sumcs1poiss02 = sum(cs1dpoissdict02[i] for i in range(len(cs1dpoissdict02)))/146
+sum2cs1poiss02 = sum(cs1dpoissdict02[i] for i in range(41,len(cs1dpoissdict02)))/105
 # ----------------- Cesio (5/5) -----------------
 cs2dgaussdict01 = (datgauss02.to_dict()).get("χ^2 (1)")
-sumcs2gauss01 = sum(cs2dgaussdict01[i] for i in range(len(cs2dgaussdict01)))
-sum2cs2gauss01 = sum(cs2dgaussdict01[i] for i in range(8,len(cs2dgaussdict01)))
+sumcs2gauss01 = sum(cs2dgaussdict01[i] for i in range(len(cs2dgaussdict01)))/32
+sum2cs2gauss01 = sum(cs2dgaussdict01[i] for i in range(8,len(cs2dgaussdict01)))/24
 cs2dgaussdict02 = (datgauss02.to_dict()).get("χ^2 (2)")
-sumcs2gauss02 = sum(cs2dgaussdict02[i] for i in range(len(cs2dgaussdict02)))
-sum2cs2gauss02 = sum(cs2dgaussdict02[i] for i in range(8,len(cs2dgaussdict02)))
+sumcs2gauss02 = sum(cs2dgaussdict02[i] for i in range(len(cs2dgaussdict02)))/32
+sum2cs2gauss02 = sum(cs2dgaussdict02[i] for i in range(8,len(cs2dgaussdict02)))/24
 cs2dpoissdict01 = (datposs02.to_dict()).get("χ^2 (1)")
-sumcs2poiss01 = sum(cs2dpoissdict01[i] for i in range(len(cs2dpoissdict01)))
-sum2cs2poiss01 = sum(cs2dpoissdict01[i] for i in range(8,len(cs2dpoissdict01)))
+sumcs2poiss01 = sum(cs2dpoissdict01[i] for i in range(len(cs2dpoissdict01)))/32
+sum2cs2poiss01 = sum(cs2dpoissdict01[i] for i in range(8,len(cs2dpoissdict01)))/24
 cs2dpoissdict02 = (datposs02.to_dict()).get("χ^2 (2)")
-sumcs2poiss02 = sum(cs2dpoissdict02[i] for i in range(len(cs2dpoissdict02)))
-sum2cs2poiss02 = sum(cs2dpoissdict02[i] for i in range(8,len(cs2dpoissdict02)))
+sumcs2poiss02 = sum(cs2dpoissdict02[i] for i in range(len(cs2dpoissdict02)))/32
+sum2cs2poiss02 = sum(cs2dpoissdict02[i] for i in range(8,len(cs2dpoissdict02)))/24
 
 tchi = pd.DataFrame({
     '$$χ^2$$':['Gauss $$(1/[y_{i}(x)]^{2})$$', 'Gauss $$(1/[h_{i}(x)]^{2})$$', 'Poisson $$(1/[y_{i}(x)]^{2})$$', 'Poisson $$(1/[h_{i}(x)]^{2})$$'], 
@@ -450,31 +450,31 @@ tchi02 = pd.DataFrame({
 #              Datos acotados            #
 # ----------------- Aire -----------------
 madgaussdict01 = (datgaussai02.to_dict()).get("χ^2 (1)")
-msumairgauss01 = sum(madgaussdict01[i] for i in range(len(madgaussdict01)))
+msumairgauss01 = sum(madgaussdict01[i] for i in range(len(madgaussdict01)))/(dair['Aire'].count())
 madgaussdict02 = (datgaussai02.to_dict()).get("χ^2 (2)")
-msumairgauss02 = sum(madgaussdict02[i] for i in range(len(madgaussdict02)))
+msumairgauss02 = sum(madgaussdict02[i] for i in range(len(madgaussdict02)))/(dair['Aire'].count())
 madpoissdict01 = (datpossai02.to_dict()).get("χ^2 (1)")
-msumairpoiss01 = sum(madpoissdict01[i] for i in range(len(madpoissdict01)))
+msumairpoiss01 = sum(madpoissdict01[i] for i in range(len(madpoissdict01)))/(dair['Aire'].count())
 madpoissdict02 = (datpossai02.to_dict()).get("χ^2 (2)")
-msumairpoiss02 = sum(madpoissdict02[i] for i in range(len(madpoissdict02)))
+msumairpoiss02 = sum(madpoissdict02[i] for i in range(len(madpoissdict02)))/(dair['Aire'].count())
 # ----------------- Cesio (1/1) -----------------
 mcs1dgaussdict01 = (mdatgauss01.to_dict()).get("χ^2 (1)")
-msumcs1gauss01 = sum(mcs1dgaussdict01[i] for i in range(len(mcs1dgaussdict01)))
+msumcs1gauss01 = sum(mcs1dgaussdict01[i] for i in range(len(mcs1dgaussdict01)))/(dcs01['Cesio'].count())
 mcs1dgaussdict02 = (mdatgauss01.to_dict()).get("χ^2 (2)")
-msumcs1gauss02 = sum(mcs1dgaussdict02[i] for i in range(len(mcs1dgaussdict02)))
+msumcs1gauss02 = sum(mcs1dgaussdict02[i] for i in range(len(mcs1dgaussdict02)))/(dcs01['Cesio'].count())
 mcs1dpoissdict01 = (mdatposs01.to_dict()).get("χ^2 (1)")
-msumcs1poiss01 = sum(mcs1dpoissdict01[i] for i in range(len(mcs1dpoissdict01)))
+msumcs1poiss01 = sum(mcs1dpoissdict01[i] for i in range(len(mcs1dpoissdict01)))/(dcs01['Cesio'].count())
 mcs1dpoissdict02 = (mdatposs01.to_dict()).get("χ^2 (2)")
-msumcs1poiss02 = sum(mcs1dpoissdict02[i] for i in range(len(mcs1dpoissdict02)))
+msumcs1poiss02 = sum(mcs1dpoissdict02[i] for i in range(len(mcs1dpoissdict02)))/(dcs01['Cesio'].count())
 # ----------------- Cesio (5/5) -----------------
 mcs2dgaussdict01 = (mdatgauss02.to_dict()).get("χ^2 (1)")
-msumcs2gauss01 = sum(cs2dgaussdict01[i] for i in range(len(cs2dgaussdict01)))
+msumcs2gauss01 = sum(cs2dgaussdict01[i] for i in range(len(cs2dgaussdict01)))/(dcs02['Cesio'].count())
 mcs2dgaussdict02 = (mdatgauss02.to_dict()).get("χ^2 (2)")
-msumcs2gauss02 = sum(cs2dgaussdict02[i] for i in range(len(cs2dgaussdict02)))
+msumcs2gauss02 = sum(cs2dgaussdict02[i] for i in range(len(cs2dgaussdict02)))/(dcs02['Cesio'].count())
 mcs2dpoissdict01 = (mdatposs02.to_dict()).get("χ^2 (1)")
-msumcs2poiss01 = sum(cs2dpoissdict01[i] for i in range(len(cs2dpoissdict01)))
+msumcs2poiss01 = sum(cs2dpoissdict01[i] for i in range(len(cs2dpoissdict01)))/(dcs02['Cesio'].count())
 mcs2dpoissdict02 = (mdatposs02.to_dict()).get("χ^2 (2)")
-msumcs2poiss02 = sum(cs2dpoissdict02[i] for i in range(len(cs2dpoissdict02)))
+msumcs2poiss02 = sum(cs2dpoissdict02[i] for i in range(len(cs2dpoissdict02)))/(dcs02['Cesio'].count())
 
 tchi03 = pd.DataFrame({
     '$$χ^2$$':['Gauss $$(1/[y_{i}(x)]^{2})$$', 'Gauss $$(1/[h_{i}(x)]^{2})$$', 'Poisson $$(1/[y_{i}(x)]^{2})$$', 'Poisson $$(1/[h_{i}(x)]^{2})$$'], 
@@ -630,11 +630,12 @@ def app():
     
     st.markdown("## **Discusión de Resultados**")
     # Sección de los resultados
+    # De los fits realizados en ``GNUPlot`` se consideró utilizar el del día 69, después del primer caso de contagio registrado, presentados en los apartados ***Gráfica 01*** y ***Fit 11 GNUPlot***, del apédice. Esto se debe a que en otros días los valores aumentaban o disminuian de manera drástica, como en el caso que se presenta en el ***Fit 13 GNUPlot*** (véase apéndice), donde el valor de $$A$$ cambiaba de 930,848 $$\pm$$ 3038 a 73351,4 $$\pm$$ 1,105e+06. Además, a partir del día 71 los datos tendían a decrecer, y con ello al realizar el ajuste tomando de ese día en adelante hacía que el fit proyectara que el valor máximo ya había sucedido y decreciera en vez de predecir un pico.
     st.write(
         """
-        A partir de los datos dados por el Ministerio de Salud, de los casos positivos desde el 13 de marzo del 2020 hasta el 15 de marzo del 2021 (véase apartado ***Tabla 01***), se procede a realizar en las gráficas el histograma presentado en la ***Gráfica 01*** y ***Gráfica 02***. Del mismo modo se realizó una curva de ajuste empleando para ello la distribución gaussiana, con respecto a cierta cantidad de datos del histograma, para predecir un posible pico de contagios de COVID-19; esto es, considerando que se está en el día 69 y 80, después del primer caso, presentados en la ***Gráfica 01*** y ***Gráfica 02***, respectivamente.
+        A partir de los datos obtenidos del decaimiento radiactivo del aire y del Cesio-137, empleando un contador de particulas Geiger, se procedió a realizar en las gráficas los histogramas presentados en las secciones de resultados ***Gráfica 01***, ***Gráfica 02*** y ***Gráfica 03***, siendo estos las del aire, las del Cesio-137 y las del Cesio-137 con datos agrupados, respectivamente. Del mismo modo, se realizó una curva de ajuste empleando para ello las distribuciones de Gauss y de Poisson para verificar a cual de estas se ajustaba de mejor manera cada caso de decaimiento radactivo; además, se realizó la prueba de $$\chi^{2}$$ para cada uno de los casos.
         \n
-        De los fits realizados en ``GNUPlot`` se consideró utilizar el del día 69, después del primer caso de contagio registrado, presentados en los apartados ***Gráfica 01*** y ***Fit 11 GNUPlot***, del apédice. Esto se debe a que en otros días los valores aumentaban o disminuian de manera drástica, como en el caso que se presenta en el ***Fit 13 GNUPlot*** (véase apéndice), donde el valor de $$A$$ cambiaba de 930,848 $$\pm$$ 3038 a 73351,4 $$\pm$$ 1,105e+06. Además, a partir del día 71 los datos tendían a decrecer, y con ello al realizar el ajuste tomando de ese día en adelante hacía que el fit proyectara que el valor máximo ya había sucedido y decreciera en vez de predecir un pico.
+        De los fits realizados en ```GNUPlot``` se determinaron los valores del ajuste de la curva de la distribución gaussiana, presentados en el apartado de resultados ***Gráfica 01***, ***Gráfica 02***, ***Gráfica 03*** en la sección de **Distribución Gaussiana**. De manera que se obtuvo un resultado de $$A$$=63.5733, $$u$$=2,18871 y $$r$$=1,59884 para el aire, $$A$$=5,09274, $$u$$=442,826 y $$r$$=19,5845 para el Cesio-137 y para los datos agrupados del Cesio-137 $$A$$=25,382, $$u$$=439,84 y $$r$$=19,6525. Estos valores pueden verse en el apartado de ***Ajuste (Fit)*** en la sección de **Anexos**. Con ello, en la sección de **Resultados**, en el apartado ***Gráfica 01*** se puede observar que el ajuste presentado por la distribución de Poisson hay un mejor ajuste con respecto a los valores medidos; sin embargo, a pesar de que el ajuste dado por la distribución gaussiana no esta mal, se puede observar que dicho ajuste difiere en mayor medida con respecto a los valores experimentales. 
         
         De igual manera existían datos anteriores que también lograban realizar una proyección de un pico coherente a futuro, pero el utilizar estos ocasionaba que se desecharan
         un gran número de datos y por lo mismo su predicción podría ser menos fiable. Pero, como se mencionó anteriormente, también existían datos que ocasionaban que el ajuste
