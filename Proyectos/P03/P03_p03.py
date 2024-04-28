@@ -17,9 +17,10 @@ def app():
     st.title("Conclusiones")
     st.write(
         '''
-        - Las gráficas presentadas por ``Plotly.Express`` permiten realizar gráficas interactivas en donde puede observarse la comparación de la proyección dada por el ajuste con los datos reales que ya conocemos.
-        - En esta ocasión no era óptimo utilizar una distribución binomial, aunque los datos tomaran esta forma, ya que para ello necesitabamos información que no poseíamos, como lo es la probabilidad.
-        - Aunque la elección de la distribución y fórmula a utilizar es un paso clave, la exactitud y fiabilidad del ajuste fue decidida gracias al análisis previo de los datos para definir cuales nos darían resultados más satisfactorios y coherentes con lo estudiado.
+        - La distribución de Poisson es la que presenta un mejor ajuste a los datos experimentales del aire, el cual se presenta en la prueba de $$\chi^{2}$$.
+        - Debido a la definición matemática de la distribución de Poisson, el fit diverge para los datos del Cesio-137, y con ello la mejor distribución para dichos datos es la descrita por la distribución gaussiana.
+        - La exclusión de datos que se alejan del rango usual de medición generó un mejor ajuste de los fits con respecto a los valores experimentales, sin embargo, ésta forma de analizar los datos no es coherente, dado que se están excluyendo datos experimentales.
+        - El fit generado por una distribución gaussiana es más general que la de una distribución de Poisson debido a que esta logró aplicarse tanto para el caso del decaimiento del aire como para el decaimiento del Cesio-137.
         '''
     )
     
