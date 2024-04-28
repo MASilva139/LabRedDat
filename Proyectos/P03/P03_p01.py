@@ -29,9 +29,16 @@ def app():
             st.markdown("## Resumen / Caso de estudio")
             st.write(
             """
-                En la siguiente práctica se procedió a realizar una aplicación web para graficar los datos de los registros de casos de COVID-19 del año 2020 dados por el Ministerio de Salud y a partir de ello predecir el pico de contagios asumiendo que no se cuentan con los datos futuros; empleando para ello la biblioteca de ``Plotly-Express``, para gráficar el histograma y la curva de ajuste, y el programa de ``GNUPlot``, para los valores de la curva de ajuste. \n
-                Empleando el programa de ``GNUPlot`` se determinaron los valores de las constantes de la ecuación de Distribución Gaussiana $$A$$, $$\mu$$ y $$\sigma$$, realizando un fit sobre los datos de casos positivos, columna 5 del csv; utilizando 69 datos, comenzando desde el día 13 de marzo del 2020, se determinaron que los valores de las constantes son $$A=$$930.848, $$\mu=$$109.684 y $$\sigma=$$23.3855. Se vectorizó la función de Distribución Gaussiana para poder introducir diferentes valores de $$x$$ como una lista y con ello poder graficar la curva de ajuste respecto a los datos de casos positivos registrados. \n
-                Se evaluaron los datos disponibles y se eliminaron aquellos que ocasionaban un sobreajuste al fit, de manera que solamente se utilizaron los valores de los primeros 69 días, debido a que con otros datos el ajuste toma que el pico de casos positivos ya se dio, de manera que los datos solamente decrecerian. De igual manera, se utilizó la distribución Gaussiana, en lugar de la distribución binomial, debido a que al tratarse de datos y no probabilidades, el ajuste que daba la primera de estas era mejor, mientras que con la binomial se hubiese tenido que arreglar la función o los datos para poder realizar el ajuste de la curva.
+                En la siguiente prácita se procedio a realizar un fit del decaimiento radiactivo del aire y del cesio-137, para una distribución Gaussiana y una distribución de Poisson.
+                Para obtener los datos se realizaron 250 mediciones con un contador de Geiger, primero sin utilizar ningún material (medición del aire) y después utilizando el
+                cesio-137. Para realizar las gráficas se utilizó ```Plotly-express```, con lo cual se colocó el histograma y la curva de ajuste, y para obtener los valores de la
+                curva de ajuste de la distribución Gaussiana se utilizó ```GNUPlot```, mientras que para la curva de ajuste de la distribución de Poisson se definió únicamente una
+                función.
+
+                Empleando el programa de ```GNUPlot``` se determinaron los valores de las constantes de la ecuación de Distribución Gaussiana $$A$$, $$\mu$$ y $$\sigma$$, realizando un
+                fit sobre los datos del aire, del cesio-137 y los datos agrupados de cinco en cinco del cesio-137. Siendo estos valores $$A=63.5727$$, $$\mu=2.1887$$ y $$\sigma=1.59887$$; 
+                $$A=5.09274$$, $$\mu=442.826$$ y $$\sigma=19.5845$$; $$A=25.382$$, $$\mu=439.84$$ y $$\sigma=19.6525$$; para cada medición respectivamente.Se vectorizó la función de 
+                distribución Gaussiana para poder introducir diferentes valores de $$x$$ como una lista y con ello poder graficar la curva de ajuste respecto a los datos.
             """
             )
             st.markdown("## Marco Teórico")
@@ -50,7 +57,7 @@ def app():
                 
                 Es un isótopo radiactivo del cesio que se produce principalmente por fisión nuclear. Tiene un periodo de semidesintegración de 30,23 años y decae emitiendo partículas beta a un isómero nuclear metaestable de Bario-137. El Bario-137 tiene un periodo de semidesintegración de 2,65 minutos.
                 
-                ### Decaimiento radioactivo
+                ### Decaimiento radiactivo
                 
                 Es un proceso en el que un núcleo inestable se transforma en uno más estable, emitiendo patículas y/o fotones y liberando energía durante el proceso. 
                 Una sustancia que experimenta este fenómeno espotáneamente se denomina sustancia radioactiva. Pueden emitir tres tipos de radiación:
@@ -176,7 +183,7 @@ def app():
                 
         if opt == "Referencias":
             st.markdown("## Referencias bibliográficas (marco teórico)")
-            wpages1 = ['Anónimo. (n.d.) Caracterización de un contador Geiger. Absorción de radiación por materiales, [En línea]. Recuperado de: http://nuclear.fis.ucm.es/LABORATORIO/guiones/Caracterizaci%F3ndeGeiger.pdf','Anónimo. (n.d.) Contador Geiger, [En Línea]. Recuperado de: https://www.pce-instruments.com/espanol/instrumento-medida/medidor/contador-geiger-kat_163206.htm','Universitat de Barcelona. (n.d.) Prueba Chi-cuadrado, [En Línea]. Recuperado de: http://www.ub.edu/aplica_infor/spss/cap5-2.htm','CEACES, (n.d.). Distribución normal, [PDF]. Recuperado de https://www.uv.es/ceaces/pdf/normal.pdf','Ciocci, L., Acuña, G. (2001) Estudio de la estadística del decaimiento radiactivo [PDF]. Buenos Aires. Recuperado de: http://users.df.uba.ar/sgil/labo5_uba/inform/info/pautadas/estadistica_decaimiento_ligia.pdf', "Echevarría, R. (n.d.). Breve Introducción a GNUPlot. Recuperado de https://personal.us.es/echevarria/documentos/APUNTESgnuplot.pdf",'Navarro, F. (2004) La Enciclopedia Vol 4. Madrid: Salvat.','Wikipedia. (2022) Cesio-137 [En línea]. Recuperado de: https://es.wikipedia.org/wiki/Cesio-137']
+            wpages1 = ['Universitat de Barcelona. (n.d.) Prueba Chi-cuadrado, [En Línea]. Recuperado de: http://www.ub.edu/aplica_infor/spss/cap5-2.htm','CEACES, (n.d.). Distribución normal, [PDF]. Recuperado de https://www.uv.es/ceaces/pdf/normal.pdf','Ciocci, L., Acuña, G. (2001) Estudio de la estadística del decaimiento radiactivo [PDF]. Buenos Aires. Recuperado de: http://users.df.uba.ar/sgil/labo5_uba/inform/info/pautadas/estadistica_decaimiento_ligia.pdf', "Echevarría, R. (n.d.). Breve Introducción a GNUPlot. Recuperado de https://personal.us.es/echevarria/documentos/APUNTESgnuplot.pdf",'Navarro, F. (2004) La Enciclopedia Vol 4. Madrid: Salvat.','Wikipedia. (2022) Cesio-137 [En línea]. Recuperado de: https://es.wikipedia.org/wiki/Cesio-137']
             #https://www.ugr.es/~bioestad/guiaspss/practica6/ (prueba chi-cuadrado, universidad de granada)
             st.write(wpages1)
             
