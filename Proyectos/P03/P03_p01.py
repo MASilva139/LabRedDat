@@ -81,7 +81,7 @@ def app():
                 Esta distribución expresa la probabilidad $$P_{P}(x)$$ de que en cierto intervalo se observa un número entero $$x$$ de desintegraciones, siendo $$\mu$$ el número de desintegraciones predicho.
                 
                 ### Contador de Geiger
-                Proximamente agregado :) (posiblemente agregado)
+                Un contador Geiger-Müller es un dispositivo que permite detectar radiaciones ionizantes, es decir, radiación alfa, beta, gamma, fotones y rayos X. Fue inventado en 1928 en Kiel, Alemania, por los físicos Hans Geiger y Walter Müller. El modo de funcionamiento de cualquier contador Geiger se basa en un principio simple: Los iones producidos por las radiaciones, al atravesar el volumen activo del detector, son acelerados por un campo eléctrico, produciendo un pulso de corriente que señala el paso de radiación.
                 
                 ### Prueba $$\chi$$-cuadrado $$\left(\chi^{2}\right)$$
                 Esta prueba puede utilizarse con datos medibles en una escala nominal. La hipótesis nula de la prueba $$\chi^{2}$$ postula una distribución de probabilidad totalmente específicada.
