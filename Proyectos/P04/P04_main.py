@@ -4,19 +4,19 @@ from streamlit_extras.stylable_container import stylable_container as stycont
 from PIL import Image as im
 import os
 
-import P03_p01, P03_p02, P03_p03
+import P04_p01, P04_p02, P04_p03
 #print(os.path.abspath('form01.css'))
 #with open('form01.css') as f:
 #    css = f.read()
 #st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
 try:
     st.set_page_config(
-        page_title="Proyecto 03",
+        page_title="Proyecto 04",
         page_icon=':shinto_shrine:',
         layout="wide"
     )
     #https://github.com/MathCatsAnd/Streamlit-Mechanics-Examples/blob/main/pages/column_selector_v2.py
-    with open('Proyectos/P03/form01.css') as f:
+    with open('Proyectos/P04/form01.css') as f:
         css = f.read()
 
     # Añade tu CSS
@@ -47,26 +47,29 @@ try:
                     default_index=0, # En este se define la primera página en mostrarse,
                     orientation="horizontal",
                     styles={
-                        "container": {"padding": "1!important", "background-color":'#5f2ed3'},
+                        "container": {"padding": "1!important", "background-color":'#353535'},
                         "icon":{"color":"white", "font-size":"16px"},
                         "nav-link":{
                             "color":"white", 
                             "font-size": "15px", 
                             "text-align":"center", 
                             "margin":"0px",
-                            "--hover-color":"#000"
+                            "--hover-color":"#0f0f0f"
                         },
-                        "nav-link-selected":{"background-color":"#353535"}
+                        "nav-link-selected":{
+                            "background-color":"#000",
+                            "color": "#fff"
+                        }
                     }
                 )
             if st.session_state.app == "Inicio":
-                P03_p01.app()
+                P04_p01.app()
                 
             if st.session_state.app == "Proyecto":
-                P03_p02.app()
+                P04_p02.app()
                 
             if st.session_state.app == "Conclusiones":
-                P03_p03.app()
+                P04_p03.app()
 
         run()
     pass

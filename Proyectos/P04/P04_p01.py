@@ -5,13 +5,13 @@ import streamlit as st
 import pandas as pd
 
 def app():
-    with open('Proyectos/P03/form01.css') as f:
+    with open('Proyectos/P04/form01.css') as f:
         css = f.read()
 
     # Añade tu CSS
     st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
     
-    st.title('Proyecto 03: Decaimiento de Cesio-137')
+    st.title('Proyecto 04: Machine Learning')
     
     c1, c2 = st.columns([1,5])
     with c1:
@@ -44,142 +44,225 @@ def app():
             # A partir de aquí se escribe para el marco teórico
             st.write(
                 r"""
-                ### Cesio
+                ### Machine learning vs. deep learning vs. redes neuronales
                 
-                Es un metal de color blanco argénteo muy reactivo que cristaliza en pequeños octaedros. Se caracteriza por su baja dureza. Tiene el puesto más alto en la serie electromotriz; posee también el punto de fusión más bajo de cualquier otro metal y el más bajo potencial iónico de cualquier elemento. Tiene un único isótopo estable, de masa atómica 133. Químicamente presenta el número de oxidación +1. El cesio se oxida con facilidad y arde fácilmente en presencia del aire a temperatura ambiente. Es soluble en alcohol y ácidos.
+                Dado que el deep learning y el machine learning tienden a utilizarse indistintamente, conviene señalar los matices entre ambos. El machine learning, el deep learning y las redes neuronales son subcampos de la inteligencia artificial. Sin embargo, las redes neuronales son en realidad un subcampo del machine learning, y el deep learning es un subcampo de las redes neuronales.
+
+                La forma en que el deep learning y el machine learning difieren es en cómo aprende cada algoritmo. El "deep" machine learning puede utilizar conjuntos de datos etiquetados, también conocido como aprendizaje supervisado, para informar a su algoritmo, pero no requiere necesariamente un conjunto de datos etiquetados. El proceso de deep learning puede ingerir datos no estructurados en su forma bruta (por ejemplo, texto o imágenes) y determinar automáticamente el conjunto de características que distinguen unas categorías de datos de otras. Esto elimina parte de la intervención humana necesaria y permite utilizar grandes cantidades de datos. 
                 
-                #### Cesio-137
+                El machine learning clásico, o "no profundo", depende más de la intervención humana para aprender. Los expertos humanos determinan el conjunto de características para comprender las diferencias entre las entradas de datos, lo que suele requerir datos más estructurados para aprender.
+
+                Las redes neuronales, o redes neuronales artificiales (RNA), se componen de capas de nodos, que contienen una capa de entrada, una o más capas ocultas y una capa de salida. Cada nodo, o neurona artificial, se conecta a otro y tiene un peso y un umbral asociados. Si la salida de cualquier nodo individual está por encima del valor umbral especificado, ese nodo se activa y envía datos a la siguiente capa de la red. En caso contrario, ese nodo no transmite ningún dato a la siguiente capa de la red. El término "deep" (profundo) en deep learning se refiere al número de capas de una red neuronal. Una red neuronal que consta de más de tres capas (que incluirían la entrada y la salida) puede considerarse un algoritmo de deep learning o una red neuronal profunda. Una red neuronal que sólo tiene tres capas no es más que una red neuronal básica.
                 
-                Es un isótopo radiactivo del cesio que se produce principalmente por fisión nuclear. Tiene un periodo de semidesintegración de 30,23 años y decae emitiendo partículas beta a un isómero nuclear metaestable de Bario-137. El Bario-137 tiene un periodo de semidesintegración de 2,65 minutos.
+                ### Métodos de machine learning
                 
-                ### Decaimiento radiactivo
+                #### Machine learning supervisado
                 
-                Es un proceso en el que un núcleo inestable se transforma en uno más estable, emitiendo patículas y/o fotones y liberando energía durante el proceso. 
-                Una sustancia que experimenta este fenómeno espotáneamente se denomina sustancia radioactiva. Pueden emitir tres tipos de radiación:
-                - Radiación $$\alpha$$
-                - Radiación $$\beta$$
-                - Radiación $$\gamma$$
+                El aprendizaje supervisado, también conocido como machine learning supervisado, se define por su uso de conjuntos de datos etiquetados para entrenar algoritmos que clasifiquen datos o predigan resultados con precisión. A medida que se introducen datos de entrada en el modelo, éste ajusta sus ponderaciones hasta que se ha ajustado adecuadamente. Esto ocurre como parte del proceso de validación cruzada para garantizar que el modelo evite el sobreajuste o el infraajuste. El aprendizaje supervisado ayuda a las organizaciones a resolver una variedad de problemas del mundo real a escala, como clasificar el spam en una carpeta separada de su bandeja de entrada. Algunos métodos utilizados en el aprendizaje supervisado son las redes neuronales, el clasificador bayesiano ingenuo, la regresión lineal y logística, el bosque aleatorio y la máquina de vectores de soporte (SVM).
                 
-                En general, los núcleos de los distintos elementos no son estables. Emiten espontáneamente partículas cargadas y radiación electromagnética. Este fenómeno se conoce como radiactividad natural.
+                #### Machine learning no supervisado
                 
-                Los núcleos excitados se desexcitan mediante tres tipos de decaimiento: 
-                - $$\alpha$$: consiste en la emisión de helio doblemente ionizados.
-                - $$\beta$$: consiste en la emisión de partículas beta, electrones o positrones.
-                - $$\gamma$$: cuando la desexcitación se lleva a cabo mediante la emisión de radiación electromagnética.
+                El aprendizaje no supervisado, también conocido como machine learning no supervisado, utiliza algoritmos de machine learning para analizar y agrupar conjuntos de datos no etiquetados (subconjuntos denominados clústeres). Estos algoritmos descubren patrones ocultos o agrupaciones de datos sin necesidad de intervención humana. La capacidad de este método para descubrir similitudes y diferencias en la información lo hace ideal para el análisis exploratorio de datos, las estrategias de venta cruzada, la segmentación de clientes y el reconocimiento de imágenes y patrones. También se utiliza para reducir el número de características de un modelo mediante el proceso de reducción de la dimensionalidad. El análisis de componentes principales (PCA) y la descomposición en valores singulares (DVE) son dos métodos habituales para ello. Otros algoritmos utilizados en el aprendizaje no supervisado son las redes neuronales, el k-medias y los métodos de agrupación probabilística.
                 
-                La desintegración radiactiva es un fenómeno naturalmente estadístico. Las hipótesis con las cuales se trabaja para el estudio de las desintegraciones radiactivas son:
-                - Dado un intervalo temporal, todos los átomos de una muestra tienen la misma probabilidad de desintegrarse en dicho intervalo.
-                - La desintegración de un átomo es un evento independiente de la desintegración de los demás átomos de la muestra.
-                - La probabilidad de desintegración de un átomo en un intervalo temporal permanece constante para todo intervalo temporal de la misma duración.
+                #### Aprendizaje semisupervisado
                 
-                Las fluctuaciones en el número de desintegraciones están representadas por una distribución de Poisson
+                El aprendizaje semisupervisado ofrece un término medio entre el aprendizaje supervisado y el no supervisado. Durante el entrenamiento, utiliza un conjunto de datos etiquetados más pequeño para guiar la clasificación y la extracción de características a partir de un conjunto de datos más grande sin etiquetar. El aprendizaje semisupervisado puede resolver el problema de no disponer de suficientes datos etiquetados para un algoritmo de aprendizaje supervisado. También ayuda si etiquetar los datos suficientes resulta demasiado costoso.
+                
+                ### Introducción a Machine Learning
+                
+                De un data set ($$ds$$) tira a un learner ($$L$$) y ello tira a una función de peso ($$W$$), donde el data set es la lista que contiene pares ($$x$$, $$y$$) conocidos, El Learner se encarga de encontrar el vector de peso. Se tiene una función que depende de la variable $$x$$, tal que
                 """
                 r'''
-                $$
-                P_{P}(x) = \frac{\mu^{x}e^{-\mu}}{x!}
+                $$ 
+                x \longrightarrow \vec{\phi}(x)
                 $$
                 '''
                 r"""
-                Esta distribución expresa la probabilidad $$P_{P}(x)$$ de que en cierto intervalo se observa un número entero $$x$$ de desintegraciones, siendo $$\mu$$ el número de desintegraciones predicho.
-                
-                ### Contador de Geiger
-                Un contador Geiger-Müller es un dispositivo que permite detectar radiaciones ionizantes, es decir, radiación alfa, beta, gamma, fotones y rayos X. Fue inventado en 1928 en Kiel, Alemania, por los físicos Hans Geiger y Walter Müller. El modo de funcionamiento de cualquier contador Geiger se basa en un principio simple: Los iones producidos por las radiaciones, al atravesar el volumen activo del detector, son acelerados por un campo eléctrico, produciendo un pulso de corriente que señala el paso de radiación.
-                
-                ### Prueba $$\chi$$-cuadrado $$\left(\chi^{2}\right)$$
-                Esta prueba puede utilizarse con datos medibles en una escala nominal. La hipótesis nula de la prueba $$\chi^{2}$$ postula una distribución de probabilidad totalmente específicada.
-                
-                Para realizar este contraste se disponen los datos en una tabla de frecuencias. Para cada valor o intervalo de valores se indica la frecuencia absoluta observada o empirica $$(x_{i})$$. A continuación, y suponiendo que la hipótesis nula es cierta, se calculan para cada valor o intervalo de valores la frecuencia absoluta que cabría esperar o frecuencia esperada
+                donde $$\vec{\phi}(x)$$ es el vector de característica (feature vector) definido como
                 """
                 r'''
-                $$
-                \Omicron_{i} = n\cdot p_{i}
+                $$ 
+                f(x): \hspace{10pt} x \longmapsto \vec{\phi}(x)
                 $$
                 '''
                 r"""
-                donde $$n$$ es el tamaño de la muestra y $$p_{i}$$ la probabilidad del $$i$$-ésimo valor o intervalo de valores según la hipótesis nula. La hipótesis nula es cierta si $$n\rightarrow\infty$$, de manera que la prueba $$\chi^{2}$$ se define por
+                Con el vector de peso de peso $$W$$ y el vector de característica se define al $$Score()$$, siendo este el producto punto entre dichos vectores
                 """
                 r'''
-                $$
-                \chi^{2} = \sum_{i=1}^{k}\frac{\left(x_{i}-\Omicron_{i}\right)^{2}}{\Omicron_{i}}
+                $$ 
+                Score\left( \vec{\phi}(x),\hspace{2pt}\vec{W} \right) = \vec{W}\cdot\vec{\phi}(x)
                 $$
                 '''
                 r"""
-                Esta ecuación tiene una distribución $$\chi^{2}$$ con $$k-1$$ grados de libertad si $$n$$ es suficientemente grande, es decir, si todas las frecuencias esperadas son mayores que 5.
-                
-                Si existe concordancia perfecta entre las frecuencias observadas y las esperadas el estadístico tomará un valor igual a 0; por el contrario, si existe una gran discrepancia entre estas frecuencias el estadístico tomará un valor grande y, en consecuencia, se rechazará la hipótesis nula. Así pues, la región crítica estará situada en el extremo superior de la distribución $$\chi^{2}$$ con $$k-1$$ grados de libertad.
+                Y a partir del $$Score()$$ se define a la función $$y$$, que da tres posibles resultados
                 """
+                r'''
+                $$ 
+                y\left( Score\left( \vec{\phi}(x),\hspace{2pt}\vec{W} \right) \right) = 
+                \left\{
+                \begin{aligned}
+                    1 \hspace{3pt};\hspace{10pt} Score\left( \vec{\phi}(x),\hspace{2pt}\vec{W} \right)>0 \\
+                    ? \hspace{3pt};\hspace{10pt} Score\left( \vec{\phi}(x),\hspace{2pt}\vec{W} \right)=0 \\
+                    0 \hspace{3pt};\hspace{10pt} Score\left( \vec{\phi}(x),\hspace{2pt}\vec{W} \right)<0
+                \end{aligned}
+                \right.
+                $$
+                '''
+                r"""
+                donde se tiene que $$y$$ es un clasificador lineal. Sin embargo, para tener valores diferentes de 0 se tiene que 
+                """
+                r'''
+                $$ 
+                y\left( Score\left( \vec{\phi}(x),\hspace{2pt}\vec{W} \right) \right) = 
+                \left\{
+                \begin{aligned}
+                    1 \hspace{3pt};\hspace{10pt} Score\left( \vec{\phi}(x),\hspace{2pt}\vec{W} \right)>0 \\
+                    ? \hspace{3pt};\hspace{10pt} Score\left( \vec{\phi}(x),\hspace{2pt}\vec{W} \right)=0 \\
+                    -1 \hspace{3pt};\hspace{10pt} Score\left( \vec{\phi}(x),\hspace{2pt}\vec{W} \right)<0
+                \end{aligned}
+                \right.
+                $$
+                '''
+                r"""
+                El training data set se define por
+                """
+                r'''
+                $$ 
+                T_{ds} = \left\{ \left(\phi_{1} \hspace{2pt},\hspace{3pt} y_{1}\right) \hspace{2pt},\hspace{3pt} \left(\phi_{2} \hspace{2pt},\hspace{3pt} y_{2}\right) \hspace{2pt},\hspace{3pt} \dots \hspace{2pt},\hspace{3pt} \left(\phi_{n} \hspace{2pt},\hspace{3pt} y_{n}\right) \right\}
+                $$
+                '''
+                r"""
+                La pérdida, conocida como función $$loss()$$, se define de la siguiente forma
+                """
+                r'''
+                $$ 
+                loss\left( \vec{W} ,\hspace{2pt} \vec{\phi}(x) ,\hspace{2pt} y, \hspace{2pt} Score\left( \vec{\phi}(x),\hspace{2pt}\vec{W} \right) \right) = \left| \left[ \vec{\phi}(x)\cdot\vec{W}\leq0 \right] \right.
+                $$
+                '''
+                r"""
+                Hay una cantidad dada por el producto del $$Score()$$ y $$y()$$, tal que a esta cantidad se le denominará como $$P_{\pi2}()$$
+                """
+                r'''
+                $$ 
+                P_{\pi2} = Score\left( \vec{\phi}(x),\hspace{2pt}\vec{W} \right) * y\left( Score\left( \vec{\phi}(x),\hspace{2pt}\vec{W} \right) \right)
+                $$
+                '''
+                r"""
+                Se tiene que $$P_{\pi2}$$ sirve para evaluar el valor del vector de peso. Una función $$loss()$$ se le conoce como
+                """
+                r'''
+                $$ 
+                loss_{0-1} = \left| \left[ \left( \vec{W}\cdot\vec{\phi}(x) \right)y \leq 0 \right] \right.
+                $$
+                '''
+                r"""
+                donde $$\left|\right.$$ denota un operador que retorna valores booleanos, es decir, 0 y 1. Para minimizar la función $$loss_{0-1}$$ se busca otra función que se pueda derivar, empleando para ello el descenso del gradiente. Para ello se tiene que $$loss_{hinge}$$ es otra función $$loss$$ que da
+                """
+                r'''
+                $$ 
+                loss_{hinge} = 
+                \left\{ 
+                    \begin{aligned}
+                        -P_{\pi2}+1 & \hspace{5pt};\hspace{10pt} P_{\pi2}\leq1 \\
+                        0 & \hspace{5pt};\hspace{10pt} P_{\pi2}>1
+                    \end{aligned}
+                \right.
+                $$
+                '''
+                r"""
+                Del mismo modo
+                """
+                r'''
+                $$ 
+                loss_{hinge} = 
+                \left\{ 
+                    \begin{aligned}
+                        -P_{\pi2}+y & \hspace{5pt};\hspace{10pt} P_{\pi2} \leq y \\
+                        0 & \hspace{5pt};\hspace{10pt} P_{\pi2} > y
+                    \end{aligned}
+                \right.
+                $$
+                '''
+                r"""
+                Entonces, si el vector característico se define por
+                """
+                r'''
+                $$ 
+                \vec{\phi}(x) = \left( \phi_{1} \hspace{2pt},\hspace{5pt} \phi_{2} \hspace{2pt},\hspace{5pt} \phi_{3} \hspace{2pt},\hspace{5pt} \dots \hspace{2pt},\hspace{5pt} \phi_{n} \right)
+                $$
+                '''
+                r"""
+                y se considera el vector de peso como
+                """
+                r'''
+                $$ 
+                \vec{W} = \left( W_{1} \hspace{2pt},\hspace{5pt} W_{2} \hspace{2pt},\hspace{5pt} W_{3} \hspace{2pt},\hspace{5pt} \dots \hspace{2pt},\hspace{5pt} W_{n} \right)
+                $$
+                '''
+                r"""
+                Por lo tanto, el gradiente, definido en las diferentes componentes del espacio, esta dado por
+                """
+                r'''
+                $$ 
+                \nabla{loss_{hinge}} = \frac{\partial\left[ loss_{hinge} \right]}{\partial\vec{W}} + \frac{\partial\left[ loss_{hinge} \right]}{\partial\vec{\phi}}
+                $$
+                '''
+                r"""
+                Considerando coordenadas cartesianas $$\left(x_{1},x_{2},\dots,x_{n}\right)$$, se tiene que para dos dimensiones 
+                """
+                r'''
+                $$ 
+                \nabla{loss_{hinge}} = \frac{\partial}{\partial W_{1}}\left[-\left( \phi_{1}W_{1}+\phi_{2}W_{2} \right)y+1\right]\boldsymbol{\hat{x}_{1}} + \frac{\partial}{\partial W_{2}}\left[-\left( \phi_{1}W_{1}+\phi_{2}W_{2} \right)y+1\right]\boldsymbol{\hat{x}_{2}}
+                $$
+                '''
+                r"""
+                Como el vector de característica $$\vec{\phi}(x)$$ no es variable, se tiene que 
+                """
+                r'''
+                $$ 
+                \frac{\partial\left[ loss_{hinge} \right]}{\partial\vec{\phi}} = 0
+                $$
+                '''
+                r"""
+                Con ello, se tiene que
+                """
+                r'''
+                $$
+                \begin{aligned}
+                    \nabla{loss_{hinge}} & = \left[- \left( \frac{\partial W_{1}}{\partial W_{1}} \phi_{1} + \frac{\partial \phi_{1}}{\partial W_{1}} W_{1} \right)y \right] \boldsymbol{\hat{x}_{1}} + \left[- \left( \frac{\partial W_{2}}{\partial W_{2}} \phi_{2} + \frac{\partial \phi_{2}}{\partial W_{2}} W_{2} \right)y \right] \boldsymbol{\hat{x}_{2}} \\
+                    \nabla{loss_{hinge}} & = - \left( \phi_{1} \boldsymbol{\hat{x}_{1}} + \phi_{2} \boldsymbol{\hat{x}_{2}} \right) y
+                \end{aligned}
+                $$
+                '''
+                r"""
+                De manera general, se tiene que para $$n$$ dimensiones el gradiente de la función $$loss_{hinge}$$
+                """
+                r'''
+                $$
+                \begin{aligned}
+                    \nabla{loss_{hinge}} & = -\vec{\phi}y
+                \end{aligned}
+                $$
+                '''
+                r"""
+                Donde el gradiente de la función $$loss_{hinge}$$ puede tener dos posibles soluciones
+                """
+                r'''
+                $$
+                \nabla{loss_{hinge}} = \frac{\partial}{\partial\vec{W}}
+                \left\{
+                \begin{aligned}
+                    -\left( \vec{W}\cdot\vec{\phi}(x) \right)y + 1 & \hspace{2pt};\hspace{10pt} P_{\pi2}\leq1 \\
+                    0 & \hspace{2pt};\hspace{10pt} P_{\pi2}>1
+                \end{aligned}
+                \right.
+                $$
+                '''
             )
-            st.write(
-                """
-                ### Distribución Normal
-            
-                También conocida como distribución de Gauss, es una distribución de variable continua, con campo de variación $$(-\infty, \infty)$$. Esta queda especificada por dos parámetros de los que depende su función de densidad y que resultan ser la media $$\mu$$ y la dsviación típica de la distribución $$\sigma$$. Su estudio teórico suele introducirse directamente a partir de su función de densidad.
-                
-                Dado que depende de dos parámetros, $$\mu$$ y $$\sigma$$, el hecho de que una variable $$X$$ se distribuya con una distribución normal de media $$\mu$$ y desviación típica $$\sigma$$ se representa por la siguiente expresión:
-                """
-                r'''
-                $$
-                X \rightarrow N \left[\mu : \sigma\right] \hspace{20pt} \| \hspace{20pt} L(X) \rightarrow N \left[\mu : \sigma\right]
-                $$
-                '''
-                """
-                Por tanto, se tiene que la función de densidad está dada por 
-                """
-                r'''
-                $$
-                f(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{2}} \hspace{20pt} \forall x \in \Re
-                $$
-                '''
-                """
-                Las características de dicha función de densidad son:
-                """
-                '''
-                1. Si se realiza la primera derivada de la función se tiene que
-                '''
-                r'''
-                $$
-                f'(x) = -\frac{\left(x-\mu\right)}{{\sigma}^{3}\sqrt{2\pi}}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{2}} \longrightarrow f'(x) = -\frac{\left(x-\mu\right)}{\sigma^{2}}\cdot f(x)
-                $$
-                '''
-                '''
-                2. Si se realiza la segunda derivada de la función se tiene que
-                '''
-                r'''
-                $$
-                f''(x) = \frac{\left(x-\mu\right)^{2}-\sigma^{2}}{\sigma^{4}}\cdot f(x)
-                $$
-                '''
-                """
-                Al igualar a cero la primera derivada se obtiene que $$f'(x)=0$$ para $$X=\mu$$ y para $$X=\infty$$. Como la segunda derivada en $$X=\mu$$ es negativa, se puede concluir que la función de densidad presenta un máximo en $$X=\mu$$, lo que afir,a que la media es también la moda de la distribución normal.
-                
-                #### Fórmula
-                """
-                r'''
-                $$
-                P_{G}(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{2}} \longleftrightarrow P_{G}(x)=\frac{1}{\sigma\sqrt{2\pi}} \cdot \exp{\left[-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{2}\right]}
-                $$
-                '''
-                """
-                Donde $$P_G(x)$$ es la distribución gaussiana. La ecuación empleada en la práctica está dada por:
-                """
-                r'''
-                $$
-                P_{G}(x)=A\cdot e^{-\frac{1}{2}\left(\frac{x-u}{r}\right)^{2}} \longleftrightarrow P_{G}(x)=A\cdot \exp{\left[-\frac{1}{2}\left(\frac{x-u}{r}\right)^{2}\right]}
-                $$
-                '''
-                """
-                #### GNUPlot
-            
-                Es un programa de visualización gráfica de datos científicos. Permite realizar gráficos 2D y 3D de curvas, líneas de nivel y superficies, tanto a partir de funciones como de datos discretos. Este software funciona mediante comandos, que pueden usarse en modo interactivo como escribiendo scripts; es decir, la secuencia de comandos escritos en un fichero.\n
-                Algunos comandos son:
-                """
-            )
-            st.table(df)
                 
         if opt == "Referencias":
             st.markdown("## Referencias bibliográficas (marco teórico)")
-            wpages1 = ['Anónimo. (n.d.) Caracterización de un caontador Geiger. Absorción de radiación por materiales, [PDF]. Recuperado de: http://nuclear.fis.ucm.es/LABORATORIO/guiones/Caracterizaci%F3ndeGeiger.pdf','Universitat de Barcelona. (n.d.) Prueba Chi-cuadrado, [En Línea]. Recuperado de: http://www.ub.edu/aplica_infor/spss/cap5-2.htm','CEACES, (n.d.). Distribución normal, [PDF]. Recuperado de https://www.uv.es/ceaces/pdf/normal.pdf','Ciocci, L., Acuña, G. (2001) Estudio de la estadística del decaimiento radiactivo [PDF]. Buenos Aires. Recuperado de: http://users.df.uba.ar/sgil/labo5_uba/inform/info/pautadas/estadistica_decaimiento_ligia.pdf', "Echevarría, R. (n.d.). Breve Introducción a GNUPlot. Recuperado de https://personal.us.es/echevarria/documentos/APUNTESgnuplot.pdf",'Navarro, F. (2004) La Enciclopedia Vol 4. Madrid: Salvat.','PCE Instruments. (n.d.) Contador Geiger, [En Linea]. Recuperado de: https://www.pce-instruments.com/espanol/instrumento-medida/medidor/contador-geiger-kat_163206.htm','Wikipedia. (2022) Cesio-137 [En línea]. Recuperado de: https://es.wikipedia.org/wiki/Cesio-137']
-            #https://www.ugr.es/~bioestad/guiaspss/practica6/ (prueba chi-cuadrado, universidad de granada)
+            wpages1 = ['Anónimo. (n.d.) ¿Qué es el machine learning (ML)?, [En línea]. Recuperado de: https://www.ibm.com/es-es/topics/machine-learning']
             st.write(wpages1)
             
             st.markdown("## Referencias bibliográficas (documentación)")
