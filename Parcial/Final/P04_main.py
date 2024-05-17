@@ -4,7 +4,7 @@ from streamlit_extras.stylable_container import stylable_container as stycont
 from PIL import Image as im
 import os
 
-import P04_p01, P04_p02, P04_p03
+import P04_p01, P04_p02
 #print(os.path.abspath('form01.css'))
 #with open('form01.css') as f:
 #    css = f.read()

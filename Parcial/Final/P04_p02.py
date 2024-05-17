@@ -502,41 +502,6 @@ def app():
     """)
     
     expa0 = st.toggle("##### Datos de las constantes GNUPlot (Parte experimental)")
-    if expa0:
-        #fit.log → lin: 2750 → Wed Apr 10 14:54:58 2024
-        st.write(
-            '''
-            1. Se definió la función de la Distribución Gaussiana, $$f(x)$$.
-            2. Se indicaron los valores de las constantes como $$A$$=400, $$u$$=200 y $$r$$=100.
-            3. Empleando el comando ``fit f(x) (...)`` se realizó la gráfica de la función con los datos de casos positivos.
-            4. Se indicó el uso de 69 datos.
-            5. A partir de las iteraciones se determinaron los valores de $$A$$, $$u$$ y $$r$$ que ajustan de mejor manera el fit.
-            '''
-        )
-        
-    expa1 = st.toggle("##### Gráfica de la distribución gaussiana (parte experimental)")
-    if expa1:
-        st.write(
-            '''
-            1. Se definió, con el comando ``def``, la función de la Distribución Gaussiana, $$P_{G}(x)$$, con los valores de las constantes $$A$$, $$u$$ y $$r$$ previamente obtenidos.
-            2. Se vectorizó la función de la Distribución Gaussiana con ``numpy.vetorize()``, para diferentes valores de $$x$$.
-            3. Se definieron los parámetros de la gráfica y la curva del ajuste.
-            4. Se gráfico el ajuste y el histograma con el comando ``streamlit.plotly_chart()``.
-            '''
-        )
-        
-    expa2 = st.toggle("##### Gráfica de la distribución de Poisson (parte experimental)")
-    if expa2:
-        st.write(
-            '''
-            1. Se definió, con el comando ``def``, la función de la Distribución de Poisson, $$P_{P}(x)$$.
-            2. Se definió, dentro del comando ``def`` el valor de $$\mu$$.
-            3. Se retornó el valor de la función de Poisson como flotante.
-            4. Se vectorizó la función de la Distribución de Poisson con ``numpy.vetorize()``, para diferentes valores de $$x$$.
-            5. Se gráfico el ajuste y el histograma con el comando ``streamlit.plotly_chart()``.
-            '''
-        )
-
 ####################################################################
 ##                      Apartado de Resultados                    ##
 ####################################################################
@@ -644,15 +609,6 @@ def app():
     # De los fits realizados en ``GNUPlot`` se consideró utilizar el del día 69, después del primer caso de contagio registrado, presentados en los apartados ***Gráfica 01*** y ***Fit 11 GNUPlot***, del apédice. Esto se debe a que en otros días los valores aumentaban o disminuian de manera drástica, como en el caso que se presenta en el ***Fit 13 GNUPlot*** (véase apéndice), donde el valor de $$A$$ cambiaba de 930,848 $$\pm$$ 3038 a 73351,4 $$\pm$$ 1,105e+06. Además, a partir del día 71 los datos tendían a decrecer, y con ello al realizar el ajuste tomando de ese día en adelante hacía que el fit proyectara que el valor máximo ya había sucedido y decreciera en vez de predecir un pico.
     st.write(
         """
-        A partir de los datos obtenidos del decaimiento radiactivo del aire y del Cesio-137, empleando un contador de particulas Geiger, se procedió a realizar en las gráficas los histogramas presentados en las secciones de resultados ***Gráfica 01***, ***Gráfica 02*** y ***Gráfica 03***, siendo estos las del aire, las del Cesio-137 y las del Cesio-137 con datos agrupados, respectivamente. Del mismo modo, se realizó una curva de ajuste empleando para ello las distribuciones de Gauss y de Poisson para verificar a cual de estas se ajustaba de mejor manera cada caso de decaimiento radactivo; además, se realizó la prueba de $$\chi^{2}$$ para cada uno de los casos.
-        \n
-        De los fits realizados en ```GNUPlot``` se determinaron los valores del ajuste de la curva de la distribución gaussiana, presentados en el apartado de resultados ***Gráfica 01***, ***Gráfica 02***, ***Gráfica 03*** en la sección de **Distribución Gaussiana**. De manera que se obtuvo un resultado de $$A$$=63.5733, $$u$$=2,18871 y $$r$$=1,59884 para el aire, $$A$$=5,09274, $$u$$=442,826 y $$r$$=19,5845 para el Cesio-137 y para los datos agrupados del Cesio-137 $$A$$=25,382, $$u$$=439,84 y $$r$$=19,6525. Estos valores pueden verse en el apartado de ***Ajuste (Fit)*** en la sección de **Anexos**. Con ello, en la sección de **Resultados**, en el apartado ***Gráfica 01*** se puede observar que el ajuste para el aire presentado por la distribución de Poisson tiene un mejor ajuste con respecto a los valores medidos; sin embargo, a pesar de que el ajuste dado por la distribución gaussiana no esta mal, se puede observar que dicho ajuste difiere en mayor medida respecto a los datos experimentales. 
-        \n
-        Cabe resaltar, que el ajuste que presenta la distribución de Poisson para el Cesio-137 tiende al infinito, esto se puede observar en los apartados ***Tablas Cs-137***, ***Tablas Cs-137 (2)***, ***T02.Cs-137*** y ***T02.Cs-137 (2)*** en la sección de **Anexos**; esto se debe a que los valores donde se presentan los datos (x) son demasiado grandes, de manera que debido a la definición matemática de la distribución de Poisson se tiene que la función tiende a infinito, en cada punto del ajuste. Sin embargo, la distribución gaussiasna presenta un mejor ajuste para los datos agrupados (véase apartado ***Gráfica 03***), que con los datos sin agrupar (véase apartado ***Gráfica 02***); esta diferencia se debe a que al agrupar los datos estos se ven menos dispersos, con ello el fit se ajusta de mejor manera a ellos, mientras que al no agruparlos hay muchos datos (bines) que comparten altura, por lo tanto, el ajuste presenta una mayor discrepancia con respecto a los datos experimentales. 
-        \n
-        De lo previamente mencionado, respecto a los ajustes realizados por las distribuciones de Gauss y de Poisson, a partir de la prueba de $$\chi^{2}$$ se confirmó que la distribución que presenta un mejor ajuste es la distrubución de Poisson, en el caso del aire, dado presenta una menor diferencia significativa entre la frecuencia esperada (obtenida a partir del fit) y la frecuencia observada (datos experimentales), véase *Tabla 01: Prueba de $$\chi^{2}$$* en el apartado ***Tabla 02*** en la sección de **Resultados**. Esto se debe a que el valor de $$\chi^{2}$$=4,1719e+25 para la distribución de Poisson, mientras que $$\chi^{2}$$=2,4149e+83 para la distribución gaussiana. Sin embargo, al no poderse realizar el ajuste del fit a partir de la distribución de Poisson en el Cesio-137, no se puede realizar la prueba del $$\chi^{2}$$ para la misma, por lo tanto, se tiene que la única distribución que cumple para la prueba del $$\chi^{2}$$ es la distribución gaussiana, que presenta un valor de $$\chi^{2}$$=931520.
-        \n
-        Se pudo observar que eliminando los datos que se alejaban mucho del rango usual de mediciones los cuales afectaban el valor de $$\chi^{2}$$, siendo estos el dato 25 del aire y 351 del Cesio-137; se tiene un mejor ajuste de las distribuciones con respecto a los datos experimentales, esto se puede ver en la *Tabla 02: Prueba de $$\chi^{2}$$ (datos acotados)* en el apartado ***Tabla 02*** en la sección de Resultados; donde $$\chi^{2}$$=275.362 para la distribución de Poisson, mientras que $$\chi^{2}$$=3.2001e+08 para la distribución gaussiana. Obviamente estos resultados no son coherentes con los datos experimentales, ya que se están omitiendo de manera intencional los datos que causaban discrepancia. Se puede visualizar en los apartados que tienen el término **(modificado)**, las gráficas y tablas con las consideraciones previamente mencionadas.
+        A 
         """
     )
-#De igual manera existían datos anteriores que también lograban realizar una proyección de un pico coherente a futuro, pero el utilizar estos ocasionaba que se desecharan un gran número de datos y por lo mismo su predicción podría ser menos fiable. Pero, como se mencionó anteriormente, también existían datos que ocasionaban que el ajuste se disparara a cantidades exageradas, debido a que eran días en donde los datos aumentaban o disminuían de manera drástica, obteniendo de esta manera una proyección que parecía improbable y por ende fue desechada.
