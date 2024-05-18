@@ -292,12 +292,15 @@ def app():
             4. Se definió la función del cuadrado de la función loss, $$loss^{2}()$$.
             5. Se definió la función del descenso del gradiente del cuadrado de la función loss, $$\nabla loss^{2}()$$.
             6. Se definió la cantidad de dimensiones, $$dim$$.
-            7. Se definió el vector de peso $$\vec{W}$$, que depende de la dimensión $$dim$$, con valores random.
+            7. Se definió el vector de peso $$\vec{W}$$ objetivo, que depende de la dimensión $$dim$$, con valores aleatorios.
             8. Se definió un total de 500 para el tamaño del training data set, $$tds_{len}$$.
             9. Se generó el diccionario del training data set, $$tds=[\hspace{3pt}]$$, a partir de un ciclo ```for```.
             10. Se generó una tabla con los valores del set de datos de entrenamiento (training data set).
             11. Se definió el número máximo de iteraciones a realizar.
-            12. Se definió el origen del vector de peso.
+            13. Se definió el vector de peso para entrenar en el origen.
+            14. Se determinó el promedio de la función $$loss^{2}(\hspace{3pt})$$.
+            15. Se definió el promedio del descenso del gradiente de la función $$\overline{loss^{2}}(\hspace{3pt})$$.
+            16. Se definé el nuevo valor del vector de peso a entrenar a partir de $$\overline{\nabla loss^{2}}(\hspace{3pt})$$, según la cantidad de iteraciones.
             '''
         )
 
@@ -341,15 +344,9 @@ def app():
     
     st.markdown("## **Discusión de Resultados**")
     st.write(
-        """
-        A partir de los datos obtenidos del decaimiento radiactivo del aire y del Cesio-137, empleando un contador de particulas Geiger, se procedió a realizar en las gráficas los histogramas presentados en las secciones de resultados ***Gráfica 01***, ***Gráfica 02*** y ***Gráfica 03***, siendo estos las del aire, las del Cesio-137 y las del Cesio-137 con datos agrupados, respectivamente. Del mismo modo, se realizó una curva de ajuste empleando para ello las distribuciones de Gauss y de Poisson para verificar a cual de estas se ajustaba de mejor manera cada caso de decaimiento radactivo; además, se realizó la prueba de $$\chi^{2}$$ para cada uno de los casos.
-        \n
-        De los fits realizados en ```GNUPlot``` se determinaron los valores del ajuste de la curva de la distribución gaussiana, presentados en el apartado de resultados ***Gráfica 01***, ***Gráfica 02***, ***Gráfica 03*** en la sección de **Distribución Gaussiana**. De manera que se obtuvo un resultado de $$A$$=63.5733, $$u$$=2,18871 y $$r$$=1,59884 para el aire, $$A$$=5,09274, $$u$$=442,826 y $$r$$=19,5845 para el Cesio-137 y para los datos agrupados del Cesio-137 $$A$$=25,382, $$u$$=439,84 y $$r$$=19,6525. Estos valores pueden verse en el apartado de ***Ajuste (Fit)*** en la sección de **Anexos**. Con ello, en la sección de **Resultados**, en el apartado ***Gráfica 01*** se puede observar que el ajuste para el aire presentado por la distribución de Poisson tiene un mejor ajuste con respecto a los valores medidos; sin embargo, a pesar de que el ajuste dado por la distribución gaussiana no esta mal, se puede observar que dicho ajuste difiere en mayor medida respecto a los datos experimentales. 
-        \n
-        Cabe resaltar, que el ajuste que presenta la distribución de Poisson para el Cesio-137 tiende al infinito, esto se puede observar en los apartados ***Tablas Cs-137***, ***Tablas Cs-137 (2)***, ***T02.Cs-137*** y ***T02.Cs-137 (2)*** en la sección de **Anexos**; esto se debe a que los valores donde se presentan los datos (x) son demasiado grandes, de manera que debido a la definición matemática de la distribución de Poisson se tiene que la función tiende a infinito, en cada punto del ajuste. Sin embargo, la distribución gaussiasna presenta un mejor ajuste para los datos agrupados (véase apartado ***Gráfica 03***), que con los datos sin agrupar (véase apartado ***Gráfica 02***); esta diferencia se debe a que al agrupar los datos estos se ven menos dispersos, con ello el fit se ajusta de mejor manera a ellos, mientras que al no agruparlos hay muchos datos (bines) que comparten altura, por lo tanto, el ajuste presenta una mayor discrepancia con respecto a los datos experimentales. 
-        \n
-        De lo previamente mencionado, respecto a los ajustes realizados por las distribuciones de Gauss y de Poisson, a partir de la prueba de $$\chi^{2}$$ se confirmó que la distribución que presenta un mejor ajuste es la distrubución de Poisson, en el caso del aire, dado presenta una menor diferencia significativa entre la frecuencia esperada (obtenida a partir del fit) y la frecuencia observada (datos experimentales), véase *Tabla 01: Prueba de $$\chi^{2}$$* en el apartado ***Tabla 02*** en la sección de **Resultados**. Esto se debe a que el valor de $$\chi^{2}$$=4,1719e+25 para la distribución de Poisson, mientras que $$\chi^{2}$$=2,4149e+83 para la distribución gaussiana. Sin embargo, al no poderse realizar el ajuste del fit a partir de la distribución de Poisson en el Cesio-137, no se puede realizar la prueba del $$\chi^{2}$$ para la misma, por lo tanto, se tiene que la única distribución que cumple para la prueba del $$\chi^{2}$$ es la distribución gaussiana, que presenta un valor de $$\chi^{2}$$=931520.
-        \n
-        Se pudo observar que eliminando los datos que se alejaban mucho del rango usual de mediciones los cuales afectaban el valor de $$\chi^{2}$$, siendo estos el dato 25 del aire y 351 del Cesio-137; se tiene un mejor ajuste de las distribuciones con respecto a los datos experimentales, esto se puede ver en la *Tabla 02: Prueba de $$\chi^{2}$$ (datos acotados)* en el apartado ***Tabla 02*** en la sección de Resultados; donde $$\chi^{2}$$=275.362 para la distribución de Poisson, mientras que $$\chi^{2}$$=3.2001e+08 para la distribución gaussiana. Obviamente estos resultados no son coherentes con los datos experimentales, ya que se están omitiendo de manera intencional los datos que causaban discrepancia. Se puede visualizar en los apartados que tienen el término **(modificado)**, las gráficas y tablas con las consideraciones previamente mencionadas.
+        r"""
+        A partir de un vector de peso esperado $$\vec{W}_{target}$$, generado de manera aleatoria, se procedió a calcular un vector de peso entrenado $$\vec{W}_{traininng}$$, ubicado inicialmente en el origen, a través del set de datos de entrenamiento (training data set), realizando dicha aproximación por iteraciones que generaban pequeños pasos hasta lograr la reducción del promedio del descenso del gradiente de la función loss, $$\overline{\nabla loss^{2}}$$.
+        
+        De la sección de Test, se tiene el scatter (gráfica) del set de datos de entrenamiento para el vector de peso $$\vec{W}_{training}$$. En la sección Trained, se ingresó un set de datos para comprobar al vector de peso previamente entrenado. Por último, en la sección Compare, se compararon los valores de ambas gráficas para determinar que tan efectivo fue el entrenamiento, el cual demostró que no había un gran margen de error entre los datos del entrenamiento del vector de peso con respecto a los datos ingresados y evaluados por el vector de peso $$\vec{W}_{trained}$$.
         """
     )
