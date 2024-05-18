@@ -70,7 +70,7 @@ def app():
                 
                 ### Introducción a Machine Learning
                 
-                De un data set ($$ds$$) tira a un learner ($$L$$) y ello tira a una función de peso ($$W$$), donde el data set es la lista que contiene pares ($$x$$, $$y$$) conocidos, El Learner se encarga de encontrar el vector de peso. Se tiene una función que depende de la variable $$x$$, tal que
+                De un data set ($$ds$$) tira a un learner ($$L$$) y ello tira a una función de peso ($$W$$), donde el data set es la lista que contiene pares ($$x$$, $$y$$) conocidos, El Learner se encarga de encontrar el vector de peso, mientras que el vector de peso es un vector con la misma cantidad de dimensiones que el Feature Vector entrenado, para que al realizar un producto punto entre estos se obtenga el escore para obtener la etiqueta $$y$$. Se tiene una función que depende de la variable $$x$$, tal que
                 """
                 r'''
                 $$ 
@@ -78,7 +78,7 @@ def app():
                 $$
                 '''
                 r"""
-                donde $$\vec{\phi}(x)$$ es el vector de característica (feature vector) definido como
+                donde $$\vec{\phi}(x)$$ es el vector de característica (feature vector), el cual se encarga de describir al input, definido como
                 """
                 r'''
                 $$ 
@@ -124,7 +124,7 @@ def app():
                 $$
                 '''
                 r"""
-                El training data set se define por
+                El training data set, o set de datos del entrenamiento, se define por
                 """
                 r'''
                 $$ 

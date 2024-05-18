@@ -67,9 +67,6 @@ try:
                 
             if st.session_state.app == "Proyecto":
                 P04_p02.app()
-                
-            if st.session_state.app == "Conclusiones":
-                P04_p03.app()
 
         run()
     pass
