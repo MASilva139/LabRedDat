@@ -82,7 +82,7 @@ def app():
             st.plotly_chart(pfit)
             
             dfd['lrev'] = dfd['revenue'].apply(lambda x: float(mpm.ln(x)))
-            dfin01 = pd.DataFrame({'month':dfd['month'], 'mrevenue':dfd['mrevenue'], 'revenue':dfd['revenue'], 'lref':dfd['lrev']})
+            dfin01 = pd.DataFrame({'month':dfd['month'], 'mrevenue':dfd['mrevenue'], 'revenue':dfd['revenue'], 'lrev':dfd['lrev']})
             dfin01.to_csv('Parcial/Final/csv/App Revenue/AppRev001.csv', sep=";", index=True)
             
             plfit = px.scatter(x=dfd.index, y=dfd['lrev'])
@@ -91,6 +91,15 @@ def app():
             st.plotly_chart(plfit)
             
             st.table(dfin01)
+            
+            cov1_01 = np.cov(dfin01.index, dfin01['revenue'])
+            cs1_01 = sp(dfin01.index, dfin01['revenue'])
+            cp1_01 = prs(dfin01.index, dfin01['revenue'])
+            cov1_02 = np.cov(dfin01.index, dfin01['lrev'])
+            cs1_02 = sp(dfin01.index, dfin01['lrev'])
+            cp1_02 = prs(dfin01.index, dfin01['lrev'])
+            coef01 = pd.DataFrame({'Covarianza (N)': [cov1_01,0], 'Coef.Spearman (N)': cs1_01, 'Coef.Pearson (N)': cp1_01, 'Covarianza (log)': [cov1_02,0], 'Coef.Spearman (log)': cs1_02, 'Coef.Pearson (log)': cp1_02})
+            st.table(coef01)
             
         if resultados == "Gráfica 02":
             st.markdown('## Genshin Month Revenue 02')
@@ -111,6 +120,15 @@ def app():
             
             st.table(dfin02)
             
+            cov2_01 = np.cov(dfin02.index, dfin02['GenRevGT'])
+            cs2_01 = sp(dfin02.index, dfin02['GenRevGT'])
+            cp2_01 = prs(dfin02.index, dfin02['GenRevGT'])
+            cov2_02 = np.cov(dfin02.index, dfin02['LGenRevGT'])
+            cs2_02 = sp(dfin02.index, dfin02['LGenRevGT'])
+            cp2_02 = prs(dfin02.index, dfin02['LGenRevGT'])
+            coef02 = pd.DataFrame({'Covarianza (N)': [cov2_01,0], 'Coef.Spearman (N)': cs2_01, 'Coef.Pearson (N)': cp2_01, 'Covarianza (log)': [cov2_02,0], 'Coef.Spearman (log)': cs2_02, 'Coef.Pearson (log)': cp2_02})
+            st.table(coef02)
+            
         if resultados == "Gráfica 03":
             st.markdown('## Genshin Banner Revenue iOS china (pc not included)')
             pfit3 = px.scatter(x=dfd3.index, y=dfd3['revenue'], log_x=False)
@@ -129,4 +147,12 @@ def app():
             st.plotly_chart(plfit3)
             
             st.table(dfin03)
-                
+            
+            cov3_01 = np.cov(dfin03.index, dfin03['revenue'])
+            cs3_01 = sp(dfin03.index, dfin03['revenue'])
+            cp3_01 = prs(dfin03.index, dfin03['revenue'])
+            cov3_02 = np.cov(dfin03.index, dfin03['lrev'])
+            cs3_02 = sp(dfin03.index, dfin03['lrev'])
+            cp3_02 = prs(dfin03.index, dfin03['lrev'])
+            coef03 = pd.DataFrame({'Covarianza (N)': [cov3_01,0], 'Coef.Spearman (N)': cs3_01, 'Coef.Pearson (N)': cp3_01, 'Covarianza (log)': [cov3_02,0], 'Coef.Spearman (log)': cs3_02, 'Coef.Pearson (log)': cp3_02})
+            st.table(coef03)
