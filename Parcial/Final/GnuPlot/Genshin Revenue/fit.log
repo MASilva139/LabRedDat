@@ -2659,3 +2659,4673 @@ A3              1.000
 B3              0.987  1.000 
 C3             -0.925 -0.972  1.000 
 D3              0.713  0.790 -0.895  1.000 
+
+
+*******************************************************************************
+Sun May 19 12:43:35 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:4 every :::0::d
+        format = x:z
+        #datapoints = 43
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 1.5778960880e+06   0.00e+00  1.82e+02    5.000000e+02   1.000000e+00   1.000000e+01
+   8 3.2986016690e+04  -1.80e-01  1.82e-03    1.149317e+02   1.567899e+01   2.096156e+01
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 32986
+rel. change during last iteration : -1.80273e-06
+
+degrees of freedom    (FIT_NDF)                        : 40
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 28.7167
+variance of residuals (reduced chisquare) = WSSR/ndf   : 824.65
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 114.932          +/- 6.86         (5.969%)
+ug              = 15.679           +/- 2.254        (14.37%)
+rg              = 20.9616          +/- 3.489        (16.64%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.202  1.000 
+rg             -0.630 -0.559  1.000 
+
+
+*******************************************************************************
+Sun May 19 12:43:35 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:4 every :::0::d
+        format = x:z
+        #datapoints = 43
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 1.1873872782e+17   0.00e+00  3.25e+07    1.000000e+07   1.000000e+00   1.000000e+00
+   4 1.1045275365e+05  -6.08e-01  3.25e+03    1.746149e+01   1.070902e+00   1.145303e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 110453
+rel. change during last iteration : -6.08374e-06
+
+degrees of freedom    (FIT_NDF)                        : 40
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 52.5483
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2761.32
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 17.4615          +/- 8.966        (51.35%)
+ul              = 1.0709           +/- 2.825        (263.8%)
+rl              = 1.1453           +/- 1.685        (147.1%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.854  1.000 
+rl              0.983  0.891  1.000 
+
+
+*******************************************************************************
+Sun May 19 12:43:35 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:4 every :::0::d
+        format = x:z
+        #datapoints = 43
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = -A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 8.7893644132e+15   0.00e+00  7.21e+06    5.000000e+02   1.500000e+02   1.000000e+00   1.000000e+02
+   9 3.2826752142e+04  -5.71e-03  7.21e-03    3.372279e-04  -7.705717e-02   2.746670e+00   8.995916e+01
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 32826.8
+rel. change during last iteration : -5.71211e-08
+
+degrees of freedom    (FIT_NDF)                        : 39
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 29.0123
+variance of residuals (reduced chisquare) = WSSR/ndf   : 841.712
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 0.000337228      +/- 0.002956     (876.5%)
+B3              = -0.0770572       +/- 0.189        (245.2%)
+C3              = 2.74667          +/- 3.392        (123.5%)
+D3              = 89.9592          +/- 16.26        (18.07%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3              0.985  1.000 
+C3             -0.911 -0.966  1.000 
+D3              0.626  0.713 -0.845  1.000 
+
+
+*******************************************************************************
+Sun May 19 12:48:20 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 43
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 2.3451008061e+06   0.00e+00  1.82e+02    5.000000e+02   1.000000e+00   1.000000e+01
+   8 5.6850932519e+00  -2.48e-02  1.82e-06    1.855475e+01   1.800975e+01   7.666247e+01
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 5.68509
+rel. change during last iteration : -2.48138e-07
+
+degrees of freedom    (FIT_NDF)                        : 40
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.376998
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.142127
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5547          +/- 0.08523      (0.4593%)
+ug              = 18.0098          +/- 1.699        (9.434%)
+rg              = 76.6625          +/- 10.38        (13.54%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.192  1.000 
+rg             -0.712 -0.466  1.000 
+
+
+*******************************************************************************
+Sun May 19 12:48:20 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 43
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 1.1873904727e+17   0.00e+00  3.25e+07    1.000000e+07   1.000000e+00   1.000000e+00
+   4 1.7041543991e+03  -4.54e-02  3.25e+03    3.433734e+00   1.070886e+00   1.145353e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 1704.15
+rel. change during last iteration : -4.54093e-07
+
+degrees of freedom    (FIT_NDF)                        : 40
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 6.52716
+variance of residuals (reduced chisquare) = WSSR/ndf   : 42.6039
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 3.43373          +/- 1.114        (32.44%)
+ul              = 1.07089          +/- 1.785        (166.6%)
+rl              = 1.14535          +/- 1.064        (92.93%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.854  1.000 
+rl              0.983  0.891  1.000 
+
+
+*******************************************************************************
+Sun May 19 12:48:21 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 43
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = -A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 8.7893178411e+15   0.00e+00  7.21e+06    5.000000e+02   1.500000e+02   1.000000e+00   1.000000e+02
+  10 5.6171855439e+00  -4.29e-08  7.21e-04   -2.637765e-05  -3.212873e-03   8.355357e-02   1.795776e+01
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 5.61719
+rel. change during last iteration : -4.29291e-13
+
+degrees of freedom    (FIT_NDF)                        : 39
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.379513
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.14403
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = -2.63776e-05     +/- 3.866e-05    (146.6%)
+B3              = -0.00321287      +/- 0.002472     (76.94%)
+C3              = 0.0835536        +/- 0.04438      (53.11%)
+D3              = 17.9578          +/- 0.2127       (1.184%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3              0.985  1.000 
+C3             -0.911 -0.966  1.000 
+D3              0.626  0.713 -0.845  1.000 
+
+
+*******************************************************************************
+Sun May 19 12:48:56 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 43
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 2.3451008061e+06   0.00e+00  1.82e+02    5.000000e+02   1.000000e+00   1.000000e+01
+   8 5.6850932519e+00  -2.48e-02  1.82e-06    1.855475e+01   1.800975e+01   7.666247e+01
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 5.68509
+rel. change during last iteration : -2.48138e-07
+
+degrees of freedom    (FIT_NDF)                        : 40
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.376998
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.142127
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5547          +/- 0.08523      (0.4593%)
+ug              = 18.0098          +/- 1.699        (9.434%)
+rg              = 76.6625          +/- 10.38        (13.54%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.192  1.000 
+rg             -0.712 -0.466  1.000 
+
+
+*******************************************************************************
+Sun May 19 12:48:56 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 43
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 1.1873904727e+17   0.00e+00  3.25e+07    1.000000e+07   1.000000e+00   1.000000e+00
+   4 1.7041543991e+03  -4.54e-02  3.25e+03    3.433734e+00   1.070886e+00   1.145353e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 1704.15
+rel. change during last iteration : -4.54093e-07
+
+degrees of freedom    (FIT_NDF)                        : 40
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 6.52716
+variance of residuals (reduced chisquare) = WSSR/ndf   : 42.6039
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 3.43373          +/- 1.114        (32.44%)
+ul              = 1.07089          +/- 1.785        (166.6%)
+rl              = 1.14535          +/- 1.064        (92.93%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.854  1.000 
+rl              0.983  0.891  1.000 
+
+
+*******************************************************************************
+Sun May 19 12:48:56 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 43
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = -A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 8.7893178411e+15   0.00e+00  7.21e+06    5.000000e+02   1.500000e+02   1.000000e+00   1.000000e+02
+  10 5.6171855439e+00  -4.29e-08  7.21e-04   -2.637765e-05  -3.212873e-03   8.355357e-02   1.795776e+01
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 5.61719
+rel. change during last iteration : -4.29291e-13
+
+degrees of freedom    (FIT_NDF)                        : 39
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.379513
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.14403
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = -2.63776e-05     +/- 3.866e-05    (146.6%)
+B3              = -0.00321287      +/- 0.002472     (76.94%)
+C3              = 0.0835536        +/- 0.04438      (53.11%)
+D3              = 17.9578          +/- 0.2127       (1.184%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3              0.985  1.000 
+C3             -0.911 -0.966  1.000 
+D3              0.626  0.713 -0.845  1.000 
+
+
+*******************************************************************************
+Sun May 19 12:50:56 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-19.4183 : 36.8317]
+        #datapoints = 37
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 1.0300977473e+09   0.00e+00  3.92e+03    1.000000e+04   1.000000e+00   1.000000e+01
+  10 5.2532399356e+00  -3.78e-07  3.92e-07    1.859070e+01   1.726254e+01   6.738768e+01
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 5.25324
+rel. change during last iteration : -3.77911e-12
+
+degrees of freedom    (FIT_NDF)                        : 34
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.393074
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.154507
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5907          +/- 0.09736      (0.5237%)
+ug              = 17.2625          +/- 1.529        (8.859%)
+rg              = 67.3877          +/- 10.67        (15.83%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.067  1.000 
+rg             -0.739 -0.149  1.000 
+
+
+*******************************************************************************
+Sun May 19 12:50:56 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-19.4183 : 36.8317]
+        #datapoints = 37
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 9.1739034795e+16   0.00e+00  3.11e+07    1.000000e+07   1.000000e+00   1.000000e+00
+   4 1.5710036013e+03  -5.47e-02  3.11e+03    3.635814e+00   1.076257e+00   1.152193e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 1571
+rel. change during last iteration : -5.46653e-07
+
+degrees of freedom    (FIT_NDF)                        : 34
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 6.7975
+variance of residuals (reduced chisquare) = WSSR/ndf   : 46.206
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 3.63581          +/- 1.325        (36.44%)
+ul              = 1.07626          +/- 1.872        (173.9%)
+rl              = 1.15219          +/- 1.152        (100%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.866  1.000 
+rl              0.983  0.903  1.000 
+
+
+*******************************************************************************
+Sun May 19 12:50:56 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-19.4183 : 36.8317]
+        #datapoints = 37
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = -A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 1.1528706289e+10   0.00e+00  9.13e+03    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+   8 5.2445894020e+00  -6.86e-09  9.13e-05   -4.478782e-06  -2.266189e-03   7.336266e-02   1.797725e+01
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 5.24459
+rel. change during last iteration : -6.85873e-14
+
+degrees of freedom    (FIT_NDF)                        : 33
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.398656
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.158927
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = -4.47878e-06     +/- 6.882e-05    (1537%)
+B3              = -0.00226619      +/- 0.003771     (166.4%)
+C3              = 0.0733627        +/- 0.05797      (79.02%)
+D3              = 17.9773          +/- 0.2377       (1.322%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3              0.985  1.000 
+C3             -0.911 -0.965  1.000 
+D3              0.620  0.708 -0.841  1.000 
+
+
+*******************************************************************************
+Sun May 19 12:51:38 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 43
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 1.0300985374e+09   0.00e+00  3.63e+03    1.000000e+04   1.000000e+00   1.000000e+01
+   9 5.6850932519e+00  -5.17e-01  3.63e-06    1.855475e+01   1.800977e+01   7.666237e+01
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 5.68509
+rel. change during last iteration : -5.17494e-06
+
+degrees of freedom    (FIT_NDF)                        : 40
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.376998
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.142127
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5547          +/- 0.08523      (0.4593%)
+ug              = 18.0098          +/- 1.699        (9.434%)
+rg              = 76.6624          +/- 10.38        (13.54%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.192  1.000 
+rg             -0.712 -0.466  1.000 
+
+
+*******************************************************************************
+Sun May 19 12:51:38 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 43
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 1.1873904727e+17   0.00e+00  3.25e+07    1.000000e+07   1.000000e+00   1.000000e+00
+   4 1.7041543991e+03  -4.54e-02  3.25e+03    3.433734e+00   1.070886e+00   1.145353e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 1704.15
+rel. change during last iteration : -4.54093e-07
+
+degrees of freedom    (FIT_NDF)                        : 40
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 6.52716
+variance of residuals (reduced chisquare) = WSSR/ndf   : 42.6039
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 3.43373          +/- 1.114        (32.44%)
+ul              = 1.07089          +/- 1.785        (166.6%)
+rl              = 1.14535          +/- 1.064        (92.93%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.854  1.000 
+rl              0.983  0.891  1.000 
+
+
+*******************************************************************************
+Sun May 19 12:51:38 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 43
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = -A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 3.5746030166e+16   0.00e+00  1.44e+07   -1.000000e+03   1.000000e+00   1.000000e+00   1.000000e+00
+  11 5.6171855439e+00  -4.97e-07  1.44e-04   -2.637765e-05  -3.212873e-03   8.355357e-02   1.795776e+01
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 5.61719
+rel. change during last iteration : -4.96965e-12
+
+degrees of freedom    (FIT_NDF)                        : 39
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.379513
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.14403
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = -2.63776e-05     +/- 3.866e-05    (146.6%)
+B3              = -0.00321287      +/- 0.002472     (76.94%)
+C3              = 0.0835536        +/- 0.04438      (53.11%)
+D3              = 17.9578          +/- 0.2127       (1.184%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3              0.985  1.000 
+C3             -0.911 -0.966  1.000 
+D3              0.626  0.713 -0.845  1.000 
+
+
+*******************************************************************************
+Sun May 19 12:53:30 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 43
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 1.3434066425e+04   0.00e+00  3.01e+00    1.800000e+01   1.000000e+00   1.000000e+00
+  84 5.6850932519e+00  -1.78e-03  3.01e-07    1.855475e+01   1.800975e+01   7.666249e+01
+
+After 84 iterations the fit converged.
+final sum of squares of residuals : 5.68509
+rel. change during last iteration : -1.78337e-08
+
+degrees of freedom    (FIT_NDF)                        : 40
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.376998
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.142127
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5547          +/- 0.08523      (0.4593%)
+ug              = 18.0098          +/- 1.699        (9.434%)
+rg              = 76.6625          +/- 10.38        (13.54%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.192  1.000 
+rg             -0.712 -0.466  1.000 
+
+
+*******************************************************************************
+Sun May 19 12:53:30 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 43
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 1.6791192613e+03   0.00e+00  9.76e+00    3.000000e+00   1.000000e+00   1.000000e+00
+1229 1.0277017711e+01  -5.91e-01  9.76e+02    1.277838e-01   1.340225e+00   9.788101e-31
+
+After 1229 iterations the fit converged.
+final sum of squares of residuals : 10.277
+rel. change during last iteration : -5.91314e-06
+
+degrees of freedom    (FIT_NDF)                        : 40
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.506878
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.256925
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.127784         +/- 0.09569      (74.88%)
+ul              = 1.34023          +/- 4.813        (359.1%)
+rl              = 9.7881e-31       +/- 2.409e-30    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.872  1.000 
+rl              1.000  0.874  1.000 
+
+
+*******************************************************************************
+Sun May 19 12:53:37 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 43
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = -A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 3.5744059510e+20   0.00e+00  1.44e+09   -1.000000e+05   1.000000e+00   1.000000e+00   1.000000e+00
+   4 7.6683220226e+05  -7.42e-02  1.44e+05    2.784425e-02   9.999994e-01   1.000000e+00   1.000000e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 766832
+rel. change during last iteration : -7.41509e-07
+
+degrees of freedom    (FIT_NDF)                        : 39
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 140.223
+variance of residuals (reduced chisquare) = WSSR/ndf   : 19662.4
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 0.0278442        +/- 0.01429      (51.31%)
+B3              = 0.999999         +/- 0.9133       (91.33%)
+C3              = 1                +/- 16.4         (1640%)
+D3              = 1                +/- 78.59        (7859%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3              0.985  1.000 
+C3             -0.911 -0.966  1.000 
+D3              0.626  0.713 -0.845  1.000 
+
+
+*******************************************************************************
+Sun May 19 12:54:10 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 1.2169207467e+04   0.00e+00  3.16e+00    1.800000e+01   1.000000e+00   1.000000e+00
+  79 5.6367991500e+00  -1.47e-03  3.16e-07    1.855572e+01   1.797107e+01   7.629837e+01
+
+After 79 iterations the fit converged.
+final sum of squares of residuals : 5.6368
+rel. change during last iteration : -1.46963e-08
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.395699
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.156578
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5557          +/- 0.09529      (0.5135%)
+ug              = 17.9711          +/- 1.837        (10.22%)
+rg              = 76.2984          +/- 13.65        (17.89%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.087  1.000 
+rg             -0.738 -0.197  1.000 
+
+
+*******************************************************************************
+Sun May 19 12:54:10 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 1.6539691102e+03   0.00e+00  9.47e+00    3.000000e+00   1.000000e+00   1.000000e+00
+1526 7.7563767509e+00  -5.64e-02  9.47e+02    1.282501e-01   1.353989e+00   9.588446e-31
+
+After 1526 iterations the fit converged.
+final sum of squares of residuals : 7.75638
+rel. change during last iteration : -5.64386e-07
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.464171
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.215455
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.12825          +/- 0.09619      (75%)
+ul              = 1.35399          +/- 4.631        (342%)
+rl              = 9.58845e-31      +/- 1.256e-30    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.880  1.000 
+rl              1.000  0.882  1.000 
+
+
+*******************************************************************************
+Sun May 19 12:54:18 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = -A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 1.7890170854e+20   0.00e+00  1.07e+09   -1.000000e+05   1.000000e+00   1.000000e+00   1.000000e+00
+   4 4.6035601164e+05  -8.19e-02  1.07e+05    3.072921e-02   9.999993e-01   1.000000e+00   1.000000e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 460356
+rel. change during last iteration : -8.18912e-07
+
+degrees of freedom    (FIT_NDF)                        : 35
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 114.687
+variance of residuals (reduced chisquare) = WSSR/ndf   : 13153
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 0.0307292        +/- 0.01646      (53.56%)
+B3              = 0.999999         +/- 0.952        (95.2%)
+C3              = 1                +/- 15.45        (1545%)
+D3              = 1                +/- 66.92        (6692%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3              0.985  1.000 
+C3             -0.911 -0.966  1.000 
+D3              0.622  0.710 -0.842  1.000 
+
+
+*******************************************************************************
+Sun May 19 12:54:53 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 1.2169207467e+04   0.00e+00  3.16e+00    1.800000e+01   1.000000e+00   1.000000e+00
+  79 5.6367991500e+00  -1.47e-03  3.16e-07    1.855572e+01   1.797107e+01   7.629837e+01
+
+After 79 iterations the fit converged.
+final sum of squares of residuals : 5.6368
+rel. change during last iteration : -1.46963e-08
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.395699
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.156578
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5557          +/- 0.09529      (0.5135%)
+ug              = 17.9711          +/- 1.837        (10.22%)
+rg              = 76.2984          +/- 13.65        (17.89%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.087  1.000 
+rg             -0.738 -0.197  1.000 
+
+
+*******************************************************************************
+Sun May 19 12:54:54 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 1.6539691102e+03   0.00e+00  9.47e+00    3.000000e+00   1.000000e+00   1.000000e+00
+1526 7.7563767509e+00  -5.64e-02  9.47e+02    1.282501e-01   1.353989e+00   9.588446e-31
+
+After 1526 iterations the fit converged.
+final sum of squares of residuals : 7.75638
+rel. change during last iteration : -5.64386e-07
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.464171
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.215455
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.12825          +/- 0.09619      (75%)
+ul              = 1.35399          +/- 4.631        (342%)
+rl              = 9.58845e-31      +/- 1.256e-30    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.880  1.000 
+rl              1.000  0.882  1.000 
+
+
+*******************************************************************************
+Sun May 19 12:55:02 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = -A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 1.7890170854e+20   0.00e+00  1.07e+09   -1.000000e+05   1.000000e+00   1.000000e+00   1.000000e+00
+   4 4.6035601164e+05  -8.19e-02  1.07e+05    3.072921e-02   9.999993e-01   1.000000e+00   1.000000e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 460356
+rel. change during last iteration : -8.18912e-07
+
+degrees of freedom    (FIT_NDF)                        : 35
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 114.687
+variance of residuals (reduced chisquare) = WSSR/ndf   : 13153
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 0.0307292        +/- 0.01646      (53.56%)
+B3              = 0.999999         +/- 0.952        (95.2%)
+C3              = 1                +/- 15.45        (1545%)
+D3              = 1                +/- 66.92        (6692%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3              0.985  1.000 
+C3             -0.911 -0.966  1.000 
+D3              0.622  0.710 -0.842  1.000 
+
+
+*******************************************************************************
+Sun May 19 12:55:35 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 1.2169207467e+04   0.00e+00  3.16e+00    1.800000e+01   1.000000e+00   1.000000e+00
+  79 5.6367991500e+00  -1.47e-03  3.16e-07    1.855572e+01   1.797107e+01   7.629837e+01
+
+After 79 iterations the fit converged.
+final sum of squares of residuals : 5.6368
+rel. change during last iteration : -1.46963e-08
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.395699
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.156578
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5557          +/- 0.09529      (0.5135%)
+ug              = 17.9711          +/- 1.837        (10.22%)
+rg              = 76.2984          +/- 13.65        (17.89%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.087  1.000 
+rg             -0.738 -0.197  1.000 
+
+
+*******************************************************************************
+Sun May 19 12:55:35 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 1.6539691102e+03   0.00e+00  9.47e+00    3.000000e+00   1.000000e+00   1.000000e+00
+1526 7.7563767509e+00  -5.64e-02  9.47e+02    1.282501e-01   1.353989e+00   9.588446e-31
+
+After 1526 iterations the fit converged.
+final sum of squares of residuals : 7.75638
+rel. change during last iteration : -5.64386e-07
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.464171
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.215455
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.12825          +/- 0.09619      (75%)
+ul              = 1.35399          +/- 4.631        (342%)
+rl              = 9.58845e-31      +/- 1.256e-30    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.880  1.000 
+rl              1.000  0.882  1.000 
+
+
+*******************************************************************************
+Sun May 19 12:55:43 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = -A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 1.7890170854e+20   0.00e+00  1.07e+09   -1.000000e+05   1.000000e+00   1.000000e+00   1.000000e+00
+   4 4.6035601164e+05  -8.19e-02  1.07e+05    3.072921e-02   9.999993e-01   1.000000e+00   1.000000e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 460356
+rel. change during last iteration : -8.18912e-07
+
+degrees of freedom    (FIT_NDF)                        : 35
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 114.687
+variance of residuals (reduced chisquare) = WSSR/ndf   : 13153
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 0.0307292        +/- 0.01646      (53.56%)
+B3              = 0.999999         +/- 0.952        (95.2%)
+C3              = 1                +/- 15.45        (1545%)
+D3              = 1                +/- 66.92        (6692%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3              0.985  1.000 
+C3             -0.911 -0.966  1.000 
+D3              0.622  0.710 -0.842  1.000 
+
+
+*******************************************************************************
+Sun May 19 12:56:19 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 1.2169207467e+04   0.00e+00  3.16e+00    1.800000e+01   1.000000e+00   1.000000e+00
+  79 5.6367991500e+00  -1.47e-03  3.16e-07    1.855572e+01   1.797107e+01   7.629837e+01
+
+After 79 iterations the fit converged.
+final sum of squares of residuals : 5.6368
+rel. change during last iteration : -1.46963e-08
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.395699
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.156578
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5557          +/- 0.09529      (0.5135%)
+ug              = 17.9711          +/- 1.837        (10.22%)
+rg              = 76.2984          +/- 13.65        (17.89%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.087  1.000 
+rg             -0.738 -0.197  1.000 
+
+
+*******************************************************************************
+Sun May 19 12:56:20 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 1.6539691102e+03   0.00e+00  9.47e+00    3.000000e+00   1.000000e+00   1.000000e+00
+1526 7.7563767509e+00  -5.64e-02  9.47e+02    1.282501e-01   1.353989e+00   9.588446e-31
+
+After 1526 iterations the fit converged.
+final sum of squares of residuals : 7.75638
+rel. change during last iteration : -5.64386e-07
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.464171
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.215455
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.12825          +/- 0.09619      (75%)
+ul              = 1.35399          +/- 4.631        (342%)
+rl              = 9.58845e-31      +/- 1.256e-30    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.880  1.000 
+rl              1.000  0.882  1.000 
+
+
+*******************************************************************************
+Sun May 19 12:56:28 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = -A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 1.9007015508e+10   0.00e+00  1.07e+04   -1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+   8 5.5110821403e+00  -3.07e-08  1.07e-04   -5.073243e-05  -4.464827e-03   9.998949e-02   1.791745e+01
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 5.51108
+rel. change during last iteration : -3.07175e-13
+
+degrees of freedom    (FIT_NDF)                        : 35
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.396812
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.157459
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = -5.07324e-05     +/- 5.694e-05    (112.2%)
+B3              = -0.00446483      +/- 0.003294     (73.78%)
+C3              = 0.0999895        +/- 0.05346      (53.47%)
+D3              = 17.9175          +/- 0.2316       (1.292%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3              0.985  1.000 
+C3             -0.911 -0.966  1.000 
+D3              0.622  0.710 -0.842  1.000 
+
+
+*******************************************************************************
+Sun May 19 13:42:11 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [3.26284 : 73.5753]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 1.3084998760e+04   0.00e+00  1.77e-01    1.800000e+01   1.000000e+00   1.000000e+00
+ 547 2.2481727088e+00  -7.40e-05  1.77e-07    1.853540e+01   1.690289e+01   8.327886e+01
+
+After 547 iterations the fit converged.
+final sum of squares of residuals : 2.24817
+rel. change during last iteration : -7.40263e-10
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.249898
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0624492
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5354          +/- 0.05578      (0.301%)
+ug              = 16.9029          +/- 2.11         (12.48%)
+rg              = 83.2789          +/- 11.22        (13.48%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.194  1.000 
+rg             -0.573 -0.766  1.000 
+
+
+*******************************************************************************
+Sun May 19 13:42:14 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [3.26284 : 73.5753]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 7.0243053606e+02   0.00e+00  1.01e+01    3.000000e+00   1.000000e+00   1.000000e+00
+1541 6.7840956600e+00  -4.93e-01  1.01e+03    1.275473e-01   1.300566e+00   9.686845e-31
+
+After 1541 iterations the fit converged.
+final sum of squares of residuals : 6.7841
+rel. change during last iteration : -4.92949e-06
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.434105
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.188447
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.127547         +/- 0.2132       (167.1%)
+ul              = 1.30057          +/- 24.32        (1870%)
+rl              = 9.68685e-31      +/- 3.698e-30    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.958  1.000 
+rl              1.000  0.959  1.000 
+
+
+*******************************************************************************
+Sun May 19 13:42:22 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [3.26284 : 73.5753]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 3.7763050841e+10   0.00e+00  1.51e+04    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+   8 2.2369551392e+00  -6.62e-04  1.51e-04   -1.519466e-05  -2.605336e-04   2.356060e-02   1.826585e+01
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 2.23696
+rel. change during last iteration : -6.61801e-09
+
+degrees of freedom    (FIT_NDF)                        : 35
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.25281
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.063913
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = -1.51947e-05     +/- 3.628e-05    (238.8%)
+B3              = -0.000260534     +/- 0.002529     (970.6%)
+C3              = 0.0235606        +/- 0.05211      (221.2%)
+D3              = 18.2659          +/- 0.3039       (1.664%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.990  1.000 
+C3              0.946 -0.981  1.000 
+D3             -0.827  0.886 -0.951  1.000 
+
+
+*******************************************************************************
+Sun May 19 13:42:40 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-23.4570 : 46.8555]
+        #datapoints = 43
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 1.3434066425e+04   0.00e+00  3.01e+00    1.800000e+01   1.000000e+00   1.000000e+00
+  84 5.6850932519e+00  -1.78e-03  3.01e-07    1.855475e+01   1.800975e+01   7.666249e+01
+
+After 84 iterations the fit converged.
+final sum of squares of residuals : 5.68509
+rel. change during last iteration : -1.78337e-08
+
+degrees of freedom    (FIT_NDF)                        : 40
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.376998
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.142127
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5547          +/- 0.08523      (0.4593%)
+ug              = 18.0098          +/- 1.699        (9.434%)
+rg              = 76.6625          +/- 10.38        (13.54%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.192  1.000 
+rg             -0.712 -0.466  1.000 
+
+
+*******************************************************************************
+Sun May 19 13:42:41 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-23.4570 : 46.8555]
+        #datapoints = 43
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 1.6791192613e+03   0.00e+00  9.76e+00    3.000000e+00   1.000000e+00   1.000000e+00
+1229 1.0277017711e+01  -5.91e-01  9.76e+02    1.277838e-01   1.340225e+00   9.788101e-31
+
+After 1229 iterations the fit converged.
+final sum of squares of residuals : 10.277
+rel. change during last iteration : -5.91314e-06
+
+degrees of freedom    (FIT_NDF)                        : 40
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.506878
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.256925
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.127784         +/- 0.09569      (74.88%)
+ul              = 1.34023          +/- 4.813        (359.1%)
+rl              = 9.7881e-31       +/- 2.409e-30    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.872  1.000 
+rl              1.000  0.874  1.000 
+
+
+*******************************************************************************
+Sun May 19 13:42:47 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-23.4570 : 46.8555]
+        #datapoints = 43
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 3.3781986021e+10   0.00e+00  1.44e+04   -1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+   8 5.6171855439e+00  -4.99e-07  1.44e-04    2.637765e-05  -3.212873e-03   8.355357e-02   1.795776e+01
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 5.61719
+rel. change during last iteration : -4.98926e-12
+
+degrees of freedom    (FIT_NDF)                        : 39
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.379513
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.14403
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 2.63776e-05      +/- 3.866e-05    (146.6%)
+B3              = -0.00321287      +/- 0.002472     (76.94%)
+C3              = 0.0835536        +/- 0.04438      (53.11%)
+D3              = 17.9578          +/- 0.2127       (1.184%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.911 -0.966  1.000 
+D3             -0.626  0.713 -0.845  1.000 
+
+
+*******************************************************************************
+Sun May 19 13:43:47 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 1.2169207467e+04   0.00e+00  3.16e+00    1.800000e+01   1.000000e+00   1.000000e+00
+  79 5.6367991500e+00  -1.47e-03  3.16e-07    1.855572e+01   1.797107e+01   7.629837e+01
+
+After 79 iterations the fit converged.
+final sum of squares of residuals : 5.6368
+rel. change during last iteration : -1.46963e-08
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.395699
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.156578
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5557          +/- 0.09529      (0.5135%)
+ug              = 17.9711          +/- 1.837        (10.22%)
+rg              = 76.2984          +/- 13.65        (17.89%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.087  1.000 
+rg             -0.738 -0.197  1.000 
+
+
+*******************************************************************************
+Sun May 19 13:43:47 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 1.6539691102e+03   0.00e+00  9.47e+00    3.000000e+00   1.000000e+00   1.000000e+00
+1526 7.7563767509e+00  -5.64e-02  9.47e+02    1.282501e-01   1.353989e+00   9.588446e-31
+
+After 1526 iterations the fit converged.
+final sum of squares of residuals : 7.75638
+rel. change during last iteration : -5.64386e-07
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.464171
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.215455
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.12825          +/- 0.09619      (75%)
+ul              = 1.35399          +/- 4.631        (342%)
+rl              = 9.58845e-31      +/- 1.256e-30    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.880  1.000 
+rl              1.000  0.882  1.000 
+
+
+*******************************************************************************
+Sun May 19 13:43:55 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 1.9007015508e+10   0.00e+00  1.07e+04    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+   8 5.5110821403e+00  -3.07e-08  1.07e-04    5.073243e-05  -4.464827e-03   9.998949e-02   1.791745e+01
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 5.51108
+rel. change during last iteration : -3.07175e-13
+
+degrees of freedom    (FIT_NDF)                        : 35
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.396812
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.157459
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 5.07324e-05      +/- 5.694e-05    (112.2%)
+B3              = -0.00446483      +/- 0.003294     (73.78%)
+C3              = 0.0999895        +/- 0.05346      (53.47%)
+D3              = 17.9175          +/- 0.2316       (1.292%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.911 -0.966  1.000 
+D3             -0.622  0.710 -0.842  1.000 
+
+
+*******************************************************************************
+Sun May 19 13:56:26 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 1.2169207467e+04   0.00e+00  3.16e+00    1.800000e+01   1.000000e+00   1.000000e+00
+  79 5.6367991500e+00  -1.47e-03  3.16e-07    1.855572e+01   1.797107e+01   7.629837e+01
+
+After 79 iterations the fit converged.
+final sum of squares of residuals : 5.6368
+rel. change during last iteration : -1.46963e-08
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.395699
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.156578
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5557          +/- 0.09529      (0.5135%)
+ug              = 17.9711          +/- 1.837        (10.22%)
+rg              = 76.2984          +/- 13.65        (17.89%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.087  1.000 
+rg             -0.738 -0.197  1.000 
+
+
+*******************************************************************************
+Sun May 19 13:56:26 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 1.6539691102e+03   0.00e+00  9.47e+00    3.000000e+00   1.000000e+00   1.000000e+00
+1526 7.7563767509e+00  -5.64e-02  9.47e+02    1.282501e-01   1.353989e+00   9.588446e-31
+
+After 1526 iterations the fit converged.
+final sum of squares of residuals : 7.75638
+rel. change during last iteration : -5.64386e-07
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.464171
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.215455
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.12825          +/- 0.09619      (75%)
+ul              = 1.35399          +/- 4.631        (342%)
+rl              = 9.58845e-31      +/- 1.256e-30    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.880  1.000 
+rl              1.000  0.882  1.000 
+
+
+*******************************************************************************
+Sun May 19 13:56:34 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 1.9007015508e+10   0.00e+00  1.07e+04    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+   8 5.5110821403e+00  -3.07e-08  1.07e-04    5.073243e-05  -4.464827e-03   9.998949e-02   1.791745e+01
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 5.51108
+rel. change during last iteration : -3.07175e-13
+
+degrees of freedom    (FIT_NDF)                        : 35
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.396812
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.157459
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 5.07324e-05      +/- 5.694e-05    (112.2%)
+B3              = -0.00446483      +/- 0.003294     (73.78%)
+C3              = 0.0999895        +/- 0.05346      (53.47%)
+D3              = 17.9175          +/- 0.2316       (1.292%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.911 -0.966  1.000 
+D3             -0.622  0.710 -0.842  1.000 
+
+
+*******************************************************************************
+Sun May 19 13:57:19 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 1.2169207467e+04   0.00e+00  3.16e+00    1.800000e+01   1.000000e+00   1.000000e+00
+  79 5.6367991500e+00  -1.47e-03  3.16e-07    1.855572e+01   1.797107e+01   7.629837e+01
+
+After 79 iterations the fit converged.
+final sum of squares of residuals : 5.6368
+rel. change during last iteration : -1.46963e-08
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.395699
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.156578
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5557          +/- 0.09529      (0.5135%)
+ug              = 17.9711          +/- 1.837        (10.22%)
+rg              = 76.2984          +/- 13.65        (17.89%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.087  1.000 
+rg             -0.738 -0.197  1.000 
+
+
+*******************************************************************************
+Sun May 19 13:57:20 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 1.6539691102e+03   0.00e+00  9.47e+00    3.000000e+00   1.000000e+00   1.000000e+00
+1526 7.7563767509e+00  -5.64e-02  9.47e+02    1.282501e-01   1.353989e+00   9.588446e-31
+
+After 1526 iterations the fit converged.
+final sum of squares of residuals : 7.75638
+rel. change during last iteration : -5.64386e-07
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.464171
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.215455
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.12825          +/- 0.09619      (75%)
+ul              = 1.35399          +/- 4.631        (342%)
+rl              = 9.58845e-31      +/- 1.256e-30    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.880  1.000 
+rl              1.000  0.882  1.000 
+
+
+*******************************************************************************
+Sun May 19 13:57:28 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 1.9007015508e+10   0.00e+00  1.07e+04    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+   8 5.5110821403e+00  -3.07e-08  1.07e-04    5.073243e-05  -4.464827e-03   9.998949e-02   1.791745e+01
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 5.51108
+rel. change during last iteration : -3.07175e-13
+
+degrees of freedom    (FIT_NDF)                        : 35
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.396812
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.157459
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 5.07324e-05      +/- 5.694e-05    (112.2%)
+B3              = -0.00446483      +/- 0.003294     (73.78%)
+C3              = 0.0999895        +/- 0.05346      (53.47%)
+D3              = 17.9175          +/- 0.2316       (1.292%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.911 -0.966  1.000 
+D3             -0.622  0.710 -0.842  1.000 
+
+
+*******************************************************************************
+Sun May 19 13:58:05 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 1.2169207467e+04   0.00e+00  3.16e+00    1.800000e+01   1.000000e+00   1.000000e+00
+  79 5.6367991500e+00  -1.47e-03  3.16e-07    1.855572e+01   1.797107e+01   7.629837e+01
+
+After 79 iterations the fit converged.
+final sum of squares of residuals : 5.6368
+rel. change during last iteration : -1.46963e-08
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.395699
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.156578
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5557          +/- 0.09529      (0.5135%)
+ug              = 17.9711          +/- 1.837        (10.22%)
+rg              = 76.2984          +/- 13.65        (17.89%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.087  1.000 
+rg             -0.738 -0.197  1.000 
+
+
+*******************************************************************************
+Sun May 19 13:58:05 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 1.6539691102e+03   0.00e+00  9.47e+00    3.000000e+00   1.000000e+00   1.000000e+00
+1526 7.7563767509e+00  -5.64e-02  9.47e+02    1.282501e-01   1.353989e+00   9.588446e-31
+
+After 1526 iterations the fit converged.
+final sum of squares of residuals : 7.75638
+rel. change during last iteration : -5.64386e-07
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.464171
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.215455
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.12825          +/- 0.09619      (75%)
+ul              = 1.35399          +/- 4.631        (342%)
+rl              = 9.58845e-31      +/- 1.256e-30    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.880  1.000 
+rl              1.000  0.882  1.000 
+
+
+*******************************************************************************
+Sun May 19 13:58:13 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 1.9007015508e+10   0.00e+00  1.07e+04    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+   8 5.5110821403e+00  -3.07e-08  1.07e-04    5.073243e-05  -4.464827e-03   9.998949e-02   1.791745e+01
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 5.51108
+rel. change during last iteration : -3.07175e-13
+
+degrees of freedom    (FIT_NDF)                        : 35
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.396812
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.157459
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 5.07324e-05      +/- 5.694e-05    (112.2%)
+B3              = -0.00446483      +/- 0.003294     (73.78%)
+C3              = 0.0999895        +/- 0.05346      (53.47%)
+D3              = 17.9175          +/- 0.2316       (1.292%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.911 -0.966  1.000 
+D3             -0.622  0.710 -0.842  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:00:49 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 1.2169207467e+04   0.00e+00  3.16e+00    1.800000e+01   1.000000e+00   1.000000e+00
+  79 5.6367991500e+00  -1.47e-03  3.16e-07    1.855572e+01   1.797107e+01   7.629837e+01
+
+After 79 iterations the fit converged.
+final sum of squares of residuals : 5.6368
+rel. change during last iteration : -1.46963e-08
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.395699
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.156578
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5557          +/- 0.09529      (0.5135%)
+ug              = 17.9711          +/- 1.837        (10.22%)
+rg              = 76.2984          +/- 13.65        (17.89%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.087  1.000 
+rg             -0.738 -0.197  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:00:49 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 1.6539691102e+03   0.00e+00  9.47e+00    3.000000e+00   1.000000e+00   1.000000e+00
+1526 7.7563767509e+00  -5.64e-02  9.47e+02    1.282501e-01   1.353989e+00   9.588446e-31
+
+After 1526 iterations the fit converged.
+final sum of squares of residuals : 7.75638
+rel. change during last iteration : -5.64386e-07
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.464171
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.215455
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.12825          +/- 0.09619      (75%)
+ul              = 1.35399          +/- 4.631        (342%)
+rl              = 9.58845e-31      +/- 1.256e-30    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.880  1.000 
+rl              1.000  0.882  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:00:58 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 1.9007015508e+10   0.00e+00  1.07e+04    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+   8 5.5110821403e+00  -3.07e-08  1.07e-04    5.073243e-05  -4.464827e-03   9.998949e-02   1.791745e+01
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 5.51108
+rel. change during last iteration : -3.07175e-13
+
+degrees of freedom    (FIT_NDF)                        : 35
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.396812
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.157459
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 5.07324e-05      +/- 5.694e-05    (112.2%)
+B3              = -0.00446483      +/- 0.003294     (73.78%)
+C3              = 0.0999895        +/- 0.05346      (53.47%)
+D3              = 17.9175          +/- 0.2316       (1.292%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.911 -0.966  1.000 
+D3             -0.622  0.710 -0.842  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:01:43 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 1.2169207467e+04   0.00e+00  3.16e+00    1.800000e+01   1.000000e+00   1.000000e+00
+  79 5.6367991500e+00  -1.47e-03  3.16e-07    1.855572e+01   1.797107e+01   7.629837e+01
+
+After 79 iterations the fit converged.
+final sum of squares of residuals : 5.6368
+rel. change during last iteration : -1.46963e-08
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.395699
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.156578
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5557          +/- 0.09529      (0.5135%)
+ug              = 17.9711          +/- 1.837        (10.22%)
+rg              = 76.2984          +/- 13.65        (17.89%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.087  1.000 
+rg             -0.738 -0.197  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:01:43 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 1.6539691102e+03   0.00e+00  9.47e+00    3.000000e+00   1.000000e+00   1.000000e+00
+1526 7.7563767509e+00  -5.64e-02  9.47e+02    1.282501e-01   1.353989e+00   9.588446e-31
+
+After 1526 iterations the fit converged.
+final sum of squares of residuals : 7.75638
+rel. change during last iteration : -5.64386e-07
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.464171
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.215455
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.12825          +/- 0.09619      (75%)
+ul              = 1.35399          +/- 4.631        (342%)
+rl              = 9.58845e-31      +/- 1.256e-30    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.880  1.000 
+rl              1.000  0.882  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:01:51 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 1.9007015508e+10   0.00e+00  1.07e+04    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+   8 5.5110821403e+00  -3.07e-08  1.07e-04    5.073243e-05  -4.464827e-03   9.998949e-02   1.791745e+01
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 5.51108
+rel. change during last iteration : -3.07175e-13
+
+degrees of freedom    (FIT_NDF)                        : 35
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.396812
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.157459
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 5.07324e-05      +/- 5.694e-05    (112.2%)
+B3              = -0.00446483      +/- 0.003294     (73.78%)
+C3              = 0.0999895        +/- 0.05346      (53.47%)
+D3              = 17.9175          +/- 0.2316       (1.292%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.911 -0.966  1.000 
+D3             -0.622  0.710 -0.842  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:02:11 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 1.2169207467e+04   0.00e+00  3.16e+00    1.800000e+01   1.000000e+00   1.000000e+00
+  79 5.6367991500e+00  -1.47e-03  3.16e-07    1.855572e+01   1.797107e+01   7.629837e+01
+
+After 79 iterations the fit converged.
+final sum of squares of residuals : 5.6368
+rel. change during last iteration : -1.46963e-08
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.395699
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.156578
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5557          +/- 0.09529      (0.5135%)
+ug              = 17.9711          +/- 1.837        (10.22%)
+rg              = 76.2984          +/- 13.65        (17.89%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.087  1.000 
+rg             -0.738 -0.197  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:02:11 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 1.6539691102e+03   0.00e+00  9.47e+00    3.000000e+00   1.000000e+00   1.000000e+00
+1526 7.7563767509e+00  -5.64e-02  9.47e+02    1.282501e-01   1.353989e+00   9.588446e-31
+
+After 1526 iterations the fit converged.
+final sum of squares of residuals : 7.75638
+rel. change during last iteration : -5.64386e-07
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.464171
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.215455
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.12825          +/- 0.09619      (75%)
+ul              = 1.35399          +/- 4.631        (342%)
+rl              = 9.58845e-31      +/- 1.256e-30    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.880  1.000 
+rl              1.000  0.882  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:02:19 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 1.9007015508e+10   0.00e+00  1.07e+04    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+   8 5.5110821403e+00  -3.07e-08  1.07e-04    5.073243e-05  -4.464827e-03   9.998949e-02   1.791745e+01
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 5.51108
+rel. change during last iteration : -3.07175e-13
+
+degrees of freedom    (FIT_NDF)                        : 35
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.396812
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.157459
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 5.07324e-05      +/- 5.694e-05    (112.2%)
+B3              = -0.00446483      +/- 0.003294     (73.78%)
+C3              = 0.0999895        +/- 0.05346      (53.47%)
+D3              = 17.9175          +/- 0.2316       (1.292%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.911 -0.966  1.000 
+D3             -0.622  0.710 -0.842  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:02:44 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 1.2169207467e+04   0.00e+00  3.16e+00    1.800000e+01   1.000000e+00   1.000000e+00
+  79 5.6367991500e+00  -1.47e-03  3.16e-07    1.855572e+01   1.797107e+01   7.629837e+01
+
+After 79 iterations the fit converged.
+final sum of squares of residuals : 5.6368
+rel. change during last iteration : -1.46963e-08
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.395699
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.156578
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5557          +/- 0.09529      (0.5135%)
+ug              = 17.9711          +/- 1.837        (10.22%)
+rg              = 76.2984          +/- 13.65        (17.89%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.087  1.000 
+rg             -0.738 -0.197  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:02:44 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 1.6539691102e+03   0.00e+00  9.47e+00    3.000000e+00   1.000000e+00   1.000000e+00
+1526 7.7563767509e+00  -5.64e-02  9.47e+02    1.282501e-01   1.353989e+00   9.588446e-31
+
+After 1526 iterations the fit converged.
+final sum of squares of residuals : 7.75638
+rel. change during last iteration : -5.64386e-07
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.464171
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.215455
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.12825          +/- 0.09619      (75%)
+ul              = 1.35399          +/- 4.631        (342%)
+rl              = 9.58845e-31      +/- 1.256e-30    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.880  1.000 
+rl              1.000  0.882  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:02:53 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 1.9007015508e+10   0.00e+00  1.07e+04    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+   8 5.5110821403e+00  -3.07e-08  1.07e-04    5.073243e-05  -4.464827e-03   9.998949e-02   1.791745e+01
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 5.51108
+rel. change during last iteration : -3.07175e-13
+
+degrees of freedom    (FIT_NDF)                        : 35
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.396812
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.157459
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 5.07324e-05      +/- 5.694e-05    (112.2%)
+B3              = -0.00446483      +/- 0.003294     (73.78%)
+C3              = 0.0999895        +/- 0.05346      (53.47%)
+D3              = 17.9175          +/- 0.2316       (1.292%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.911 -0.966  1.000 
+D3             -0.622  0.710 -0.842  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:06:15 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 1.2169207467e+04   0.00e+00  3.16e+00    1.800000e+01   1.000000e+00   1.000000e+00
+  79 5.6367991500e+00  -1.47e-03  3.16e-07    1.855572e+01   1.797107e+01   7.629837e+01
+
+After 79 iterations the fit converged.
+final sum of squares of residuals : 5.6368
+rel. change during last iteration : -1.46963e-08
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.395699
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.156578
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5557          +/- 0.09529      (0.5135%)
+ug              = 17.9711          +/- 1.837        (10.22%)
+rg              = 76.2984          +/- 13.65        (17.89%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.087  1.000 
+rg             -0.738 -0.197  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:06:16 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 1.6539691102e+03   0.00e+00  9.47e+00    3.000000e+00   1.000000e+00   1.000000e+00
+1526 7.7563767509e+00  -5.64e-02  9.47e+02    1.282501e-01   1.353989e+00   9.588446e-31
+
+After 1526 iterations the fit converged.
+final sum of squares of residuals : 7.75638
+rel. change during last iteration : -5.64386e-07
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.464171
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.215455
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.12825          +/- 0.09619      (75%)
+ul              = 1.35399          +/- 4.631        (342%)
+rl              = 9.58845e-31      +/- 1.256e-30    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.880  1.000 
+rl              1.000  0.882  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:06:24 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 1.9007015508e+10   0.00e+00  1.07e+04    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+   8 5.5110821403e+00  -3.07e-08  1.07e-04    5.073243e-05  -4.464827e-03   9.998949e-02   1.791745e+01
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 5.51108
+rel. change during last iteration : -3.07175e-13
+
+degrees of freedom    (FIT_NDF)                        : 35
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.396812
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.157459
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 5.07324e-05      +/- 5.694e-05    (112.2%)
+B3              = -0.00446483      +/- 0.003294     (73.78%)
+C3              = 0.0999895        +/- 0.05346      (53.47%)
+D3              = 17.9175          +/- 0.2316       (1.292%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.911 -0.966  1.000 
+D3             -0.622  0.710 -0.842  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:06:58 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 1.2169207467e+04   0.00e+00  3.16e+00    1.800000e+01   1.000000e+00   1.000000e+00
+  79 5.6367991500e+00  -1.47e-03  3.16e-07    1.855572e+01   1.797107e+01   7.629837e+01
+
+After 79 iterations the fit converged.
+final sum of squares of residuals : 5.6368
+rel. change during last iteration : -1.46963e-08
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.395699
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.156578
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5557          +/- 0.09529      (0.5135%)
+ug              = 17.9711          +/- 1.837        (10.22%)
+rg              = 76.2984          +/- 13.65        (17.89%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.087  1.000 
+rg             -0.738 -0.197  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:06:58 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 1.6539691102e+03   0.00e+00  9.47e+00    3.000000e+00   1.000000e+00   1.000000e+00
+1526 7.7563767509e+00  -5.64e-02  9.47e+02    1.282501e-01   1.353989e+00   9.588446e-31
+
+After 1526 iterations the fit converged.
+final sum of squares of residuals : 7.75638
+rel. change during last iteration : -5.64386e-07
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.464171
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.215455
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.12825          +/- 0.09619      (75%)
+ul              = 1.35399          +/- 4.631        (342%)
+rl              = 9.58845e-31      +/- 1.256e-30    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.880  1.000 
+rl              1.000  0.882  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:07:01 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 1.9007015508e+10   0.00e+00  1.07e+04    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+   8 5.5110821403e+00  -3.07e-08  1.07e-04    5.073243e-05  -4.464827e-03   9.998949e-02   1.791745e+01
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 5.51108
+rel. change during last iteration : -3.07175e-13
+
+degrees of freedom    (FIT_NDF)                        : 35
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.396812
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.157459
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 5.07324e-05      +/- 5.694e-05    (112.2%)
+B3              = -0.00446483      +/- 0.003294     (73.78%)
+C3              = 0.0999895        +/- 0.05346      (53.47%)
+D3              = 17.9175          +/- 0.2316       (1.292%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.911 -0.966  1.000 
+D3             -0.622  0.710 -0.842  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:10:32 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-1.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 5.6367991586e+00   0.00e+00  1.06e+01    1.855570e+01   1.797110e+01   7.629840e+01
+   1 5.6367991501e+00  -1.51e-04  1.06e+00    1.855571e+01   1.797110e+01   7.629840e+01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 5.6368
+rel. change during last iteration : -1.51217e-09
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.395699
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.156578
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5557          +/- 0.09529      (0.5135%)
+ug              = 17.9711          +/- 1.837        (10.22%)
+rg              = 76.2984          +/- 13.65        (17.89%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.087  1.000 
+rg             -0.738 -0.197  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:10:32 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-1.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 7.7563791718e+00   0.00e+00  1.06e+01    1.282500e-01   1.353990e+00   9.588450e-31
+3584 7.1962693824e+00  -1.00e+00  1.06e+01    8.962340e-02   2.660067e+00  -4.272668e-44
+
+After 3584 iterations the fit converged.
+final sum of squares of residuals : 7.19627
+rel. change during last iteration : -9.99995e-06
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.447098
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.199896
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.0896234        +/- 0.135        (150.6%)
+ul              = 2.66007          +/- 14.4         (541.2%)
+rl              = -4.27267e-44     +/- 6.637e-42    (1.553e+04%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.926  1.000 
+rl             -1.000 -0.927  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:10:51 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-1.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 5.5110822212e+00   0.00e+00  9.16e+00    5.073240e-05  -4.464830e-03   9.998950e-02   1.791750e+01
+   1 5.5110821404e+00  -1.47e-03  9.16e-01    5.073241e-05  -4.464828e-03   9.998951e-02   1.791745e+01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 5.51108
+rel. change during last iteration : -1.46655e-08
+
+degrees of freedom    (FIT_NDF)                        : 35
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.396812
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.157459
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 5.07324e-05      +/- 5.694e-05    (112.2%)
+B3              = -0.00446483      +/- 0.003294     (73.78%)
+C3              = 0.0999895        +/- 0.05346      (53.47%)
+D3              = 17.9175          +/- 0.2316       (1.292%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.911 -0.966  1.000 
+D3             -0.622  0.710 -0.842  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:11:31 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-12.1325 : 46.6175]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 5.6367991586e+00   0.00e+00  1.06e+01    1.855570e+01   1.797110e+01   7.629840e+01
+   1 5.6367991501e+00  -1.51e-04  1.06e+00    1.855571e+01   1.797110e+01   7.629840e+01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 5.6368
+rel. change during last iteration : -1.51217e-09
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.395699
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.156578
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5557          +/- 0.09529      (0.5135%)
+ug              = 17.9711          +/- 1.837        (10.22%)
+rg              = 76.2984          +/- 13.65        (17.89%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.087  1.000 
+rg             -0.738 -0.197  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:11:31 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-12.1325 : 46.6175]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 7.7563791718e+00   0.00e+00  1.06e+01    1.282500e-01   1.353990e+00   9.588450e-31
+3584 7.1962693824e+00  -1.00e+00  1.06e+01    8.962340e-02   2.660067e+00  -4.272668e-44
+
+After 3584 iterations the fit converged.
+final sum of squares of residuals : 7.19627
+rel. change during last iteration : -9.99995e-06
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.447098
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.199896
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.0896234        +/- 0.135        (150.6%)
+ul              = 2.66007          +/- 14.4         (541.2%)
+rl              = -4.27267e-44     +/- 6.637e-42    (1.553e+04%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.926  1.000 
+rl             -1.000 -0.927  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:11:50 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-12.1325 : 46.6175]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 1.7888344737e+10   0.00e+00  1.07e+04    1.000000e+00  -4.464830e-03   9.998950e-02   1.791750e+01
+   5 5.5110821420e+00  -6.42e-03  1.07e-01    5.073679e-05  -4.465043e-03   9.999178e-02   1.791745e+01
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 5.51108
+rel. change during last iteration : -6.41901e-08
+
+degrees of freedom    (FIT_NDF)                        : 35
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.396812
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.157459
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 5.07368e-05      +/- 5.694e-05    (112.2%)
+B3              = -0.00446504      +/- 0.003294     (73.77%)
+C3              = 0.0999918        +/- 0.05346      (53.47%)
+D3              = 17.9175          +/- 0.2316       (1.292%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.911 -0.966  1.000 
+D3             -0.622  0.710 -0.842  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:12:07 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-2.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 5.6367991586e+00   0.00e+00  1.06e+01    1.855570e+01   1.797110e+01   7.629840e+01
+   1 5.6367991501e+00  -1.51e-04  1.06e+00    1.855571e+01   1.797110e+01   7.629840e+01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 5.6368
+rel. change during last iteration : -1.51217e-09
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.395699
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.156578
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5557          +/- 0.09529      (0.5135%)
+ug              = 17.9711          +/- 1.837        (10.22%)
+rg              = 76.2984          +/- 13.65        (17.89%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.087  1.000 
+rg             -0.738 -0.197  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:12:07 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-2.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 7.7563791718e+00   0.00e+00  1.06e+01    1.282500e-01   1.353990e+00   9.588450e-31
+3584 7.1962693824e+00  -1.00e+00  1.06e+01    8.962340e-02   2.660067e+00  -4.272668e-44
+
+After 3584 iterations the fit converged.
+final sum of squares of residuals : 7.19627
+rel. change during last iteration : -9.99995e-06
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.447098
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.199896
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.0896234        +/- 0.135        (150.6%)
+ul              = 2.66007          +/- 14.4         (541.2%)
+rl              = -4.27267e-44     +/- 6.637e-42    (1.553e+04%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.926  1.000 
+rl             -1.000 -0.927  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:12:26 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-2.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 1.9007015508e+10   0.00e+00  1.07e+04    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+   8 5.5110821403e+00  -3.07e-08  1.07e-04    5.073243e-05  -4.464827e-03   9.998949e-02   1.791745e+01
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 5.51108
+rel. change during last iteration : -3.07175e-13
+
+degrees of freedom    (FIT_NDF)                        : 35
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.396812
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.157459
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 5.07324e-05      +/- 5.694e-05    (112.2%)
+B3              = -0.00446483      +/- 0.003294     (73.78%)
+C3              = 0.0999895        +/- 0.05346      (53.47%)
+D3              = 17.9175          +/- 0.2316       (1.292%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.911 -0.966  1.000 
+D3             -0.622  0.710 -0.842  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:15:30 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-2.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 5.6367991586e+00   0.00e+00  1.06e+01    1.855570e+01   1.797110e+01   7.629840e+01
+   1 5.6367991501e+00  -1.51e-04  1.06e+00    1.855571e+01   1.797110e+01   7.629840e+01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 5.6368
+rel. change during last iteration : -1.51217e-09
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.395699
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.156578
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5557          +/- 0.09529      (0.5135%)
+ug              = 17.9711          +/- 1.837        (10.22%)
+rg              = 76.2984          +/- 13.65        (17.89%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.087  1.000 
+rg             -0.738 -0.197  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:15:30 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-2.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 7.7563791718e+00   0.00e+00  1.06e+01    1.282500e-01   1.353990e+00   9.588450e-31
+3584 7.1962693824e+00  -1.00e+00  1.06e+01    8.962340e-02   2.660067e+00  -4.272668e-44
+
+After 3584 iterations the fit converged.
+final sum of squares of residuals : 7.19627
+rel. change during last iteration : -9.99995e-06
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.447098
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.199896
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.0896234        +/- 0.135        (150.6%)
+ul              = 2.66007          +/- 14.4         (541.2%)
+rl              = -4.27267e-44     +/- 6.637e-42    (1.553e+04%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.926  1.000 
+rl             -1.000 -0.927  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:15:49 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-2.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 1.9007015508e+10   0.00e+00  1.07e+04    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+   8 5.5110821403e+00  -3.07e-08  1.07e-04    5.073243e-05  -4.464827e-03   9.998949e-02   1.791745e+01
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 5.51108
+rel. change during last iteration : -3.07175e-13
+
+degrees of freedom    (FIT_NDF)                        : 35
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.396812
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.157459
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 5.07324e-05      +/- 5.694e-05    (112.2%)
+B3              = -0.00446483      +/- 0.003294     (73.78%)
+C3              = 0.0999895        +/- 0.05346      (53.47%)
+D3              = 17.9175          +/- 0.2316       (1.292%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.911 -0.966  1.000 
+D3             -0.622  0.710 -0.842  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:17:09 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-2.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 5.6367991586e+00   0.00e+00  1.06e+01    1.855570e+01   1.797110e+01   7.629840e+01
+   1 5.6367991501e+00  -1.51e-04  1.06e+00    1.855571e+01   1.797110e+01   7.629840e+01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 5.6368
+rel. change during last iteration : -1.51217e-09
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.395699
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.156578
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5557          +/- 0.09529      (0.5135%)
+ug              = 17.9711          +/- 1.837        (10.22%)
+rg              = 76.2984          +/- 13.65        (17.89%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.087  1.000 
+rg             -0.738 -0.197  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:17:10 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-2.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 7.7563791718e+00   0.00e+00  1.06e+01    1.282500e-01   1.353990e+00   9.588450e-31
+3584 7.1962693824e+00  -1.00e+00  1.06e+01    8.962340e-02   2.660067e+00  -4.272668e-44
+
+After 3584 iterations the fit converged.
+final sum of squares of residuals : 7.19627
+rel. change during last iteration : -9.99995e-06
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.447098
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.199896
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.0896234        +/- 0.135        (150.6%)
+ul              = 2.66007          +/- 14.4         (541.2%)
+rl              = -4.27267e-44     +/- 6.637e-42    (1.553e+04%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.926  1.000 
+rl             -1.000 -0.927  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:17:28 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-2.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 1.9007015508e+10   0.00e+00  1.07e+04    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+   8 5.5110821403e+00  -3.07e-08  1.07e-04    5.073243e-05  -4.464827e-03   9.998949e-02   1.791745e+01
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 5.51108
+rel. change during last iteration : -3.07175e-13
+
+degrees of freedom    (FIT_NDF)                        : 35
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.396812
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.157459
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 5.07324e-05      +/- 5.694e-05    (112.2%)
+B3              = -0.00446483      +/- 0.003294     (73.78%)
+C3              = 0.0999895        +/- 0.05346      (53.47%)
+D3              = 17.9175          +/- 0.2316       (1.292%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.911 -0.966  1.000 
+D3             -0.622  0.710 -0.842  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:17:29 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-2.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: j(x)
+	j(x) = -A4*x**4+B4*x**3+C4*x**2+D4*x+E4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A4            B4            C4            D4            E4           
+   0 2.0483554992e+15   0.00e+00  3.25e+06    1.000000e+01   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  10 5.4613317333e+00  -5.66e-03  3.25e-04    3.274361e-06   2.995839e-04  -1.049293e-02   1.493865e-01   1.783459e+01
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 5.46133
+rel. change during last iteration : -5.66202e-08
+
+degrees of freedom    (FIT_NDF)                        : 34
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.400783
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.160627
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A4              = 3.27436e-06      +/- 5.884e-06    (179.7%)
+B4              = 0.000299584      +/- 0.0004508    (150.5%)
+C4              = -0.0104929       +/- 0.01133      (108%)
+D4              = 0.149387         +/- 0.1039       (69.55%)
+E4              = 17.8346          +/- 0.2773       (1.555%)
+
+correlation matrix of the fit parameters:
+                A4     B4     C4     D4     E4     
+A4              1.000 
+B4              0.992  1.000 
+C4             -0.956 -0.985  1.000 
+D4              0.854  0.908 -0.964  1.000 
+E4             -0.537 -0.600  0.689 -0.828  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:20:18 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [7.40000 : 54.4000]
+        #datapoints = 31
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 2.0023485989e+00   0.00e+00  1.06e+01    1.855570e+01   1.797110e+01   7.629840e+01
+   4 1.9755353133e+00  -2.07e-01  1.06e-03    1.853536e+01   1.909086e+01   7.364039e+01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 1.97554
+rel. change during last iteration : -2.06917e-06
+
+degrees of freedom    (FIT_NDF)                        : 28
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.265622
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0705548
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5354          +/- 0.06799      (0.3668%)
+ug              = 19.0909          +/- 2.201        (11.53%)
+rg              = 73.6404          +/- 14.6         (19.82%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.227  1.000 
+rg             -0.639 -0.695  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:20:18 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [7.40000 : 54.4000]
+        #datapoints = 31
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 3.9283978148e+00   0.00e+00  1.06e+01    1.282500e-01   1.353990e+00   9.588450e-31
+ 265 3.1650823490e+00  -8.23e-03  1.06e+02    6.481450e-02   6.338127e+00   5.450380e-61
+
+After 265 iterations the fit converged.
+final sum of squares of residuals : 3.16508
+rel. change during last iteration : -8.22952e-08
+
+degrees of freedom    (FIT_NDF)                        : 28
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.336212
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.113039
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.0648145        +/- 0.6067       (936.1%)
+ul              = 6.33813          +/- 233.4        (3682%)
+rl              = 5.45038e-61      +/- 2.263e-60    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.988  1.000 
+rl              1.000  0.989  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:20:20 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [7.40000 : 54.4000]
+        #datapoints = 31
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 2.0553622854e+00   0.00e+00  9.21e+00    5.073240e-05  -4.464830e-03   9.998950e-02   1.791750e+01
+   5 1.8932939727e+00  -1.33e-02  9.21e-05    9.393718e-05  -8.159596e-03   1.996210e-01   1.709046e+01
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 1.89329
+rel. change during last iteration : -1.33397e-07
+
+degrees of freedom    (FIT_NDF)                        : 27
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.264806
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.070122
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 9.39372e-05      +/- 8.51e-05     (90.59%)
+B3              = -0.0081596       +/- 0.005909     (72.42%)
+C3              = 0.199621         +/- 0.1267       (63.46%)
+D3              = 17.0905          +/- 0.8216       (4.807%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.994  1.000 
+C3              0.969 -0.990  1.000 
+D3             -0.918  0.953 -0.984  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:21:14 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-2.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 5.6367991586e+00   0.00e+00  1.06e+01    1.855570e+01   1.797110e+01   7.629840e+01
+   1 5.6367991501e+00  -1.51e-04  1.06e+00    1.855571e+01   1.797110e+01   7.629840e+01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 5.6368
+rel. change during last iteration : -1.51217e-09
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.395699
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.156578
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5557          +/- 0.09529      (0.5135%)
+ug              = 17.9711          +/- 1.837        (10.22%)
+rg              = 76.2984          +/- 13.65        (17.89%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.087  1.000 
+rg             -0.738 -0.197  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:21:14 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-2.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 7.7563791718e+00   0.00e+00  1.06e+01    1.282500e-01   1.353990e+00   9.588450e-31
+3584 7.1962693824e+00  -1.00e+00  1.06e+01    8.962340e-02   2.660067e+00  -4.272668e-44
+
+After 3584 iterations the fit converged.
+final sum of squares of residuals : 7.19627
+rel. change during last iteration : -9.99995e-06
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.447098
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.199896
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.0896234        +/- 0.135        (150.6%)
+ul              = 2.66007          +/- 14.4         (541.2%)
+rl              = -4.27267e-44     +/- 6.637e-42    (1.553e+04%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.926  1.000 
+rl             -1.000 -0.927  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:21:33 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-2.00000 : 45.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 5.5110822212e+00   0.00e+00  9.16e+00    5.073240e-05  -4.464830e-03   9.998950e-02   1.791750e+01
+   1 5.5110821404e+00  -1.47e-03  9.16e-01    5.073241e-05  -4.464828e-03   9.998951e-02   1.791745e+01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 5.51108
+rel. change during last iteration : -1.46655e-08
+
+degrees of freedom    (FIT_NDF)                        : 35
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.396812
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.157459
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 5.07324e-05      +/- 5.694e-05    (112.2%)
+B3              = -0.00446483      +/- 0.003294     (73.78%)
+C3              = 0.0999895        +/- 0.05346      (53.47%)
+D3              = 17.9175          +/- 0.2316       (1.292%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.911 -0.966  1.000 
+D3             -0.622  0.710 -0.842  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:51:30 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-2.00000 : 50.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 5.6367991586e+00   0.00e+00  1.06e+01    1.855570e+01   1.797110e+01   7.629840e+01
+   1 5.6367991501e+00  -1.51e-04  1.06e+00    1.855571e+01   1.797110e+01   7.629840e+01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 5.6368
+rel. change during last iteration : -1.51217e-09
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.395699
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.156578
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5557          +/- 0.09529      (0.5135%)
+ug              = 17.9711          +/- 1.837        (10.22%)
+rg              = 76.2984          +/- 13.65        (17.89%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.087  1.000 
+rg             -0.738 -0.197  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:51:30 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-2.00000 : 50.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 7.1962693980e+00   0.00e+00  1.06e+01    8.962340e-02   2.660070e+00  -4.272670e-44
+   1 7.1962507971e+00  -2.58e-01  1.06e+00    8.962035e-02   2.659766e+00  -4.272506e-44
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 7.19625
+rel. change during last iteration : -2.58481e-06
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.447097
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.199896
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.0896204        +/- 0.135        (150.6%)
+ul              = 2.65977          +/- 14.4         (541.2%)
+rl              = -4.27251e-44     +/- 6.637e-42    (1.553e+04%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.926  1.000 
+rl             -1.000 -0.927  1.000 
+
+
+*******************************************************************************
+Sun May 19 14:51:30 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-2.00000 : 50.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 5.5110822212e+00   0.00e+00  9.16e+00    5.073240e-05  -4.464830e-03   9.998950e-02   1.791750e+01
+   1 5.5110821404e+00  -1.47e-03  9.16e-01    5.073241e-05  -4.464828e-03   9.998951e-02   1.791745e+01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 5.51108
+rel. change during last iteration : -1.46655e-08
+
+degrees of freedom    (FIT_NDF)                        : 35
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.396812
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.157459
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 5.07324e-05      +/- 5.694e-05    (112.2%)
+B3              = -0.00446483      +/- 0.003294     (73.78%)
+C3              = 0.0999895        +/- 0.05346      (53.47%)
+D3              = 17.9175          +/- 0.2316       (1.292%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.911 -0.966  1.000 
+D3             -0.622  0.710 -0.842  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:06:53 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-2.00000 : 55.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 5.6367991586e+00   0.00e+00  1.06e+01    1.855570e+01   1.797110e+01   7.629840e+01
+   1 5.6367991501e+00  -1.51e-04  1.06e+00    1.855571e+01   1.797110e+01   7.629840e+01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 5.6368
+rel. change during last iteration : -1.51217e-09
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.395699
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.156578
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5557          +/- 0.09529      (0.5135%)
+ug              = 17.9711          +/- 1.837        (10.22%)
+rg              = 76.2984          +/- 13.65        (17.89%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.087  1.000 
+rg             -0.738 -0.197  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:06:53 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-2.00000 : 55.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 7.1962693980e+00   0.00e+00  1.06e+01    8.962340e-02   2.660070e+00  -4.272670e-44
+   1 7.1962507971e+00  -2.58e-01  1.06e+00    8.962035e-02   2.659766e+00  -4.272506e-44
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 7.19625
+rel. change during last iteration : -2.58481e-06
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.447097
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.199896
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.0896204        +/- 0.135        (150.6%)
+ul              = 2.65977          +/- 14.4         (541.2%)
+rl              = -4.27251e-44     +/- 6.637e-42    (1.553e+04%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.926  1.000 
+rl             -1.000 -0.927  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:06:53 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-2.00000 : 55.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 5.5110822212e+00   0.00e+00  9.16e+00    5.073240e-05  -4.464830e-03   9.998950e-02   1.791750e+01
+   1 5.5110821404e+00  -1.47e-03  9.16e-01    5.073241e-05  -4.464828e-03   9.998951e-02   1.791745e+01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 5.51108
+rel. change during last iteration : -1.46655e-08
+
+degrees of freedom    (FIT_NDF)                        : 35
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.396812
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.157459
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 5.07324e-05      +/- 5.694e-05    (112.2%)
+B3              = -0.00446483      +/- 0.003294     (73.78%)
+C3              = 0.0999895        +/- 0.05346      (53.47%)
+D3              = 17.9175          +/- 0.2316       (1.292%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.911 -0.966  1.000 
+D3             -0.622  0.710 -0.842  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:07:34 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to ["1970-01-01" : "1970-01-01"]
+BREAK: No data to fit
+
+*******************************************************************************
+Sun May 19 15:08:03 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 5.6367991586e+00   0.00e+00  1.06e+01    1.855570e+01   1.797110e+01   7.629840e+01
+   1 5.6367991501e+00  -1.51e-04  1.06e+00    1.855571e+01   1.797110e+01   7.629840e+01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 5.6368
+rel. change during last iteration : -1.51217e-09
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.395699
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.156578
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5557          +/- 0.09529      (0.5135%)
+ug              = 17.9711          +/- 1.837        (10.22%)
+rg              = 76.2984          +/- 13.65        (17.89%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.087  1.000 
+rg             -0.738 -0.197  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:08:03 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 7.1962693980e+00   0.00e+00  1.06e+01    8.962340e-02   2.660070e+00  -4.272670e-44
+   1 7.1962507971e+00  -2.58e-01  1.06e+00    8.962035e-02   2.659766e+00  -4.272506e-44
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 7.19625
+rel. change during last iteration : -2.58481e-06
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.447097
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.199896
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.0896204        +/- 0.135        (150.6%)
+ul              = 2.65977          +/- 14.4         (541.2%)
+rl              = -4.27251e-44     +/- 6.637e-42    (1.553e+04%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.926  1.000 
+rl             -1.000 -0.927  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:08:03 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 5.5110822212e+00   0.00e+00  9.16e+00    5.073240e-05  -4.464830e-03   9.998950e-02   1.791750e+01
+   1 5.5110821404e+00  -1.47e-03  9.16e-01    5.073241e-05  -4.464828e-03   9.998951e-02   1.791745e+01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 5.51108
+rel. change during last iteration : -1.46655e-08
+
+degrees of freedom    (FIT_NDF)                        : 35
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.396812
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.157459
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 5.07324e-05      +/- 5.694e-05    (112.2%)
+B3              = -0.00446483      +/- 0.003294     (73.78%)
+C3              = 0.0999895        +/- 0.05346      (53.47%)
+D3              = 17.9175          +/- 0.2316       (1.292%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.911 -0.966  1.000 
+D3             -0.622  0.710 -0.842  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:10:24 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 2:5 every :::0::d
+        format = x:z
+        x range restricted to ["1970-01-01" : "1970-01-01"]
+BREAK: No data to fit
+
+*******************************************************************************
+Sun May 19 15:18:01 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 2:5 every :::0::d
+        format = x:z
+        x range restricted to ["1970-01-01" : "1970-01-01"]
+BREAK: No data to fit
+
+*******************************************************************************
+Sun May 19 15:18:17 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 2:5 every :::0::d
+        format = x:z
+        x range restricted to ["1970-01-01" : "1970-01-01"]
+BREAK: No data to fit
+
+*******************************************************************************
+Sun May 19 15:19:10 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to ["1970-01-01" : "1970-01-01"]
+BREAK: No data to fit
+
+*******************************************************************************
+Sun May 19 15:19:54 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 2:5 every :::0::d
+        format = x:z
+        x range restricted to ["1970-01-01" : "1970-01-01"]
+BREAK: No data to fit
+
+*******************************************************************************
+Sun May 19 15:21:17 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 2:5 every :::0::d
+        format = x:z
+        x range restricted to ["2020-09-30" : "2024-07-31"]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 1.3145065527e+04   0.00e+00  0.00e+00    1.855570e+01   1.797110e+01   7.629840e+01
+BREAK: Singular matrix in Givens()
+
+*******************************************************************************
+Sun May 19 15:21:56 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 2:5 every :::0::d
+        format = x:z
+        x range restricted to ["2020-09-30" : "2024-07-31"]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 1.3145065527e+04   0.00e+00  0.00e+00    1.000000e+00   1.000000e+00   1.000000e+00
+BREAK: Singular matrix in Givens()
+
+*******************************************************************************
+Sun May 19 15:24:11 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to ["2020-09-30" : "2024-07-31"]
+BREAK: No data to fit
+
+*******************************************************************************
+Sun May 19 15:24:27 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 5.6367991586e+00   0.00e+00  1.06e+01    1.855570e+01   1.797110e+01   7.629840e+01
+   1 5.6367991501e+00  -1.51e-04  1.06e+00    1.855571e+01   1.797110e+01   7.629840e+01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 5.6368
+rel. change during last iteration : -1.51217e-09
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.395699
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.156578
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5557          +/- 0.09529      (0.5135%)
+ug              = 17.9711          +/- 1.837        (10.22%)
+rg              = 76.2984          +/- 13.65        (17.89%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.087  1.000 
+rg             -0.738 -0.197  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:24:27 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 7.1962693980e+00   0.00e+00  1.06e+01    8.962340e-02   2.660070e+00  -4.272670e-44
+   1 7.1962507971e+00  -2.58e-01  1.06e+00    8.962035e-02   2.659766e+00  -4.272506e-44
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 7.19625
+rel. change during last iteration : -2.58481e-06
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.447097
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.199896
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.0896204        +/- 0.135        (150.6%)
+ul              = 2.65977          +/- 14.4         (541.2%)
+rl              = -4.27251e-44     +/- 6.637e-42    (1.553e+04%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.926  1.000 
+rl             -1.000 -0.927  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:24:27 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 5.5110822212e+00   0.00e+00  9.16e+00    5.073240e-05  -4.464830e-03   9.998950e-02   1.791750e+01
+   1 5.5110821404e+00  -1.47e-03  9.16e-01    5.073241e-05  -4.464828e-03   9.998951e-02   1.791745e+01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 5.51108
+rel. change during last iteration : -1.46655e-08
+
+degrees of freedom    (FIT_NDF)                        : 35
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.396812
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.157459
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 5.07324e-05      +/- 5.694e-05    (112.2%)
+B3              = -0.00446483      +/- 0.003294     (73.78%)
+C3              = 0.0999895        +/- 0.05346      (53.47%)
+D3              = 17.9175          +/- 0.2316       (1.292%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.911 -0.966  1.000 
+D3             -0.622  0.710 -0.842  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:25:24 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-3.00000 : 55.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 5.6367991586e+00   0.00e+00  1.06e+01    1.855570e+01   1.797110e+01   7.629840e+01
+   1 5.6367991501e+00  -1.51e-04  1.06e+00    1.855571e+01   1.797110e+01   7.629840e+01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 5.6368
+rel. change during last iteration : -1.51217e-09
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.395699
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.156578
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5557          +/- 0.09529      (0.5135%)
+ug              = 17.9711          +/- 1.837        (10.22%)
+rg              = 76.2984          +/- 13.65        (17.89%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.087  1.000 
+rg             -0.738 -0.197  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:25:24 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-3.00000 : 55.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 7.1962693980e+00   0.00e+00  1.06e+01    8.962340e-02   2.660070e+00  -4.272670e-44
+   1 7.1962507971e+00  -2.58e-01  1.06e+00    8.962035e-02   2.659766e+00  -4.272506e-44
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 7.19625
+rel. change during last iteration : -2.58481e-06
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.447097
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.199896
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.0896204        +/- 0.135        (150.6%)
+ul              = 2.65977          +/- 14.4         (541.2%)
+rl              = -4.27251e-44     +/- 6.637e-42    (1.553e+04%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.926  1.000 
+rl             -1.000 -0.927  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:25:24 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-3.00000 : 55.0000]
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 5.5110822212e+00   0.00e+00  9.16e+00    5.073240e-05  -4.464830e-03   9.998950e-02   1.791750e+01
+   1 5.5110821404e+00  -1.47e-03  9.16e-01    5.073241e-05  -4.464828e-03   9.998951e-02   1.791745e+01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 5.51108
+rel. change during last iteration : -1.46655e-08
+
+degrees of freedom    (FIT_NDF)                        : 35
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.396812
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.157459
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 5.07324e-05      +/- 5.694e-05    (112.2%)
+B3              = -0.00446483      +/- 0.003294     (73.78%)
+C3              = 0.0999895        +/- 0.05346      (53.47%)
+D3              = 17.9175          +/- 0.2316       (1.292%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.911 -0.966  1.000 
+D3             -0.622  0.710 -0.842  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:26:15 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [37.9093 : 38.3189]
+BREAK: No data to fit
+
+*******************************************************************************
+Sun May 19 15:26:19 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [37.9093 : 38.3189]
+BREAK: No data to fit
+
+*******************************************************************************
+Sun May 19 15:26:34 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 5.6367991586e+00   0.00e+00  1.06e+01    1.855570e+01   1.797110e+01   7.629840e+01
+   1 5.6367991501e+00  -1.51e-04  1.06e+00    1.855571e+01   1.797110e+01   7.629840e+01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 5.6368
+rel. change during last iteration : -1.51217e-09
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.395699
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.156578
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5557          +/- 0.09529      (0.5135%)
+ug              = 17.9711          +/- 1.837        (10.22%)
+rg              = 76.2984          +/- 13.65        (17.89%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug              0.087  1.000 
+rg             -0.738 -0.197  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:26:34 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 7.1962693980e+00   0.00e+00  1.06e+01    8.962340e-02   2.660070e+00  -4.272670e-44
+   1 7.1962507971e+00  -2.58e-01  1.06e+00    8.962035e-02   2.659766e+00  -4.272506e-44
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 7.19625
+rel. change during last iteration : -2.58481e-06
+
+degrees of freedom    (FIT_NDF)                        : 36
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.447097
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.199896
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.0896204        +/- 0.135        (150.6%)
+ul              = 2.65977          +/- 14.4         (541.2%)
+rl              = -4.27251e-44     +/- 6.637e-42    (1.553e+04%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.926  1.000 
+rl             -1.000 -0.927  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:26:34 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        #datapoints = 39
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 5.5110822212e+00   0.00e+00  9.16e+00    5.073240e-05  -4.464830e-03   9.998950e-02   1.791750e+01
+   1 5.5110821404e+00  -1.47e-03  9.16e-01    5.073241e-05  -4.464828e-03   9.998951e-02   1.791745e+01
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 5.51108
+rel. change during last iteration : -1.46655e-08
+
+degrees of freedom    (FIT_NDF)                        : 35
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.396812
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.157459
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 5.07324e-05      +/- 5.694e-05    (112.2%)
+B3              = -0.00446483      +/- 0.003294     (73.78%)
+C3              = 0.0999895        +/- 0.05346      (53.47%)
+D3              = 17.9175          +/- 0.2316       (1.292%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.911 -0.966  1.000 
+D3             -0.622  0.710 -0.842  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:28:30 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-3.00000 : 55.0000]
+        #datapoints = 32
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 4.9144665689e+00   0.00e+00  1.06e+01    1.855570e+01   1.797110e+01   7.629840e+01
+   5 4.8434225313e+00  -2.97e-04  1.06e-04    1.856713e+01   2.004515e+01   8.540542e+01
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 4.84342
+rel. change during last iteration : -2.96956e-09
+
+degrees of freedom    (FIT_NDF)                        : 29
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.408674
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.167015
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5671          +/- 0.1016       (0.547%)
+ug              = 20.0452          +/- 4.603        (22.96%)
+rg              = 85.4054          +/- 32.22        (37.73%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug             -0.212  1.000 
+rg             -0.605  0.737  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:28:30 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-3.00000 : 55.0000]
+        #datapoints = 32
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 5.1919068234e+00   0.00e+00  1.06e+01    8.962340e-02   2.660070e+00  -4.272670e-44
+5687 2.0099313777e+00  -7.40e-01  1.06e+01    5.404156e-02   1.069257e-07   4.244984e-74
+
+After 5687 iterations the fit converged.
+final sum of squares of residuals : 2.00993
+rel. change during last iteration : -7.3969e-06
+
+degrees of freedom    (FIT_NDF)                        : 29
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.263264
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.069308
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.0540416        +/- 0.02817      (52.12%)
+ul              = 1.06926e-07      +/- 1.069e-06    (999.5%)
+rl              = 4.24498e-74      +/- 5.081e-73    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.969  1.000 
+rl              1.000  0.969  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:28:59 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-3.00000 : 55.0000]
+        #datapoints = 32
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 4.9393480687e+00   0.00e+00  9.06e+00    5.073240e-05  -4.464830e-03   9.998950e-02   1.791750e+01
+   5 4.6013987901e+00  -1.57e-03  9.06e-05    1.401529e-04  -7.787461e-03   1.303934e-01   1.786960e+01
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 4.6014
+rel. change during last iteration : -1.56515e-08
+
+degrees of freedom    (FIT_NDF)                        : 28
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.405383
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.164336
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 0.000140153      +/- 0.0001165    (83.14%)
+B3              = -0.00778746      +/- 0.005499     (70.62%)
+C3              = 0.130393         +/- 0.07269      (55.75%)
+D3              = 17.8696          +/- 0.2561       (1.433%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.910 -0.965  1.000 
+D3             -0.614  0.702 -0.837  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:29:32 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-3.00000 : 55.0000]
+        #datapoints = 32
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 4.9144665689e+00   0.00e+00  1.06e+01    1.855570e+01   1.797110e+01   7.629840e+01
+   5 4.8434225313e+00  -2.97e-04  1.06e-04    1.856713e+01   2.004515e+01   8.540542e+01
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 4.84342
+rel. change during last iteration : -2.96956e-09
+
+degrees of freedom    (FIT_NDF)                        : 29
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.408674
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.167015
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5671          +/- 0.1016       (0.547%)
+ug              = 20.0452          +/- 4.603        (22.96%)
+rg              = 85.4054          +/- 32.22        (37.73%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug             -0.212  1.000 
+rg             -0.605  0.737  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:29:32 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-3.00000 : 55.0000]
+        #datapoints = 32
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 5.1919068234e+00   0.00e+00  1.06e+01    8.962340e-02   2.660070e+00  -4.272670e-44
+5687 2.0099313777e+00  -7.40e-01  1.06e+01    5.404156e-02   1.069257e-07   4.244984e-74
+
+After 5687 iterations the fit converged.
+final sum of squares of residuals : 2.00993
+rel. change during last iteration : -7.3969e-06
+
+degrees of freedom    (FIT_NDF)                        : 29
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.263264
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.069308
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.0540416        +/- 0.02817      (52.12%)
+ul              = 1.06926e-07      +/- 1.069e-06    (999.5%)
+rl              = 4.24498e-74      +/- 5.081e-73    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.969  1.000 
+rl              1.000  0.969  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:30:01 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-3.00000 : 55.0000]
+        #datapoints = 32
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 4.9393480687e+00   0.00e+00  9.06e+00    5.073240e-05  -4.464830e-03   9.998950e-02   1.791750e+01
+   5 4.6013987901e+00  -1.57e-03  9.06e-05    1.401529e-04  -7.787461e-03   1.303934e-01   1.786960e+01
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 4.6014
+rel. change during last iteration : -1.56515e-08
+
+degrees of freedom    (FIT_NDF)                        : 28
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.405383
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.164336
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 0.000140153      +/- 0.0001165    (83.14%)
+B3              = -0.00778746      +/- 0.005499     (70.62%)
+C3              = 0.130393         +/- 0.07269      (55.75%)
+D3              = 17.8696          +/- 0.2561       (1.433%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.910 -0.965  1.000 
+D3             -0.614  0.702 -0.837  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:30:17 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-3.00000 : 55.0000]
+        #datapoints = 31
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 4.8969480187e+00   0.00e+00  1.06e+01    1.855570e+01   1.797110e+01   7.629840e+01
+   5 4.8433960715e+00  -4.56e-04  1.06e-04    1.856712e+01   2.001416e+01   8.523823e+01
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 4.8434
+rel. change during last iteration : -4.55678e-09
+
+degrees of freedom    (FIT_NDF)                        : 28
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.415907
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.172978
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.5671          +/- 0.1034       (0.5571%)
+ug              = 20.0142          +/- 5.274        (26.35%)
+rg              = 85.2382          +/- 35.29        (41.4%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug             -0.182  1.000 
+rg             -0.557  0.779  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:30:17 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-3.00000 : 55.0000]
+        #datapoints = 31
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 5.1895506203e+00   0.00e+00  1.06e+01    8.962340e-02   2.660070e+00  -4.272670e-44
+5999 1.9782935084e+00  -2.51e-02  1.06e+02    5.406115e-02   1.019772e-07   4.234640e-74
+
+After 5999 iterations the fit converged.
+final sum of squares of residuals : 1.97829
+rel. change during last iteration : -2.51271e-07
+
+degrees of freedom    (FIT_NDF)                        : 28
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.265807
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0706533
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.0540612        +/- 0.02902      (53.68%)
+ul              = 1.01977e-07      +/- 1.049e-06    (1029%)
+rl              = 4.23464e-74      +/- 3.948e-73    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.970  1.000 
+rl              1.000  0.970  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:30:48 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5 every :::0::d
+        format = x:z
+        x range restricted to [-3.00000 : 55.0000]
+        #datapoints = 31
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 4.9063556240e+00   0.00e+00  9.05e+00    5.073240e-05  -4.464830e-03   9.998950e-02   1.791750e+01
+   5 4.5451452809e+00  -5.00e-03  9.05e-05    1.742390e-04  -9.116821e-03   1.435507e-01   1.784588e+01
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 4.54515
+rel. change during last iteration : -5.00089e-08
+
+degrees of freedom    (FIT_NDF)                        : 27
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.410291
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.168339
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 0.000174239      +/- 0.0001318    (75.67%)
+B3              = -0.00911682      +/- 0.006022     (66.06%)
+C3              = 0.143551         +/- 0.07701      (53.65%)
+D3              = 17.8459          +/- 0.2624       (1.47%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.909 -0.965  1.000 
+D3             -0.612  0.701 -0.836  1.000 

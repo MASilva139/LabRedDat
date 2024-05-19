@@ -44810,3 +44810,2010 @@ Dr             -0.819 -0.551  1.000
 Er             -0.367 -0.977  0.464  1.000 
 Fr             -0.368 -0.978  0.466  1.000  1.000 
 Gr             -0.374 -0.981  0.472  1.000  1.000  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:36:39 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        #datapoints = 17
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 4.8864365898e+04   0.00e+00  5.04e+01    1.000000e+02  -1.000000e+00   1.000000e+01
+ 238 7.6425032557e-01  -9.95e-01  5.04e-04    2.411768e+01  -2.667156e+02   3.434728e+02
+
+After 238 iterations the fit converged.
+final sum of squares of residuals : 0.76425
+rel. change during last iteration : -9.95138e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.233644
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0545893
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 24.1177          +/- 275.7        (1143%)
+ug              = -266.716         +/- 9808         (3677%)
+rg              = 343.473          +/- 6134         (1786%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug             -1.000  1.000 
+rg              1.000 -1.000  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:36:40 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        #datapoints = 17
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 2.1993722964e+16   0.00e+00  2.40e+07    1.000000e+07   1.000000e+00   1.000000e+00
+   4 1.1306974884e+03  -2.26e-01  2.40e+03    4.694056e+00   1.110448e+00   1.191085e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 1130.7
+rel. change during last iteration : -2.26219e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 8.98689
+variance of residuals (reduced chisquare) = WSSR/ndf   : 80.7641
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 4.69406          +/- 3.759        (80.08%)
+ul              = 1.11045          +/- 2.909        (261.9%)
+rl              = 1.19109          +/- 2.055        (172.6%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.922  1.000 
+rl              0.983  0.955  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:36:40 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        #datapoints = 17
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 1.2324502408e+13   0.00e+00  4.17e+05    5.000000e+02   1.500000e+02   1.000000e+00   1.000000e+02
+   9 5.0098057698e-01  -1.12e-04  4.17e-04   -8.257011e-04   2.444683e-02  -2.378472e-01   1.816475e+01
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0.500981
+rel. change during last iteration : -1.11629e-09
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.196308
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.038537
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = -0.000825701     +/- 0.0005255    (63.65%)
+B3              = 0.0244468        +/- 0.01281      (52.39%)
+C3              = -0.237847        +/- 0.08659      (36.41%)
+D3              = 18.1648          +/- 0.1551       (0.8539%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.904 -0.962  1.000 
+D3             -0.569  0.661 -0.808  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:37:34 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 30.0000]
+        #datapoints = 17
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 4.8864365898e+04   0.00e+00  5.04e+01    1.000000e+02  -1.000000e+00   1.000000e+01
+ 238 7.6425032557e-01  -9.95e-01  5.04e-04    2.411768e+01  -2.667156e+02   3.434728e+02
+
+After 238 iterations the fit converged.
+final sum of squares of residuals : 0.76425
+rel. change during last iteration : -9.95138e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.233644
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0545893
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 24.1177          +/- 275.7        (1143%)
+ug              = -266.716         +/- 9808         (3677%)
+rg              = 343.473          +/- 6134         (1786%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug             -1.000  1.000 
+rg              1.000 -1.000  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:37:35 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 30.0000]
+        #datapoints = 17
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 2.1993722964e+16   0.00e+00  2.40e+07    1.000000e+07   1.000000e+00   1.000000e+00
+   4 1.1306974884e+03  -2.26e-01  2.40e+03    4.694056e+00   1.110448e+00   1.191085e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 1130.7
+rel. change during last iteration : -2.26219e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 8.98689
+variance of residuals (reduced chisquare) = WSSR/ndf   : 80.7641
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 4.69406          +/- 3.759        (80.08%)
+ul              = 1.11045          +/- 2.909        (261.9%)
+rl              = 1.19109          +/- 2.055        (172.6%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.922  1.000 
+rl              0.983  0.955  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:37:36 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 30.0000]
+        #datapoints = 17
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 1.2324502408e+13   0.00e+00  4.17e+05    5.000000e+02   1.500000e+02   1.000000e+00   1.000000e+02
+   9 5.0098057698e-01  -1.12e-04  4.17e-04   -8.257011e-04   2.444683e-02  -2.378472e-01   1.816475e+01
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0.500981
+rel. change during last iteration : -1.11629e-09
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.196308
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.038537
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = -0.000825701     +/- 0.0005255    (63.65%)
+B3              = 0.0244468        +/- 0.01281      (52.39%)
+C3              = -0.237847        +/- 0.08659      (36.41%)
+D3              = 18.1648          +/- 0.1551       (0.8539%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.904 -0.962  1.000 
+D3             -0.569  0.661 -0.808  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:37:52 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 30.0000]
+        #datapoints = 17
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 4.8864365898e+04   0.00e+00  5.04e+01    1.000000e+02  -1.000000e+00   1.000000e+01
+ 238 7.6425032557e-01  -9.95e-01  5.04e-04    2.411768e+01  -2.667156e+02   3.434728e+02
+
+After 238 iterations the fit converged.
+final sum of squares of residuals : 0.76425
+rel. change during last iteration : -9.95138e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.233644
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0545893
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 24.1177          +/- 275.7        (1143%)
+ug              = -266.716         +/- 9808         (3677%)
+rg              = 343.473          +/- 6134         (1786%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug             -1.000  1.000 
+rg              1.000 -1.000  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:37:53 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 30.0000]
+        #datapoints = 17
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 2.1993722964e+16   0.00e+00  2.40e+07    1.000000e+07   1.000000e+00   1.000000e+00
+   4 1.1306974884e+03  -2.26e-01  2.40e+03    4.694056e+00   1.110448e+00   1.191085e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 1130.7
+rel. change during last iteration : -2.26219e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 8.98689
+variance of residuals (reduced chisquare) = WSSR/ndf   : 80.7641
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 4.69406          +/- 3.759        (80.08%)
+ul              = 1.11045          +/- 2.909        (261.9%)
+rl              = 1.19109          +/- 2.055        (172.6%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.922  1.000 
+rl              0.983  0.955  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:37:53 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 30.0000]
+        #datapoints = 17
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 1.2324502408e+13   0.00e+00  4.17e+05    5.000000e+02   1.500000e+02   1.000000e+00   1.000000e+02
+   9 5.0098057698e-01  -1.12e-04  4.17e-04   -8.257011e-04   2.444683e-02  -2.378472e-01   1.816475e+01
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0.500981
+rel. change during last iteration : -1.11629e-09
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.196308
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.038537
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = -0.000825701     +/- 0.0005255    (63.65%)
+B3              = 0.0244468        +/- 0.01281      (52.39%)
+C3              = -0.237847        +/- 0.08659      (36.41%)
+D3              = 18.1648          +/- 0.1551       (0.8539%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.904 -0.962  1.000 
+D3             -0.569  0.661 -0.808  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:38:22 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 30.0000]
+        #datapoints = 17
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 4.8864365898e+04   0.00e+00  5.04e+01    1.000000e+02  -1.000000e+00   1.000000e+01
+ 238 7.6425032557e-01  -9.95e-01  5.04e-04    2.411768e+01  -2.667156e+02   3.434728e+02
+
+After 238 iterations the fit converged.
+final sum of squares of residuals : 0.76425
+rel. change during last iteration : -9.95138e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.233644
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0545893
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 24.1177          +/- 275.7        (1143%)
+ug              = -266.716         +/- 9808         (3677%)
+rg              = 343.473          +/- 6134         (1786%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug             -1.000  1.000 
+rg              1.000 -1.000  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:38:23 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 30.0000]
+        #datapoints = 17
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 2.1993722964e+16   0.00e+00  2.40e+07    1.000000e+07   1.000000e+00   1.000000e+00
+   4 1.1306974884e+03  -2.26e-01  2.40e+03    4.694056e+00   1.110448e+00   1.191085e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 1130.7
+rel. change during last iteration : -2.26219e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 8.98689
+variance of residuals (reduced chisquare) = WSSR/ndf   : 80.7641
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 4.69406          +/- 3.759        (80.08%)
+ul              = 1.11045          +/- 2.909        (261.9%)
+rl              = 1.19109          +/- 2.055        (172.6%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.922  1.000 
+rl              0.983  0.955  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:38:23 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [0.00000 : 30.0000]
+        #datapoints = 17
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 1.2324502408e+13   0.00e+00  4.17e+05    5.000000e+02   1.500000e+02   1.000000e+00   1.000000e+02
+   9 5.0098057698e-01  -1.12e-04  4.17e-04   -8.257011e-04   2.444683e-02  -2.378472e-01   1.816475e+01
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0.500981
+rel. change during last iteration : -1.11629e-09
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.196308
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.038537
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = -0.000825701     +/- 0.0005255    (63.65%)
+B3              = 0.0244468        +/- 0.01281      (52.39%)
+C3              = -0.237847        +/- 0.08659      (36.41%)
+D3              = 18.1648          +/- 0.1551       (0.8539%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.904 -0.962  1.000 
+D3             -0.569  0.661 -0.808  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:39:50 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 17
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 4.8864365898e+04   0.00e+00  5.04e+01    1.000000e+02  -1.000000e+00   1.000000e+01
+ 238 7.6425032557e-01  -9.95e-01  5.04e-04    2.411768e+01  -2.667156e+02   3.434728e+02
+
+After 238 iterations the fit converged.
+final sum of squares of residuals : 0.76425
+rel. change during last iteration : -9.95138e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.233644
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0545893
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 24.1177          +/- 275.7        (1143%)
+ug              = -266.716         +/- 9808         (3677%)
+rg              = 343.473          +/- 6134         (1786%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug             -1.000  1.000 
+rg              1.000 -1.000  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:39:51 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 17
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 2.1993722964e+16   0.00e+00  2.40e+07    1.000000e+07   1.000000e+00   1.000000e+00
+   4 1.1306974884e+03  -2.26e-01  2.40e+03    4.694056e+00   1.110448e+00   1.191085e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 1130.7
+rel. change during last iteration : -2.26219e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 8.98689
+variance of residuals (reduced chisquare) = WSSR/ndf   : 80.7641
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 4.69406          +/- 3.759        (80.08%)
+ul              = 1.11045          +/- 2.909        (261.9%)
+rl              = 1.19109          +/- 2.055        (172.6%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.922  1.000 
+rl              0.983  0.955  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:39:51 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 17
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 1.2324502408e+13   0.00e+00  4.17e+05    5.000000e+02   1.500000e+02   1.000000e+00   1.000000e+02
+   9 5.0098057698e-01  -1.12e-04  4.17e-04   -8.257011e-04   2.444683e-02  -2.378472e-01   1.816475e+01
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0.500981
+rel. change during last iteration : -1.11629e-09
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.196308
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.038537
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = -0.000825701     +/- 0.0005255    (63.65%)
+B3              = 0.0244468        +/- 0.01281      (52.39%)
+C3              = -0.237847        +/- 0.08659      (36.41%)
+D3              = 18.1648          +/- 0.1551       (0.8539%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.904 -0.962  1.000 
+D3             -0.569  0.661 -0.808  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:39:52 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 17
+        residuals are weighted equally (unit weight)
+
+function used for fitting: j(x)
+	j(x) = A4*x**4+B4*x**3+C4*x**2+D4*x+E4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A4            B4            C4            D4            E4           
+   0 1.0102522604e+12   0.00e+00  1.08e+05    1.000000e+01   1.000000e+00   1.000000e+00   1.000000e+00  -1.000000e+02
+   9 4.9318089154e-01  -2.36e-08  1.08e-04   -5.678771e-05   9.915057e-04   6.104396e-03  -1.769708e-01   1.812932e+01
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0.493181
+rel. change during last iteration : -2.36371e-13
+
+degrees of freedom    (FIT_NDF)                        : 12
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.202727
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0410984
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A4              = -5.67877e-05     +/- 0.0001304    (229.5%)
+B4              = 0.000991506      +/- 0.004207     (424.3%)
+C4              = 0.0061044        +/- 0.04413      (723%)
+D4              = -0.176971        +/- 0.1659       (93.75%)
+E4              = 18.1293          +/- 0.1797       (0.991%)
+
+correlation matrix of the fit parameters:
+                A4     B4     C4     D4     E4     
+A4              1.000 
+B4             -0.992  1.000 
+C4              0.954 -0.984  1.000 
+D4             -0.842  0.898 -0.959  1.000 
+E4              0.453 -0.514  0.608 -0.770  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:40:13 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 17
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 4.8368180704e+03   0.00e+00  5.04e-01    1.000000e+00  -1.000000e+00   1.000000e+01
+ 327 7.6425188618e-01  -9.96e-01  5.04e-04    2.411542e+01  -2.666362e+02   3.434239e+02
+
+After 327 iterations the fit converged.
+final sum of squares of residuals : 0.764252
+rel. change during last iteration : -9.95505e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.233644
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0545894
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 24.1154          +/- 275.5        (1142%)
+ug              = -266.636         +/- 9802         (3676%)
+rg              = 343.424          +/- 6131         (1785%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug             -1.000  1.000 
+rg              1.000 -1.000  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:40:15 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 17
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 3.5136872453e+03   0.00e+00  2.40e+00    1.000000e+00   1.000000e+00   1.000000e+00
+1249 3.1147397173e+00  -9.47e-01  2.40e+02    1.235644e-01   1.719433e+00   9.549165e-31
+
+After 1249 iterations the fit converged.
+final sum of squares of residuals : 3.11474
+rel. change during last iteration : -9.47412e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.471679
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.222481
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.123564         +/- 0.2641       (213.8%)
+ul              = 1.71943          +/- 10.48        (609.6%)
+rl              = 9.54917e-31      +/- 3.248e-30    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.944  1.000 
+rl              1.000  0.945  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:40:22 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 17
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 1.2324502408e+13   0.00e+00  4.17e+05    5.000000e+02   1.500000e+02   1.000000e+00   1.000000e+02
+   9 5.0098057698e-01  -1.12e-04  4.17e-04   -8.257011e-04   2.444683e-02  -2.378472e-01   1.816475e+01
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0.500981
+rel. change during last iteration : -1.11629e-09
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.196308
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.038537
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = -0.000825701     +/- 0.0005255    (63.65%)
+B3              = 0.0244468        +/- 0.01281      (52.39%)
+C3              = -0.237847        +/- 0.08659      (36.41%)
+D3              = 18.1648          +/- 0.1551       (0.8539%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.904 -0.962  1.000 
+D3             -0.569  0.661 -0.808  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:40:22 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 17
+        residuals are weighted equally (unit weight)
+
+function used for fitting: j(x)
+	j(x) = A4*x**4+B4*x**3+C4*x**2+D4*x+E4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A4            B4            C4            D4            E4           
+   0 1.0102522604e+12   0.00e+00  1.08e+05    1.000000e+01   1.000000e+00   1.000000e+00   1.000000e+00  -1.000000e+02
+   9 4.9318089154e-01  -2.36e-08  1.08e-04   -5.678771e-05   9.915057e-04   6.104396e-03  -1.769708e-01   1.812932e+01
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0.493181
+rel. change during last iteration : -2.36371e-13
+
+degrees of freedom    (FIT_NDF)                        : 12
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.202727
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0410984
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A4              = -5.67877e-05     +/- 0.0001304    (229.5%)
+B4              = 0.000991506      +/- 0.004207     (424.3%)
+C4              = 0.0061044        +/- 0.04413      (723%)
+D4              = -0.176971        +/- 0.1659       (93.75%)
+E4              = 18.1293          +/- 0.1797       (0.991%)
+
+correlation matrix of the fit parameters:
+                A4     B4     C4     D4     E4     
+A4              1.000 
+B4             -0.992  1.000 
+C4              0.954 -0.984  1.000 
+D4             -0.842  0.898 -0.959  1.000 
+E4              0.453 -0.514  0.608 -0.770  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:40:49 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 17
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 4.8368180704e+03   0.00e+00  5.04e-01    1.000000e+00  -1.000000e+00   1.000000e+01
+ 327 7.6425188618e-01  -9.96e-01  5.04e-04    2.411542e+01  -2.666362e+02   3.434239e+02
+
+After 327 iterations the fit converged.
+final sum of squares of residuals : 0.764252
+rel. change during last iteration : -9.95505e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.233644
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0545894
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 24.1154          +/- 275.5        (1142%)
+ug              = -266.636         +/- 9802         (3676%)
+rg              = 343.424          +/- 6131         (1785%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug             -1.000  1.000 
+rg              1.000 -1.000  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:40:51 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 17
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 3.5136872453e+03   0.00e+00  2.40e+00    1.000000e+00   1.000000e+00   1.000000e+00
+1249 3.1147397173e+00  -9.47e-01  2.40e+02    1.235644e-01   1.719433e+00   9.549165e-31
+
+After 1249 iterations the fit converged.
+final sum of squares of residuals : 3.11474
+rel. change during last iteration : -9.47412e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.471679
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.222481
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.123564         +/- 0.2641       (213.8%)
+ul              = 1.71943          +/- 10.48        (609.6%)
+rl              = 9.54917e-31      +/- 3.248e-30    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.944  1.000 
+rl              1.000  0.945  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:40:58 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 17
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 1.2324502408e+13   0.00e+00  4.17e+05    5.000000e+02   1.500000e+02   1.000000e+00   1.000000e+02
+   9 5.0098057698e-01  -1.12e-04  4.17e-04   -8.257011e-04   2.444683e-02  -2.378472e-01   1.816475e+01
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0.500981
+rel. change during last iteration : -1.11629e-09
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.196308
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.038537
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = -0.000825701     +/- 0.0005255    (63.65%)
+B3              = 0.0244468        +/- 0.01281      (52.39%)
+C3              = -0.237847        +/- 0.08659      (36.41%)
+D3              = 18.1648          +/- 0.1551       (0.8539%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.904 -0.962  1.000 
+D3             -0.569  0.661 -0.808  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:40:58 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 17
+        residuals are weighted equally (unit weight)
+
+function used for fitting: j(x)
+	j(x) = A4*x**4+B4*x**3+C4*x**2+D4*x+E4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A4            B4            C4            D4            E4           
+   0 1.0102522604e+12   0.00e+00  1.08e+05    1.000000e+01   1.000000e+00   1.000000e+00   1.000000e+00  -1.000000e+02
+   9 4.9318089154e-01  -2.36e-08  1.08e-04   -5.678771e-05   9.915057e-04   6.104396e-03  -1.769708e-01   1.812932e+01
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0.493181
+rel. change during last iteration : -2.36371e-13
+
+degrees of freedom    (FIT_NDF)                        : 12
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.202727
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0410984
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A4              = -5.67877e-05     +/- 0.0001304    (229.5%)
+B4              = 0.000991506      +/- 0.004207     (424.3%)
+C4              = 0.0061044        +/- 0.04413      (723%)
+D4              = -0.176971        +/- 0.1659       (93.75%)
+E4              = 18.1293          +/- 0.1797       (0.991%)
+
+correlation matrix of the fit parameters:
+                A4     B4     C4     D4     E4     
+A4              1.000 
+B4             -0.992  1.000 
+C4              0.954 -0.984  1.000 
+D4             -0.842  0.898 -0.959  1.000 
+E4              0.453 -0.514  0.608 -0.770  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:41:19 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 16
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 4.5412985092e+03   0.00e+00  5.09e-01    1.000000e+00  -1.000000e+00   1.000000e+01
+ 225 6.9206280425e-01  -9.94e-01  5.09e-04    2.429912e+01  -2.377800e+02   3.032867e+02
+
+After 225 iterations the fit converged.
+final sum of squares of residuals : 0.692063
+rel. change during last iteration : -9.94398e-06
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.230728
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0532356
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 24.2991          +/- 254.6        (1048%)
+ug              = -237.78          +/- 7852         (3302%)
+rg              = 303.287          +/- 4856         (1601%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug             -1.000  1.000 
+rg              1.000 -1.000  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:41:20 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 16
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 3.3586063262e+03   0.00e+00  2.35e+00    1.000000e+00   1.000000e+00   1.000000e+00
+1288 3.0279670140e+00  -9.62e-01  2.35e+02    1.237315e-01   1.734226e+00   9.805970e-31
+
+After 1288 iterations the fit converged.
+final sum of squares of residuals : 3.02797
+rel. change during last iteration : -9.61736e-06
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.482618
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.232921
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.123731         +/- 0.2919       (235.9%)
+ul              = 1.73423          +/- 11.32        (652.5%)
+rl              = 9.80597e-31      +/- 8.195e-30    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.947  1.000 
+rl              1.000  0.948  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:41:27 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 16
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 7.9710261108e+12   0.00e+00  3.45e+05    5.000000e+02   1.500000e+02   1.000000e+00   1.000000e+02
+   9 4.0395132647e-01  -5.11e-05  3.45e-04   -1.437608e-03   3.651014e-02  -2.970274e-01   1.821248e+01
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0.403951
+rel. change during last iteration : -5.10907e-10
+
+degrees of freedom    (FIT_NDF)                        : 12
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.183474
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0336626
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = -0.00143761      +/- 0.0006092    (42.38%)
+B3              = 0.0365101        +/- 0.01392      (38.13%)
+C3              = -0.297027        +/- 0.08812      (29.67%)
+D3              = 18.2125          +/- 0.1477       (0.8108%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.904 -0.962  1.000 
+D3             -0.563  0.655 -0.804  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:41:27 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 16
+        residuals are weighted equally (unit weight)
+
+function used for fitting: j(x)
+	j(x) = A4*x**4+B4*x**3+C4*x**2+D4*x+E4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A4            B4            C4            D4            E4           
+   0 5.7516615164e+11   0.00e+00  8.42e+04    1.000000e+01   1.000000e+00   1.000000e+00   1.000000e+00  -1.000000e+02
+   9 2.5449671315e-01  -4.23e-09  8.42e-05   -3.288437e-04   8.427702e-03  -5.674053e-02  -8.114720e-03   1.805858e+01
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0.254497
+rel. change during last iteration : -4.23155e-14
+
+degrees of freedom    (FIT_NDF)                        : 11
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.152105
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0231361
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A4              = -0.000328844     +/- 0.0001294    (39.35%)
+B4              = 0.0084277        +/- 0.003914     (46.44%)
+C4              = -0.0567405       +/- 0.03846      (67.79%)
+D4              = -0.00811472      +/- 0.1351       (1665%)
+E4              = 18.0586          +/- 0.1366       (0.7563%)
+
+correlation matrix of the fit parameters:
+                A4     B4     C4     D4     E4     
+A4              1.000 
+B4             -0.992  1.000 
+C4              0.954 -0.984  1.000 
+D4             -0.841  0.897 -0.959  1.000 
+E4              0.443 -0.505  0.599 -0.762  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:42:03 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 15
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 4.2618896634e+03   0.00e+00  5.13e-01    1.000000e+00  -1.000000e+00   1.000000e+01
+ 344 6.5173231530e-01  -9.98e-01  5.13e-04    2.414855e+01  -2.615706e+02   3.363331e+02
+
+After 344 iterations the fit converged.
+final sum of squares of residuals : 0.651732
+rel. change during last iteration : -9.9786e-06
+
+degrees of freedom    (FIT_NDF)                        : 12
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.233047
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.054311
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 24.1485          +/- 359.9        (1490%)
+ug              = -261.571         +/- 1.254e+04    (4795%)
+rg              = 336.333          +/- 7856         (2336%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug             -1.000  1.000 
+rg              1.000 -1.000  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:42:05 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 15
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 3.2111894753e+03   0.00e+00  2.30e+00    1.000000e+00   1.000000e+00   1.000000e+00
+1380 2.4731073631e+00  -8.38e-01  2.30e+02    1.240394e-01   1.767175e+00  -9.700095e-31
+
+After 1380 iterations the fit converged.
+final sum of squares of residuals : 2.47311
+rel. change during last iteration : -8.37868e-06
+
+degrees of freedom    (FIT_NDF)                        : 12
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.453974
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.206092
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.124039         +/- 0.3006       (242.4%)
+ul              = 1.76717          +/- 11.44        (647.2%)
+rl              = -9.7001e-31      +/- 5.512e-30    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.951  1.000 
+rl              1.000  0.952  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:42:12 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 15
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 5.0079871515e+12   0.00e+00  2.82e+05    5.000000e+02   1.500000e+02   1.000000e+00   1.000000e+02
+   9 3.5861242848e-01  -1.63e-05  2.82e-04   -8.976079e-04   2.655870e-02  -2.515131e-01   1.817879e+01
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0.358612
+rel. change during last iteration : -1.62973e-10
+
+degrees of freedom    (FIT_NDF)                        : 11
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.180558
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0326011
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = -0.000897608     +/- 0.0007544    (84.05%)
+B3              = 0.0265587        +/- 0.01609      (60.58%)
+C3              = -0.251513        +/- 0.09492      (37.74%)
+D3              = 18.1788          +/- 0.1481       (0.8147%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.903 -0.961  1.000 
+D3             -0.556  0.648 -0.799  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:42:12 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 15
+        residuals are weighted equally (unit weight)
+
+function used for fitting: j(x)
+	j(x) = A4*x**4+B4*x**3+C4*x**2+D4*x+E4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A4            B4            C4            D4            E4           
+   0 3.1532312157e+11   0.00e+00  6.43e+04    1.000000e+01   1.000000e+00   1.000000e+00   1.000000e+00  -1.000000e+02
+   8 2.5058130460e-01  -2.68e-01  6.43e-04   -3.769884e-04   9.658067e-03  -6.644972e-02   1.614870e-02   1.804940e+01
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 0.250581
+rel. change during last iteration : -2.68e-06
+
+degrees of freedom    (FIT_NDF)                        : 10
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.158298
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0250581
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A4              = -0.000376988     +/- 0.0001816    (48.16%)
+B4              = 0.00965807       +/- 0.005127     (53.08%)
+C4              = -0.0664497       +/- 0.04696      (70.67%)
+D4              = 0.0161487        +/- 0.1534       (950.2%)
+E4              = 18.0494          +/- 0.144        (0.798%)
+
+correlation matrix of the fit parameters:
+                A4     B4     C4     D4     E4     
+A4              1.000 
+B4             -0.992  1.000 
+C4              0.954 -0.984  1.000 
+D4             -0.840  0.896 -0.958  1.000 
+E4              0.433 -0.494  0.588 -0.754  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:42:43 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 14
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 3.9713165192e+03   0.00e+00  5.17e-01    1.000000e+00  -1.000000e+00   1.000000e+01
+  95 6.6299274502e-01  -3.10e-01  5.17e-04    1.880748e+01  -4.787536e+01   1.491259e+02
+
+After 95 iterations the fit converged.
+final sum of squares of residuals : 0.662993
+rel. change during last iteration : -3.10271e-06
+
+degrees of freedom    (FIT_NDF)                        : 11
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.245504
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0602721
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 18.8075          +/- 14.33        (76.19%)
+ug              = -47.8754         +/- 625.4        (1306%)
+rg              = 149.126          +/- 858.7        (575.8%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug             -0.999  1.000 
+rg              0.998 -0.999  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:42:43 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 14
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 3.0512199644e+03   0.00e+00  2.24e+00    1.000000e+00   1.000000e+00   1.000000e+00
+1364 2.3188413120e+00  -7.59e-01  2.24e+02    1.242359e-01   1.794733e+00  -9.799366e-31
+
+After 1364 iterations the fit converged.
+final sum of squares of residuals : 2.31884
+rel. change during last iteration : -7.58732e-06
+
+degrees of freedom    (FIT_NDF)                        : 11
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.459134
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.210804
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.124236         +/- 0.3346       (269.3%)
+ul              = 1.79473          +/- 12.45        (693.7%)
+rl              = -9.79937e-31     +/- 9.052e-30    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.954  1.000 
+rl              1.000  0.955  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:42:50 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 14
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 3.0437943500e+12   0.00e+00  2.27e+05    5.000000e+02   1.500000e+02   1.000000e+00   1.000000e+02
+   9 3.5600343673e-01  -4.36e-06  2.27e-04   -7.273625e-04   2.364021e-02  -2.391338e-01   1.817044e+01
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0.356003
+rel. change during last iteration : -4.35894e-11
+
+degrees of freedom    (FIT_NDF)                        : 10
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.188681
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0356003
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = -0.000727362     +/- 0.001008     (138.6%)
+B3              = 0.0236402        +/- 0.01997      (84.49%)
+C3              = -0.239134        +/- 0.1092       (45.67%)
+D3              = 18.1704          +/- 0.1578       (0.8685%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.902 -0.961  1.000 
+D3             -0.548  0.641 -0.793  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:42:50 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 14
+        residuals are weighted equally (unit weight)
+
+function used for fitting: j(x)
+	j(x) = A4*x**4+B4*x**3+C4*x**2+D4*x+E4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A4            B4            C4            D4            E4           
+   0 1.6555673061e+11   0.00e+00  4.82e+04    1.000000e+01   1.000000e+00   1.000000e+00   1.000000e+00  -1.000000e+02
+   8 1.9230372301e-01  -4.76e-02  4.82e-04   -6.396675e-04   1.590399e-02  -1.122434e-01   1.220042e-01   1.801363e+01
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 0.192304
+rel. change during last iteration : -4.76405e-07
+
+degrees of freedom    (FIT_NDF)                        : 9
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.146175
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0213671
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A4              = -0.000639667     +/- 0.0002311    (36.13%)
+B4              = 0.015904         +/- 0.006059     (38.1%)
+C4              = -0.112243        +/- 0.05147      (45.86%)
+D4              = 0.122004         +/- 0.1555       (127.5%)
+E4              = 18.0136          +/- 0.1347       (0.748%)
+
+correlation matrix of the fit parameters:
+                A4     B4     C4     D4     E4     
+A4              1.000 
+B4             -0.992  1.000 
+C4              0.954 -0.984  1.000 
+D4             -0.839  0.895 -0.957  1.000 
+E4              0.420 -0.481  0.576 -0.744  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:43:12 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 12
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 3.3985991359e+03   0.00e+00  5.22e-01    1.000000e+00  -1.000000e+00   1.000000e+01
+ 346 6.1425597945e-01  -9.96e-01  5.22e-04    2.496493e+01  -2.478082e+02   3.031898e+02
+
+After 346 iterations the fit converged.
+final sum of squares of residuals : 0.614256
+rel. change during last iteration : -9.95922e-06
+
+degrees of freedom    (FIT_NDF)                        : 9
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.261248
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0682507
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 24.9649          +/- 650.3        (2605%)
+ug              = -247.808         +/- 1.889e+04    (7621%)
+rg              = 303.19           +/- 1.13e+04     (3728%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug             -1.000  1.000 
+rg              1.000 -1.000  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:43:14 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 12
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 2.7228533131e+03   0.00e+00  2.13e+00    1.000000e+00   1.000000e+00   1.000000e+00
+1433 1.8851104755e+00  -5.91e-01  2.13e+02    1.247107e-01   1.868979e+00  -9.835131e-31
+
+After 1433 iterations the fit converged.
+final sum of squares of residuals : 1.88511
+rel. change during last iteration : -5.90891e-06
+
+degrees of freedom    (FIT_NDF)                        : 9
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.457664
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.209457
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.124711         +/- 0.4186       (335.6%)
+ul              = 1.86898          +/- 14.89        (796.9%)
+rl              = -9.83513e-31     +/- 1.36e-29     (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.962  1.000 
+rl              1.000  0.963  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:43:21 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 12
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 9.9608544501e+11   0.00e+00  1.40e+05    5.000000e+02   1.500000e+02   1.000000e+00   1.000000e+02
+   9 7.1446314752e-02  -7.19e-07  1.40e-04    2.969916e-03  -3.086222e-02  -4.153399e-02   1.806125e+01
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0.0714463
+rel. change during last iteration : -7.1906e-12
+
+degrees of freedom    (FIT_NDF)                        : 8
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0945029
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00893079
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = 0.00296992       +/- 0.0008781    (29.57%)
+B3              = -0.0308622       +/- 0.01472      (47.69%)
+C3              = -0.041534        +/- 0.0678       (163.2%)
+D3              = 18.0613          +/- 0.08229      (0.4556%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.984  1.000 
+C3              0.900 -0.960  1.000 
+D3             -0.528  0.621 -0.779  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:43:21 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 12
+        residuals are weighted equally (unit weight)
+
+function used for fitting: j(x)
+	j(x) = A4*x**4+B4*x**3+C4*x**2+D4*x+E4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A4            B4            C4            D4            E4           
+   0 3.8952674184e+10   0.00e+00  2.52e+04    1.000000e+01   1.000000e+00   1.000000e+00   1.000000e+00  -1.000000e+02
+   8 5.6779535052e-02  -3.88e-03  2.52e-04   -3.947227e-04   1.165382e-02  -9.069091e-02   9.120563e-02   1.801659e+01
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 0.0567795
+rel. change during last iteration : -3.88068e-08
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0900631
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00811136
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A4              = -0.000394723     +/- 0.0002935    (74.37%)
+B4              = 0.0116538        +/- 0.006512     (55.88%)
+C4              = -0.0906909       +/- 0.04665      (51.44%)
+D4              = 0.0912056        +/- 0.118        (129.4%)
+E4              = 18.0166          +/- 0.08517      (0.4727%)
+
+correlation matrix of the fit parameters:
+                A4     B4     C4     D4     E4     
+A4              1.000 
+B4             -0.992  1.000 
+C4              0.954 -0.984  1.000 
+D4             -0.837  0.893 -0.956  1.000 
+E4              0.390 -0.449  0.544 -0.719  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:44:56 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 16
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 4.5412985092e+03   0.00e+00  5.09e-01    1.000000e+00  -1.000000e+00   1.000000e+01
+ 225 6.9206280425e-01  -9.94e-01  5.09e-04    2.429912e+01  -2.377800e+02   3.032867e+02
+
+After 225 iterations the fit converged.
+final sum of squares of residuals : 0.692063
+rel. change during last iteration : -9.94398e-06
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.230728
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0532356
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 24.2991          +/- 254.6        (1048%)
+ug              = -237.78          +/- 7852         (3302%)
+rg              = 303.287          +/- 4856         (1601%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug             -1.000  1.000 
+rg              1.000 -1.000  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:44:57 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 16
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 3.3586063262e+03   0.00e+00  2.35e+00    1.000000e+00   1.000000e+00   1.000000e+00
+1288 3.0279670140e+00  -9.62e-01  2.35e+02    1.237315e-01   1.734226e+00   9.805970e-31
+
+After 1288 iterations the fit converged.
+final sum of squares of residuals : 3.02797
+rel. change during last iteration : -9.61736e-06
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.482618
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.232921
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.123731         +/- 0.2919       (235.9%)
+ul              = 1.73423          +/- 11.32        (652.5%)
+rl              = 9.80597e-31      +/- 8.195e-30    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.947  1.000 
+rl              1.000  0.948  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:45:04 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 16
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 7.9710261108e+12   0.00e+00  3.45e+05    5.000000e+02   1.500000e+02   1.000000e+00   1.000000e+02
+   9 4.0395132647e-01  -5.11e-05  3.45e-04   -1.437608e-03   3.651014e-02  -2.970274e-01   1.821248e+01
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0.403951
+rel. change during last iteration : -5.10907e-10
+
+degrees of freedom    (FIT_NDF)                        : 12
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.183474
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0336626
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = -0.00143761      +/- 0.0006092    (42.38%)
+B3              = 0.0365101        +/- 0.01392      (38.13%)
+C3              = -0.297027        +/- 0.08812      (29.67%)
+D3              = 18.2125          +/- 0.1477       (0.8108%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.904 -0.962  1.000 
+D3             -0.563  0.655 -0.804  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:45:04 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 16
+        residuals are weighted equally (unit weight)
+
+function used for fitting: j(x)
+	j(x) = A4*x**4+B4*x**3+C4*x**2+D4*x+E4
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A4            B4            C4            D4            E4           
+   0 5.7516615164e+11   0.00e+00  8.42e+04    1.000000e+01   1.000000e+00   1.000000e+00   1.000000e+00  -1.000000e+02
+   9 2.5449671315e-01  -4.23e-09  8.42e-05   -3.288437e-04   8.427702e-03  -5.674053e-02  -8.114720e-03   1.805858e+01
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0.254497
+rel. change during last iteration : -4.23155e-14
+
+degrees of freedom    (FIT_NDF)                        : 11
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.152105
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0231361
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A4              = -0.000328844     +/- 0.0001294    (39.35%)
+B4              = 0.0084277        +/- 0.003914     (46.44%)
+C4              = -0.0567405       +/- 0.03846      (67.79%)
+D4              = -0.00811472      +/- 0.1351       (1665%)
+E4              = 18.0586          +/- 0.1366       (0.7563%)
+
+correlation matrix of the fit parameters:
+                A4     B4     C4     D4     E4     
+A4              1.000 
+B4             -0.992  1.000 
+C4              0.954 -0.984  1.000 
+D4             -0.841  0.897 -0.959  1.000 
+E4              0.443 -0.505  0.599 -0.762  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:46:33 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 16
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 4.5412985092e+03   0.00e+00  5.09e-01    1.000000e+00  -1.000000e+00   1.000000e+01
+ 225 6.9206280425e-01  -9.94e-01  5.09e-04    2.429912e+01  -2.377800e+02   3.032867e+02
+
+After 225 iterations the fit converged.
+final sum of squares of residuals : 0.692063
+rel. change during last iteration : -9.94398e-06
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.230728
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0532356
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 24.2991          +/- 254.6        (1048%)
+ug              = -237.78          +/- 7852         (3302%)
+rg              = 303.287          +/- 4856         (1601%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug             -1.000  1.000 
+rg              1.000 -1.000  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:46:34 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 16
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 3.3586063262e+03   0.00e+00  2.35e+00    1.000000e+00   1.000000e+00   1.000000e+00
+1288 3.0279670140e+00  -9.62e-01  2.35e+02    1.237315e-01   1.734226e+00   9.805970e-31
+
+After 1288 iterations the fit converged.
+final sum of squares of residuals : 3.02797
+rel. change during last iteration : -9.61736e-06
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.482618
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.232921
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.123731         +/- 0.2919       (235.9%)
+ul              = 1.73423          +/- 11.32        (652.5%)
+rl              = 9.80597e-31      +/- 8.195e-30    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.947  1.000 
+rl              1.000  0.948  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:46:41 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 16
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 7.9710261108e+12   0.00e+00  3.45e+05    5.000000e+02   1.500000e+02   1.000000e+00   1.000000e+02
+   9 4.0395132647e-01  -5.11e-05  3.45e-04   -1.437608e-03   3.651014e-02  -2.970274e-01   1.821248e+01
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0.403951
+rel. change during last iteration : -5.10907e-10
+
+degrees of freedom    (FIT_NDF)                        : 12
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.183474
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0336626
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = -0.00143761      +/- 0.0006092    (42.38%)
+B3              = 0.0365101        +/- 0.01392      (38.13%)
+C3              = -0.297027        +/- 0.08812      (29.67%)
+D3              = 18.2125          +/- 0.1477       (0.8108%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.904 -0.962  1.000 
+D3             -0.563  0.655 -0.804  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:47:44 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 16
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 4.5412985092e+03   0.00e+00  5.09e-01    1.000000e+00  -1.000000e+00   1.000000e+01
+ 225 6.9206280425e-01  -9.94e-01  5.09e-04    2.429912e+01  -2.377800e+02   3.032867e+02
+
+After 225 iterations the fit converged.
+final sum of squares of residuals : 0.692063
+rel. change during last iteration : -9.94398e-06
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.230728
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0532356
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 24.2991          +/- 254.6        (1048%)
+ug              = -237.78          +/- 7852         (3302%)
+rg              = 303.287          +/- 4856         (1601%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug             -1.000  1.000 
+rg              1.000 -1.000  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:47:46 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 16
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 3.3586063262e+03   0.00e+00  2.35e+00    1.000000e+00   1.000000e+00   1.000000e+00
+1288 3.0279670140e+00  -9.62e-01  2.35e+02    1.237315e-01   1.734226e+00   9.805970e-31
+
+After 1288 iterations the fit converged.
+final sum of squares of residuals : 3.02797
+rel. change during last iteration : -9.61736e-06
+
+degrees of freedom    (FIT_NDF)                        : 13
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.482618
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.232921
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.123731         +/- 0.2919       (235.9%)
+ul              = 1.73423          +/- 11.32        (652.5%)
+rl              = 9.80597e-31      +/- 8.195e-30    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.947  1.000 
+rl              1.000  0.948  1.000 
+
+
+*******************************************************************************
+Sun May 19 15:47:53 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6 every :::0::d
+        format = x:z
+        x range restricted to [-5.00000 : 30.0000]
+        #datapoints = 16
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 7.9710261108e+12   0.00e+00  3.45e+05    5.000000e+02   1.500000e+02   1.000000e+00   1.000000e+02
+   9 4.0395132647e-01  -5.11e-05  3.45e-04   -1.437608e-03   3.651014e-02  -2.970274e-01   1.821248e+01
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0.403951
+rel. change during last iteration : -5.10907e-10
+
+degrees of freedom    (FIT_NDF)                        : 12
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.183474
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0336626
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = -0.00143761      +/- 0.0006092    (42.38%)
+B3              = 0.0365101        +/- 0.01392      (38.13%)
+C3              = -0.297027        +/- 0.08812      (29.67%)
+D3              = 18.2125          +/- 0.1477       (0.8108%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.985  1.000 
+C3              0.904 -0.962  1.000 
+D3             -0.563  0.655 -0.804  1.000 
