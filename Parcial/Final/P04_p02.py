@@ -495,32 +495,10 @@ def app():
     
     st.title('Decaimiento de Cesio-137')
     
-    st.markdown("## **Procedimiento Experimental**")
-    # Sección del procedimiento del proyecto
-    st.write("""
-        En la presente práctica se llevó a cabo el análisis del decaimiento radiactivo del Cesio-137 y el aire. Con ello en mente se procedio la práctica de la siguiente manera
-    """)
-    
-    expa0 = st.toggle("##### Datos de las constantes GNUPlot (Parte experimental)")
 ####################################################################
 ##                      Apartado de Resultados                    ##
 ####################################################################
     st.markdown("## **Resultados**")
-    # Sección de los resultados
-    rlist = ['**Gráfica 01**', '**Gráfica 02**', '**Gráfica 03**', '**Tabla 01**', '**Tabla 02**']
-    rlist02 = ['Distribución Gaussiana del Aire.', 'Distribución del Cesio-137.', 'Distribución del Cesio-137, datos agrupados de 5 en 5.', 'Datos de las gráficas, histograma y ajuste de las ditribuciones gaussianas y de Poisson.', 'Datos de la prueba de $$\chi^{2}$$ de las distribuciones gaussianas y de Poisson.']
-    # Diccionario con los valores de rlist con el valor de cada valor de rlist02
-    dic = {key: i for key, i in zip(rlist,rlist02)}
-    # Imprime cada par en el markdown
-    s = "\n".join([f'- {key}: {i}' for key, i in dic.items()])
-    # for i in rlist:
-    #     s += "- " + i + "\n"
-    st.write(
-        """
-        En la presente sección se presentarán los resultados obtenidos en la presente práctica, de los cuales están divididos en:
-        """
-    )
-    st.markdown(s)
     
     c1, c2 = st.columns([1,6])
     with c1:
@@ -604,11 +582,3 @@ def app():
                 st.markdown("### Tabla 02: Prueba $$χ^2$$ (datos acotados)")
                 st.markdown(tchi02.to_markdown())
     
-    st.markdown("## **Discusión de Resultados**")
-    # Sección de los resultados
-    # De los fits realizados en ``GNUPlot`` se consideró utilizar el del día 69, después del primer caso de contagio registrado, presentados en los apartados ***Gráfica 01*** y ***Fit 11 GNUPlot***, del apédice. Esto se debe a que en otros días los valores aumentaban o disminuian de manera drástica, como en el caso que se presenta en el ***Fit 13 GNUPlot*** (véase apéndice), donde el valor de $$A$$ cambiaba de 930,848 $$\pm$$ 3038 a 73351,4 $$\pm$$ 1,105e+06. Además, a partir del día 71 los datos tendían a decrecer, y con ello al realizar el ajuste tomando de ese día en adelante hacía que el fit proyectara que el valor máximo ya había sucedido y decreciera en vez de predecir un pico.
-    st.write(
-        """
-        A 
-        """
-    )
