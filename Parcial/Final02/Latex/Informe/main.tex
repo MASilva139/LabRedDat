@@ -1,0 +1,170 @@
+\documentclass[osajnl,twocolumn,showpacs,superscriptaddress,10pt]{revtex4-2}
+%
+%
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}
+\usepackage{bbm}
+\usepackage{lipsum}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{animate}
+\usepackage{subfig}
+\usepackage{gensymb}
+\usepackage{physics}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage[pdftex]{hyperref}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{wrapfig}
+\usepackage{minipage-marginpar}
+\usepackage{boxedminipage}
+\usepackage[dvipsnames]{xcolor}
+%
+\usepackage{fancyhdr}
+\usepackage{fourier-orns}
+%
+\renewcommand{\headrule}{%
+\vspace{2pt}\hrulefill
+\raisebox{0pt}{\quad\decofourleft\decotwo\decofourright\quad}%
+\hrulefill}
+\setlength{\headheight}{35pt}
+%
+%
+\AtBeginDocument{\selectlanguage{spanish}}
+\decimalpoint
+%\bibliographystyle{IEEEtran}
+%\bibliography{IEEEabrv,mybibfile}
+%
+%
+\begin{document}
+%Titulo
+    \title{MECÁNICA 02 (F-502)}
+    %\thanks{F-701: AVC01}
+
+    %\author{Mario Silva, 201906054}
+    %\affiliation{}
+%\collaboration{MUSO Collaboration}%\noaffiliation
+%\date{\today}%
+%Resumen
+\begin{abstract}
+    
+\end{abstract}
+\maketitle
+%
+%Comandos--------------------------------
+\providecommand{\hs}[1]{\ensuremath{\hspace{#1 pt}}}
+\providecommand{\hsn}[1]{\ensuremath{\hspace{#1 pt}}}
+\providecommand{\vs}[1]{\ensuremath{\vspace{#1 pt}}}
+\providecommand{\unitvec}[1]{\boldsymbol{\hat{#1}}}
+\providecommand{\dif}[2]{ \ensuremath{\frac{d #1}{d #2}} }
+\providecommand{\into}[2]{ \ensuremath{\oint_{#1}{#2}} }
+
+\providecommand{\linft}[2]{ \ensuremath{\lim_{#1\rightarrow\infty}\corch{#2}} }
+
+\providecommand{\parent}[1]{\ensuremath{\left(\hspace{2pt} #1 \hspace{2pt}\right)}}
+\providecommand{\corch}[1]{\ensuremath{\left[\hspace{2pt} #1 \hspace{2pt}\right]}}
+\providecommand{\llav}[1]{\ensuremath{\left\{\hspace{2pt} #1 \hspace{2pt}\right\}}}
+
+\providecommand{\difn}[3]{ \ensuremath{\frac{d^{#3} #1}{d {#2}^{#3}}} }
+\providecommand{\parti}[2]{ \ensuremath{\frac{\partial #1}{\partial #2}} }
+\providecommand{\partin}[3]{ \ensuremath{\frac{{\partial}^{#3} #1}{{\partial} {#2}^{#3}}} }
+\providecommand{\bs}[1]{\ensuremath{\boldsymbol{#1}}}
+
+\providecommand{\pcruz}[2]{\ensuremath{ {#1}\times{#2} }}
+\providecommand{\ppunt}[2]{\ensuremath{ {#1}\cdot{#2} }}
+\providecommand{\bs}[1]{\ensuremath{ \boldsymbol{#1} }}
+
+\providecommand{\llint}[4]{\ensuremath{\int_{#1}^{#2}\left\{\hsn{2} #3 \hsn{2}\right\}\hsn{1}{d{#4}} }}
+\providecommand{\chint}[4]{\ensuremath{\int_{#1}^{#2}\left[\hsn{2} #3 \hsn{2}\right]\hsn{1}{d{#4}} }}
+\providecommand{\print}[4]{\ensuremath{\int_{#1}^{#2}\left(\hsn{2} #3 \hsn{2}\right)\hsn{1}{d{#4}}}}
+\providecommand{\clint}[3]{\ensuremath{\left[\hs{2} {#3} \hs{2}\right|_{#1}^{#2} }}
+\providecommand{\inte}[4]{\ensuremath{ \int_{#1}^{#2}{#3}\hsn{1}{d{#4}} }}
+\providecommand{\lne}[1]{\ensuremath{\ln{\left\{\hspace{1pt} #1 \hspace{1pt}\right\}}}}
+
+\providecommand{\cose}[1]{\ensuremath{\cos{\left[\hspace{2pt} #1 \hspace{2pt}\right]}}}
+\providecommand{\seno}[1]{\ensuremath{\sin{\left[\hspace{2pt} #1 \hspace{2pt}\right]}}}
+\providecommand{\tang}[1]{\ensuremath{\tan{\left[\hspace{2pt} #1 \hspace{2pt}\right]}}}
+\providecommand{\cota}[1]{\ensuremath{\cot{\left[\hspace{2pt} #1 \hspace{2pt}\right]}}}
+\providecommand{\seca}[1]{\ensuremath{\sec{\left[\hspace{2pt} #1 \hspace{2pt}\right]}}}
+\providecommand{\csec}[1]{\ensuremath{\csc{\left[\hspace{2pt} #1 \hspace{2pt}\right]}}}
+
+\providecommand{\cosen}[2]{\ensuremath{\cos^{#2}{\left[\hspace{2pt} #1 \hspace{2pt}\right]}}}
+\providecommand{\senon}[2]{\ensuremath{\sin^{#2}{\left[\hspace{2pt} #1 \hspace{2pt}\right]}}}
+\providecommand{\tangn}[2]{\ensuremath{\tan^{#2}{\left[\hspace{2pt} #1 \hspace{2pt}\right]}}}
+\providecommand{\cotan}[2]{\ensuremath{\cot^{#2}{\left[\hspace{2pt} #1 \hspace{2pt}\right]}}}
+\providecommand{\secan}[2]{\ensuremath{\sec^{#2}{\left[\hspace{2pt} #1 \hspace{2pt}\right]}}}
+\providecommand{\csecn}[2]{\ensuremath{\csc^{#2}{\left[\hspace{2pt} #1 \hspace{2pt}\right]}}}
+
+\providecommand{\acose}[1]{\ensuremath{\cos^{-1}{\left[\hspace{2pt} #1 \hspace{2pt}\right]}}}
+\providecommand{\aseno}[1]{\ensuremath{\sin^{-1}{\left[\hspace{2pt} #1 \hspace{2pt}\right]}}}
+\providecommand{\atang}[1]{\ensuremath{\tan^{-1}{\left[\hspace{2pt} #1 \hspace{2pt}\right]}}}
+\providecommand{\acota}[1]{\ensuremath{\cot^{-1}{\left[\hspace{2pt} #1 \hspace{2pt}\right]}}}
+\providecommand{\aseca}[1]{\ensuremath{\sec^{-1}{\left[\hspace{2pt} #1 \hspace{2pt}\right]}}}
+\providecommand{\acsec}[1]{\ensuremath{\csc^{-1}{\left[\hspace{2pt} #1 \hspace{2pt}\right]}}}
+
+\providecommand{\sumat}[3]{\ensuremath{\sum_{#1}^{#2}{\left\{\hspace{2pt} #3 \hspace{2pt}\right\}}}}
+\providecommand{\suma}[3]{\ensuremath{\sum_{#1}^{#2}{#3}}}
+\providecommand{\Rarr}[1]{\ensuremath{\hs{#1}\Longrightarrow\hs{#1}}}
+\providecommand{\rarr}[1]{\ensuremath{\hs{#1}\longrightarrow\hs{#1}}}
+
+\providecommand{\expo}[1]{\ensuremath{e^{#1}}}
+\providecommand{\uvec}[1]{\ensuremath{\hat{#1}}}
+%
+% \vfill
+% \break
+%
+% \pagestyle{fancy}
+% \fancyhf{}
+% \fancyhead[L]{
+%     \begin{minipage}{0.19\textwidth}
+%         \includegraphics[width=1\textwidth]{IMG/Imagen2.png}
+%     \end{minipage}
+% }
+% \fancyhead[R]{
+%     \textsf{Mario Armando Urbina Silva\\Carné: 201906054}
+% }
+% \fancyfoot[LE,RO]{\hfill\thepage\hfill}
+% %... then configure it.
+% \renewcommand{\footruleskip}{3pt}
+% \renewcommand{\footrulewidth}{1pt}
+
+
+\section{Introducción}
+
+\section{Marco Teórico (Parte A)}
+    \subsection{Rozamiento Viscoso}
+
+\section{Conclusiones}
+    \begin{itemize}
+        \item El rozamiento viscoso se da como consecuencia de la fricción que presenta un fluido respecto a un objeto.
+        \item La ley de Poiseuille se cumple fluidos con viscosidad constante, es decir, en fluidos homogéneos.
+        \item El número de Reynolds favorece los flujos turbulentos, como consecuencia de la aceleración y desaceleración del pulso, en el caso del flujo sanguíneo.
+    \end{itemize}
+
+
+\section{Bibliografía}
+    \begin{itemize}
+        %https://cbccampusvirtual.uba.ar/pluginfile.php/1921518/mod_resource/content/3/Leyes%20OhmPoiseuille.pdf
+        \item Castañaga, A., et al. (2023) Flujo de Poiseuille. [En Línea], Recuperado de: \url{https://mat.caminos.upm.es/wiki/Flujo_de_Poiseuille_(Grupo_23)}
+        \item Ciancaglini, Carlos. (2004). Hidrodinamia de la circulación vascular periférica normal y patológica. Revista Costarricense de Cardiología, 6(2), 43-61. Retrieved May 10, 2024, from \url{http://www.scielo.sa.cr/scielo.php?script=sci_arttext&pid=S1409-41422004000200006&lng=en&tlng=es.}
+        \item Lifshits, E.M. and Landau, L.D. (1986) Mecánica de fluidos (9 vols). 2nd edn. España:  Reverte.
+        \item Galpern, E., Shalom, D., Della, F. (2017) Exp 6: Fuerza viscosa. [PDF], Recuperado de: \url{http://materias.df.uba.ar/f1bygaa2017c1/files/2017/05/Exp6.pdf}
+        \item Olmo, M. (n.d.) Ley de Poiseuille. [En Línea], Recuperado de: \url{http://hyperphysics.phy-astr.gsu.edu/hbasees/poicon.html}
+        %http://laplace.us.es/wiki/index.php/Fuerzas_de_rozamiento_(GIE)
+        \item Pedro. (2023) Fuerzas de rozamiento (GIE), [En Línea]. Recuperado de: \url{http://laplace.us.es/wiki/index.php/Fuerzas_de_rozamiento_(GIE)}
+        %
+        \item Symon, K.R. and Almarza, Y.A. (1979) Mecánica. 1st edn. Madrid: Aguilar.
+        %
+        \item ULPGC. (n.d.) Rozamiento interno: viscosidad, [PDF]. Recuperado de: \url{https://www2.ulpgc.es/hege/almacen/download/43/43822/stokes.pdf}
+        \item Universidad de Cantabria. (2017) Tema 5. Hemodinámica o física del flujo sanguíneo. [En Línea], Recuperado de: \url{https://ocw.unican.es/mod/page/view.php?id=509&lang=en}
+    \end{itemize}
+
+
+\end{document}

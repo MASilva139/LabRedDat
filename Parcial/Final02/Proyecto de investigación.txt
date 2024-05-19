@@ -1,0 +1,4 @@
+Proyecto
+
+https://www.kaggle.com/datasets/adebusayoadewunmi/nuclearfusion-data
+https://arxiv.org/search/?query=nuclear+fusion&searchtype=all&source=header

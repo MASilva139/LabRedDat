@@ -12,3 +12,5 @@ https://www.gachaguru.com/blog/top-50-gacha-games-by-revenue-in-november-2023
 https://www.gachaguru.com/blog
 
 https://www.statista.com/statistics/1265527/mihoyo-annual-app-revenue/
+
+https://github.com/charliedilorenzo/GenshinWishStats/blob/master/WishSim.py
