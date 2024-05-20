@@ -184,7 +184,34 @@ Es por ello que se procedió a determinar la matriz de covarianza, para determin
 Por último, empleando el programa de GnuPlot y Python, utilizando las librerías de pandas, mpmath y scipy.stats, se realizarón las gráficas de los datos de ventas por mes y ventas por banner de personaje, realizando diferentes tipos de curvas para ver cual se ajustaba de mejor manera a los datos y de esta forma se pudiera predecir de cierta forma los ingresos de miHoYo, tanto por parte de occidente como en el caso del banner que representan los ingresos por parte de la iOS de China (sin incluir ordenadores PC).
 
 \section{Resultados}
+Como ha de saberse, a la hora de calcular datos de ventas hay que tomar en consideración la acogida que tiene dicho producto en el mercado, más aun cuando se trata de ventas de un juego cacha en donde el "hype" por cierta cosa, personaje, skin puede influir a que la comunidad pague más para obtener dicho producto o no; además, también hay que tomar en consideración la influencia que tienen los creadores de contenido en la comunidad de jugadores y en algunas ocasiones sobre las decisiones de algunos jugadores. Es por ello que los datos a analizar no tienen una distribución que las represente de manera fiable y en su mayoría se analizaran las curvas de ajuste con respecto a los posibles ingresos de ventas que pueda tener el juego de Genshin Impact a un pequeño plazo.
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.4\textwidth]{img/GIRev01.pdf}
+        \caption{\label{G01-statista}Ingresos por mes (base logarítmica), Statista 2024}
+    \end{center}
+\end{figure}
+Como se puede observar en la figura \ref{G01-statista}, donde se tienen datos desde septiembre del 2020 (mes en el que salió Genshin Impact), la curva de ajuste cúbica puede ser una de las mejores predicciones dado que comenzando el mes de abril recién habia salido un nuevo personaje por la comunidad del juego (Chiori), irónicamente muy poco bien recibido, de igual manera se puede observar en el penúltimo dato presentado en la figura \ref{G02-GachaRevenue}; sin embargo, no sería hasta finales del mes de abril e inicios del mes de mayo fuese a haber aumento en los igresos debido al nuevo personaje, uno de los más esperados desde la presentación del mismo en uno de los tantos avances de la trama. Esto último se podría corroborar observando la tendencia del último dato de la gráfica \ref{G02-GachaRevenue}, que de cierta forma su valor se acerca a la curva de ajuste cúbica de la figura \ref{G01-statista}.
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.4\textwidth]{img/GIRev02.pdf}
+        \caption{\label{G02-GachaRevenue}Ingresos por mes (base logarítmica), GachaRevenue}
+    \end{center}
+\end{figure}
+De esta forma se puede determinar que las curvas de ajuste, tanto de la distribución de gauss, logarítmica y cúbica, que se pueden observar en la figura \ref{G02-GachaRevenue} no se acoplan a lo esperado y con ellas no se puede observar un panorama aceptable de ventas a corto plazo. Esto se debe a que las funciones de distribución de gauss y cúbica indican una gran caída de ventas, lo cual, al observar los datos de ventas en la gráfica \ref{G01-statista}, no tiene ningún sentido. Del mismo modo se descarta la posibilidad de la función logarítmica debido a que las ventas del mes de mayo, con la entrada de la segunda mitad de la versión y cambio de banner, no se vislumbran tan altas como indica la curva de ajuste logarítmica.
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.4\textwidth]{img/GIBannChRev02.pdf}
+        \caption{\label{G03-iOS}Ingresos por banner iOS China (base logarítmica), ajuste omitiendo datos, GenshinLab}
+    \end{center}
+\end{figure}
 
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.4\textwidth]{img/GIBannChRev01.pdf}
+        \caption{\label{G04-iOS}Ajuste de ingresos por banner iOS China (base logarítmica), GenshinLab}
+    \end{center}
+\end{figure}
 
 \section{Conclusiones}
     \begin{itemize}

@@ -4,7 +4,7 @@
 
 set datafile separator ';'
 
-d=2
+d=0
 #----------------------------------Función gaussiana
 f(x) = Ag*exp(-((x-ug)/rg)**2/2)
 Ag = 18.5557
@@ -46,7 +46,7 @@ E4 = 1
 
 set xrange [-3:55]
 #set yrange [0:200000000]
-set yrange [15:22]
+set yrange [16:20]
 
 # plot 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv' using 1:5, f(x)
 
@@ -54,4 +54,4 @@ plot 'C:\Users\mario\Documents\F503\Parcial\Final\csv\App Revenue\AppRev001.csv'
  g(x) title "Logaritmic fit" lt rgb "steelblue",\
  i(x) title "Cubic fit" lt rgb "dark-violet"
  set ylabel "Ventas (en millones de $)/log"
- set xlabel "Mes "
+ set xlabel "#Mes "

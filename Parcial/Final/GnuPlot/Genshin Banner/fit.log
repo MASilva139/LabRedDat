@@ -1271,3 +1271,357 @@ A3              1.000
 B3             -0.986  1.000 
 C3              0.913 -0.966  1.000 
 D3             -0.635  0.722 -0.850  1.000 
+
+
+*******************************************************************************
+Sun May 19 22:38:18 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Genshin Banner\Genshin Revenue Banner.csv' using 1:7 every :::0::d
+        format = x:z
+        #datapoints = 60
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 6.0543034560e+04   0.00e+00  2.89e+01    1.000000e+02  -1.000000e+00   1.000000e+01
+   9 1.4055183270e+01  -5.58e-08  2.89e-03    1.671751e+01   3.356225e+01   1.486782e+02
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 14.0552
+rel. change during last iteration : -5.57608e-13
+
+degrees of freedom    (FIT_NDF)                        : 57
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.49657
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.246582
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 16.7175          +/- 0.09478      (0.567%)
+ug              = 33.5622          +/- 5.583        (16.63%)
+rg              = 148.678          +/- 47.59        (32.01%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug             -0.190  1.000 
+rg             -0.715  0.460  1.000 
+
+
+*******************************************************************************
+Sun May 19 22:38:18 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Genshin Banner\Genshin Revenue Banner.csv' using 1:7 every :::0::d
+        format = x:z
+        #datapoints = 60
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 7.4635585467e+03   0.00e+00  3.59e+00    1.000000e+00   1.000000e+00   1.000000e+00
+1379 1.6113400065e+01  -3.03e-01  3.59e+02    1.153404e-01   1.427190e+00  -9.500923e-31
+
+After 1379 iterations the fit converged.
+final sum of squares of residuals : 16.1134
+rel. change during last iteration : -3.02813e-06
+
+degrees of freedom    (FIT_NDF)                        : 57
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.531687
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.282691
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.11534          +/- 0.07716      (66.9%)
+ul              = 1.42719          +/- 5.273        (369.5%)
+rl              = -9.50092e-31     +/- 9.283e-31    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.852  1.000 
+rl              1.000  0.854  1.000 
+
+
+*******************************************************************************
+Sun May 19 22:38:25 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Genshin Banner\Genshin Revenue Banner.csv' using 1:7 every :::0::d
+        format = x:z
+        #datapoints = 60
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 9.5354991927e+16   0.00e+00  1.98e+07    5.000000e+02   1.500000e+02   1.000000e+00   1.000000e+02
+  10 1.3342477378e+01  -1.02e-05  1.98e-03   -2.695572e-05   2.016854e-03  -3.107302e-02   1.656277e+01
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 13.3425
+rel. change during last iteration : -1.02379e-10
+
+degrees of freedom    (FIT_NDF)                        : 56
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.488117
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.238259
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = -2.69557e-05     +/- 1.547e-05    (57.38%)
+B3              = 0.00201685       +/- 0.001389     (68.86%)
+C3              = -0.031073        +/- 0.0351       (112.9%)
+D3              = 16.5628          +/- 0.2371       (1.431%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.986  1.000 
+C3              0.913 -0.966  1.000 
+D3             -0.636  0.723 -0.851  1.000 
+
+
+*******************************************************************************
+Sun May 19 22:40:16 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Genshin Banner\Genshin Revenue Banner.csv' using 1:7 every :::0::d
+        format = x:z
+        x range restricted to [-1.00000 : 70.0000]
+        #datapoints = 60
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 6.0543034560e+04   0.00e+00  2.89e+01    1.000000e+02  -1.000000e+00   1.000000e+01
+   9 1.4055183270e+01  -5.58e-08  2.89e-03    1.671751e+01   3.356225e+01   1.486782e+02
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 14.0552
+rel. change during last iteration : -5.57608e-13
+
+degrees of freedom    (FIT_NDF)                        : 57
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.49657
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.246582
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 16.7175          +/- 0.09478      (0.567%)
+ug              = 33.5622          +/- 5.583        (16.63%)
+rg              = 148.678          +/- 47.59        (32.01%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug             -0.190  1.000 
+rg             -0.715  0.460  1.000 
+
+
+*******************************************************************************
+Sun May 19 22:40:17 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Genshin Banner\Genshin Revenue Banner.csv' using 1:7 every :::0::d
+        format = x:z
+        x range restricted to [-1.00000 : 70.0000]
+        #datapoints = 60
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 7.4635585467e+03   0.00e+00  3.59e+00    1.000000e+00   1.000000e+00   1.000000e+00
+1379 1.6113400065e+01  -3.03e-01  3.59e+02    1.153404e-01   1.427190e+00  -9.500923e-31
+
+After 1379 iterations the fit converged.
+final sum of squares of residuals : 16.1134
+rel. change during last iteration : -3.02813e-06
+
+degrees of freedom    (FIT_NDF)                        : 57
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.531687
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.282691
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.11534          +/- 0.07716      (66.9%)
+ul              = 1.42719          +/- 5.273        (369.5%)
+rl              = -9.50092e-31     +/- 9.283e-31    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.852  1.000 
+rl              1.000  0.854  1.000 
+
+
+*******************************************************************************
+Sun May 19 22:40:24 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Genshin Banner\Genshin Revenue Banner.csv' using 1:7 every :::0::d
+        format = x:z
+        x range restricted to [-1.00000 : 70.0000]
+        #datapoints = 60
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 9.5354991927e+16   0.00e+00  1.98e+07    5.000000e+02   1.500000e+02   1.000000e+00   1.000000e+02
+  10 1.3342477378e+01  -1.02e-05  1.98e-03   -2.695572e-05   2.016854e-03  -3.107302e-02   1.656277e+01
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 13.3425
+rel. change during last iteration : -1.02379e-10
+
+degrees of freedom    (FIT_NDF)                        : 56
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.488117
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.238259
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = -2.69557e-05     +/- 1.547e-05    (57.38%)
+B3              = 0.00201685       +/- 0.001389     (68.86%)
+C3              = -0.031073        +/- 0.0351       (112.9%)
+D3              = 16.5628          +/- 0.2371       (1.431%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.986  1.000 
+C3              0.913 -0.966  1.000 
+D3             -0.636  0.723 -0.851  1.000 
+
+
+*******************************************************************************
+Sun May 19 22:43:59 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Genshin Banner\Genshin Revenue Banner.csv' using 1:7 every :::0::d
+        format = x:z
+        x range restricted to [-1.00000 : 70.0000]
+        #datapoints = 57
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = Ag*exp(-((x-ug)/rg)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Ag            ug            rg           
+   0 5.9695031142e+04   0.00e+00  2.97e+01    1.000000e+02  -1.000000e+00   1.000000e+01
+   8 1.3456527303e+01  -5.56e-03  2.97e-07    1.674234e+01   3.007714e+01   1.213912e+02
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 13.4565
+rel. change during last iteration : -5.55766e-08
+
+degrees of freedom    (FIT_NDF)                        : 54
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.499194
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.249195
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Ag              = 16.7423          +/- 0.09908      (0.5918%)
+ug              = 30.0771          +/- 3.733        (12.41%)
+rg              = 121.391          +/- 29.67        (24.44%)
+
+correlation matrix of the fit parameters:
+                Ag     ug     rg     
+Ag              1.000 
+ug             -0.116  1.000 
+rg             -0.734  0.268  1.000 
+
+
+*******************************************************************************
+Sun May 19 22:43:59 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Genshin Banner\Genshin Revenue Banner.csv' using 1:7 every :::0::d
+        format = x:z
+        x range restricted to [-1.00000 : 70.0000]
+        #datapoints = 57
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = Al*log(((x+ul)/rl)**2/2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   Al            ul            rl           
+   0 7.2012136363e+03   0.00e+00  3.53e+00    1.000000e+00   1.000000e+00   1.000000e+00
+1411 1.6014788737e+01  -3.14e-01  3.53e+02    1.153141e-01   1.436177e+00  -9.358428e-31
+
+After 1411 iterations the fit converged.
+final sum of squares of residuals : 16.0148
+rel. change during last iteration : -3.14262e-06
+
+degrees of freedom    (FIT_NDF)                        : 54
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.544583
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.29657
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+Al              = 0.115314         +/- 0.08282      (71.82%)
+ul              = 1.43618          +/- 5.544        (386%)
+rl              = -9.35843e-31     +/- 7.725e-31    (0%)
+
+correlation matrix of the fit parameters:
+                Al     ul     rl     
+Al              1.000 
+ul              0.856  1.000 
+rl              1.000  0.858  1.000 
+
+
+*******************************************************************************
+Sun May 19 22:44:06 2024
+
+
+FIT:    data read from 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Genshin Banner\Genshin Revenue Banner.csv' using 1:7 every :::0::d
+        format = x:z
+        x range restricted to [-1.00000 : 70.0000]
+        #datapoints = 57
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = A3*x**3+B3*x**2+C3*x+D3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A3            B3            C3            D3           
+   0 6.6421779692e+16   0.00e+00  1.70e+07    5.000000e+02   1.500000e+02   1.000000e+00   1.000000e+02
+  10 1.1224166136e+01  -5.40e-06  1.70e-03   -5.685327e-05   4.220764e-03  -7.272233e-02   1.671285e+01
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 11.2242
+rel. change during last iteration : -5.39747e-11
+
+degrees of freedom    (FIT_NDF)                        : 53
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.460192
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.211777
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A3              = -5.68533e-05     +/- 1.745e-05    (30.7%)
+B3              = 0.00422076       +/- 0.001488     (35.25%)
+C3              = -0.0727223       +/- 0.03567      (49.05%)
+D3              = 16.7129          +/- 0.2286       (1.368%)
+
+correlation matrix of the fit parameters:
+                A3     B3     C3     D3     
+A3              1.000 
+B3             -0.986  1.000 
+C3              0.913 -0.966  1.000 
+D3             -0.635  0.722 -0.850  1.000 

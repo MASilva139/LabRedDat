@@ -47,7 +47,7 @@ plot 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Genshin Banner\Genshin Rev
  i(x) title "Cubic fit" lt rgb "dark-violet"
  #j(x) title "P4(x) fit" lt rgb "goldenrod"
  set ylabel "Ventas (en millones de $)/log"
- set xlabel "Mes "
+ set xlabel "#Banner "
 
 #plot 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' every :::0::d using 1:5, f(x)
 # plot f(x)

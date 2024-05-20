@@ -1,17 +1,17 @@
 # Fdb version 4
-["bibtex .build/main"] 1716173524.05784 ".build/main.aux" ".build/main.bbl" ".build/main" 1716178525.28534 0
+["bibtex .build/main"] 1716186480.21206 ".build/main.aux" ".build/main.bbl" ".build/main" 1716186484.41255 0
   "./ref.bib" 1716172526 2369 13e59c1b3eecb212aa1fb52eb137be2d ""
-  ".build/main.aux" 1716178523 2840 7039d09e6e17141e90938b93f2be6611 "pdflatex"
+  ".build/main.aux" 1716186482 4048 ca9a306ee141f6b11f81c049df9fdf19 "pdflatex"
   "C:/Users/mario/AppData/Local/Programs/MiKTeX/bibtex/bst/revtex/apsrev4-2.bst" 1685674058 69609 e9dea59f0e753ccda3ddc8f5806d846d ""
-  "c:/Users/mario/Documents/F503/Parcial/Final/Latex/Informe/.build/mainNotes.bib" 1716178523 104 4d8bb863c86f3d7b03a471e9d4707f34 ""
+  "c:/Users/mario/Documents/F503/Parcial/Final/Latex/Informe/.build/mainNotes.bib" 1716186482 104 4d8bb863c86f3d7b03a471e9d4707f34 ""
   (generated)
   ".build/main.bbl"
   ".build/main.blg"
   (rewritten before read)
-["pdflatex"] 1716178520.43814 "c:/Users/mario/Documents/F503/Parcial/Final/Latex/Informe/main.tex" ".build/main.pdf" "main" 1716178525.28673 0
-  ".build/main.aux" 1716178523 2840 7039d09e6e17141e90938b93f2be6611 "pdflatex"
-  ".build/main.bbl" 1716173524 5530 08fe7a8558f823565b54cdb7fba0b6ec "bibtex .build/main"
-  ".build/main.out" 1716178523 1594 29efa30f35d1e431a51b1acb75272094 "pdflatex"
+["pdflatex"] 1716186480.97252 "c:/Users/mario/Documents/F503/Parcial/Final/Latex/Informe/main.tex" ".build/main.pdf" "main" 1716186484.41396 0
+  ".build/main.aux" 1716186482 4048 ca9a306ee141f6b11f81c049df9fdf19 "pdflatex"
+  ".build/main.bbl" 1716186480 5530 08fe7a8558f823565b54cdb7fba0b6ec "bibtex .build/main"
+  ".build/main.out" 1716186482 1594 70942f92e87c2492546de1877de925fe "pdflatex"
   "C:/Users/mario/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1716164150 116064 8a88fdd81e0459a64227fef2730968ec ""
   "C:/Users/mario/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx0900.pk" 1708284801 22504 ea5d7280157c917428143bd10cf5ada9 ""
   "C:/Users/mario/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1200.pk" 1708284807 31952 0ca9be187cb4f58d1b4bca8d0ad5f7dd ""
@@ -177,8 +177,12 @@
   "C:/Users/mario/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "C:/Users/mario/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1695383086 2269 4fe6fb3396214c91f164d45faf9bec45 ""
   "C:/Users/mario/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1695383086 20785 f7d1133a287929598a897c93f8f4c44b ""
-  "c:/Users/mario/Documents/F503/Parcial/Final/Latex/Informe/main.tex" 1716178518 19649 6d4dd661633ae5117dfa9fa96bebc78d ""
-  "main.tex" 1716178518 19649 6d4dd661633ae5117dfa9fa96bebc78d ""
+  "c:/Users/mario/Documents/F503/Parcial/Final/Latex/Informe/main.tex" 1716186453 23047 6d55a4691c82b9064dcfc59af51431ba ""
+  "img/GIBannChRev01.pdf" 1716180094 13872 afba2aed7534986b2ea61a668bc011e4 ""
+  "img/GIBannChRev02.pdf" 1716180309 13828 1ed69a2045b3fd0a49b4208d0c592dc7 ""
+  "img/GIRev01.pdf" 1716181507 13251 2ff398521663da6f4c95c371e8427796 ""
+  "img/GIRev02.pdf" 1716181360 12106 3e4afa83d2d62ae2a248dd5ee7f5a489 ""
+  "main.tex" 1716186453 23047 6d55a4691c82b9064dcfc59af51431ba ""
   (generated)
   ".build/main.aux"
   ".build/main.log"

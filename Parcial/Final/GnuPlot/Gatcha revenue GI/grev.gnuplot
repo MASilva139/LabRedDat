@@ -4,7 +4,7 @@
 
 set datafile separator ';'
 
-d=3
+d=0
 #----------------------------------Función gaussiana
 f(x) = Ag*exp(-((x-ug)/rg)**2/2)
 Ag=1
@@ -39,7 +39,7 @@ E4 = -100
 
 set xrange [-1:30]
 #set yrange [0:70000000]
-set yrange [15:22]
+set yrange [16:19]
 
 # plot 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' using 1:6, f(x)
 
@@ -48,7 +48,7 @@ plot 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Reve
  i(x) title "Cubic fit" lt rgb "dark-violet"
  #j(x) title "P4(x) fit" lt rgb "goldenrod"
  set ylabel "Ventas (en millones de $)/log"
- set xlabel "Mes "
+ set xlabel "#Mes "
 
 
 #plot 'C:\Users\mario\Documents\F503\Parcial\Final\csv\Gatcha Revenue\Gatcha Revenue.csv' every :::0::d using 1:5, f(x)
