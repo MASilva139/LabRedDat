@@ -18,12 +18,12 @@ INPUT C:\Users\mario\AppData\Local\Programs\MiKTeX\tex\latex\natbib\natbib.sty
 INPUT C:\Users\mario\AppData\Local\Programs\MiKTeX\tex\latex\natbib\natbib.sty
 INPUT C:\Users\mario\AppData\Local\Programs\MiKTeX\tex\latex\revtex\revsymb4-2.sty
 INPUT C:\Users\mario\AppData\Local\Programs\MiKTeX\tex\latex\revtex\revsymb4-2.sty
-INPUT C:\Users\mario\AppData\Local\Programs\MiKTeX\tex\latex\tools\dcolumn.sty
-INPUT C:\Users\mario\AppData\Local\Programs\MiKTeX\tex\latex\tools\dcolumn.sty
+INPUT C:\Users\mario\AppData\Local\Programs\MiKTeX\tex\latex\dcolumn\dcolumn.sty
+INPUT C:\Users\mario\AppData\Local\Programs\MiKTeX\tex\latex\dcolumn\dcolumn.sty
 INPUT C:\Users\mario\AppData\Local\Programs\MiKTeX\tex\latex\tools\array.sty
 INPUT C:\Users\mario\AppData\Local\Programs\MiKTeX\tex\latex\tools\array.sty
-INPUT C:\Users\mario\AppData\Local\Programs\MiKTeX\tex\latex\tools\bm.sty
-INPUT C:\Users\mario\AppData\Local\Programs\MiKTeX\tex\latex\tools\bm.sty
+INPUT C:\Users\mario\AppData\Local\Programs\MiKTeX\tex\latex\bm\bm.sty
+INPUT C:\Users\mario\AppData\Local\Programs\MiKTeX\tex\latex\bm\bm.sty
 INPUT C:\Users\mario\AppData\Local\Programs\MiKTeX\tex\latex\bbm\bbm.sty
 INPUT C:\Users\mario\AppData\Local\Programs\MiKTeX\tex\latex\bbm\bbm.sty
 INPUT C:\Users\mario\AppData\Local\Programs\MiKTeX\tex\latex\lipsum\lipsum.sty
@@ -78,8 +78,8 @@ INPUT C:\Users\mario\AppData\Local\Programs\MiKTeX\tex\generic\iftex\iftex.sty
 INPUT C:\Users\mario\AppData\Local\Programs\MiKTeX\tex\generic\iftex\iftex.sty
 INPUT C:\Users\mario\AppData\Local\Programs\MiKTeX\tex\latex\oberdiek\ifdraft.sty
 INPUT C:\Users\mario\AppData\Local\Programs\MiKTeX\tex\latex\oberdiek\ifdraft.sty
-INPUT C:\Users\mario\AppData\Local\Programs\MiKTeX\tex\latex\tools\calc.sty
-INPUT C:\Users\mario\AppData\Local\Programs\MiKTeX\tex\latex\tools\calc.sty
+INPUT C:\Users\mario\AppData\Local\Programs\MiKTeX\tex\latex\calc\calc.sty
+INPUT C:\Users\mario\AppData\Local\Programs\MiKTeX\tex\latex\calc\calc.sty
 INPUT C:\Users\mario\AppData\Local\Programs\MiKTeX\tex\latex\media9\pdfbase.sty
 INPUT C:\Users\mario\AppData\Local\Programs\MiKTeX\tex\latex\media9\pdfbase.sty
 INPUT C:\Users\mario\AppData\Local\Programs\MiKTeX\tex\latex\zref\zref-abspage.sty
