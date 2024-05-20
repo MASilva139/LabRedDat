@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.25)  20 MAY 2024 00:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.25)  20 MAY 2024 02:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -801,17 +801,57 @@ File: img/GIRev02.pdf Graphic file (type pdf)
 Package pdftex.def Info: img/GIRev02.pdf  used on input line 197.
 (pdftex.def)             Requested size: 203.99689pt x 152.35803pt.
 [3 <./img/GIRev01.pdf>]
-<img/GIBannChRev02.pdf, id=110, 642.4pt x 479.7925pt>
+<img/GIBannChRev02.pdf, id=111, 642.4pt x 479.7925pt>
 File: img/GIBannChRev02.pdf Graphic file (type pdf)
 <use img/GIBannChRev02.pdf>
 Package pdftex.def Info: img/GIBannChRev02.pdf  used on input line 204.
 (pdftex.def)             Requested size: 203.99689pt x 152.35803pt.
-<img/GIBannChRev01.pdf, id=111, 642.4pt x 479.7925pt>
+<img/GIBannChRev01.pdf, id=114, 642.4pt x 479.7925pt>
 File: img/GIBannChRev01.pdf Graphic file (type pdf)
 <use img/GIBannChRev01.pdf>
 Package pdftex.def Info: img/GIBannChRev01.pdf  used on input line 211.
 (pdftex.def)             Requested size: 203.99689pt x 152.35803pt.
- (c:\Users\mario\Documents\F503\Parcial\Final\Latex\Informe\.build\main.bbl [4 <./img/GIRev02.pdf> <./img/GIBannChRev02.pdf> <./img/GIBannChRev01.pdf>]) [5] (c:\Users\mario\Documents\F503\Parcial\Final\Latex\Informe\.build\main.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--224
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--224
+\T1/cmr/m/n/10 Para la grá-fi-ca []2[] se tie-ne que la co-va-rian-za
+ []
+
+
+Underfull \hbox (badness 2591) in paragraph at lines 215--224
+\T1/cmr/m/n/10 res-pec-ti-va-men-te; mien-tras que pa-ra los va-lo-res de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--224
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--224
+
+ []
+
+
+Underfull \hbox (badness 1810) in paragraph at lines 215--224
+\T1/cmr/m/n/10 Con los va-lo-res de los co-efi-cien-tes de Pear-son de
+ []
+
+
+Underfull \hbox (badness 1360) in paragraph at lines 215--224
+\T1/cmr/m/n/10 co-mo in-di-ca-ba la co-va-rian-za pre-via-men-te cal-cu-la-da;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--224
+
+ []
+
+[4 <./img/GIRev02.pdf> <./img/GIBannChRev02.pdf> <./img/GIBannChRev01.pdf>] (c:\Users\mario\Documents\F503\Parcial\Final\Latex\Informe\.build\main.bbl) [5] (c:\Users\mario\Documents\F503\Parcial\Final\Latex\Informe\.build\main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-13>
@@ -826,11 +866,11 @@ Here is how much of TeX's memory you used:
  40635 multiletter control sequences out of 15000+600000
  581073 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,13n,93p,1097b,655s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\mario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\mario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0900.pk> <C:\Users\mario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\mario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0900.pk> <C:\Users\mario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\mario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\mario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\mario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\mario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk>
-Output written on c:\Users\mario\Documents\F503\Parcial\Final\Latex\Informe\.build\main.pdf (5 pages, 175689 bytes).
+ 79i,13n,93p,1311b,537s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\mario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\mario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0900.pk> <C:\Users\mario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\mario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0900.pk> <C:\Users\mario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\mario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\mario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\mario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\mario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk><C:/Users/mario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/mario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/mario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mario/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on c:\Users\mario\Documents\F503\Parcial\Final\Latex\Informe\.build\main.pdf (5 pages, 223862 bytes).
 PDF statistics:
- 482 PDF objects out of 1000 (max. 8388607)
+ 520 PDF objects out of 1000 (max. 8388607)
  31 named destinations out of 1000 (max. 500000)
  101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
