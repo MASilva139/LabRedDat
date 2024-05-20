@@ -1,7 +1,7 @@
 import pandas as pd
 from scipy.stats import spearmanr as sp
 from scipy.stats import pearsonr as prs
-from scipy.stats import chisquare as chi
+from scipy.stats import kendalltau as tau
 import plotly.express as px
 import streamlit as st
 import numpy as np
@@ -95,10 +95,12 @@ def app():
             cov1_01 = np.cov(dfin01.index, dfin01['revenue'])
             cs1_01 = sp(dfin01.index, dfin01['revenue'])
             cp1_01 = prs(dfin01.index, dfin01['revenue'])
+            ct1_01 = tau(dfin01.index, dfin01['revenue'])
             cov1_02 = np.cov(dfin01.index, dfin01['lrev'])
             cs1_02 = sp(dfin01.index, dfin01['lrev'])
             cp1_02 = prs(dfin01.index, dfin01['lrev'])
-            coef01 = pd.DataFrame({'Covarianza (N)': [cov1_01,0], 'Coef.Spearman (N)': cs1_01, 'Coef.Pearson (N)': cp1_01, 'Covarianza (log)': [cov1_02,0], 'Coef.Spearman (log)': cs1_02, 'Coef.Pearson (log)': cp1_02})
+            ct1_02 = tau(dfin01.index, dfin01['lrev'])
+            coef01 = pd.DataFrame({'Covarianza (N)': [cov1_01,0], 'Coef.Spearman (N)': cs1_01, 'Coef.Pearson (N)': cp1_01, 'Coef.Kendall (N)': ct1_01, 'Covarianza (log)': [cov1_02,0], 'Coef.Spearman (log)': cs1_02, 'Coef.Pearson (log)': cp1_02, 'Coef.Kendall (log)': ct1_02})
             st.table(coef01)
             
         if resultados == "Gráfica 02":
@@ -123,10 +125,12 @@ def app():
             cov2_01 = np.cov(dfin02.index, dfin02['GenRevGT'])
             cs2_01 = sp(dfin02.index, dfin02['GenRevGT'])
             cp2_01 = prs(dfin02.index, dfin02['GenRevGT'])
+            ct2_01 = tau(dfin02.index, dfin02['GenRevGT'])
             cov2_02 = np.cov(dfin02.index, dfin02['LGenRevGT'])
             cs2_02 = sp(dfin02.index, dfin02['LGenRevGT'])
             cp2_02 = prs(dfin02.index, dfin02['LGenRevGT'])
-            coef02 = pd.DataFrame({'Covarianza (N)': [cov2_01,0], 'Coef.Spearman (N)': cs2_01, 'Coef.Pearson (N)': cp2_01, 'Covarianza (log)': [cov2_02,0], 'Coef.Spearman (log)': cs2_02, 'Coef.Pearson (log)': cp2_02})
+            ct2_02 = tau(dfin02.index, dfin02['LGenRevGT'])
+            coef02 = pd.DataFrame({'Covarianza (N)': [cov2_01,0], 'Coef.Spearman (N)': cs2_01, 'Coef.Pearson (N)': cp2_01, 'Coef.Kendall (N)': ct2_01, 'Covarianza (log)': [cov2_02,0], 'Coef.Spearman (log)': cs2_02, 'Coef.Pearson (log)': cp2_02, 'Coef.Kendall (log)': ct2_02})
             st.table(coef02)
             
         if resultados == "Gráfica 03":
@@ -151,8 +155,10 @@ def app():
             cov3_01 = np.cov(dfin03.index, dfin03['revenue'])
             cs3_01 = sp(dfin03.index, dfin03['revenue'])
             cp3_01 = prs(dfin03.index, dfin03['revenue'])
+            ct3_01 = tau(dfin03.index, dfin03['revenue'])
             cov3_02 = np.cov(dfin03.index, dfin03['lrev'])
             cs3_02 = sp(dfin03.index, dfin03['lrev'])
             cp3_02 = prs(dfin03.index, dfin03['lrev'])
-            coef03 = pd.DataFrame({'Covarianza (N)': [cov3_01,0], 'Coef.Spearman (N)': cs3_01, 'Coef.Pearson (N)': cp3_01, 'Covarianza (log)': [cov3_02,0], 'Coef.Spearman (log)': cs3_02, 'Coef.Pearson (log)': cp3_02})
+            ct3_02 = tau(dfin03.index, dfin03['lrev'])
+            coef03 = pd.DataFrame({'Covarianza (N)': [cov3_01,0], 'Coef.Spearman (N)': cs3_01, 'Coef.Pearson (N)': cp3_01, 'Coef.Kendall (N)': ct3_01, 'Covarianza (log)': [cov3_02,0], 'Coef.Spearman (log)': cs3_02, 'Coef.Pearson (log)': cp3_02, 'Coef.Kendall (log)': ct3_02})
             st.table(coef03)

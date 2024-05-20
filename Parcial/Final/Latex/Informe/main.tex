@@ -157,14 +157,31 @@ El método de pago es relativamente sencillo, se canjea la moneda del juego por 
 \section{Genshin Impact}
 Genshin Impact es un juego de rol de acción de mundo abierto desarrollado por miHoYo que nos lleva hasta Teyvat, un mundo de fantasía donde los siete elementos fluyen y convergen. En el rol de un viajero de otro mundo recién despertado en esta tierra, el jugador tiene la misión de buscar a Los Arcontes de los Siete Elementos, unos seres mortales. Cada pasaje de la aventura de Genshin Impact desenterrará algo milagroso, y lo perdido será finalmente encontrado.
 \\\\
-Genshin Impact se hace fuerte en su ambientación, con cierto parecido al vasto mundo de Hyrule creado por Nintendo para The Legend of Zelda: Breath of the Wild pero con suficiente fuerza e identidad propia como para ofrecer al jugador una experiencia visual totalmente inmersiva. En ese objetivo sus responsables garantizan paisajes majestuosos, animaciones desbordantes en tiempo real y movimientos de personajes finamente detallados así como un sistema de iluminación y tiempo que cambia conforme se avanza en la partida, todo rodeado por una cuidada banda sonora.
+Genshin Impact se hace fuerte en su ambientación, con cierto parecido al vasto mundo de Hyrule creado por Nintendo para The Legend of Zelda: Breath of the Wild pero con suficiente fuerza e identidad propia como para ofrecer al jugador una experiencia visual totalmente inmersiva.\cite{3DJuegos} Dicha similitud es uno de los aspectos más criticados del juego, aunque finalmente 'Genshin Impact' ha sobrevolado un poco esta polémica y ha terminado adquiriendo una fama por derecho propio. Al fin y al cabo, elementos como la necesidad de cocinar, los campamentos enemigos que rapiñar, el medidor de estamina o las torres que permiten viajar de un punto a otro del mapa con rapidez no las inventó Nintendo\cite{xataka}. En ese objetivo sus responsables garantizan paisajes majestuosos, animaciones desbordantes en tiempo real y movimientos de personajes finamente detallados así como un sistema de iluminación y tiempo que cambia conforme se avanza en la partida, todo rodeado por una cuidada banda sonora.
 \\\\
 miHoYo también apuesta su capital a un sistema de combate elemental. Su funcionamiento parte de la premisa de dominar los siete elementos de su mundo—Anemo, Electro, Hydro, Pyro, Cryo, Dendro y Geo— para desencadenar diferentes reacciones. Por otra parte, quienes deseen llegar lo más lejos posible en el videojuego se han de armar un poderoso equipo, escogiendo entre una amplia selección de personajes, cada uno con personalidades, historias y habilidades únicas.
 \\\\
-Genshin Impact es uno de los grandes éxitos free-to-play del 2020 para PC, PS5, PS4 y móviles iOS y Android, y un referente de la nueva hornada de títulos desarrollados en China para Occidente.\cite{3DJuegos}
+Genshin Impact es uno de los grandes éxitos free-to-play del 2020 para PC, PS5, PS4 y móviles iOS y Android, y un referente de la nueva hornada de títulos desarrollados en China para Occidente\cite{3DJuegos}.
+
+    \subsection{El gancho del gacha}
+    Hay un concepto en el juego, que es el del "world level", que limita el nivel al que puede llegar el jugador, las misiones que puede aceptar y otros aspectos que claramente impiden definir 'Genshin Impact' como un sandbox al uso. Así que mientras ese "world level" se incrementa y permite realizar más acciones, hay que aceptar misiones y vagabundear por el mundo subiendo poco a poco de nivel. En ocasiones, muy poco a poco.
+    \\\\
+    Detrás de esta mecánica, por supuesto, hay truco. 'Genshin Impact' es un gacha, un subgénero habitual en los free-to-play en el que los jugadores acceden a mejoras a través de máquinas que dan premios de forma arbitraria, al estilo de las polémicas e infaustas loot boxes. Por supuesto, estas máquinas funcionan con dinero real, y es una mecánica lógicamente criticada que se ha adueñado del panorama móvil chino y coreano. 'Genshin Impact' es uno de los primeros juegos masivos en popularizar la mecánica en occidente.
+    \\\\
+    En el caso de 'Genshin Impact', y posiblemente de ahí viene su popularidad y la moderada buena fama que tiene entre jugadores tradicionales, las mecánicas gacha no son especialmente intrusivas y solo se acentúan al final.
+    \\\\ 
+    También en este aspecto de usar técnicas poco tradicionales para atrapar al jugador, 'Genshin Impact' se revela maquiavélico a partir del nivel 20, donde hay que subir equipo y personaje con recursos difíciles de conseguir, lo que introduce en la ecuación a los Dominios, mazmorras que otorgan recompensas según el día de la semana que sea. Es decir, el juego de miHoYo presiona al jugador para que acceda a las partidas a diario, generando esa necesidad de volver una y otra vez a la exploración y la batalla.
+    \\\\
+    Cómo todo eso ha confluido en un juego coherente y que el jugador no percibe como un enganchapardillos es el auténtico milagro de 'Genshin Impact'. Jugadores y analistas están pasmados de que un free-to-play sea capaz de brindar al jugador un mundo de tamaño muy superior a lo habitual, con unas mecánicas más trabajadas (aquí solo hemos sobrevolado sobre ellas en términos generales, ya que como en todo RPG hay decenas de factores que manejar para mejorar los stats) y que no se explora simplemente pateando descampados, sino que hay que poner en marcha y mejorar poderes, e ingeniárselas a base de escalada, vuelo y localización de accesos secretos para husmear a fondo el terreno\cite{xataka}.
 
 \section{Metodología}
-
+Los datos acerca de las ingresos por mes, desde la salida del juego, en la región de occidente, incluyendo japón, se recolectaron del documento subido por J. Clement en  la página de Statista. Del mismo modo, se recolectaron datos de la página GachaRevenue, sin embargo estos comenzaban desde diciembre del 2022; y para los datos de los diferentes banner, desde la salida hasta el 20 de febrero del 2024, se recolectaron de la página de GENSHINLAB. Los parámetros utilizados para el presente estudio fueron el número de mes y los ingresos que obtuvo la empresa de miHoYo en dicho mes (dichos datos no incluyen las ventas de todas las plataformas).
+\\\\
+Para determinar si el ingreso económico, por mes, es consistente con algun tipo de distribución se decidió usar el logaritmo de dichos datos, dado que el hecho de utilizar los valores originales podría afectar el ajuste/fit con respecto a los datos, presentando de esta forma grandes inconsistencias en el ajuste. Por lo tanto, para demostrar dichos diferencias se realizó el análisis de los datos tanto en su forma original como en su forma logarímica.
+\\\\
+Es por ello que se procedió a determinar la matriz de covarianza, para determinar la dependencia entre los ingresos a lo largo del tiempo (en este caso se analiza respectivamente los ingresos mensuales); así mismo, se determinaron los coeficientes de correlación de Pearson, Spearman y el coeficiente de correlación de rango de Kendall para analizar de mejor manera los datos y determinar de esta forma si los datos tienen correlación alguna.
+\\\\
+Por último, empleando el programa de GnuPlot y Python, utilizando las librerías de pandas, mpmath y scipy.stats, se realizarón las gráficas de los datos de ventas por mes y ventas por banner de personaje, realizando diferentes tipos de curvas para ver cual se ajustaba de mejor manera a los datos y de esta forma se pudiera predecir de cierta forma los ingresos de miHoYo, tanto por parte de occidente como en el caso del banner que representan los ingresos por parte de la iOS de China (sin incluir ordenadores PC).
 
 \section{Resultados}
 
@@ -176,24 +193,6 @@ Genshin Impact es uno de los grandes éxitos free-to-play del 2020 para PC, PS5,
         \item El número de Reynolds favorece los flujos turbulentos, como consecuencia de la aceleración y desaceleración del pulso, en el caso del flujo sanguíneo.
     \end{itemize}
 
-
-% \section{Referencias}
-%     \begin{itemize}
-%         %https://cbccampusvirtual.uba.ar/pluginfile.php/1921518/mod_resource/content/3/Leyes%20OhmPoiseuille.pdf
-%         \item Castañaga, A., et al. (2023) Flujo de Poiseuille. [En Línea], Recuperado de: \url{https://mat.caminos.upm.es/wiki/Flujo_de_Poiseuille_(Grupo_23)}
-%         \item Ciancaglini, Carlos. (2004). Hidrodinamia de la circulación vascular periférica normal y patológica. Revista Costarricense de Cardiología, 6(2), 43-61. Retrieved May 10, 2024, from \url{http://www.scielo.sa.cr/scielo.php?script=sci_arttext&pid=S1409-41422004000200006&lng=en&tlng=es.}
-%         \item Lifshits, E.M. and Landau, L.D. (1986) Mecánica de fluidos (9 vols). 2nd edn. España:  Reverte.
-%         \item Galpern, E., Shalom, D., Della, F. (2017) Exp 6: Fuerza viscosa. [PDF], Recuperado de: \url{http://materias.df.uba.ar/f1bygaa2017c1/files/2017/05/Exp6.pdf}
-%         \item Olmo, M. (n.d.) Ley de Poiseuille. [En Línea], Recuperado de: \url{http://hyperphysics.phy-astr.gsu.edu/hbasees/poicon.html}
-%         %http://laplace.us.es/wiki/index.php/Fuerzas_de_rozamiento_(GIE)
-%         \item Pedro. (2023) Fuerzas de rozamiento (GIE), [En Línea]. Recuperado de: \url{http://laplace.us.es/wiki/index.php/Fuerzas_de_rozamiento_(GIE)}
-%         %
-%         \item Symon, K.R. and Almarza, Y.A. (1979) Mecánica. 1st edn. Madrid: Aguilar.
-%         %
-%         \item ULPGC. (n.d.) Rozamiento interno: viscosidad, [PDF]. Recuperado de: \url{https://www2.ulpgc.es/hege/almacen/download/43/43822/stokes.pdf}
-%         \item Universidad de Cantabria. (2017) Tema 5. Hemodinámica o física del flujo sanguíneo. [En Línea], Recuperado de: \url{https://ocw.unican.es/mod/page/view.php?id=509&lang=en}
-%     \end{itemize}
-
-
+    \nocite{*}
     \bibliography{ref.bib}
 \end{document}
