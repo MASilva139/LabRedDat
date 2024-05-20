@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{0}%
+\begin{thebibliography}{5}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -50,4 +50,35 @@
 \providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
 \let\auto@bib@innerbib\@empty
 %</preamble>
+\bibitem [{\citenamefont {ONTSI}(2019)}]{ONTSI}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibnamefont {ONTSI}},\ }\href
+  {https://www.pocketgamer.biz/comment-and-opinion/72369/mobile-gaming-whales-spending-more-than-ever-according-to-gameanalytics/}
+  {\bibinfo {title} {Informe anual del sector de los contenidos digitales en
+  españa}} (\bibinfo {year} {2019})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Navarro}(2021)}]{Navarro}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Navarro}},\ }\href
+  {https://rua.ua.es/dspace/bitstream/10045/118114/1/Analisis_de_las_mecanicas_gacha_y_su_relacion_con_la_adi_Navarro_Pastor_Jose.pdf}
+  {\bibinfo {title} {Análisis de las mecánicas gacha y su relación con la
+  adicción en los videojuegos}} (\bibinfo {year} {2021})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lawrenson}(2022)}]{gacha}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Lawrenson}},\ }\href
+  {https://www.qustodio.com/es/blog/que-son-los-juegos-gacha/} {\bibinfo
+  {title} {¿qué son los juegos gacha? te contamos todo lo que debes saber}}
+  (\bibinfo {year} {2022})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Anónimo}(2023)}]{gacha02}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibnamefont {Anónimo}},\ }\href
+  {https://plarium.com/es/blog/gacha-games/} {\bibinfo {title} {Lo que debes
+  saber de los juegos gacha: De las recompensas sorpresa hasta el
+  entretenimiento garantizado}} (\bibinfo {year} {2023})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Anónimo}(nd)}]{3DJuegos}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibnamefont {Anónimo}},\ }\href
+  {https://www.3djuegos.com/juegos/genshin-impact/} {\bibinfo {title} {Genshin
+  impact}} (\bibinfo {year} {n.d.})\BibitemShut {NoStop}%
 \end{thebibliography}%
